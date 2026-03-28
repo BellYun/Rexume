@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useMemo, useCallback } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import {
   GlobalWorkerOptions,
   getDocument,
@@ -34,44 +34,6 @@ interface PDFViewerProps {
   setClickedCommentId: (id: number | null) => void;
 }
 
-/** 간단한 우선순위 스케줄러: 근접도 우선 + 동시성 K */
-class RenderScheduler {
-  private K: number;
-  private inFlight = 0;
-  private q: { id: string; priority: number; run: () => Promise<void> }[] = [];
-  private enqueued = new Set<string>();
-
-  constructor(K = 4) {
-    this.K = K;
-  }
-  setConcurrency(k: number) {
-    this.K = Math.max(1, k);
-    this.drain();
-  }
-  enqueue(job: { id: string; priority: number; run: () => Promise<void> }) {
-    if (this.enqueued.has(job.id)) return;
-    this.enqueued.add(job.id);
-    this.q.push(job);
-    // priority 낮을수록 먼저
-    this.q.sort((a, b) => a.priority - b.priority);
-    this.drain();
-  }
-  private drain() {
-    while (this.inFlight < this.K && this.q.length) {
-      const job = this.q.shift()!;
-      this.inFlight++;
-      job
-        .run()
-        .catch(() => {})
-        .finally(() => {
-          this.inFlight--;
-          this.enqueued.delete(job.id);
-          this.drain();
-        });
-    }
-  }
-}
-
 const PDFViewer = ({
   pdfSrc,
   addFeedbackPoint,
@@ -87,9 +49,8 @@ const PDFViewer = ({
 
   // 페이지 DOM 보관
   const pageElements = useRef<Map<number, PDFElement>>(new Map());
-  // Shared IO / Scheduler
+  // Shared IntersectionObserver
   const observerRef = useRef<IntersectionObserver | null>(null);
-  const schedulerRef = useRef<RenderScheduler>(new RenderScheduler(4));
 
   // PDF 로딩
   useEffect(() => {
@@ -138,38 +99,14 @@ const PDFViewer = ({
       scheduledRef.current = false;
       const pages = Array.from(pendingRef.current);
       pendingRef.current.clear();
-
-      // 우선순위 = viewport 중심으로부터의 거리(px)
-      const viewportCenter =
-        typeof window !== "undefined"
-          ? window.scrollY + window.innerHeight / 2
-          : 0;
-
-      pages
-        .map((n) => {
-          const el = pageElements.current.get(n);
-          const rect = el?.getBoundingClientRect();
-          const pageCenter =
-            (rect?.top ?? 0) + window.scrollY + (rect?.height ?? 0) / 2;
-          const priority = Math.abs(pageCenter - viewportCenter);
-          return { n, el, priority };
-        })
-        .sort((a, b) => a.priority - b.priority)
-        .forEach(({ n, el, priority }) => {
-          if (!el) return;
-          // 이미 렌더링 완료면 스킵
-          if (el.rendered?.()) return;
-
-          schedulerRef.current.enqueue({
-            id: `page-${n}`,
-            priority,
-            run: async () => {
-              // 중간에 attach 안됐으면 skip
-              if (!el.renderPage) return;
-              await el.renderPage();
-            },
-          });
-        });
+      pages.forEach((n) => {
+        const el = pageElements.current.get(n);
+        if (!el) return;
+        if (el.rendered?.()) return;
+        if (el.renderPage) {
+          el.renderPage().catch(() => {});
+        }
+      });
     });
   }, []);
 
@@ -213,7 +150,6 @@ const PDFViewer = ({
       observerRef.current = null;
       pendingRef.current.clear();
       scheduledRef.current = false;
-      // 스케줄러는 유지(리스트 새로 렌더 시에도 in-flight 마무리 가능)
     };
   }, [pdf, numPages, flushInRaf]);
 

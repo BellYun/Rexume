@@ -1,0 +1,519 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (개선 전)",
+      "shortName": "basic",
+      "tbt": {
+        "avg": 1248,
+        "min": 1062,
+        "max": 1371,
+        "median": 1297
+      },
+      "fcp": {
+        "avg": 278,
+        "min": 216,
+        "max": 472,
+        "median": 262
+      },
+      "firstCanvasTime": {
+        "avg": 2450,
+        "min": 2145,
+        "max": 3259,
+        "median": 2333
+      },
+      "longTaskCount": {
+        "avg": 6,
+        "min": 5,
+        "max": 7,
+        "median": 6
+      },
+      "longTaskMax": {
+        "avg": 770,
+        "min": 621,
+        "max": 843,
+        "median": 785
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "loadComplete": {
+        "avg": 1292,
+        "min": 1020,
+        "max": 1858,
+        "median": 1225
+      },
+      "runs": 10
+    },
+    {
+      "version": "Simple 75vh + rAF (기존 최고)",
+      "shortName": "simple-75vh-raf",
+      "tbt": {
+        "avg": 942,
+        "min": 847,
+        "max": 1015,
+        "median": 939
+      },
+      "fcp": {
+        "avg": 267,
+        "min": 228,
+        "max": 340,
+        "median": 248
+      },
+      "firstCanvasTime": {
+        "avg": 2324,
+        "min": 1947,
+        "max": 3703,
+        "median": 2194
+      },
+      "longTaskCount": {
+        "avg": 5,
+        "min": 4,
+        "max": 6,
+        "median": 5
+      },
+      "longTaskMax": {
+        "avg": 748,
+        "min": 639,
+        "max": 791,
+        "median": 764
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "loadComplete": {
+        "avg": 1297,
+        "min": 1049,
+        "max": 2277,
+        "median": 1199
+      },
+      "runs": 10
+    },
+    {
+      "version": "PDF Optimization (번들 최적화)",
+      "shortName": "pdf-optimazation",
+      "tbt": {
+        "avg": 939,
+        "min": 745,
+        "max": 987,
+        "median": 957
+      },
+      "fcp": {
+        "avg": 249,
+        "min": 236,
+        "max": 264,
+        "median": 250
+      },
+      "firstCanvasTime": {
+        "avg": 2110,
+        "min": 1824,
+        "max": 2258,
+        "median": 2127
+      },
+      "longTaskCount": {
+        "avg": 6,
+        "min": 5,
+        "max": 6,
+        "median": 6
+      },
+      "longTaskMax": {
+        "avg": 727,
+        "min": 551,
+        "max": 766,
+        "median": 751
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "loadComplete": {
+        "avg": 1101,
+        "min": 848,
+        "max": 1287,
+        "median": 1108
+      },
+      "runs": 10
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "tbt": 1275,
+        "fcp": 472,
+        "firstCanvasTime": 2585,
+        "longTaskCount": 7,
+        "longTaskMax": 729,
+        "canvasCount": 147,
+        "loadComplete": 1496,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 1
+      },
+      {
+        "tbt": 1298,
+        "fcp": 268,
+        "firstCanvasTime": 2316,
+        "longTaskCount": 5,
+        "longTaskMax": 778,
+        "canvasCount": 147,
+        "loadComplete": 1331,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 2
+      },
+      {
+        "tbt": 1324,
+        "fcp": 256,
+        "firstCanvasTime": 2391,
+        "longTaskCount": 6,
+        "longTaskMax": 811,
+        "canvasCount": 147,
+        "loadComplete": 1192,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 3
+      },
+      {
+        "tbt": 1310,
+        "fcp": 284,
+        "firstCanvasTime": 2349,
+        "longTaskCount": 6,
+        "longTaskMax": 801,
+        "canvasCount": 147,
+        "loadComplete": 1205,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 4
+      },
+      {
+        "tbt": 1147,
+        "fcp": 252,
+        "firstCanvasTime": 2305,
+        "longTaskCount": 6,
+        "longTaskMax": 786,
+        "canvasCount": 147,
+        "loadComplete": 1255,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 5
+      },
+      {
+        "tbt": 1062,
+        "fcp": 264,
+        "firstCanvasTime": 2679,
+        "longTaskCount": 7,
+        "longTaskMax": 828,
+        "canvasCount": 147,
+        "loadComplete": 1245,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 6
+      },
+      {
+        "tbt": 1316,
+        "fcp": 260,
+        "firstCanvasTime": 2145,
+        "longTaskCount": 6,
+        "longTaskMax": 783,
+        "canvasCount": 147,
+        "loadComplete": 1188,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 7
+      },
+      {
+        "tbt": 1371,
+        "fcp": 268,
+        "firstCanvasTime": 3259,
+        "longTaskCount": 5,
+        "longTaskMax": 843,
+        "canvasCount": 147,
+        "loadComplete": 1858,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 8
+      },
+      {
+        "tbt": 1296,
+        "fcp": 236,
+        "firstCanvasTime": 2300,
+        "longTaskCount": 6,
+        "longTaskMax": 719,
+        "canvasCount": 147,
+        "loadComplete": 1126,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 9
+      },
+      {
+        "tbt": 1078,
+        "fcp": 216,
+        "firstCanvasTime": 2174,
+        "longTaskCount": 6,
+        "longTaskMax": 621,
+        "canvasCount": 147,
+        "loadComplete": 1020,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 10
+      }
+    ],
+    "simple-75vh-raf": [
+      {
+        "tbt": 922,
+        "fcp": 268,
+        "firstCanvasTime": 2193,
+        "longTaskCount": 5,
+        "longTaskMax": 779,
+        "canvasCount": 147,
+        "loadComplete": 1210,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 1
+      },
+      {
+        "tbt": 909,
+        "fcp": 248,
+        "firstCanvasTime": 2220,
+        "longTaskCount": 5,
+        "longTaskMax": 791,
+        "canvasCount": 147,
+        "loadComplete": 1281,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 2
+      },
+      {
+        "tbt": 987,
+        "fcp": 236,
+        "firstCanvasTime": 2195,
+        "longTaskCount": 5,
+        "longTaskMax": 781,
+        "canvasCount": 147,
+        "loadComplete": 1167,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 3
+      },
+      {
+        "tbt": 1015,
+        "fcp": 240,
+        "firstCanvasTime": 2287,
+        "longTaskCount": 5,
+        "longTaskMax": 785,
+        "canvasCount": 147,
+        "loadComplete": 1237,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 4
+      },
+      {
+        "tbt": 976,
+        "fcp": 284,
+        "firstCanvasTime": 2050,
+        "longTaskCount": 4,
+        "longTaskMax": 759,
+        "canvasCount": 147,
+        "loadComplete": 1174,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 5
+      },
+      {
+        "tbt": 911,
+        "fcp": 340,
+        "firstCanvasTime": 3703,
+        "longTaskCount": 5,
+        "longTaskMax": 668,
+        "canvasCount": 147,
+        "loadComplete": 2277,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 6
+      },
+      {
+        "tbt": 979,
+        "fcp": 336,
+        "firstCanvasTime": 2374,
+        "longTaskCount": 5,
+        "longTaskMax": 766,
+        "canvasCount": 147,
+        "loadComplete": 1244,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 7
+      },
+      {
+        "tbt": 847,
+        "fcp": 240,
+        "firstCanvasTime": 1947,
+        "longTaskCount": 5,
+        "longTaskMax": 639,
+        "canvasCount": 147,
+        "loadComplete": 1049,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 8
+      },
+      {
+        "tbt": 945,
+        "fcp": 228,
+        "firstCanvasTime": 2092,
+        "longTaskCount": 4,
+        "longTaskMax": 751,
+        "canvasCount": 147,
+        "loadComplete": 1138,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 9
+      },
+      {
+        "tbt": 933,
+        "fcp": 248,
+        "firstCanvasTime": 2177,
+        "longTaskCount": 6,
+        "longTaskMax": 761,
+        "canvasCount": 147,
+        "loadComplete": 1188,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 10
+      }
+    ],
+    "pdf-optimazation": [
+      {
+        "tbt": 745,
+        "fcp": 236,
+        "firstCanvasTime": 1824,
+        "longTaskCount": 5,
+        "longTaskMax": 551,
+        "canvasCount": 147,
+        "loadComplete": 848,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 1
+      },
+      {
+        "tbt": 949,
+        "fcp": 264,
+        "firstCanvasTime": 2130,
+        "longTaskCount": 6,
+        "longTaskMax": 751,
+        "canvasCount": 147,
+        "loadComplete": 1103,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 2
+      },
+      {
+        "tbt": 981,
+        "fcp": 248,
+        "firstCanvasTime": 2147,
+        "longTaskCount": 6,
+        "longTaskMax": 758,
+        "canvasCount": 147,
+        "loadComplete": 1103,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 3
+      },
+      {
+        "tbt": 942,
+        "fcp": 236,
+        "firstCanvasTime": 2258,
+        "longTaskCount": 6,
+        "longTaskMax": 706,
+        "canvasCount": 147,
+        "loadComplete": 1002,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 4
+      },
+      {
+        "tbt": 987,
+        "fcp": 256,
+        "firstCanvasTime": 2083,
+        "longTaskCount": 6,
+        "longTaskMax": 762,
+        "canvasCount": 147,
+        "loadComplete": 1157,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 5
+      },
+      {
+        "tbt": 963,
+        "fcp": 256,
+        "firstCanvasTime": 2201,
+        "longTaskCount": 6,
+        "longTaskMax": 733,
+        "canvasCount": 147,
+        "loadComplete": 1287,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 6
+      },
+      {
+        "tbt": 955,
+        "fcp": 236,
+        "firstCanvasTime": 2036,
+        "longTaskCount": 6,
+        "longTaskMax": 741,
+        "canvasCount": 147,
+        "loadComplete": 1082,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 7
+      },
+      {
+        "tbt": 959,
+        "fcp": 248,
+        "firstCanvasTime": 2202,
+        "longTaskCount": 5,
+        "longTaskMax": 753,
+        "canvasCount": 147,
+        "loadComplete": 1119,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 8
+      },
+      {
+        "tbt": 936,
+        "fcp": 260,
+        "firstCanvasTime": 2123,
+        "longTaskCount": 5,
+        "longTaskMax": 751,
+        "canvasCount": 147,
+        "loadComplete": 1112,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 9
+      },
+      {
+        "tbt": 973,
+        "fcp": 252,
+        "firstCanvasTime": 2096,
+        "longTaskCount": 5,
+        "longTaskMax": 766,
+        "canvasCount": 147,
+        "loadComplete": 1197,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 10
+      }
+    ]
+  },
+  "meta": {
+    "runs": 10,
+    "cpuThrottle": 4,
+    "baseUrl": "http://localhost:3000",
+    "timestamp": "2026-03-06T05:41:30.561Z"
+  }
+}

@@ -11,11 +11,17 @@
  * 사용:
  *   node bench/pdf-firstpage-performance.js
  * 
- * 측정 URL:
- * - http://localhost:3000/feedback-basic/4
- * - http://localhost:3000/feedback/4?version=simple
- * - http://localhost:3000/feedback/4?version=raf
- * - http://localhost:3000/feedback/4?version=raf-windowing
+ * 측정 URL (9개 버전):
+ * - Basic (개선 전)
+ * - Simple (IntersectionObserver)
+ * - Simple (No Track)
+ * - Simple 75vh + rAF
+ * - Simple 75vh + rAF (No Concurrent Limit)
+ * - RAF (requestAnimationFrame)
+ * - Lazy (지연된 getPage)
+ * - Opt9: RAF 페인트 제거
+ * - Opt9B: RAF 배칭 제거
+ * - Opt9C: Scheduler 제거
  */
 
 const puppeteer = require('puppeteer');
@@ -23,33 +29,110 @@ const fs = require('fs');
 const path = require('path');
 
 // ---- 설정 ----
-const CPU_THROTTLE = 4; // 4x 스로틀링
-const RUNS_PER_URL = 5; // URL당 반복 횟수
+const CPU_THROTTLE = Number(process.env.CPU_THROTTLE || 4); // 환경변수로 조정 가능 (기본 4배)
+const RUNS_PER_URL = Number(process.env.RUNS_PER_URL || 10); // URL당 반복 횟수 (환경변수로 조정 가능, 기본 10회)
 const HEADLESS = true;
+const BASE_URL = process.env.TEST_URL || 'http://localhost:3000'; // Docker 지원
 
-// 측정할 URL 목록
-const TEST_URLS = [
+// 측정할 URL 목록 (기본)
+const DEFAULT_TEST_URLS = [
   {
-    url: 'http://localhost:3000/feedback-basic/4',
+    url: `${BASE_URL}/feedback-basic/4`,
     name: 'Basic (개선 전)',
     shortName: 'basic'
   },
   {
-    url: 'http://localhost:3000/feedback/4?version=simple',
+    url: `${BASE_URL}/feedback/4?version=simple`,
     name: 'Simple (IntersectionObserver)',
     shortName: 'simple'
   },
   {
-    url: 'http://localhost:3000/feedback/4?version=raf',
+    url: `${BASE_URL}/feedback/4?version=simple-notrack`,
+    name: 'Simple (No Track)',
+    shortName: 'simple-notrack'
+  },
+  {
+    url: `${BASE_URL}/feedback/4?version=simple-75vh-raf-paint`,
+    name: 'Simple 75vh + rAF',
+    shortName: 'simple-75vh-raf-paint'
+  },
+  {
+    url: `${BASE_URL}/feedback/4?version=simple-75vh-raf-paint-nc`,
+    name: 'Simple 75vh + rAF (No Concurrent Limit)',
+    shortName: 'simple-75vh-raf-paint-nc'
+  },
+  {
+    url: `${BASE_URL}/feedback/4?version=raf`,
     name: 'RAF (requestAnimationFrame)',
     shortName: 'raf'
   },
   {
-    url: 'http://localhost:3000/feedback/4?version=raf-windowing',
-    name: 'RAF Windowing (점진적 마운트)',
-    shortName: 'raf-windowing'
+    url: `${BASE_URL}/feedback/4?version=lazy`,
+    name: 'Lazy (지연된 getPage)',
+    shortName: 'lazy'
+  },
+  {
+    url: `${BASE_URL}/feedback/4?version=lazy-pure-raf-lean`,
+    name: 'Lazy + Pure rAF (Lean)',
+    shortName: 'lazy-pure-raf-lean'
+  },
+  {
+    url: `${BASE_URL}/feedback/4?version=opt9-raf-nopaint`,
+    name: 'Opt9: RAF 페인트 제거',
+    shortName: 'opt9-raf-nopaint'
+  },
+  {
+    url: `${BASE_URL}/feedback/4?version=opt9-raf-nobatch`,
+    name: 'Opt9B: RAF 배칭 제거',
+    shortName: 'opt9-raf-nobatch'
+  },
+  {
+    url: `${BASE_URL}/feedback/4?version=opt9-raf-nobatch-noscheduler`,
+    name: 'Opt9C: Scheduler 제거',
+    shortName: 'opt9-raf-nobatch-noscheduler'
   }
 ];
+
+const TEST_SCOPE = process.env.TEST_SCOPE || 'default';
+
+const TEST_URLS =
+  TEST_SCOPE === 'simple-only'
+    ? [
+        {
+          url: `${BASE_URL}/feedback/4?version=simple-notrack`,
+          name: 'Simple (No Track)',
+          shortName: 'simple-notrack',
+        },
+        {
+          url: `${BASE_URL}/feedback/4?version=simple-75vh-raf-paint`,
+          name: 'Simple 75vh + rAF',
+          shortName: 'simple-75vh-raf-paint',
+        },
+      ]
+    : TEST_SCOPE === 'three-versions'
+    ? [
+        {
+          url: `${BASE_URL}/feedback-basic/4`,
+          name: 'Basic (개선 전)',
+          shortName: 'basic'
+        },
+        {
+          url: `${BASE_URL}/feedback/4?version=simple-notrack`,
+          name: 'Simple (No Track)',
+          shortName: 'simple-notrack',
+        },
+        {
+          url: `${BASE_URL}/feedback/4?version=simple-75vh-raf-paint`,
+          name: 'Simple 75vh + rAF',
+          shortName: 'simple-75vh-raf-paint',
+        },
+        {
+          url: `${BASE_URL}/feedback/4?version=simple-75vh-raf-paint-nc`,
+          name: 'Simple 75vh + rAF (No Concurrent Limit)',
+          shortName: 'simple-75vh-raf-paint-nc',
+        },
+      ]
+    : DEFAULT_TEST_URLS;
 
 const benchDir = __dirname;
 const outDir = path.join(benchDir, 'results');
@@ -62,12 +145,25 @@ async function measurePDFFirstPagePerformance(testUrl, versionName, runNumber = 
   console.log(`\n📊 측정 시작 (${runNumber}회차): ${versionName}`);
   console.log(`   URL: ${testUrl}`);
   
-  const browser = await puppeteer.launch({
+  // Docker 환경 감지
+  const isDocker = fs.existsSync('/.dockerenv');
+  
+  const launchOptions = {
     headless: HEADLESS ? 'new' : false,
     defaultViewport: { width: 1920, height: 1080 },
-    args: ['--disable-dev-shm-usage', '--no-sandbox'],
+    args: ['--disable-dev-shm-usage', '--no-sandbox', '--crash-dumps-dir=/tmp'],
     protocolTimeout: 120000, // 2분
-  });
+  };
+  
+  if (isDocker) {
+    // Docker 환경: 시스템 Chromium 사용
+    launchOptions.executablePath = '/usr/bin/chromium';
+  } else if (fs.existsSync('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome')) {
+    // macOS: 시스템 Chrome 사용
+    launchOptions.executablePath = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+  }
+  
+  const browser = await puppeteer.launch(launchOptions);
 
   const page = await browser.newPage();
   

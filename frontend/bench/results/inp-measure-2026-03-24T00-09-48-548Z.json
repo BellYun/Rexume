@@ -1,0 +1,3597 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (스케줄링 없음)",
+      "shortName": "basic",
+      "inp": {
+        "avg": 170672283,
+        "min": 170628576,
+        "max": 170715480,
+        "median": 170670576
+      },
+      "interactions": {
+        "avg": 24427,
+        "min": 12502,
+        "max": 48357,
+        "median": 14323
+      },
+      "events": {
+        "avg": 24485,
+        "min": 12557,
+        "max": 48429,
+        "median": 14363
+      },
+      "inputDelay": {
+        "avg": 8161,
+        "min": 3778,
+        "max": 15188,
+        "median": 5762
+      },
+      "presDelay": {
+        "avg": 170658007,
+        "min": 170618348,
+        "max": 170706535,
+        "median": 170650562
+      },
+      "processing": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "probeMed": {
+        "avg": 13,
+        "min": 8,
+        "max": 16,
+        "median": 15
+      },
+      "probeP75": {
+        "avg": 83,
+        "min": 51,
+        "max": 109,
+        "median": 91
+      },
+      "probeP95": {
+        "avg": 949,
+        "min": 125,
+        "max": 3783,
+        "median": 325
+      },
+      "probeMax": {
+        "avg": 1222,
+        "min": 304,
+        "max": 3783,
+        "median": 730
+      },
+      "probeCount": {
+        "avg": 29,
+        "min": 15,
+        "max": 45,
+        "median": 31
+      },
+      "tbt": {
+        "avg": 1259,
+        "min": 1113,
+        "max": 1473,
+        "median": 1244
+      },
+      "ltCount": {
+        "avg": 8,
+        "min": 6,
+        "max": 9,
+        "median": 7
+      },
+      "ltAvg": {
+        "avg": 229,
+        "min": 207,
+        "max": 254,
+        "median": 222
+      },
+      "ltMax": {
+        "avg": 695,
+        "min": 594,
+        "max": 771,
+        "median": 745
+      },
+      "runs": 5
+    },
+    {
+      "version": "Simple (IO)",
+      "shortName": "simple",
+      "inp": {
+        "avg": 170759290,
+        "min": 170730000,
+        "max": 170787936,
+        "median": 170759496
+      },
+      "interactions": {
+        "avg": 15151,
+        "min": 13038,
+        "max": 20403,
+        "median": 14034
+      },
+      "events": {
+        "avg": 15196,
+        "min": 13084,
+        "max": 20442,
+        "median": 14083
+      },
+      "inputDelay": {
+        "avg": 3956,
+        "min": 3772,
+        "max": 4272,
+        "median": 3957
+      },
+      "presDelay": {
+        "avg": 170750795,
+        "min": 170721435,
+        "max": 170779887,
+        "median": 170751121
+      },
+      "processing": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "probeMed": {
+        "avg": 15,
+        "min": 8,
+        "max": 31,
+        "median": 12
+      },
+      "probeP75": {
+        "avg": 65,
+        "min": 36,
+        "max": 107,
+        "median": 49
+      },
+      "probeP95": {
+        "avg": 313,
+        "min": 141,
+        "max": 796,
+        "median": 235
+      },
+      "probeMax": {
+        "avg": 799,
+        "min": 141,
+        "max": 2584,
+        "median": 241
+      },
+      "probeCount": {
+        "avg": 16,
+        "min": 14,
+        "max": 21,
+        "median": 16
+      },
+      "tbt": {
+        "avg": 944,
+        "min": 869,
+        "max": 1025,
+        "median": 957
+      },
+      "ltCount": {
+        "avg": 6,
+        "min": 5,
+        "max": 7,
+        "median": 6
+      },
+      "ltAvg": {
+        "avg": 216,
+        "min": 197,
+        "max": 237,
+        "median": 209
+      },
+      "ltMax": {
+        "avg": 689,
+        "min": 630,
+        "max": 764,
+        "median": 650
+      },
+      "runs": 5
+    },
+    {
+      "version": "Optimized (IO+RAF+Limit)",
+      "shortName": "optimized",
+      "inp": {
+        "avg": 170833091,
+        "min": 170802448,
+        "max": 170862696,
+        "median": 170833704
+      },
+      "interactions": {
+        "avg": 15542,
+        "min": 13099,
+        "max": 23376,
+        "median": 13625
+      },
+      "events": {
+        "avg": 15591,
+        "min": 13150,
+        "max": 23420,
+        "median": 13673
+      },
+      "inputDelay": {
+        "avg": 4556,
+        "min": 3790,
+        "max": 6689,
+        "median": 4167
+      },
+      "presDelay": {
+        "avg": 170824179,
+        "min": 170793837,
+        "max": 170853897,
+        "median": 170825116
+      },
+      "processing": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "probeMed": {
+        "avg": 14,
+        "min": 10,
+        "max": 20,
+        "median": 13
+      },
+      "probeP75": {
+        "avg": 96,
+        "min": 76,
+        "max": 107,
+        "median": 102
+      },
+      "probeP95": {
+        "avg": 691,
+        "min": 175,
+        "max": 1720,
+        "median": 584
+      },
+      "probeMax": {
+        "avg": 694,
+        "min": 175,
+        "max": 1720,
+        "median": 584
+      },
+      "probeCount": {
+        "avg": 19,
+        "min": 12,
+        "max": 36,
+        "median": 15
+      },
+      "tbt": {
+        "avg": 948,
+        "min": 839,
+        "max": 1029,
+        "median": 959
+      },
+      "ltCount": {
+        "avg": 7,
+        "min": 6,
+        "max": 8,
+        "median": 7
+      },
+      "ltAvg": {
+        "avg": 203,
+        "min": 178,
+        "max": 226,
+        "median": 203
+      },
+      "ltMax": {
+        "avg": 697,
+        "min": 640,
+        "max": 756,
+        "median": 720
+      },
+      "runs": 5
+    },
+    {
+      "version": "Opt14 (IO+RAF+Cache)",
+      "shortName": "opt14",
+      "inp": {
+        "avg": 170907368,
+        "min": 170877968,
+        "max": 170937048,
+        "median": 170907480
+      },
+      "interactions": {
+        "avg": 17745,
+        "min": 16200,
+        "max": 20567,
+        "median": 17098
+      },
+      "events": {
+        "avg": 17781,
+        "min": 16235,
+        "max": 20593,
+        "median": 17141
+      },
+      "inputDelay": {
+        "avg": 4876,
+        "min": 3861,
+        "max": 5673,
+        "median": 5165
+      },
+      "presDelay": {
+        "avg": 170898307,
+        "min": 170868356,
+        "max": 170928083,
+        "median": 170898399
+      },
+      "processing": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "probeMed": {
+        "avg": 10,
+        "min": 8,
+        "max": 13,
+        "median": 10
+      },
+      "probeP75": {
+        "avg": 97,
+        "min": 22,
+        "max": 183,
+        "median": 93
+      },
+      "probeP95": {
+        "avg": 1632,
+        "min": 584,
+        "max": 2673,
+        "median": 1438
+      },
+      "probeMax": {
+        "avg": 1632,
+        "min": 584,
+        "max": 2673,
+        "median": 1438
+      },
+      "probeCount": {
+        "avg": 17,
+        "min": 16,
+        "max": 18,
+        "median": 17
+      },
+      "tbt": {
+        "avg": 996,
+        "min": 938,
+        "max": 1040,
+        "median": 1006
+      },
+      "ltCount": {
+        "avg": 7,
+        "min": 6,
+        "max": 7,
+        "median": 7
+      },
+      "ltAvg": {
+        "avg": 208,
+        "min": 200,
+        "max": 220,
+        "median": 207
+      },
+      "ltMax": {
+        "avg": 747,
+        "min": 731,
+        "max": 764,
+        "median": 750
+      },
+      "runs": 5
+    },
+    {
+      "version": "Opt15 (Worker+RAF)",
+      "shortName": "opt15",
+      "inp": {
+        "avg": 170979597,
+        "min": 170951240,
+        "max": 171008136,
+        "median": 170979536
+      },
+      "interactions": {
+        "avg": 16483,
+        "min": 14182,
+        "max": 21032,
+        "median": 16408
+      },
+      "events": {
+        "avg": 16525,
+        "min": 14227,
+        "max": 21058,
+        "median": 16456
+      },
+      "inputDelay": {
+        "avg": 3899,
+        "min": 3441,
+        "max": 4490,
+        "median": 4018
+      },
+      "presDelay": {
+        "avg": 170971307,
+        "min": 170942728,
+        "max": 170999571,
+        "median": 170971281
+      },
+      "processing": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "probeMed": {
+        "avg": 10,
+        "min": 7,
+        "max": 15,
+        "median": 9
+      },
+      "probeP75": {
+        "avg": 60,
+        "min": 15,
+        "max": 105,
+        "median": 71
+      },
+      "probeP95": {
+        "avg": 1266,
+        "min": 119,
+        "max": 3813,
+        "median": 426
+      },
+      "probeMax": {
+        "avg": 1470,
+        "min": 175,
+        "max": 3813,
+        "median": 1311
+      },
+      "probeCount": {
+        "avg": 19,
+        "min": 15,
+        "max": 27,
+        "median": 15
+      },
+      "tbt": {
+        "avg": 724,
+        "min": 515,
+        "max": 910,
+        "median": 683
+      },
+      "ltCount": {
+        "avg": 5,
+        "min": 4,
+        "max": 6,
+        "median": 4
+      },
+      "ltAvg": {
+        "avg": 226,
+        "min": 200,
+        "max": 249,
+        "median": 234
+      },
+      "ltMax": {
+        "avg": 681,
+        "min": 539,
+        "max": 758,
+        "median": 699
+      },
+      "runs": 5
+    },
+    {
+      "version": "Opt15-NL (Worker+RAF)",
+      "shortName": "opt15-nolimit",
+      "inp": {
+        "avg": 171051747,
+        "min": 171022872,
+        "max": 171080480,
+        "median": 171051856
+      },
+      "interactions": {
+        "avg": 14898,
+        "min": 12210,
+        "max": 17587,
+        "median": 15081
+      },
+      "events": {
+        "avg": 14939,
+        "min": 12250,
+        "max": 17626,
+        "median": 15126
+      },
+      "inputDelay": {
+        "avg": 3817,
+        "min": 3651,
+        "max": 4096,
+        "median": 3690
+      },
+      "presDelay": {
+        "avg": 171043454,
+        "min": 171014296,
+        "max": 171072349,
+        "median": 171043615
+      },
+      "processing": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "probeMed": {
+        "avg": 10,
+        "min": 8,
+        "max": 14,
+        "median": 9
+      },
+      "probeP75": {
+        "avg": 68,
+        "min": 15,
+        "max": 105,
+        "median": 84
+      },
+      "probeP95": {
+        "avg": 1462,
+        "min": 107,
+        "max": 3397,
+        "median": 1147
+      },
+      "probeMax": {
+        "avg": 1674,
+        "min": 183,
+        "max": 3397,
+        "median": 1238
+      },
+      "probeCount": {
+        "avg": 21,
+        "min": 18,
+        "max": 27,
+        "median": 19
+      },
+      "tbt": {
+        "avg": 823,
+        "min": 710,
+        "max": 991,
+        "median": 838
+      },
+      "ltCount": {
+        "avg": 5,
+        "min": 4,
+        "max": 5,
+        "median": 5
+      },
+      "ltAvg": {
+        "avg": 240,
+        "min": 212,
+        "max": 264,
+        "median": 237
+      },
+      "ltMax": {
+        "avg": 714,
+        "min": 613,
+        "max": 795,
+        "median": 725
+      },
+      "runs": 5
+    },
+    {
+      "version": "WorkerOnly (Worker)",
+      "shortName": "worker-only",
+      "inp": {
+        "avg": 171124712,
+        "min": 171095544,
+        "max": 171154080,
+        "median": 171124840
+      },
+      "interactions": {
+        "avg": 16284,
+        "min": 13359,
+        "max": 18446,
+        "median": 17796
+      },
+      "events": {
+        "avg": 16323,
+        "min": 13409,
+        "max": 18481,
+        "median": 17826
+      },
+      "inputDelay": {
+        "avg": 4392,
+        "min": 3610,
+        "max": 5265,
+        "median": 4489
+      },
+      "presDelay": {
+        "avg": 171116203,
+        "min": 171086692,
+        "max": 171145458,
+        "median": 171116062
+      },
+      "processing": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "probeMed": {
+        "avg": 11,
+        "min": 9,
+        "max": 15,
+        "median": 10
+      },
+      "probeP75": {
+        "avg": 49,
+        "min": 17,
+        "max": 84,
+        "median": 40
+      },
+      "probeP95": {
+        "avg": 1343,
+        "min": 157,
+        "max": 4344,
+        "median": 456
+      },
+      "probeMax": {
+        "avg": 1940,
+        "min": 157,
+        "max": 4344,
+        "median": 2003
+      },
+      "probeCount": {
+        "avg": 27,
+        "min": 19,
+        "max": 41,
+        "median": 22
+      },
+      "tbt": {
+        "avg": 878,
+        "min": 736,
+        "max": 1072,
+        "median": 773
+      },
+      "ltCount": {
+        "avg": 5,
+        "min": 4,
+        "max": 5,
+        "median": 5
+      },
+      "ltAvg": {
+        "avg": 262,
+        "min": 218,
+        "max": 340,
+        "median": 255
+      },
+      "ltMax": {
+        "avg": 754,
+        "min": 730,
+        "max": 765,
+        "median": 758
+      },
+      "runs": 5
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "inp": 170628576,
+        "interactionCount": 12502,
+        "interactionDurations": {
+          "avg": 170351533,
+          "min": 16,
+          "max": 170628744,
+          "med": 170624136,
+          "p75": 170625880,
+          "p95": 170627856
+        },
+        "totalEvents": 12557,
+        "eventDuration": {
+          "avg": 169605388,
+          "min": 16,
+          "max": 170628744,
+          "med": 170624112,
+          "p75": 170625856,
+          "p95": 170627856
+        },
+        "inputDelay": {
+          "avg": 6072,
+          "min": 0,
+          "max": 10254,
+          "med": 5762,
+          "p75": 7486,
+          "p95": 9479
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 14,
+          "med": 0,
+          "p75": 14,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169599316,
+          "min": -2,
+          "max": 170624963,
+          "med": 170618348,
+          "p75": 170618352,
+          "p95": 170618366
+        },
+        "probe": {
+          "avg": 38,
+          "min": 0,
+          "max": 304,
+          "med": 8,
+          "p75": 61,
+          "p95": 134
+        },
+        "probeTimeout": {
+          "avg": 16,
+          "min": 0,
+          "max": 125,
+          "med": 0,
+          "p75": 8,
+          "p95": 109
+        },
+        "probeRaf": {
+          "avg": 22,
+          "min": 0,
+          "max": 304,
+          "med": 7,
+          "p75": 9,
+          "p95": 108
+        },
+        "probeCount": 31,
+        "tbt": 1113,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 221,
+          "min": 55,
+          "max": 611,
+          "med": 137,
+          "p75": 390,
+          "p95": 611
+        },
+        "version": "Basic (스케줄링 없음)",
+        "run": 1,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170644448,
+        "interactionCount": 13354,
+        "interactionDurations": {
+          "avg": 170384105,
+          "min": 16,
+          "max": 170644448,
+          "med": 170639128,
+          "p75": 170641280,
+          "p95": 170643688
+        },
+        "totalEvents": 13400,
+        "eventDuration": {
+          "avg": 169799204,
+          "min": 16,
+          "max": 170644448,
+          "med": 170639120,
+          "p75": 170641256,
+          "p95": 170643688
+        },
+        "inputDelay": {
+          "avg": 4381,
+          "min": 4,
+          "max": 8857,
+          "med": 3878,
+          "p75": 6015,
+          "p95": 8227
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 12,
+          "med": 0,
+          "p75": 12,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169794824,
+          "min": 2,
+          "max": 170642079,
+          "med": 170635237,
+          "p75": 170635241,
+          "p95": 170635253
+        },
+        "probe": {
+          "avg": 63,
+          "min": 1,
+          "max": 325,
+          "med": 16,
+          "p75": 105,
+          "p95": 325
+        },
+        "probeTimeout": {
+          "avg": 58,
+          "min": 0,
+          "max": 320,
+          "med": 13,
+          "p75": 95,
+          "p95": 320
+        },
+        "probeRaf": {
+          "avg": 6,
+          "min": 1,
+          "max": 24,
+          "med": 5,
+          "p75": 8,
+          "p95": 24
+        },
+        "probeCount": 16,
+        "tbt": 1244,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 239,
+          "min": 72,
+          "max": 594,
+          "med": 134,
+          "p75": 443,
+          "p95": 594
+        },
+        "version": "Basic (스케줄링 없음)",
+        "run": 2,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170670576,
+        "interactionCount": 33600,
+        "interactionDurations": {
+          "avg": 170534939,
+          "min": 16,
+          "max": 170670576,
+          "med": 170662832,
+          "p75": 170667200,
+          "p95": 170670072
+        },
+        "totalEvents": 33674,
+        "eventDuration": {
+          "avg": 170160185,
+          "min": 16,
+          "max": 170670576,
+          "med": 170662816,
+          "p75": 170667184,
+          "p95": 170670072
+        },
+        "inputDelay": {
+          "avg": 11211,
+          "min": 1,
+          "max": 19715,
+          "med": 12197,
+          "p75": 16199,
+          "p95": 19288
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 31,
+          "med": 0,
+          "p75": 31,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170148973,
+          "min": 0,
+          "max": 170657584,
+          "med": 170650562,
+          "p75": 170650565,
+          "p95": 170650731
+        },
+        "probe": {
+          "avg": 84,
+          "min": 1,
+          "max": 730,
+          "med": 15,
+          "p75": 91,
+          "p95": 379
+        },
+        "probeTimeout": {
+          "avg": 76,
+          "min": 0,
+          "max": 725,
+          "med": 8,
+          "p75": 79,
+          "p95": 371
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 52,
+          "med": 7,
+          "p75": 9,
+          "p95": 24
+        },
+        "probeCount": 36,
+        "tbt": 1473,
+        "longTaskCount": 9,
+        "longTaskDur": {
+          "avg": 222,
+          "min": 68,
+          "max": 771,
+          "med": 126,
+          "p75": 205,
+          "p95": 771
+        },
+        "version": "Basic (스케줄링 없음)",
+        "run": 3,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170702336,
+        "interactionCount": 48357,
+        "interactionDurations": {
+          "avg": 170604784,
+          "min": 16,
+          "max": 170702336,
+          "med": 170694552,
+          "p75": 170698392,
+          "p95": 170701288
+        },
+        "totalEvents": 48429,
+        "eventDuration": {
+          "avg": 170351146,
+          "min": 16,
+          "max": 170702336,
+          "med": 170694536,
+          "p75": 170698384,
+          "p95": 170701288
+        },
+        "inputDelay": {
+          "avg": 13564,
+          "min": 1,
+          "max": 22778,
+          "med": 15188,
+          "p75": 18989,
+          "p95": 21859
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 409,
+          "med": 0,
+          "p75": 409,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170337583,
+          "min": -1,
+          "max": 170686809,
+          "med": 170679353,
+          "p75": 170679356,
+          "p95": 170679362
+        },
+        "probe": {
+          "avg": 53,
+          "min": 1,
+          "max": 967,
+          "med": 15,
+          "p75": 51,
+          "p95": 125
+        },
+        "probeTimeout": {
+          "avg": 45,
+          "min": 0,
+          "max": 946,
+          "med": 6,
+          "p75": 42,
+          "p95": 118
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 24,
+          "med": 8,
+          "p75": 9,
+          "p95": 21
+        },
+        "probeCount": 45,
+        "tbt": 1330,
+        "longTaskCount": 9,
+        "longTaskDur": {
+          "avg": 207,
+          "min": 50,
+          "max": 745,
+          "med": 136,
+          "p75": 199,
+          "p95": 745
+        },
+        "version": "Basic (스케줄링 없음)",
+        "run": 4,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170715480,
+        "interactionCount": 14323,
+        "interactionDurations": {
+          "avg": 170508279,
+          "min": 16,
+          "max": 170715480,
+          "med": 170710328,
+          "p75": 170712280,
+          "p95": 170714784
+        },
+        "totalEvents": 14363,
+        "eventDuration": {
+          "avg": 170033425,
+          "min": 16,
+          "max": 170715480,
+          "med": 170710320,
+          "p75": 170712280,
+          "p95": 170714784
+        },
+        "inputDelay": {
+          "avg": 4305,
+          "min": 6,
+          "max": 8641,
+          "med": 3778,
+          "p75": 5709,
+          "p95": 8027
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 15,
+          "med": 0,
+          "p75": 15,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170029120,
+          "min": -3,
+          "max": 170712666,
+          "med": 170706535,
+          "p75": 170706540,
+          "p95": 170706553
+        },
+        "probe": {
+          "avg": 317,
+          "min": 1,
+          "max": 3783,
+          "med": 13,
+          "p75": 109,
+          "p95": 3783
+        },
+        "probeTimeout": {
+          "avg": 309,
+          "min": 0,
+          "max": 3768,
+          "med": 9,
+          "p75": 84,
+          "p95": 3768
+        },
+        "probeRaf": {
+          "avg": 7,
+          "min": 0,
+          "max": 25,
+          "med": 7,
+          "p75": 8,
+          "p95": 25
+        },
+        "probeCount": 15,
+        "tbt": 1137,
+        "longTaskCount": 6,
+        "longTaskDur": {
+          "avg": 254,
+          "min": 74,
+          "max": 753,
+          "med": 164,
+          "p75": 293,
+          "p95": 753
+        },
+        "version": "Basic (스케줄링 없음)",
+        "run": 5,
+        "rating": "POOR"
+      }
+    ],
+    "simple": [
+      {
+        "inp": 170730000,
+        "interactionCount": 14509,
+        "interactionDurations": {
+          "avg": 170502445,
+          "min": 16,
+          "max": 170730248,
+          "med": 170725416,
+          "p75": 170727264,
+          "p95": 170729616
+        },
+        "totalEvents": 14556,
+        "eventDuration": {
+          "avg": 169951908,
+          "min": 16,
+          "max": 170730248,
+          "med": 170725408,
+          "p75": 170727264,
+          "p95": 170729616
+        },
+        "inputDelay": {
+          "avg": 4559,
+          "min": 4,
+          "max": 8818,
+          "med": 3973,
+          "p75": 5820,
+          "p95": 8186
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 15,
+          "med": 0,
+          "p75": 15,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169947349,
+          "min": -3,
+          "max": 170721610,
+          "med": 170721435,
+          "p75": 170721439,
+          "p95": 170721448
+        },
+        "probe": {
+          "avg": 100,
+          "min": 1,
+          "max": 796,
+          "med": 31,
+          "p75": 92,
+          "p95": 796
+        },
+        "probeTimeout": {
+          "avg": 87,
+          "min": 0,
+          "max": 778,
+          "med": 15,
+          "p75": 84,
+          "p95": 778
+        },
+        "probeRaf": {
+          "avg": 13,
+          "min": 1,
+          "max": 76,
+          "med": 8,
+          "p75": 9,
+          "p95": 76
+        },
+        "probeCount": 14,
+        "tbt": 957,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 197,
+          "min": 74,
+          "max": 630,
+          "med": 133,
+          "p75": 212,
+          "p95": 630
+        },
+        "version": "Simple (IO)",
+        "run": 1,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170745280,
+        "interactionCount": 20403,
+        "interactionDurations": {
+          "avg": 170607061,
+          "min": 16,
+          "max": 170745280,
+          "med": 170740352,
+          "p75": 170743264,
+          "p95": 170744936
+        },
+        "totalEvents": 20442,
+        "eventDuration": {
+          "avg": 170281571,
+          "min": 16,
+          "max": 170745280,
+          "med": 170740348,
+          "p75": 170743240,
+          "p95": 170744936
+        },
+        "inputDelay": {
+          "avg": 4833,
+          "min": 4,
+          "max": 8890,
+          "med": 4272,
+          "p75": 7149,
+          "p95": 8557
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 13,
+          "med": 0,
+          "p75": 13,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170276738,
+          "min": -1,
+          "max": 170741877,
+          "med": 170736069,
+          "p75": 170736072,
+          "p95": 170736094
+        },
+        "probe": {
+          "avg": 155,
+          "min": 1,
+          "max": 2584,
+          "med": 13,
+          "p75": 41,
+          "p95": 150
+        },
+        "probeTimeout": {
+          "avg": 145,
+          "min": 0,
+          "max": 2521,
+          "med": 11,
+          "p75": 34,
+          "p95": 142
+        },
+        "probeRaf": {
+          "avg": 9,
+          "min": 0,
+          "max": 63,
+          "med": 7,
+          "p75": 9,
+          "p95": 24
+        },
+        "probeCount": 21,
+        "tbt": 873,
+        "longTaskCount": 6,
+        "longTaskDur": {
+          "avg": 209,
+          "min": 62,
+          "max": 650,
+          "med": 132,
+          "p75": 205,
+          "p95": 650
+        },
+        "version": "Simple (IO)",
+        "run": 2,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170759496,
+        "interactionCount": 13038,
+        "interactionDurations": {
+          "avg": 170519659,
+          "min": 16,
+          "max": 170759696,
+          "med": 170754896,
+          "p75": 170756928,
+          "p95": 170759080
+        },
+        "totalEvents": 13084,
+        "eventDuration": {
+          "avg": 169920156,
+          "min": 16,
+          "max": 170759696,
+          "med": 170754888,
+          "p75": 170756912,
+          "p95": 170759072
+        },
+        "inputDelay": {
+          "avg": 4258,
+          "min": 6,
+          "max": 8580,
+          "med": 3772,
+          "p75": 5791,
+          "p95": 7957
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 14,
+          "med": 0,
+          "p75": 14,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169915898,
+          "min": -1,
+          "max": 170751396,
+          "med": 170751121,
+          "p75": 170751125,
+          "p95": 170751135
+        },
+        "probe": {
+          "avg": 39,
+          "min": 0,
+          "max": 241,
+          "med": 12,
+          "p75": 36,
+          "p95": 241
+        },
+        "probeTimeout": {
+          "avg": 25,
+          "min": 0,
+          "max": 233,
+          "med": 5,
+          "p75": 19,
+          "p95": 233
+        },
+        "probeRaf": {
+          "avg": 13,
+          "min": 0,
+          "max": 87,
+          "med": 8,
+          "p75": 11,
+          "p95": 87
+        },
+        "probeCount": 16,
+        "tbt": 1025,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 207,
+          "min": 71,
+          "max": 764,
+          "med": 126,
+          "p75": 204,
+          "p95": 764
+        },
+        "version": "Simple (IO)",
+        "run": 3,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170773736,
+        "interactionCount": 14034,
+        "interactionDurations": {
+          "avg": 170550827,
+          "min": 16,
+          "max": 170773952,
+          "med": 170769424,
+          "p75": 170771416,
+          "p95": 170773392
+        },
+        "totalEvents": 14083,
+        "eventDuration": {
+          "avg": 169957417,
+          "min": 16,
+          "max": 170773952,
+          "med": 170769416,
+          "p75": 170771392,
+          "p95": 170773392
+        },
+        "inputDelay": {
+          "avg": 4374,
+          "min": 5,
+          "max": 8495,
+          "med": 3957,
+          "p75": 5931,
+          "p95": 7933
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 13,
+          "med": 0,
+          "p75": 13,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169953043,
+          "min": -1,
+          "max": 170765590,
+          "med": 170765461,
+          "p75": 170765465,
+          "p95": 170765472
+        },
+        "probe": {
+          "avg": 39,
+          "min": 1,
+          "max": 235,
+          "med": 8,
+          "p75": 49,
+          "p95": 235
+        },
+        "probeTimeout": {
+          "avg": 30,
+          "min": 0,
+          "max": 226,
+          "med": 5,
+          "p75": 35,
+          "p95": 226
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 79,
+          "med": 3,
+          "p75": 8,
+          "p95": 79
+        },
+        "probeCount": 17,
+        "tbt": 995,
+        "longTaskCount": 6,
+        "longTaskDur": {
+          "avg": 229,
+          "min": 56,
+          "max": 764,
+          "med": 138,
+          "p75": 204,
+          "p95": 764
+        },
+        "version": "Simple (IO)",
+        "run": 4,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170787936,
+        "interactionCount": 13769,
+        "interactionDurations": {
+          "avg": 170536021,
+          "min": 16,
+          "max": 170788128,
+          "med": 170783704,
+          "p75": 170785624,
+          "p95": 170787608
+        },
+        "totalEvents": 13816,
+        "eventDuration": {
+          "avg": 169955883,
+          "min": 16,
+          "max": 170788128,
+          "med": 170783696,
+          "p75": 170785624,
+          "p95": 170787600
+        },
+        "inputDelay": {
+          "avg": 4181,
+          "min": 5,
+          "max": 8250,
+          "med": 3806,
+          "p75": 5732,
+          "p95": 7722
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 16,
+          "med": 0,
+          "p75": 16,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169951702,
+          "min": -3,
+          "max": 170781819,
+          "med": 170779887,
+          "p75": 170779891,
+          "p95": 170779899
+        },
+        "probe": {
+          "avg": 44,
+          "min": 1,
+          "max": 141,
+          "med": 12,
+          "p75": 107,
+          "p95": 141
+        },
+        "probeTimeout": {
+          "avg": 36,
+          "min": 0,
+          "max": 133,
+          "med": 6,
+          "p75": 82,
+          "p95": 133
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 1,
+          "max": 24,
+          "med": 7,
+          "p75": 10,
+          "p95": 24
+        },
+        "probeCount": 14,
+        "tbt": 869,
+        "longTaskCount": 5,
+        "longTaskDur": {
+          "avg": 237,
+          "min": 72,
+          "max": 636,
+          "med": 143,
+          "p75": 218,
+          "p95": 636
+        },
+        "version": "Simple (IO)",
+        "run": 5,
+        "rating": "POOR"
+      }
+    ],
+    "optimized": [
+      {
+        "inp": 170802448,
+        "interactionCount": 13099,
+        "interactionDurations": {
+          "avg": 170563795,
+          "min": 16,
+          "max": 170802680,
+          "med": 170798120,
+          "p75": 170800048,
+          "p95": 170802072
+        },
+        "totalEvents": 13150,
+        "eventDuration": {
+          "avg": 169902293,
+          "min": 16,
+          "max": 170802680,
+          "med": 170798112,
+          "p75": 170800048,
+          "p95": 170802072
+        },
+        "inputDelay": {
+          "avg": 4635,
+          "min": 5,
+          "max": 8845,
+          "med": 4273,
+          "p75": 6201,
+          "p95": 8239
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 14,
+          "med": 0,
+          "p75": 14,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169897658,
+          "min": -1,
+          "max": 170794131,
+          "med": 170793837,
+          "p75": 170793841,
+          "p95": 170793850
+        },
+        "probe": {
+          "avg": 164,
+          "min": 1,
+          "max": 1720,
+          "med": 13,
+          "p75": 102,
+          "p95": 1720
+        },
+        "probeTimeout": {
+          "avg": 156,
+          "min": 0,
+          "max": 1716,
+          "med": 7,
+          "p75": 77,
+          "p95": 1716
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 1,
+          "max": 25,
+          "med": 7,
+          "p75": 9,
+          "p95": 25
+        },
+        "probeCount": 15,
+        "tbt": 944,
+        "longTaskCount": 8,
+        "longTaskDur": {
+          "avg": 178,
+          "min": 67,
+          "max": 640,
+          "med": 114,
+          "p75": 206,
+          "p95": 640
+        },
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 1,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170819008,
+        "interactionCount": 23376,
+        "interactionDurations": {
+          "avg": 170690783,
+          "min": 16,
+          "max": 170819112,
+          "med": 170815488,
+          "p75": 170817560,
+          "p95": 170818880
+        },
+        "totalEvents": 23420,
+        "eventDuration": {
+          "avg": 170370100,
+          "min": 16,
+          "max": 170819112,
+          "med": 170815488,
+          "p75": 170817552,
+          "p95": 170818880
+        },
+        "inputDelay": {
+          "avg": 6272,
+          "min": 1,
+          "max": 10410,
+          "med": 6689,
+          "p75": 8843,
+          "p95": 10171
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 12,
+          "med": 0,
+          "p75": 12,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170363828,
+          "min": -1,
+          "max": 170812161,
+          "med": 170808709,
+          "p75": 170808712,
+          "p95": 170808717
+        },
+        "probe": {
+          "avg": 93,
+          "min": 1,
+          "max": 692,
+          "med": 20,
+          "p75": 88,
+          "p95": 675
+        },
+        "probeTimeout": {
+          "avg": 85,
+          "min": 0,
+          "max": 683,
+          "med": 13,
+          "p75": 80,
+          "p95": 674
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 1,
+          "max": 35,
+          "med": 8,
+          "p75": 9,
+          "p95": 19
+        },
+        "probeCount": 36,
+        "tbt": 839,
+        "longTaskCount": 6,
+        "longTaskDur": {
+          "avg": 203,
+          "min": 50,
+          "max": 720,
+          "med": 103,
+          "p75": 191,
+          "p95": 720
+        },
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 2,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170833704,
+        "interactionCount": 13401,
+        "interactionDurations": {
+          "avg": 170574552,
+          "min": 16,
+          "max": 170833704,
+          "med": 170829000,
+          "p75": 170831016,
+          "p95": 170833456
+        },
+        "totalEvents": 13449,
+        "eventDuration": {
+          "avg": 169965765,
+          "min": 16,
+          "max": 170833704,
+          "med": 170828992,
+          "p75": 170831016,
+          "p95": 170833456
+        },
+        "inputDelay": {
+          "avg": 4330,
+          "min": 5,
+          "max": 8537,
+          "med": 3859,
+          "p75": 5846,
+          "p95": 7994
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 34,
+          "med": 0,
+          "p75": 34,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169961435,
+          "min": 0,
+          "max": 170829707,
+          "med": 170825116,
+          "p75": 170825120,
+          "p95": 170825132
+        },
+        "probe": {
+          "avg": 46,
+          "min": 0,
+          "max": 175,
+          "med": 12,
+          "p75": 107,
+          "p95": 175
+        },
+        "probeTimeout": {
+          "avg": 38,
+          "min": 0,
+          "max": 166,
+          "med": 8,
+          "p75": 84,
+          "p95": 166
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 24,
+          "med": 6,
+          "p75": 9,
+          "p95": 24
+        },
+        "probeCount": 12,
+        "tbt": 1029,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 209,
+          "min": 68,
+          "max": 756,
+          "med": 132,
+          "p75": 204,
+          "p95": 756
+        },
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 3,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170847600,
+        "interactionCount": 14211,
+        "interactionDurations": {
+          "avg": 170591095,
+          "min": 16,
+          "max": 170847752,
+          "med": 170843136,
+          "p75": 170845048,
+          "p95": 170847232
+        },
+        "totalEvents": 14262,
+        "eventDuration": {
+          "avg": 169981072,
+          "min": 16,
+          "max": 170847752,
+          "med": 170843120,
+          "p75": 170845024,
+          "p95": 170847232
+        },
+        "inputDelay": {
+          "avg": 4198,
+          "min": 5,
+          "max": 8416,
+          "med": 3790,
+          "p75": 5691,
+          "p95": 7898
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 14,
+          "med": 0,
+          "p75": 14,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169976875,
+          "min": -1,
+          "max": 170839460,
+          "med": 170839335,
+          "p75": 170839339,
+          "p95": 170839348
+        },
+        "probe": {
+          "avg": 84,
+          "min": 0,
+          "max": 584,
+          "med": 10,
+          "p75": 105,
+          "p95": 584
+        },
+        "probeTimeout": {
+          "avg": 78,
+          "min": 0,
+          "max": 581,
+          "med": 6,
+          "p75": 83,
+          "p95": 581
+        },
+        "probeRaf": {
+          "avg": 5,
+          "min": 0,
+          "max": 21,
+          "med": 4,
+          "p75": 7,
+          "p95": 21
+        },
+        "probeCount": 12,
+        "tbt": 971,
+        "longTaskCount": 6,
+        "longTaskDur": {
+          "avg": 226,
+          "min": 68,
+          "max": 724,
+          "med": 142,
+          "p75": 205,
+          "p95": 724
+        },
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 4,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170862696,
+        "interactionCount": 13625,
+        "interactionDurations": {
+          "avg": 170595094,
+          "min": 16,
+          "max": 170862696,
+          "med": 170858080,
+          "p75": 170859704,
+          "p95": 170862032
+        },
+        "totalEvents": 13673,
+        "eventDuration": {
+          "avg": 169996209,
+          "min": 16,
+          "max": 170862696,
+          "med": 170858072,
+          "p75": 170859704,
+          "p95": 170862032
+        },
+        "inputDelay": {
+          "avg": 4476,
+          "min": 2,
+          "max": 8523,
+          "med": 4167,
+          "p75": 5788,
+          "p95": 7914
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 14,
+          "med": 0,
+          "p75": 14,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 169991733,
+          "min": -1,
+          "max": 170860265,
+          "med": 170853897,
+          "p75": 170853902,
+          "p95": 170853914
+        },
+        "probe": {
+          "avg": 48,
+          "min": 0,
+          "max": 300,
+          "med": 17,
+          "p75": 76,
+          "p95": 300
+        },
+        "probeTimeout": {
+          "avg": 41,
+          "min": 0,
+          "max": 292,
+          "med": 11,
+          "p75": 66,
+          "p95": 292
+        },
+        "probeRaf": {
+          "avg": 7,
+          "min": 0,
+          "max": 24,
+          "med": 7,
+          "p75": 9,
+          "p95": 24
+        },
+        "probeCount": 20,
+        "tbt": 959,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 199,
+          "min": 65,
+          "max": 646,
+          "med": 132,
+          "p75": 209,
+          "p95": 646
+        },
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 5,
+        "rating": "POOR"
+      }
+    ],
+    "opt14": [
+      {
+        "inp": 170877968,
+        "interactionCount": 17084,
+        "interactionDurations": {
+          "avg": 170704057,
+          "min": 16,
+          "max": 170877968,
+          "med": 170873800,
+          "p75": 170876208,
+          "p95": 170877632
+        },
+        "totalEvents": 17125,
+        "eventDuration": {
+          "avg": 170295364,
+          "min": 16,
+          "max": 170877968,
+          "med": 170873784,
+          "p75": 170876200,
+          "p95": 170877632
+        },
+        "inputDelay": {
+          "avg": 5670,
+          "min": 3,
+          "max": 9294,
+          "med": 5404,
+          "p75": 7838,
+          "p95": 8889
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 13,
+          "med": 0,
+          "p75": 13,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170289695,
+          "min": 0,
+          "max": 170874339,
+          "med": 170868356,
+          "p75": 170868359,
+          "p95": 170868376
+        },
+        "probe": {
+          "avg": 264,
+          "min": 0,
+          "max": 2524,
+          "med": 11,
+          "p75": 22,
+          "p95": 2524
+        },
+        "probeTimeout": {
+          "avg": 256,
+          "min": 0,
+          "max": 2461,
+          "med": 6,
+          "p75": 22,
+          "p95": 2461
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 63,
+          "med": 3,
+          "p75": 8,
+          "p95": 63
+        },
+        "probeCount": 18,
+        "tbt": 938,
+        "longTaskCount": 6,
+        "longTaskDur": {
+          "avg": 220,
+          "min": 58,
+          "max": 731,
+          "med": 132,
+          "p75": 205,
+          "p95": 731
+        },
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 1,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170892576,
+        "interactionCount": 16200,
+        "interactionDurations": {
+          "avg": 170729702,
+          "min": 16,
+          "max": 170892576,
+          "med": 170887464,
+          "p75": 170889256,
+          "p95": 170891736
+        },
+        "totalEvents": 16235,
+        "eventDuration": {
+          "avg": 170361637,
+          "min": 16,
+          "max": 170892576,
+          "med": 170887448,
+          "p75": 170889240,
+          "p95": 170891712
+        },
+        "inputDelay": {
+          "avg": 4301,
+          "min": 5,
+          "max": 8569,
+          "med": 3861,
+          "p75": 5651,
+          "p95": 7967
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 14,
+          "med": 0,
+          "p75": 14,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170357336,
+          "min": -1,
+          "max": 170884682,
+          "med": 170883593,
+          "p75": 170883597,
+          "p95": 170883607
+        },
+        "probe": {
+          "avg": 93,
+          "min": 1,
+          "max": 941,
+          "med": 13,
+          "p75": 93,
+          "p95": 941
+        },
+        "probeTimeout": {
+          "avg": 85,
+          "min": 0,
+          "max": 928,
+          "med": 6,
+          "p75": 81,
+          "p95": 928
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 25,
+          "med": 7,
+          "p75": 10,
+          "p95": 25
+        },
+        "probeCount": 17,
+        "tbt": 1016,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 207,
+          "min": 71,
+          "max": 750,
+          "med": 127,
+          "p75": 203,
+          "p95": 750
+        },
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 2,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170907480,
+        "interactionCount": 17098,
+        "interactionDurations": {
+          "avg": 170733035,
+          "min": 16,
+          "max": 170907480,
+          "med": 170902688,
+          "p75": 170904184,
+          "p95": 170906776
+        },
+        "totalEvents": 17141,
+        "eventDuration": {
+          "avg": 170304734,
+          "min": 16,
+          "max": 170907480,
+          "med": 170902680,
+          "p75": 170904160,
+          "p95": 170906776
+        },
+        "inputDelay": {
+          "avg": 4522,
+          "min": 5,
+          "max": 8846,
+          "med": 4279,
+          "p75": 5761,
+          "p95": 8160
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 12,
+          "med": 0,
+          "p75": 12,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170300211,
+          "min": 0,
+          "max": 170905132,
+          "med": 170898399,
+          "p75": 170898403,
+          "p95": 170898414
+        },
+        "probe": {
+          "avg": 235,
+          "min": 0,
+          "max": 2673,
+          "med": 10,
+          "p75": 183,
+          "p95": 2673
+        },
+        "probeTimeout": {
+          "avg": 225,
+          "min": 0,
+          "max": 2629,
+          "med": 6,
+          "p75": 174,
+          "p95": 2629
+        },
+        "probeRaf": {
+          "avg": 10,
+          "min": 0,
+          "max": 44,
+          "med": 7,
+          "p75": 9,
+          "p95": 44
+        },
+        "probeCount": 16,
+        "tbt": 1006,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 206,
+          "min": 50,
+          "max": 740,
+          "med": 121,
+          "p75": 203,
+          "p95": 740
+        },
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 3,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170921768,
+        "interactionCount": 17774,
+        "interactionDurations": {
+          "avg": 170764497,
+          "min": 16,
+          "max": 170921912,
+          "med": 170918304,
+          "p75": 170920376,
+          "p95": 170921520
+        },
+        "totalEvents": 17809,
+        "eventDuration": {
+          "avg": 170428894,
+          "min": 16,
+          "max": 170921912,
+          "med": 170918288,
+          "p75": 170920376,
+          "p95": 170921520
+        },
+        "inputDelay": {
+          "avg": 5229,
+          "min": 4,
+          "max": 8815,
+          "med": 5165,
+          "p75": 7274,
+          "p95": 8421
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 29,
+          "med": 0,
+          "p75": 29,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170423665,
+          "min": 1,
+          "max": 170916920,
+          "med": 170913105,
+          "p75": 170913108,
+          "p95": 170913114
+        },
+        "probe": {
+          "avg": 121,
+          "min": 0,
+          "max": 1438,
+          "med": 8,
+          "p75": 80,
+          "p95": 1438
+        },
+        "probeTimeout": {
+          "avg": 114,
+          "min": 0,
+          "max": 1419,
+          "med": 2,
+          "p75": 79,
+          "p95": 1419
+        },
+        "probeRaf": {
+          "avg": 7,
+          "min": 0,
+          "max": 33,
+          "med": 6,
+          "p75": 8,
+          "p95": 33
+        },
+        "probeCount": 17,
+        "tbt": 1040,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 209,
+          "min": 69,
+          "max": 764,
+          "med": 122,
+          "p75": 205,
+          "p95": 764
+        },
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 4,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170937048,
+        "interactionCount": 20567,
+        "interactionDurations": {
+          "avg": 170816962,
+          "min": 16,
+          "max": 170937048,
+          "med": 170933760,
+          "p75": 170935048,
+          "p95": 170936768
+        },
+        "totalEvents": 20593,
+        "eventDuration": {
+          "avg": 170601295,
+          "min": 16,
+          "max": 170937048,
+          "med": 170933752,
+          "p75": 170935048,
+          "p95": 170936768
+        },
+        "inputDelay": {
+          "avg": 5197,
+          "min": 2,
+          "max": 8777,
+          "med": 5673,
+          "p75": 6955,
+          "p95": 8333
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 13,
+          "med": 0,
+          "p75": 13,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170596098,
+          "min": 2,
+          "max": 170931517,
+          "med": 170928083,
+          "p75": 170928086,
+          "p95": 170928093
+        },
+        "probe": {
+          "avg": 91,
+          "min": 0,
+          "max": 584,
+          "med": 9,
+          "p75": 108,
+          "p95": 584
+        },
+        "probeTimeout": {
+          "avg": 83,
+          "min": 0,
+          "max": 571,
+          "med": 4,
+          "p75": 85,
+          "p95": 571
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 23,
+          "med": 7,
+          "p75": 11,
+          "p95": 23
+        },
+        "probeCount": 16,
+        "tbt": 979,
+        "longTaskCount": 7,
+        "longTaskDur": {
+          "avg": 200,
+          "min": 64,
+          "max": 750,
+          "med": 115,
+          "p75": 204,
+          "p95": 750
+        },
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 5,
+        "rating": "POOR"
+      }
+    ],
+    "opt15": [
+      {
+        "inp": 170951240,
+        "interactionCount": 14182,
+        "interactionDurations": {
+          "avg": 170706204,
+          "min": 16,
+          "max": 170951480,
+          "med": 170946832,
+          "p75": 170948800,
+          "p95": 170950904
+        },
+        "totalEvents": 14227,
+        "eventDuration": {
+          "avg": 170166261,
+          "min": 16,
+          "max": 170951480,
+          "med": 170946824,
+          "p75": 170948800,
+          "p95": 170950896
+        },
+        "inputDelay": {
+          "avg": 4531,
+          "min": 2,
+          "max": 8753,
+          "med": 4092,
+          "p75": 6071,
+          "p95": 8177
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 19,
+          "med": 0,
+          "p75": 19,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170161730,
+          "min": 0,
+          "max": 170942860,
+          "med": 170942728,
+          "p75": 170942732,
+          "p95": 170942740
+        },
+        "probe": {
+          "avg": 159,
+          "min": 1,
+          "max": 1797,
+          "med": 10,
+          "p75": 105,
+          "p95": 1797
+        },
+        "probeTimeout": {
+          "avg": 151,
+          "min": 0,
+          "max": 1783,
+          "med": 6,
+          "p75": 81,
+          "p95": 1783
+        },
+        "probeRaf": {
+          "avg": 7,
+          "min": 1,
+          "max": 24,
+          "med": 7,
+          "p75": 8,
+          "p95": 24
+        },
+        "probeCount": 15,
+        "tbt": 656,
+        "longTaskCount": 4,
+        "longTaskDur": {
+          "avg": 234,
+          "min": 71,
+          "max": 661,
+          "med": 102,
+          "p75": 661,
+          "p95": 661
+        },
+        "version": "Opt15 (Worker+RAF)",
+        "run": 1,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170965328,
+        "interactionCount": 16408,
+        "interactionDurations": {
+          "avg": 170805034,
+          "min": 16,
+          "max": 170965576,
+          "med": 170960840,
+          "p75": 170962616,
+          "p95": 170964944
+        },
+        "totalEvents": 16456,
+        "eventDuration": {
+          "avg": 170306818,
+          "min": 16,
+          "max": 170965576,
+          "med": 170960824,
+          "p75": 170962616,
+          "p95": 170964944
+        },
+        "inputDelay": {
+          "avg": 3930,
+          "min": 3,
+          "max": 8201,
+          "med": 3453,
+          "p75": 5233,
+          "p95": 7573
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 15,
+          "med": 0,
+          "p75": 15,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170302888,
+          "min": 0,
+          "max": 170957486,
+          "med": 170957378,
+          "p75": 170957382,
+          "p95": 170957389
+        },
+        "probe": {
+          "avg": 43,
+          "min": 0,
+          "max": 175,
+          "med": 15,
+          "p75": 74,
+          "p95": 175
+        },
+        "probeTimeout": {
+          "avg": 34,
+          "min": 0,
+          "max": 168,
+          "med": 9,
+          "p75": 68,
+          "p95": 168
+        },
+        "probeRaf": {
+          "avg": 9,
+          "min": 0,
+          "max": 59,
+          "med": 6,
+          "p75": 8,
+          "p95": 59
+        },
+        "probeCount": 15,
+        "tbt": 683,
+        "longTaskCount": 4,
+        "longTaskDur": {
+          "avg": 241,
+          "min": 59,
+          "max": 699,
+          "med": 103,
+          "p75": 699,
+          "p95": 699
+        },
+        "version": "Opt15 (Worker+RAF)",
+        "run": 2,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170979536,
+        "interactionCount": 16598,
+        "interactionDurations": {
+          "avg": 170821307,
+          "min": 16,
+          "max": 170979616,
+          "med": 170975304,
+          "p75": 170977808,
+          "p95": 170979408
+        },
+        "totalEvents": 16641,
+        "eventDuration": {
+          "avg": 170379909,
+          "min": 16,
+          "max": 170979616,
+          "med": 170975304,
+          "p75": 170977792,
+          "p95": 170979408
+        },
+        "inputDelay": {
+          "avg": 4525,
+          "min": 3,
+          "max": 8343,
+          "med": 4018,
+          "p75": 6506,
+          "p95": 8132
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 30,
+          "med": 0,
+          "p75": 30,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170375384,
+          "min": 2,
+          "max": 170971413,
+          "med": 170971281,
+          "p75": 170971284,
+          "p95": 170971292
+        },
+        "probe": {
+          "avg": 41,
+          "min": 1,
+          "max": 256,
+          "med": 8,
+          "p75": 71,
+          "p95": 119
+        },
+        "probeTimeout": {
+          "avg": 31,
+          "min": 0,
+          "max": 256,
+          "med": 0,
+          "p75": 16,
+          "p95": 109
+        },
+        "probeRaf": {
+          "avg": 9,
+          "min": 0,
+          "max": 63,
+          "med": 7,
+          "p75": 8,
+          "p95": 23
+        },
+        "probeCount": 21,
+        "tbt": 910,
+        "longTaskCount": 5,
+        "longTaskDur": {
+          "avg": 249,
+          "min": 63,
+          "max": 749,
+          "med": 133,
+          "p75": 227,
+          "p95": 749
+        },
+        "version": "Opt15 (Worker+RAF)",
+        "run": 3,
+        "rating": "POOR"
+      },
+      {
+        "inp": 170993744,
+        "interactionCount": 14197,
+        "interactionDurations": {
+          "avg": 170772700,
+          "min": 16,
+          "max": 170993744,
+          "med": 170989024,
+          "p75": 170990920,
+          "p95": 170993312
+        },
+        "totalEvents": 14242,
+        "eventDuration": {
+          "avg": 170233115,
+          "min": 16,
+          "max": 170993744,
+          "med": 170989016,
+          "p75": 170990904,
+          "p95": 170993312
+        },
+        "inputDelay": {
+          "avg": 3883,
+          "min": 5,
+          "max": 8128,
+          "med": 3441,
+          "p75": 5333,
+          "p95": 7575
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 14,
+          "med": 0,
+          "p75": 14,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170229232,
+          "min": 0,
+          "max": 170986286,
+          "med": 170985577,
+          "p75": 170985581,
+          "p95": 170985593
+        },
+        "probe": {
+          "avg": 278,
+          "min": 0,
+          "max": 3813,
+          "med": 7,
+          "p75": 37,
+          "p95": 3813
+        },
+        "probeTimeout": {
+          "avg": 272,
+          "min": 0,
+          "max": 3807,
+          "med": 1,
+          "p75": 36,
+          "p95": 3807
+        },
+        "probeRaf": {
+          "avg": 7,
+          "min": 0,
+          "max": 23,
+          "med": 6,
+          "p75": 7,
+          "p95": 23
+        },
+        "probeCount": 15,
+        "tbt": 515,
+        "longTaskCount": 4,
+        "longTaskDur": {
+          "avg": 200,
+          "min": 51,
+          "max": 539,
+          "med": 104,
+          "p75": 539,
+          "p95": 539
+        },
+        "version": "Opt15 (Worker+RAF)",
+        "run": 4,
+        "rating": "POOR"
+      },
+      {
+        "inp": 171008136,
+        "interactionCount": 21032,
+        "interactionDurations": {
+          "avg": 170914894,
+          "min": 16,
+          "max": 171008336,
+          "med": 171004064,
+          "p75": 171006160,
+          "p95": 171007784
+        },
+        "totalEvents": 21058,
+        "eventDuration": {
+          "avg": 170703868,
+          "min": 16,
+          "max": 171008336,
+          "med": 171004064,
+          "p75": 171006160,
+          "p95": 171007784
+        },
+        "inputDelay": {
+          "avg": 4751,
+          "min": 5,
+          "max": 8767,
+          "med": 4490,
+          "p75": 6588,
+          "p95": 8217
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 14,
+          "med": 0,
+          "p75": 14,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170699116,
+          "min": 3,
+          "max": 170999708,
+          "med": 170999571,
+          "p75": 170999574,
+          "p95": 170999579
+        },
+        "probe": {
+          "avg": 80,
+          "min": 1,
+          "max": 1311,
+          "med": 9,
+          "p75": 15,
+          "p95": 426
+        },
+        "probeTimeout": {
+          "avg": 73,
+          "min": 0,
+          "max": 1308,
+          "med": 0,
+          "p75": 9,
+          "p95": 417
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 24,
+          "med": 8,
+          "p75": 9,
+          "p95": 22
+        },
+        "probeCount": 27,
+        "tbt": 854,
+        "longTaskCount": 6,
+        "longTaskDur": {
+          "avg": 204,
+          "min": 50,
+          "max": 758,
+          "med": 96,
+          "p75": 171,
+          "p95": 758
+        },
+        "version": "Opt15 (Worker+RAF)",
+        "run": 5,
+        "rating": "POOR"
+      }
+    ],
+    "opt15-nolimit": [
+      {
+        "inp": 171022872,
+        "interactionCount": 14232,
+        "interactionDurations": {
+          "avg": 170838614,
+          "min": 16,
+          "max": 171023088,
+          "med": 171018408,
+          "p75": 171020320,
+          "p95": 171022528
+        },
+        "totalEvents": 14272,
+        "eventDuration": {
+          "avg": 170359807,
+          "min": 16,
+          "max": 171023088,
+          "med": 171018392,
+          "p75": 171020296,
+          "p95": 171022528
+        },
+        "inputDelay": {
+          "avg": 4547,
+          "min": 8,
+          "max": 8797,
+          "med": 4096,
+          "p75": 6008,
+          "p95": 8239
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 7,
+          "med": 0,
+          "p75": 7,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170355260,
+          "min": 1,
+          "max": 171014461,
+          "med": 171014296,
+          "p75": 171014300,
+          "p95": 171014308
+        },
+        "probe": {
+          "avg": 200,
+          "min": 0,
+          "max": 3397,
+          "med": 8,
+          "p75": 43,
+          "p95": 3397
+        },
+        "probeTimeout": {
+          "avg": 191,
+          "min": 0,
+          "max": 3329,
+          "med": 0,
+          "p75": 34,
+          "p95": 3329
+        },
+        "probeRaf": {
+          "avg": 9,
+          "min": 0,
+          "max": 68,
+          "med": 7,
+          "p75": 9,
+          "p95": 68
+        },
+        "probeCount": 19,
+        "tbt": 710,
+        "longTaskCount": 4,
+        "longTaskDur": {
+          "avg": 253,
+          "min": 62,
+          "max": 725,
+          "med": 112,
+          "p75": 725,
+          "p95": 725
+        },
+        "version": "Opt15-NL (Worker+RAF)",
+        "run": 1,
+        "rating": "POOR"
+      },
+      {
+        "inp": 171037240,
+        "interactionCount": 17587,
+        "interactionDurations": {
+          "avg": 170897362,
+          "min": 16,
+          "max": 171037312,
+          "med": 171032928,
+          "p75": 171035480,
+          "p95": 171037040
+        },
+        "totalEvents": 17626,
+        "eventDuration": {
+          "avg": 170519227,
+          "min": 16,
+          "max": 171037312,
+          "med": 171032920,
+          "p75": 171035480,
+          "p95": 171037040
+        },
+        "inputDelay": {
+          "avg": 4539,
+          "min": 4,
+          "max": 8355,
+          "med": 3960,
+          "p75": 6509,
+          "p95": 8085
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 15,
+          "med": 0,
+          "p75": 15,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170514689,
+          "min": 2,
+          "max": 171029091,
+          "med": 171028959,
+          "p75": 171028962,
+          "p95": 171028970
+        },
+        "probe": {
+          "avg": 92,
+          "min": 0,
+          "max": 1238,
+          "med": 13,
+          "p75": 92,
+          "p95": 256
+        },
+        "probeTimeout": {
+          "avg": 82,
+          "min": 0,
+          "max": 1153,
+          "med": 5,
+          "p75": 79,
+          "p95": 251
+        },
+        "probeRaf": {
+          "avg": 10,
+          "min": 0,
+          "max": 85,
+          "med": 8,
+          "p75": 9,
+          "p95": 23
+        },
+        "probeCount": 27,
+        "tbt": 991,
+        "longTaskCount": 5,
+        "longTaskDur": {
+          "avg": 264,
+          "min": 71,
+          "max": 753,
+          "med": 128,
+          "p75": 285,
+          "p95": 753
+        },
+        "version": "Opt15-NL (Worker+RAF)",
+        "run": 2,
+        "rating": "POOR"
+      },
+      {
+        "inp": 171051856,
+        "interactionCount": 12210,
+        "interactionDurations": {
+          "avg": 170767638,
+          "min": 16,
+          "max": 171052120,
+          "med": 171047320,
+          "p75": 171049224,
+          "p95": 171051448
+        },
+        "totalEvents": 12250,
+        "eventDuration": {
+          "avg": 170210030,
+          "min": 16,
+          "max": 171052120,
+          "med": 171047304,
+          "p75": 171049224,
+          "p95": 171051440
+        },
+        "inputDelay": {
+          "avg": 4177,
+          "min": 3,
+          "max": 8507,
+          "med": 3687,
+          "p75": 5608,
+          "p95": 7832
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 15,
+          "med": 0,
+          "p75": 15,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170205852,
+          "min": -3,
+          "max": 171043742,
+          "med": 171043615,
+          "p75": 171043620,
+          "p95": 171043631
+        },
+        "probe": {
+          "avg": 100,
+          "min": 1,
+          "max": 1147,
+          "med": 14,
+          "p75": 84,
+          "p95": 1147
+        },
+        "probeTimeout": {
+          "avg": 92,
+          "min": 0,
+          "max": 1140,
+          "med": 7,
+          "p75": 74,
+          "p95": 1140
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 26,
+          "med": 8,
+          "p75": 10,
+          "p95": 26
+        },
+        "probeCount": 18,
+        "tbt": 842,
+        "longTaskCount": 5,
+        "longTaskDur": {
+          "avg": 237,
+          "min": 74,
+          "max": 795,
+          "med": 92,
+          "p75": 143,
+          "p95": 795
+        },
+        "version": "Opt15-NL (Worker+RAF)",
+        "run": 3,
+        "rating": "POOR"
+      },
+      {
+        "inp": 171066288,
+        "interactionCount": 15379,
+        "interactionDurations": {
+          "avg": 170873290,
+          "min": 16,
+          "max": 171066392,
+          "med": 171061752,
+          "p75": 171064120,
+          "p95": 171066144
+        },
+        "totalEvents": 15423,
+        "eventDuration": {
+          "avg": 170385808,
+          "min": 16,
+          "max": 171066392,
+          "med": 171061744,
+          "p75": 171064008,
+          "p95": 171066144
+        },
+        "inputDelay": {
+          "avg": 4313,
+          "min": 3,
+          "max": 8348,
+          "med": 3690,
+          "p75": 5959,
+          "p95": 8094
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 32,
+          "med": 0,
+          "p75": 32,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170381495,
+          "min": -2,
+          "max": 171058185,
+          "med": 171058051,
+          "p75": 171058055,
+          "p95": 171058064
+        },
+        "probe": {
+          "avg": 183,
+          "min": 1,
+          "max": 2404,
+          "med": 8,
+          "p75": 105,
+          "p95": 2404
+        },
+        "probeTimeout": {
+          "avg": 175,
+          "min": 0,
+          "max": 2389,
+          "med": 1,
+          "p75": 82,
+          "p95": 2389
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 1,
+          "max": 23,
+          "med": 8,
+          "p75": 8,
+          "p95": 23
+        },
+        "probeCount": 18,
+        "tbt": 838,
+        "longTaskCount": 5,
+        "longTaskDur": {
+          "avg": 236,
+          "min": 72,
+          "max": 685,
+          "med": 141,
+          "p75": 197,
+          "p95": 685
+        },
+        "version": "Opt15-NL (Worker+RAF)",
+        "run": 4,
+        "rating": "POOR"
+      },
+      {
+        "inp": 171080480,
+        "interactionCount": 15081,
+        "interactionDurations": {
+          "avg": 170883610,
+          "min": 16,
+          "max": 171080720,
+          "med": 171076000,
+          "p75": 171077776,
+          "p95": 171080096
+        },
+        "totalEvents": 15126,
+        "eventDuration": {
+          "avg": 170375230,
+          "min": 16,
+          "max": 171080720,
+          "med": 171076000,
+          "p75": 171077776,
+          "p95": 171080096
+        },
+        "inputDelay": {
+          "avg": 4089,
+          "min": 4,
+          "max": 8378,
+          "med": 3651,
+          "p75": 5422,
+          "p95": 7750
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 14,
+          "med": 0,
+          "p75": 14,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170371141,
+          "min": -1,
+          "max": 171072492,
+          "med": 171072349,
+          "p75": 171072352,
+          "p95": 171072360
+        },
+        "probe": {
+          "avg": 28,
+          "min": 0,
+          "max": 183,
+          "med": 9,
+          "p75": 15,
+          "p95": 107
+        },
+        "probeTimeout": {
+          "avg": 15,
+          "min": 0,
+          "max": 175,
+          "med": 0,
+          "p75": 6,
+          "p95": 68
+        },
+        "probeRaf": {
+          "avg": 13,
+          "min": 0,
+          "max": 81,
+          "med": 8,
+          "p75": 10,
+          "p95": 71
+        },
+        "probeCount": 25,
+        "tbt": 732,
+        "longTaskCount": 5,
+        "longTaskDur": {
+          "avg": 212,
+          "min": 69,
+          "max": 613,
+          "med": 130,
+          "p75": 176,
+          "p95": 613
+        },
+        "version": "Opt15-NL (Worker+RAF)",
+        "run": 5,
+        "rating": "POOR"
+      }
+    ],
+    "worker-only": [
+      {
+        "inp": 171095544,
+        "interactionCount": 18446,
+        "interactionDurations": {
+          "avg": 170971461,
+          "min": 16,
+          "max": 171095680,
+          "med": 171091968,
+          "p75": 171094056,
+          "p95": 171095288
+        },
+        "totalEvents": 18481,
+        "eventDuration": {
+          "avg": 170647669,
+          "min": 16,
+          "max": 171095680,
+          "med": 171091952,
+          "p75": 171094056,
+          "p95": 171095288
+        },
+        "inputDelay": {
+          "avg": 5333,
+          "min": 4,
+          "max": 8994,
+          "med": 5265,
+          "p75": 7362,
+          "p95": 8600
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 13,
+          "med": 0,
+          "p75": 13,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170642336,
+          "min": 1,
+          "max": 171086866,
+          "med": 171086692,
+          "p75": 171086695,
+          "p95": 171086701
+        },
+        "probe": {
+          "avg": 167,
+          "min": 0,
+          "max": 2638,
+          "med": 10,
+          "p75": 67,
+          "p95": 456
+        },
+        "probeTimeout": {
+          "avg": 157,
+          "min": 0,
+          "max": 2576,
+          "med": 5,
+          "p75": 57,
+          "p95": 439
+        },
+        "probeRaf": {
+          "avg": 11,
+          "min": 0,
+          "max": 62,
+          "med": 8,
+          "p75": 9,
+          "p95": 28
+        },
+        "probeCount": 22,
+        "tbt": 736,
+        "longTaskCount": 4,
+        "longTaskDur": {
+          "avg": 255,
+          "min": 53,
+          "max": 758,
+          "med": 104,
+          "p75": 758,
+          "p95": 758
+        },
+        "version": "WorkerOnly (Worker)",
+        "run": 1,
+        "rating": "POOR"
+      },
+      {
+        "inp": 171109528,
+        "interactionCount": 13359,
+        "interactionDurations": {
+          "avg": 170862227,
+          "min": 16,
+          "max": 171109840,
+          "med": 171105136,
+          "p75": 171107048,
+          "p95": 171109168
+        },
+        "totalEvents": 13409,
+        "eventDuration": {
+          "avg": 170225110,
+          "min": 16,
+          "max": 171109840,
+          "med": 171105120,
+          "p75": 171107032,
+          "p95": 171109160
+        },
+        "inputDelay": {
+          "avg": 4049,
+          "min": 6,
+          "max": 8330,
+          "med": 3610,
+          "p75": 5517,
+          "p95": 7655
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 12,
+          "med": 0,
+          "p75": 12,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170221061,
+          "min": -3,
+          "max": 171101728,
+          "med": 171101514,
+          "p75": 171101518,
+          "p95": 171101527
+        },
+        "probe": {
+          "avg": 256,
+          "min": 0,
+          "max": 4344,
+          "med": 15,
+          "p75": 40,
+          "p95": 4344
+        },
+        "probeTimeout": {
+          "avg": 244,
+          "min": 0,
+          "max": 4277,
+          "med": 5,
+          "p75": 33,
+          "p95": 4277
+        },
+        "probeRaf": {
+          "avg": 12,
+          "min": 0,
+          "max": 67,
+          "med": 8,
+          "p75": 9,
+          "p95": 67
+        },
+        "probeCount": 19,
+        "tbt": 773,
+        "longTaskCount": 5,
+        "longTaskDur": {
+          "avg": 220,
+          "min": 65,
+          "max": 730,
+          "med": 111,
+          "p75": 125,
+          "p95": 730
+        },
+        "version": "WorkerOnly (Worker)",
+        "run": 2,
+        "rating": "POOR"
+      },
+      {
+        "inp": 171124840,
+        "interactionCount": 17796,
+        "interactionDurations": {
+          "avg": 170995929,
+          "min": 16,
+          "max": 171125000,
+          "med": 171120552,
+          "p75": 171123120,
+          "p95": 171124584
+        },
+        "totalEvents": 17826,
+        "eventDuration": {
+          "avg": 170708154,
+          "min": 16,
+          "max": 171125000,
+          "med": 171120552,
+          "p75": 171123120,
+          "p95": 171124584
+        },
+        "inputDelay": {
+          "avg": 4860,
+          "min": 3,
+          "max": 8939,
+          "med": 4489,
+          "p75": 7059,
+          "p95": 8527
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 12,
+          "med": 0,
+          "p75": 12,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170703295,
+          "min": 1,
+          "max": 171116198,
+          "med": 171116062,
+          "p75": 171116065,
+          "p95": 171116070
+        },
+        "probe": {
+          "avg": 41,
+          "min": 0,
+          "max": 557,
+          "med": 9,
+          "p75": 17,
+          "p95": 194
+        },
+        "probeTimeout": {
+          "avg": 32,
+          "min": 0,
+          "max": 540,
+          "med": 0,
+          "p75": 8,
+          "p95": 193
+        },
+        "probeRaf": {
+          "avg": 8,
+          "min": 0,
+          "max": 24,
+          "med": 8,
+          "p75": 11,
+          "p95": 17
+        },
+        "probeCount": 41,
+        "tbt": 1052,
+        "longTaskCount": 5,
+        "longTaskDur": {
+          "avg": 277,
+          "min": 69,
+          "max": 765,
+          "med": 133,
+          "p75": 347,
+          "p95": 765
+        },
+        "version": "WorkerOnly (Worker)",
+        "run": 3,
+        "rating": "POOR"
+      },
+      {
+        "inp": 171139568,
+        "interactionCount": 13572,
+        "interactionDurations": {
+          "avg": 170921179,
+          "min": 16,
+          "max": 171139768,
+          "med": 171135088,
+          "p75": 171137080,
+          "p95": 171139240
+        },
+        "totalEvents": 13617,
+        "eventDuration": {
+          "avg": 170356338,
+          "min": 16,
+          "max": 171139768,
+          "med": 171135088,
+          "p75": 171137080,
+          "p95": 171139240
+        },
+        "inputDelay": {
+          "avg": 4227,
+          "min": 5,
+          "max": 8481,
+          "med": 3796,
+          "p75": 5796,
+          "p95": 7953
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 15,
+          "med": 0,
+          "p75": 15,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170352110,
+          "min": 0,
+          "max": 171132173,
+          "med": 171131291,
+          "p75": 171131295,
+          "p95": 171131304
+        },
+        "probe": {
+          "avg": 40,
+          "min": 0,
+          "max": 157,
+          "med": 12,
+          "p75": 84,
+          "p95": 157
+        },
+        "probeTimeout": {
+          "avg": 35,
+          "min": 0,
+          "max": 155,
+          "med": 6,
+          "p75": 77,
+          "p95": 155
+        },
+        "probeRaf": {
+          "avg": 6,
+          "min": 0,
+          "max": 23,
+          "med": 5,
+          "p75": 8,
+          "p95": 23
+        },
+        "probeCount": 20,
+        "tbt": 759,
+        "longTaskCount": 5,
+        "longTaskDur": {
+          "avg": 218,
+          "min": 63,
+          "max": 760,
+          "med": 71,
+          "p75": 132,
+          "p95": 760
+        },
+        "version": "WorkerOnly (Worker)",
+        "run": 4,
+        "rating": "POOR"
+      },
+      {
+        "inp": 171154080,
+        "interactionCount": 18246,
+        "interactionDurations": {
+          "avg": 171037852,
+          "min": 16,
+          "max": 171154272,
+          "med": 171150272,
+          "p75": 171152232,
+          "p95": 171153776
+        },
+        "totalEvents": 18282,
+        "eventDuration": {
+          "avg": 170701053,
+          "min": 16,
+          "max": 171154272,
+          "med": 171150256,
+          "p75": 171152224,
+          "p95": 171153776
+        },
+        "inputDelay": {
+          "avg": 4943,
+          "min": 4,
+          "max": 8819,
+          "med": 4799,
+          "p75": 6770,
+          "p95": 8323
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 13,
+          "med": 0,
+          "p75": 13,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 170696110,
+          "min": -1,
+          "max": 171145602,
+          "med": 171145458,
+          "p75": 171145461,
+          "p95": 171145466
+        },
+        "probe": {
+          "avg": 135,
+          "min": 1,
+          "max": 2003,
+          "med": 9,
+          "p75": 35,
+          "p95": 1562
+        },
+        "probeTimeout": {
+          "avg": 125,
+          "min": 0,
+          "max": 1997,
+          "med": 0,
+          "p75": 14,
+          "p95": 1514
+        },
+        "probeRaf": {
+          "avg": 10,
+          "min": 1,
+          "max": 48,
+          "med": 8,
+          "p75": 10,
+          "p95": 24
+        },
+        "probeCount": 32,
+        "tbt": 1072,
+        "longTaskCount": 4,
+        "longTaskDur": {
+          "avg": 340,
+          "min": 72,
+          "max": 758,
+          "med": 264,
+          "p75": 758,
+          "p95": 758
+        },
+        "version": "WorkerOnly (Worker)",
+        "run": 5,
+        "rating": "POOR"
+      }
+    ]
+  },
+  "meta": {
+    "runs": 5,
+    "cpuThrottle": 4,
+    "baseUrl": "http://localhost:3000",
+    "pdfUrl": "/sample4.pdf",
+    "timestamp": "2026-03-24T00:09:48.551Z"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-10-30T00:15:41.509Z",
+  "group": "group1",
+  "description": "최적화 1,2,3 + 기준선",
+  "config": {
+    "cpuThrottle": 4,
+    "runsPerUrl": 3,
+    "headless": true,
+    "testUrls": [
+      {
+        "url": "http://nextjs:3000/feedback-basic/4",
+        "name": "Basic (개선 전)",
+        "shortName": "basic"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+        "name": "Opt1: RAF 페인트 안정화",
+        "shortName": "opt1-raf"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+        "name": "Opt2: Callback Ref 패턴",
+        "shortName": "opt2-callback-ref"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+        "name": "Opt3: Combined (RAF + Callback)",
+        "shortName": "opt3-combined"
+      }
+    ]
+  },
+  "results": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "url": "http://nextjs:3000/feedback-basic/4",
+      "shortName": "basic",
+      "results": []
+    },
+    "opt1-raf": {
+      "name": "Opt1: RAF 페인트 안정화",
+      "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+      "shortName": "opt1-raf",
+      "results": []
+    },
+    "opt2-callback-ref": {
+      "name": "Opt2: Callback Ref 패턴",
+      "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+      "shortName": "opt2-callback-ref",
+      "results": []
+    },
+    "opt3-combined": {
+      "name": "Opt3: Combined (RAF + Callback)",
+      "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+      "shortName": "opt3-combined",
+      "results": []
+    }
+  },
+  "statistics": {}
+}

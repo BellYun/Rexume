@@ -1,0 +1,2357 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (pdfOld, 스케줄링 없음)",
+      "shortName": "basic",
+      "inp": {
+        "avg": 120,
+        "min": 96,
+        "max": 160,
+        "median": 104
+      },
+      "interactionCount": {
+        "avg": 1,
+        "min": 1,
+        "max": 1,
+        "median": 1
+      },
+      "duration": {
+        "avg": {
+          "avg": 120,
+          "min": 96,
+          "max": 160,
+          "median": 104
+        },
+        "median": {
+          "avg": 120,
+          "min": 96,
+          "max": 160,
+          "median": 104
+        },
+        "p75": {
+          "avg": 120,
+          "min": 96,
+          "max": 160,
+          "median": 104
+        },
+        "p95": {
+          "avg": 120,
+          "min": 96,
+          "max": 160,
+          "median": 104
+        },
+        "max": {
+          "avg": 120,
+          "min": 96,
+          "max": 160,
+          "median": 104
+        }
+      },
+      "inputDelay": {
+        "avg": {
+          "avg": 5,
+          "min": 4,
+          "max": 7,
+          "median": 5
+        },
+        "median": {
+          "avg": 5,
+          "min": 4,
+          "max": 7,
+          "median": 5
+        },
+        "p75": {
+          "avg": 5,
+          "min": 4,
+          "max": 7,
+          "median": 5
+        },
+        "max": {
+          "avg": 5,
+          "min": 4,
+          "max": 7,
+          "median": 5
+        }
+      },
+      "processingTime": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 1,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 1,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 1,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 1,
+          "median": 0
+        }
+      },
+      "presentationDelay": {
+        "avg": {
+          "avg": 115,
+          "min": 91,
+          "max": 156,
+          "median": 97
+        },
+        "median": {
+          "avg": 115,
+          "min": 91,
+          "max": 156,
+          "median": 97
+        },
+        "p75": {
+          "avg": 115,
+          "min": 91,
+          "max": 156,
+          "median": 97
+        },
+        "max": {
+          "avg": 115,
+          "min": 91,
+          "max": 156,
+          "median": 97
+        }
+      },
+      "tbt": {
+        "avg": 1319,
+        "min": 1209,
+        "max": 1390,
+        "median": 1358
+      },
+      "longTaskCount": {
+        "avg": 8,
+        "min": 7,
+        "max": 10,
+        "median": 7
+      },
+      "runs": 3
+    },
+    {
+      "version": "Simple (IntersectionObserver)",
+      "shortName": "simple",
+      "inp": {
+        "avg": 83,
+        "min": 80,
+        "max": 88,
+        "median": 80
+      },
+      "interactionCount": {
+        "avg": 1,
+        "min": 1,
+        "max": 1,
+        "median": 1
+      },
+      "duration": {
+        "avg": {
+          "avg": 83,
+          "min": 80,
+          "max": 88,
+          "median": 80
+        },
+        "median": {
+          "avg": 83,
+          "min": 80,
+          "max": 88,
+          "median": 80
+        },
+        "p75": {
+          "avg": 83,
+          "min": 80,
+          "max": 88,
+          "median": 80
+        },
+        "p95": {
+          "avg": 83,
+          "min": 80,
+          "max": 88,
+          "median": 80
+        },
+        "max": {
+          "avg": 83,
+          "min": 80,
+          "max": 88,
+          "median": 80
+        }
+      },
+      "inputDelay": {
+        "avg": {
+          "avg": 4,
+          "min": 4,
+          "max": 4,
+          "median": 4
+        },
+        "median": {
+          "avg": 4,
+          "min": 4,
+          "max": 4,
+          "median": 4
+        },
+        "p75": {
+          "avg": 4,
+          "min": 4,
+          "max": 4,
+          "median": 4
+        },
+        "max": {
+          "avg": 4,
+          "min": 4,
+          "max": 4,
+          "median": 4
+        }
+      },
+      "processingTime": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "presentationDelay": {
+        "avg": {
+          "avg": 79,
+          "min": 76,
+          "max": 84,
+          "median": 76
+        },
+        "median": {
+          "avg": 79,
+          "min": 76,
+          "max": 84,
+          "median": 76
+        },
+        "p75": {
+          "avg": 79,
+          "min": 76,
+          "max": 84,
+          "median": 76
+        },
+        "max": {
+          "avg": 79,
+          "min": 76,
+          "max": 84,
+          "median": 76
+        }
+      },
+      "tbt": {
+        "avg": 872,
+        "min": 837,
+        "max": 892,
+        "median": 887
+      },
+      "longTaskCount": {
+        "avg": 4,
+        "min": 4,
+        "max": 5,
+        "median": 4
+      },
+      "runs": 3
+    },
+    {
+      "version": "Optimized (IO+RAF+Limit)",
+      "shortName": "optimized",
+      "inp": {
+        "avg": 32,
+        "min": 0,
+        "max": 56,
+        "median": 40
+      },
+      "interactionCount": {
+        "avg": 1,
+        "min": 0,
+        "max": 1,
+        "median": 1
+      },
+      "duration": {
+        "avg": {
+          "avg": 32,
+          "min": 0,
+          "max": 56,
+          "median": 40
+        },
+        "median": {
+          "avg": 32,
+          "min": 0,
+          "max": 56,
+          "median": 40
+        },
+        "p75": {
+          "avg": 32,
+          "min": 0,
+          "max": 56,
+          "median": 40
+        },
+        "p95": {
+          "avg": 32,
+          "min": 0,
+          "max": 56,
+          "median": 40
+        },
+        "max": {
+          "avg": 32,
+          "min": 0,
+          "max": 56,
+          "median": 40
+        }
+      },
+      "inputDelay": {
+        "avg": {
+          "avg": 3,
+          "min": 0,
+          "max": 6,
+          "median": 4
+        },
+        "median": {
+          "avg": 3,
+          "min": 0,
+          "max": 6,
+          "median": 4
+        },
+        "p75": {
+          "avg": 3,
+          "min": 0,
+          "max": 6,
+          "median": 4
+        },
+        "max": {
+          "avg": 3,
+          "min": 0,
+          "max": 6,
+          "median": 4
+        }
+      },
+      "processingTime": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 1,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 1,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 1,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 1,
+          "median": 0
+        }
+      },
+      "presentationDelay": {
+        "avg": {
+          "avg": 29,
+          "min": 0,
+          "max": 49,
+          "median": 37
+        },
+        "median": {
+          "avg": 29,
+          "min": 0,
+          "max": 49,
+          "median": 37
+        },
+        "p75": {
+          "avg": 29,
+          "min": 0,
+          "max": 49,
+          "median": 37
+        },
+        "max": {
+          "avg": 29,
+          "min": 0,
+          "max": 49,
+          "median": 37
+        }
+      },
+      "tbt": {
+        "avg": 868,
+        "min": 843,
+        "max": 882,
+        "median": 879
+      },
+      "longTaskCount": {
+        "avg": 5,
+        "min": 5,
+        "max": 5,
+        "median": 5
+      },
+      "runs": 3
+    },
+    {
+      "version": "Opt14 (IO+RAF+Limit+Cache)",
+      "shortName": "opt14",
+      "inp": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "interactionCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "duration": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p95": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "inputDelay": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "processingTime": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "presentationDelay": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "tbt": {
+        "avg": 821,
+        "min": 761,
+        "max": 855,
+        "median": 847
+      },
+      "longTaskCount": {
+        "avg": 5,
+        "min": 5,
+        "max": 5,
+        "median": 5
+      },
+      "runs": 3
+    },
+    {
+      "version": "Opt15 (IO+RAF+Worker, Limit=3)",
+      "shortName": "opt15",
+      "inp": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "interactionCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "duration": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p95": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "inputDelay": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "processingTime": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "presentationDelay": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "tbt": {
+        "avg": 595,
+        "min": 538,
+        "max": 634,
+        "median": 613
+      },
+      "longTaskCount": {
+        "avg": 2,
+        "min": 2,
+        "max": 2,
+        "median": 2
+      },
+      "runs": 3
+    },
+    {
+      "version": "Opt15-NoLimit (IO+RAF+Worker)",
+      "shortName": "opt15-nolimit",
+      "inp": {
+        "avg": 13,
+        "min": 0,
+        "max": 40,
+        "median": 0
+      },
+      "interactionCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 1,
+        "median": 0
+      },
+      "duration": {
+        "avg": {
+          "avg": 13,
+          "min": 0,
+          "max": 40,
+          "median": 0
+        },
+        "median": {
+          "avg": 13,
+          "min": 0,
+          "max": 40,
+          "median": 0
+        },
+        "p75": {
+          "avg": 13,
+          "min": 0,
+          "max": 40,
+          "median": 0
+        },
+        "p95": {
+          "avg": 13,
+          "min": 0,
+          "max": 40,
+          "median": 0
+        },
+        "max": {
+          "avg": 13,
+          "min": 0,
+          "max": 40,
+          "median": 0
+        }
+      },
+      "inputDelay": {
+        "avg": {
+          "avg": 1,
+          "min": 0,
+          "max": 3,
+          "median": 0
+        },
+        "median": {
+          "avg": 1,
+          "min": 0,
+          "max": 3,
+          "median": 0
+        },
+        "p75": {
+          "avg": 1,
+          "min": 0,
+          "max": 3,
+          "median": 0
+        },
+        "max": {
+          "avg": 1,
+          "min": 0,
+          "max": 3,
+          "median": 0
+        }
+      },
+      "processingTime": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "presentationDelay": {
+        "avg": {
+          "avg": 12,
+          "min": 0,
+          "max": 36,
+          "median": 0
+        },
+        "median": {
+          "avg": 12,
+          "min": 0,
+          "max": 36,
+          "median": 0
+        },
+        "p75": {
+          "avg": 12,
+          "min": 0,
+          "max": 36,
+          "median": 0
+        },
+        "max": {
+          "avg": 12,
+          "min": 0,
+          "max": 36,
+          "median": 0
+        }
+      },
+      "tbt": {
+        "avg": 631,
+        "min": 601,
+        "max": 649,
+        "median": 644
+      },
+      "longTaskCount": {
+        "avg": 2,
+        "min": 2,
+        "max": 2,
+        "median": 2
+      },
+      "runs": 3
+    },
+    {
+      "version": "WorkerOnly (OffscreenCanvas)",
+      "shortName": "worker-only",
+      "inp": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "interactionCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "duration": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p95": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "inputDelay": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "processingTime": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "presentationDelay": {
+        "avg": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "median": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "p75": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        },
+        "max": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0
+        }
+      },
+      "tbt": {
+        "avg": 631,
+        "min": 608,
+        "max": 665,
+        "median": 620
+      },
+      "longTaskCount": {
+        "avg": 3,
+        "min": 2,
+        "max": 4,
+        "median": 2
+      },
+      "runs": 3
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "inp": 160,
+        "interactionCount": 1,
+        "totalEventCount": 3,
+        "duration": {
+          "avg": 160,
+          "min": 160,
+          "max": 160,
+          "median": 160,
+          "p75": 160,
+          "p95": 160
+        },
+        "inputDelay": {
+          "avg": 4,
+          "min": 4,
+          "max": 4,
+          "median": 4,
+          "p75": 4,
+          "p95": 4
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 156,
+          "min": 156,
+          "max": 156,
+          "median": 156,
+          "p75": 156,
+          "p95": 156
+        },
+        "tbt": 1390,
+        "longTaskCount": 10,
+        "fcp": 752,
+        "loafCount": 11,
+        "loafDuration": {
+          "avg": 200,
+          "min": 51,
+          "max": 616,
+          "median": 145,
+          "p75": 302,
+          "p95": 616
+        },
+        "loafBlocking": {
+          "avg": 142,
+          "min": 0,
+          "max": 566,
+          "median": 93,
+          "p75": 198,
+          "p95": 566
+        },
+        "slowest5": [
+          {
+            "name": "pointerdown",
+            "duration": 160,
+            "inputDelay": 4,
+            "processingTime": 0,
+            "presentationDelay": 156
+          }
+        ],
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 1,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 104,
+        "interactionCount": 1,
+        "totalEventCount": 3,
+        "duration": {
+          "avg": 104,
+          "min": 104,
+          "max": 104,
+          "median": 104,
+          "p75": 104,
+          "p95": 104
+        },
+        "inputDelay": {
+          "avg": 7,
+          "min": 7,
+          "max": 7,
+          "median": 7,
+          "p75": 7,
+          "p95": 7
+        },
+        "processingTime": {
+          "avg": 1,
+          "min": 1,
+          "max": 1,
+          "median": 1,
+          "p75": 1,
+          "p95": 1
+        },
+        "presentationDelay": {
+          "avg": 97,
+          "min": 97,
+          "max": 97,
+          "median": 97,
+          "p75": 97,
+          "p95": 97
+        },
+        "tbt": 1209,
+        "longTaskCount": 7,
+        "fcp": 336,
+        "loafCount": 9,
+        "loafDuration": {
+          "avg": 206,
+          "min": 54,
+          "max": 685,
+          "median": 138,
+          "p75": 193,
+          "p95": 685
+        },
+        "loafBlocking": {
+          "avg": 149,
+          "min": 4,
+          "max": 635,
+          "median": 69,
+          "p75": 143,
+          "p95": 635
+        },
+        "slowest5": [
+          {
+            "name": "pointerdown",
+            "duration": 104,
+            "inputDelay": 7,
+            "processingTime": 1,
+            "presentationDelay": 97
+          }
+        ],
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 2,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 96,
+        "interactionCount": 1,
+        "totalEventCount": 3,
+        "duration": {
+          "avg": 96,
+          "min": 96,
+          "max": 96,
+          "median": 96,
+          "p75": 96,
+          "p95": 96
+        },
+        "inputDelay": {
+          "avg": 5,
+          "min": 5,
+          "max": 5,
+          "median": 5,
+          "p75": 5,
+          "p95": 5
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 91,
+          "min": 91,
+          "max": 91,
+          "median": 91,
+          "p75": 91,
+          "p95": 91
+        },
+        "tbt": 1358,
+        "longTaskCount": 7,
+        "fcp": 216,
+        "loafCount": 10,
+        "loafDuration": {
+          "avg": 203,
+          "min": 52,
+          "max": 694,
+          "median": 166,
+          "p75": 225,
+          "p95": 694
+        },
+        "loafBlocking": {
+          "avg": 147,
+          "min": 0,
+          "max": 643,
+          "median": 102,
+          "p75": 164,
+          "p95": 643
+        },
+        "slowest5": [
+          {
+            "name": "pointerdown",
+            "duration": 96,
+            "inputDelay": 5,
+            "processingTime": 0,
+            "presentationDelay": 91
+          }
+        ],
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 3,
+        "rating": "GOOD"
+      }
+    ],
+    "simple": [
+      {
+        "inp": 80,
+        "interactionCount": 1,
+        "totalEventCount": 3,
+        "duration": {
+          "avg": 80,
+          "min": 80,
+          "max": 80,
+          "median": 80,
+          "p75": 80,
+          "p95": 80
+        },
+        "inputDelay": {
+          "avg": 4,
+          "min": 4,
+          "max": 4,
+          "median": 4,
+          "p75": 4,
+          "p95": 4
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 76,
+          "min": 76,
+          "max": 76,
+          "median": 76,
+          "p75": 76,
+          "p95": 76
+        },
+        "tbt": 887,
+        "longTaskCount": 4,
+        "fcp": 580,
+        "loafCount": 5,
+        "loafDuration": {
+          "avg": 250,
+          "min": 67,
+          "max": 715,
+          "median": 136,
+          "p75": 205,
+          "p95": 715
+        },
+        "loafBlocking": {
+          "avg": 195,
+          "min": 16,
+          "max": 665,
+          "median": 78,
+          "p75": 155,
+          "p95": 665
+        },
+        "slowest5": [
+          {
+            "name": "pointerdown",
+            "duration": 80,
+            "inputDelay": 4,
+            "processingTime": 0,
+            "presentationDelay": 76
+          }
+        ],
+        "version": "Simple (IntersectionObserver)",
+        "run": 1,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 88,
+        "interactionCount": 1,
+        "totalEventCount": 3,
+        "duration": {
+          "avg": 88,
+          "min": 88,
+          "max": 88,
+          "median": 88,
+          "p75": 88,
+          "p95": 88
+        },
+        "inputDelay": {
+          "avg": 4,
+          "min": 4,
+          "max": 4,
+          "median": 4,
+          "p75": 4,
+          "p95": 4
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 84,
+          "min": 84,
+          "max": 84,
+          "median": 84,
+          "p75": 84,
+          "p95": 84
+        },
+        "tbt": 892,
+        "longTaskCount": 4,
+        "fcp": 216,
+        "loafCount": 6,
+        "loafDuration": {
+          "avg": 220,
+          "min": 53,
+          "max": 717,
+          "median": 140,
+          "p75": 202,
+          "p95": 717
+        },
+        "loafBlocking": {
+          "avg": 166,
+          "min": 3,
+          "max": 666,
+          "median": 79,
+          "p75": 151,
+          "p95": 666
+        },
+        "slowest5": [
+          {
+            "name": "pointerdown",
+            "duration": 88,
+            "inputDelay": 4,
+            "processingTime": 0,
+            "presentationDelay": 84
+          }
+        ],
+        "version": "Simple (IntersectionObserver)",
+        "run": 2,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 80,
+        "interactionCount": 1,
+        "totalEventCount": 3,
+        "duration": {
+          "avg": 80,
+          "min": 80,
+          "max": 80,
+          "median": 80,
+          "p75": 80,
+          "p95": 80
+        },
+        "inputDelay": {
+          "avg": 4,
+          "min": 4,
+          "max": 4,
+          "median": 4,
+          "p75": 4,
+          "p95": 4
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 76,
+          "min": 76,
+          "max": 76,
+          "median": 76,
+          "p75": 76,
+          "p95": 76
+        },
+        "tbt": 837,
+        "longTaskCount": 5,
+        "fcp": 212,
+        "loafCount": 6,
+        "loafDuration": {
+          "avg": 212,
+          "min": 54,
+          "max": 667,
+          "median": 133,
+          "p75": 221,
+          "p95": 667
+        },
+        "loafBlocking": {
+          "avg": 155,
+          "min": 4,
+          "max": 617,
+          "median": 73,
+          "p75": 151,
+          "p95": 617
+        },
+        "slowest5": [
+          {
+            "name": "pointerdown",
+            "duration": 80,
+            "inputDelay": 4,
+            "processingTime": 0,
+            "presentationDelay": 76
+          }
+        ],
+        "version": "Simple (IntersectionObserver)",
+        "run": 3,
+        "rating": "GOOD"
+      }
+    ],
+    "optimized": [
+      {
+        "inp": 56,
+        "interactionCount": 1,
+        "totalEventCount": 3,
+        "duration": {
+          "avg": 56,
+          "min": 56,
+          "max": 56,
+          "median": 56,
+          "p75": 56,
+          "p95": 56
+        },
+        "inputDelay": {
+          "avg": 6,
+          "min": 6,
+          "max": 6,
+          "median": 6,
+          "p75": 6,
+          "p95": 6
+        },
+        "processingTime": {
+          "avg": 1,
+          "min": 1,
+          "max": 1,
+          "median": 1,
+          "p75": 1,
+          "p95": 1
+        },
+        "presentationDelay": {
+          "avg": 49,
+          "min": 49,
+          "max": 49,
+          "median": 49,
+          "p75": 49,
+          "p95": 49
+        },
+        "tbt": 879,
+        "longTaskCount": 5,
+        "fcp": 504,
+        "loafCount": 6,
+        "loafDuration": {
+          "avg": 215,
+          "min": 50,
+          "max": 706,
+          "median": 130,
+          "p75": 192,
+          "p95": 706
+        },
+        "loafBlocking": {
+          "avg": 160,
+          "min": 0,
+          "max": 656,
+          "median": 70,
+          "p75": 142,
+          "p95": 656
+        },
+        "slowest5": [
+          {
+            "name": "pointerdown",
+            "duration": 56,
+            "inputDelay": 6,
+            "processingTime": 1,
+            "presentationDelay": 49
+          }
+        ],
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 1,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 40,
+        "interactionCount": 1,
+        "totalEventCount": 3,
+        "duration": {
+          "avg": 40,
+          "min": 40,
+          "max": 40,
+          "median": 40,
+          "p75": 40,
+          "p95": 40
+        },
+        "inputDelay": {
+          "avg": 4,
+          "min": 4,
+          "max": 4,
+          "median": 4,
+          "p75": 4,
+          "p95": 4
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 37,
+          "min": 37,
+          "max": 37,
+          "median": 37,
+          "p75": 37,
+          "p95": 37
+        },
+        "tbt": 882,
+        "longTaskCount": 5,
+        "fcp": 280,
+        "loafCount": 5,
+        "loafDuration": {
+          "avg": 253,
+          "min": 80,
+          "max": 697,
+          "median": 140,
+          "p75": 212,
+          "p95": 697
+        },
+        "loafBlocking": {
+          "avg": 193,
+          "min": 20,
+          "max": 647,
+          "median": 80,
+          "p75": 148,
+          "p95": 647
+        },
+        "slowest5": [
+          {
+            "name": "pointerdown",
+            "duration": 40,
+            "inputDelay": 4,
+            "processingTime": 0,
+            "presentationDelay": 37
+          }
+        ],
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 2,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 843,
+        "longTaskCount": 5,
+        "fcp": 212,
+        "loafCount": 6,
+        "loafDuration": {
+          "avg": 213,
+          "min": 51,
+          "max": 694,
+          "median": 126,
+          "p75": 207,
+          "p95": 694
+        },
+        "loafBlocking": {
+          "avg": 156,
+          "min": 1,
+          "max": 644,
+          "median": 66,
+          "p75": 143,
+          "p95": 644
+        },
+        "slowest5": [],
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 3,
+        "rating": "GOOD"
+      }
+    ],
+    "opt14": [
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 855,
+        "longTaskCount": 5,
+        "fcp": 496,
+        "loafCount": 5,
+        "loafDuration": {
+          "avg": 246,
+          "min": 73,
+          "max": 708,
+          "median": 140,
+          "p75": 187,
+          "p95": 708
+        },
+        "loafBlocking": {
+          "avg": 188,
+          "min": 13,
+          "max": 658,
+          "median": 73,
+          "p75": 124,
+          "p95": 658
+        },
+        "slowest5": [],
+        "version": "Opt14 (IO+RAF+Limit+Cache)",
+        "run": 1,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 761,
+        "longTaskCount": 5,
+        "fcp": 216,
+        "loafCount": 6,
+        "loafDuration": {
+          "avg": 197,
+          "min": 52,
+          "max": 599,
+          "median": 134,
+          "p75": 179,
+          "p95": 599
+        },
+        "loafBlocking": {
+          "avg": 142,
+          "min": 2,
+          "max": 549,
+          "median": 74,
+          "p75": 129,
+          "p95": 549
+        },
+        "slowest5": [],
+        "version": "Opt14 (IO+RAF+Limit+Cache)",
+        "run": 2,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 847,
+        "longTaskCount": 5,
+        "fcp": 220,
+        "loafCount": 6,
+        "loafDuration": {
+          "avg": 214,
+          "min": 53,
+          "max": 695,
+          "median": 134,
+          "p75": 187,
+          "p95": 695
+        },
+        "loafBlocking": {
+          "avg": 156,
+          "min": 3,
+          "max": 644,
+          "median": 73,
+          "p75": 122,
+          "p95": 644
+        },
+        "slowest5": [],
+        "version": "Opt14 (IO+RAF+Limit+Cache)",
+        "run": 3,
+        "rating": "GOOD"
+      }
+    ],
+    "opt15": [
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 613,
+        "longTaskCount": 2,
+        "fcp": 516,
+        "loafCount": 3,
+        "loafDuration": {
+          "avg": 286,
+          "min": 52,
+          "max": 666,
+          "median": 138,
+          "p75": 666,
+          "p95": 666
+        },
+        "loafBlocking": {
+          "avg": 229,
+          "min": 2,
+          "max": 616,
+          "median": 67,
+          "p75": 616,
+          "p95": 616
+        },
+        "slowest5": [],
+        "version": "Opt15 (IO+RAF+Worker, Limit=3)",
+        "run": 1,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 538,
+        "longTaskCount": 2,
+        "fcp": 204,
+        "loafCount": 2,
+        "loafDuration": {
+          "avg": 359,
+          "min": 126,
+          "max": 592,
+          "median": 359,
+          "p75": 592,
+          "p95": 592
+        },
+        "loafBlocking": {
+          "avg": 300,
+          "min": 59,
+          "max": 541,
+          "median": 300,
+          "p75": 541,
+          "p95": 541
+        },
+        "slowest5": [],
+        "version": "Opt15 (IO+RAF+Worker, Limit=3)",
+        "run": 2,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 634,
+        "longTaskCount": 2,
+        "fcp": 224,
+        "loafCount": 3,
+        "loafDuration": {
+          "avg": 294,
+          "min": 50,
+          "max": 687,
+          "median": 145,
+          "p75": 687,
+          "p95": 687
+        },
+        "loafBlocking": {
+          "avg": 237,
+          "min": 0,
+          "max": 637,
+          "median": 75,
+          "p75": 637,
+          "p95": 637
+        },
+        "slowest5": [],
+        "version": "Opt15 (IO+RAF+Worker, Limit=3)",
+        "run": 3,
+        "rating": "GOOD"
+      }
+    ],
+    "opt15-nolimit": [
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 644,
+        "longTaskCount": 2,
+        "fcp": 552,
+        "loafCount": 3,
+        "loafDuration": {
+          "avg": 294,
+          "min": 53,
+          "max": 697,
+          "median": 132,
+          "p75": 697,
+          "p95": 697
+        },
+        "loafBlocking": {
+          "avg": 238,
+          "min": 3,
+          "max": 647,
+          "median": 63,
+          "p75": 647,
+          "p95": 647
+        },
+        "slowest5": [],
+        "version": "Opt15-NoLimit (IO+RAF+Worker)",
+        "run": 1,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 40,
+        "interactionCount": 1,
+        "totalEventCount": 3,
+        "duration": {
+          "avg": 40,
+          "min": 40,
+          "max": 40,
+          "median": 40,
+          "p75": 40,
+          "p95": 40
+        },
+        "inputDelay": {
+          "avg": 3,
+          "min": 3,
+          "max": 3,
+          "median": 3,
+          "p75": 3,
+          "p95": 3
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 36,
+          "min": 36,
+          "max": 36,
+          "median": 36,
+          "p75": 36,
+          "p95": 36
+        },
+        "tbt": 601,
+        "longTaskCount": 2,
+        "fcp": 216,
+        "loafCount": 3,
+        "loafDuration": {
+          "avg": 283,
+          "min": 51,
+          "max": 652,
+          "median": 146,
+          "p75": 652,
+          "p95": 652
+        },
+        "loafBlocking": {
+          "avg": 226,
+          "min": 1,
+          "max": 602,
+          "median": 75,
+          "p75": 602,
+          "p95": 602
+        },
+        "slowest5": [
+          {
+            "name": "pointerdown",
+            "duration": 40,
+            "inputDelay": 3,
+            "processingTime": 0,
+            "presentationDelay": 36
+          }
+        ],
+        "version": "Opt15-NoLimit (IO+RAF+Worker)",
+        "run": 2,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 649,
+        "longTaskCount": 2,
+        "fcp": 220,
+        "loafCount": 3,
+        "loafDuration": {
+          "avg": 296,
+          "min": 51,
+          "max": 702,
+          "median": 135,
+          "p75": 702,
+          "p95": 702
+        },
+        "loafBlocking": {
+          "avg": 240,
+          "min": 1,
+          "max": 652,
+          "median": 65,
+          "p75": 652,
+          "p95": 652
+        },
+        "slowest5": [],
+        "version": "Opt15-NoLimit (IO+RAF+Worker)",
+        "run": 3,
+        "rating": "GOOD"
+      }
+    ],
+    "worker-only": [
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 665,
+        "longTaskCount": 2,
+        "fcp": 536,
+        "loafCount": 3,
+        "loafDuration": {
+          "avg": 302,
+          "min": 53,
+          "max": 718,
+          "median": 136,
+          "p75": 718,
+          "p95": 718
+        },
+        "loafBlocking": {
+          "avg": 246,
+          "min": 3,
+          "max": 668,
+          "median": 69,
+          "p75": 668,
+          "p95": 668
+        },
+        "slowest5": [],
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 1,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 608,
+        "longTaskCount": 2,
+        "fcp": 216,
+        "loafCount": 2,
+        "loafDuration": {
+          "avg": 400,
+          "min": 141,
+          "max": 659,
+          "median": 400,
+          "p75": 659,
+          "p95": 659
+        },
+        "loafBlocking": {
+          "avg": 341,
+          "min": 72,
+          "max": 609,
+          "median": 341,
+          "p75": 609,
+          "p95": 609
+        },
+        "slowest5": [],
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 2,
+        "rating": "GOOD"
+      },
+      {
+        "inp": 0,
+        "interactionCount": 0,
+        "totalEventCount": 0,
+        "duration": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "inputDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "processingTime": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "presentationDelay": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "median": 0,
+          "p75": 0,
+          "p95": 0
+        },
+        "tbt": 620,
+        "longTaskCount": 4,
+        "fcp": 228,
+        "loafCount": 3,
+        "loafDuration": {
+          "avg": 286,
+          "min": 57,
+          "max": 665,
+          "median": 138,
+          "p75": 665,
+          "p95": 665
+        },
+        "loafBlocking": {
+          "avg": 230,
+          "min": 7,
+          "max": 615,
+          "median": 67,
+          "p75": 615,
+          "p95": 615
+        },
+        "slowest5": [],
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 3,
+        "rating": "GOOD"
+      }
+    ]
+  },
+  "meta": {
+    "runs": 3,
+    "cpuThrottle": 4,
+    "scrollCount": 10,
+    "scrollDelay": 300,
+    "baseUrl": "http://localhost:3000",
+    "pdfUrl": "/sample4.pdf",
+    "timestamp": "2026-03-23T20:52:08.104Z",
+    "metric": "INP (Interaction to Next Paint) - p98 of interaction durations",
+    "rating": "GOOD: ≤200ms, NEEDS_IMPROVEMENT: ≤500ms, POOR: >500ms"
+  }
+}

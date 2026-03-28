@@ -1,0 +1,799 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (pdfOld, 스케줄링 없음)",
+      "shortName": "basic",
+      "occupancy": {
+        "avg": 16.78,
+        "min": 16.73,
+        "max": 16.89,
+        "median": 16.73
+      },
+      "totalLongTaskDuration": {
+        "avg": 1408.67,
+        "min": 1337,
+        "max": 1548,
+        "median": 1341
+      },
+      "measurementWindow": {
+        "avg": 8392.67,
+        "min": 7938,
+        "max": 9250,
+        "median": 7990
+      },
+      "tbt": {
+        "avg": 1086,
+        "min": 1026,
+        "max": 1164,
+        "median": 1068
+      },
+      "fcp": {
+        "avg": 796,
+        "min": 232,
+        "max": 1832,
+        "median": 324
+      },
+      "firstCanvasTime": {
+        "avg": 2284.33,
+        "min": 1856,
+        "max": 3074,
+        "median": 1923
+      },
+      "longTaskCount": {
+        "avg": 5,
+        "min": 4,
+        "max": 6,
+        "median": 5
+      },
+      "longTaskMax": {
+        "avg": 699,
+        "min": 668,
+        "max": 732,
+        "median": 697
+      },
+      "longTaskAvg": {
+        "avg": 286.67,
+        "min": 258,
+        "max": 335,
+        "median": 267
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "runs": 3
+    },
+    {
+      "version": "Simple (IntersectionObserver)",
+      "shortName": "simple",
+      "occupancy": {
+        "avg": 13.92,
+        "min": 12.53,
+        "max": 15.09,
+        "median": 14.15
+      },
+      "totalLongTaskDuration": {
+        "avg": 1061.67,
+        "min": 984,
+        "max": 1143,
+        "median": 1058
+      },
+      "measurementWindow": {
+        "avg": 7635,
+        "min": 7478,
+        "max": 7855,
+        "median": 7572
+      },
+      "tbt": {
+        "avg": 794.67,
+        "min": 716,
+        "max": 879,
+        "median": 789
+      },
+      "fcp": {
+        "avg": 357.33,
+        "min": 212,
+        "max": 640,
+        "median": 220
+      },
+      "firstCanvasTime": {
+        "avg": 1912.67,
+        "min": 1742,
+        "max": 2140,
+        "median": 1856
+      },
+      "longTaskCount": {
+        "avg": 4,
+        "min": 4,
+        "max": 4,
+        "median": 4
+      },
+      "longTaskMax": {
+        "avg": 626,
+        "min": 548,
+        "max": 696,
+        "median": 634
+      },
+      "longTaskAvg": {
+        "avg": 265.67,
+        "min": 246,
+        "max": 286,
+        "median": 265
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "runs": 3
+    },
+    {
+      "version": "Optimized (Baseline)",
+      "shortName": "optimized",
+      "occupancy": {
+        "avg": 14.6,
+        "min": 13.84,
+        "max": 15.22,
+        "median": 14.73
+      },
+      "totalLongTaskDuration": {
+        "avg": 1149,
+        "min": 1124,
+        "max": 1192,
+        "median": 1131
+      },
+      "measurementWindow": {
+        "avg": 7877.33,
+        "min": 7678,
+        "max": 8120,
+        "median": 7834
+      },
+      "tbt": {
+        "avg": 836,
+        "min": 811,
+        "max": 881,
+        "median": 816
+      },
+      "fcp": {
+        "avg": 356,
+        "min": 212,
+        "max": 592,
+        "median": 264
+      },
+      "firstCanvasTime": {
+        "avg": 1949.33,
+        "min": 1788,
+        "max": 2129,
+        "median": 1931
+      },
+      "longTaskCount": {
+        "avg": 5,
+        "min": 5,
+        "max": 5,
+        "median": 5
+      },
+      "longTaskMax": {
+        "avg": 681.33,
+        "min": 651,
+        "max": 711,
+        "median": 682
+      },
+      "longTaskAvg": {
+        "avg": 229.67,
+        "min": 225,
+        "max": 238,
+        "median": 226
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "runs": 3
+    },
+    {
+      "version": "Opt14 (getPage Cache)",
+      "shortName": "opt14",
+      "occupancy": {
+        "avg": 14.64,
+        "min": 14.08,
+        "max": 15.08,
+        "median": 14.77
+      },
+      "totalLongTaskDuration": {
+        "avg": 1155.67,
+        "min": 1135,
+        "max": 1174,
+        "median": 1158
+      },
+      "measurementWindow": {
+        "avg": 7898.33,
+        "min": 7687,
+        "max": 8224,
+        "median": 7784
+      },
+      "tbt": {
+        "avg": 853.67,
+        "min": 818,
+        "max": 883,
+        "median": 860
+      },
+      "fcp": {
+        "avg": 337.33,
+        "min": 212,
+        "max": 580,
+        "median": 220
+      },
+      "firstCanvasTime": {
+        "avg": 1995.33,
+        "min": 1786,
+        "max": 2319,
+        "median": 1881
+      },
+      "longTaskCount": {
+        "avg": 5,
+        "min": 5,
+        "max": 5,
+        "median": 5
+      },
+      "longTaskMax": {
+        "avg": 679,
+        "min": 640,
+        "max": 703,
+        "median": 694
+      },
+      "longTaskAvg": {
+        "avg": 231.33,
+        "min": 227,
+        "max": 235,
+        "median": 232
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "runs": 3
+    },
+    {
+      "version": "Opt15 (RAF+IO+Worker, Limit=3)",
+      "shortName": "opt15",
+      "occupancy": {
+        "avg": 2.12,
+        "min": 2.04,
+        "max": 2.22,
+        "median": 2.11
+      },
+      "totalLongTaskDuration": {
+        "avg": 784.67,
+        "min": 750,
+        "max": 818,
+        "median": 786
+      },
+      "measurementWindow": {
+        "avg": 36911.33,
+        "min": 36715,
+        "max": 37243,
+        "median": 36776
+      },
+      "tbt": {
+        "avg": 628,
+        "min": 602,
+        "max": 651,
+        "median": 631
+      },
+      "fcp": {
+        "avg": 386.67,
+        "min": 184,
+        "max": 752,
+        "median": 224
+      },
+      "firstCanvasTime": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "longTaskCount": {
+        "avg": 2.33,
+        "min": 2,
+        "max": 3,
+        "median": 2
+      },
+      "longTaskMax": {
+        "avg": 677.67,
+        "min": 651,
+        "max": 701,
+        "median": 681
+      },
+      "longTaskAvg": {
+        "avg": 347,
+        "min": 273,
+        "max": 393,
+        "median": 375
+      },
+      "canvasCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "runs": 3
+    },
+    {
+      "version": "Opt15-NoLimit (RAF+IO+Worker)",
+      "shortName": "opt15-nolimit",
+      "occupancy": {
+        "avg": 2.28,
+        "min": 2.15,
+        "max": 2.41,
+        "median": 2.28
+      },
+      "totalLongTaskDuration": {
+        "avg": 845,
+        "min": 793,
+        "max": 888,
+        "median": 854
+      },
+      "measurementWindow": {
+        "avg": 37027.33,
+        "min": 36839,
+        "max": 37376,
+        "median": 36867
+      },
+      "tbt": {
+        "avg": 657,
+        "min": 641,
+        "max": 673,
+        "median": 657
+      },
+      "fcp": {
+        "avg": 412,
+        "min": 216,
+        "max": 796,
+        "median": 224
+      },
+      "firstCanvasTime": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "longTaskCount": {
+        "avg": 2.67,
+        "min": 2,
+        "max": 3,
+        "median": 3
+      },
+      "longTaskMax": {
+        "avg": 706.67,
+        "min": 691,
+        "max": 722,
+        "median": 707
+      },
+      "longTaskAvg": {
+        "avg": 326,
+        "min": 285,
+        "max": 397,
+        "median": 296
+      },
+      "canvasCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "runs": 3
+    },
+    {
+      "version": "WorkerOnly (OffscreenCanvas)",
+      "shortName": "worker-only",
+      "occupancy": {
+        "avg": 2.28,
+        "min": 2.18,
+        "max": 2.42,
+        "median": 2.25
+      },
+      "totalLongTaskDuration": {
+        "avg": 845.33,
+        "min": 805,
+        "max": 904,
+        "median": 827
+      },
+      "measurementWindow": {
+        "avg": 37009,
+        "min": 36799,
+        "max": 37375,
+        "median": 36853
+      },
+      "tbt": {
+        "avg": 661.33,
+        "min": 641,
+        "max": 677,
+        "median": 666
+      },
+      "fcp": {
+        "avg": 422.67,
+        "min": 216,
+        "max": 768,
+        "median": 284
+      },
+      "firstCanvasTime": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "longTaskCount": {
+        "avg": 2.33,
+        "min": 2,
+        "max": 3,
+        "median": 2
+      },
+      "longTaskMax": {
+        "avg": 711.33,
+        "min": 691,
+        "max": 727,
+        "median": 716
+      },
+      "longTaskAvg": {
+        "avg": 372.67,
+        "min": 301,
+        "max": 414,
+        "median": 403
+      },
+      "canvasCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "runs": 3
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "occupancy": 16.73,
+        "totalLongTaskDuration": 1548,
+        "measurementWindow": 9250,
+        "tbt": 1164,
+        "fcp": 1832,
+        "firstCanvasTime": 3074,
+        "longTaskCount": 6,
+        "longTaskMax": 732,
+        "longTaskAvg": 258,
+        "canvasCount": 147,
+        "loadComplete": 1898,
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 1
+      },
+      {
+        "occupancy": 16.73,
+        "totalLongTaskDuration": 1337,
+        "measurementWindow": 7990,
+        "tbt": 1026,
+        "fcp": 324,
+        "firstCanvasTime": 1923,
+        "longTaskCount": 5,
+        "longTaskMax": 668,
+        "longTaskAvg": 267,
+        "canvasCount": 147,
+        "loadComplete": 1056,
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 2
+      },
+      {
+        "occupancy": 16.89,
+        "totalLongTaskDuration": 1341,
+        "measurementWindow": 7938,
+        "tbt": 1068,
+        "fcp": 232,
+        "firstCanvasTime": 1856,
+        "longTaskCount": 4,
+        "longTaskMax": 697,
+        "longTaskAvg": 335,
+        "canvasCount": 147,
+        "loadComplete": 1003,
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 3
+      }
+    ],
+    "simple": [
+      {
+        "occupancy": 12.53,
+        "totalLongTaskDuration": 984,
+        "measurementWindow": 7855,
+        "tbt": 716,
+        "fcp": 640,
+        "firstCanvasTime": 2140,
+        "longTaskCount": 4,
+        "longTaskMax": 548,
+        "longTaskAvg": 246,
+        "canvasCount": 147,
+        "loadComplete": 1270,
+        "version": "Simple (IntersectionObserver)",
+        "run": 1
+      },
+      {
+        "occupancy": 14.15,
+        "totalLongTaskDuration": 1058,
+        "measurementWindow": 7478,
+        "tbt": 789,
+        "fcp": 220,
+        "firstCanvasTime": 1742,
+        "longTaskCount": 4,
+        "longTaskMax": 634,
+        "longTaskAvg": 265,
+        "canvasCount": 147,
+        "loadComplete": 928,
+        "version": "Simple (IntersectionObserver)",
+        "run": 2
+      },
+      {
+        "occupancy": 15.09,
+        "totalLongTaskDuration": 1143,
+        "measurementWindow": 7572,
+        "tbt": 879,
+        "fcp": 212,
+        "firstCanvasTime": 1856,
+        "longTaskCount": 4,
+        "longTaskMax": 696,
+        "longTaskAvg": 286,
+        "canvasCount": 147,
+        "loadComplete": 1019,
+        "version": "Simple (IntersectionObserver)",
+        "run": 3
+      }
+    ],
+    "optimized": [
+      {
+        "occupancy": 13.84,
+        "totalLongTaskDuration": 1124,
+        "measurementWindow": 8120,
+        "tbt": 811,
+        "fcp": 592,
+        "firstCanvasTime": 2129,
+        "longTaskCount": 5,
+        "longTaskMax": 651,
+        "longTaskAvg": 225,
+        "canvasCount": 147,
+        "loadComplete": 1303,
+        "version": "Optimized (Baseline)",
+        "run": 1
+      },
+      {
+        "occupancy": 15.22,
+        "totalLongTaskDuration": 1192,
+        "measurementWindow": 7834,
+        "tbt": 881,
+        "fcp": 264,
+        "firstCanvasTime": 1931,
+        "longTaskCount": 5,
+        "longTaskMax": 711,
+        "longTaskAvg": 238,
+        "canvasCount": 147,
+        "loadComplete": 1076,
+        "version": "Optimized (Baseline)",
+        "run": 2
+      },
+      {
+        "occupancy": 14.73,
+        "totalLongTaskDuration": 1131,
+        "measurementWindow": 7678,
+        "tbt": 816,
+        "fcp": 212,
+        "firstCanvasTime": 1788,
+        "longTaskCount": 5,
+        "longTaskMax": 682,
+        "longTaskAvg": 226,
+        "canvasCount": 147,
+        "loadComplete": 963,
+        "version": "Optimized (Baseline)",
+        "run": 3
+      }
+    ],
+    "opt14": [
+      {
+        "occupancy": 14.08,
+        "totalLongTaskDuration": 1158,
+        "measurementWindow": 8224,
+        "tbt": 883,
+        "fcp": 580,
+        "firstCanvasTime": 2319,
+        "longTaskCount": 5,
+        "longTaskMax": 703,
+        "longTaskAvg": 232,
+        "canvasCount": 147,
+        "loadComplete": 1433,
+        "version": "Opt14 (getPage Cache)",
+        "run": 1
+      },
+      {
+        "occupancy": 15.08,
+        "totalLongTaskDuration": 1174,
+        "measurementWindow": 7784,
+        "tbt": 860,
+        "fcp": 212,
+        "firstCanvasTime": 1881,
+        "longTaskCount": 5,
+        "longTaskMax": 694,
+        "longTaskAvg": 235,
+        "canvasCount": 147,
+        "loadComplete": 1029,
+        "version": "Opt14 (getPage Cache)",
+        "run": 2
+      },
+      {
+        "occupancy": 14.77,
+        "totalLongTaskDuration": 1135,
+        "measurementWindow": 7687,
+        "tbt": 818,
+        "fcp": 220,
+        "firstCanvasTime": 1786,
+        "longTaskCount": 5,
+        "longTaskMax": 640,
+        "longTaskAvg": 227,
+        "canvasCount": 147,
+        "loadComplete": 932,
+        "version": "Opt14 (getPage Cache)",
+        "run": 3
+      }
+    ],
+    "opt15": [
+      {
+        "occupancy": 2.11,
+        "totalLongTaskDuration": 786,
+        "measurementWindow": 37243,
+        "tbt": 651,
+        "fcp": 752,
+        "firstCanvasTime": 0,
+        "longTaskCount": 2,
+        "longTaskMax": 701,
+        "longTaskAvg": 393,
+        "canvasCount": 0,
+        "loadComplete": 1631,
+        "version": "Opt15 (RAF+IO+Worker, Limit=3)",
+        "run": 1
+      },
+      {
+        "occupancy": 2.22,
+        "totalLongTaskDuration": 818,
+        "measurementWindow": 36776,
+        "tbt": 602,
+        "fcp": 224,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 651,
+        "longTaskAvg": 273,
+        "canvasCount": 0,
+        "loadComplete": 950,
+        "version": "Opt15 (RAF+IO+Worker, Limit=3)",
+        "run": 2
+      },
+      {
+        "occupancy": 2.04,
+        "totalLongTaskDuration": 750,
+        "measurementWindow": 36715,
+        "tbt": 631,
+        "fcp": 184,
+        "firstCanvasTime": 0,
+        "longTaskCount": 2,
+        "longTaskMax": 681,
+        "longTaskAvg": 375,
+        "canvasCount": 0,
+        "loadComplete": 997,
+        "version": "Opt15 (RAF+IO+Worker, Limit=3)",
+        "run": 3
+      }
+    ],
+    "opt15-nolimit": [
+      {
+        "occupancy": 2.28,
+        "totalLongTaskDuration": 854,
+        "measurementWindow": 37376,
+        "tbt": 641,
+        "fcp": 796,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 691,
+        "longTaskAvg": 285,
+        "canvasCount": 0,
+        "loadComplete": 1563,
+        "version": "Opt15-NoLimit (RAF+IO+Worker)",
+        "run": 1
+      },
+      {
+        "occupancy": 2.15,
+        "totalLongTaskDuration": 793,
+        "measurementWindow": 36839,
+        "tbt": 657,
+        "fcp": 216,
+        "firstCanvasTime": 0,
+        "longTaskCount": 2,
+        "longTaskMax": 707,
+        "longTaskAvg": 397,
+        "canvasCount": 0,
+        "loadComplete": 1082,
+        "version": "Opt15-NoLimit (RAF+IO+Worker)",
+        "run": 2
+      },
+      {
+        "occupancy": 2.41,
+        "totalLongTaskDuration": 888,
+        "measurementWindow": 36867,
+        "tbt": 673,
+        "fcp": 224,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 722,
+        "longTaskAvg": 296,
+        "canvasCount": 0,
+        "loadComplete": 1006,
+        "version": "Opt15-NoLimit (RAF+IO+Worker)",
+        "run": 3
+      }
+    ],
+    "worker-only": [
+      {
+        "occupancy": 2.42,
+        "totalLongTaskDuration": 904,
+        "measurementWindow": 37375,
+        "tbt": 677,
+        "fcp": 768,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 727,
+        "longTaskAvg": 301,
+        "canvasCount": 0,
+        "loadComplete": 1565,
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 1
+      },
+      {
+        "occupancy": 2.18,
+        "totalLongTaskDuration": 805,
+        "measurementWindow": 36853,
+        "tbt": 641,
+        "fcp": 284,
+        "firstCanvasTime": 0,
+        "longTaskCount": 2,
+        "longTaskMax": 691,
+        "longTaskAvg": 403,
+        "canvasCount": 0,
+        "loadComplete": 1045,
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 2
+      },
+      {
+        "occupancy": 2.25,
+        "totalLongTaskDuration": 827,
+        "measurementWindow": 36799,
+        "tbt": 666,
+        "fcp": 216,
+        "firstCanvasTime": 0,
+        "longTaskCount": 2,
+        "longTaskMax": 716,
+        "longTaskAvg": 414,
+        "canvasCount": 0,
+        "loadComplete": 985,
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 3
+      }
+    ]
+  },
+  "meta": {
+    "runs": 3,
+    "cpuThrottle": 4,
+    "settleTime": 5000,
+    "baseUrl": "http://localhost:3000",
+    "pdfUrl": "/sample4.pdf",
+    "timestamp": "2026-03-23T19:35:11.312Z",
+    "metric": "Main Thread Occupancy (%) = sum(longTask durations) / measurement_window * 100"
+  }
+}

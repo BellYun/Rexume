@@ -1,0 +1,3582 @@
+{
+  "timestamp": "2025-10-30T13:48:37.410Z",
+  "config": {
+    "cpuThrottle": 1,
+    "runsPerUrl": 5,
+    "headless": true,
+    "testUrls": [
+      {
+        "url": "http://nextjs:3000/feedback-basic/4",
+        "name": "Basic (개선 전)",
+        "shortName": "basic"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=simple",
+        "name": "Simple (IntersectionObserver)",
+        "shortName": "simple"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=raf",
+        "name": "RAF (requestAnimationFrame)",
+        "shortName": "raf"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+        "name": "RAF Windowing (점진적 마운트)",
+        "shortName": "raf-windowing"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=lazy",
+        "name": "Lazy (지연된 getPage)",
+        "shortName": "lazy"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+        "name": "Opt1: RAF 페인트 안정화",
+        "shortName": "opt1-raf"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+        "name": "Opt2: Callback Ref 패턴",
+        "shortName": "opt2-callback-ref"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+        "name": "Opt3: Combined (RAF + Callback)",
+        "shortName": "opt3-combined"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+        "name": "Opt4: RenderScheduler (K=4)",
+        "shortName": "opt4-scheduler"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+        "name": "Opt5: RAF 배칭",
+        "shortName": "opt5-raf-batching"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+        "name": "Opt6: 우선순위 정렬",
+        "shortName": "opt6-priority"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+        "name": "Opt7: 전체 스케줄링",
+        "shortName": "opt7-all-scheduling"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt8-raf-paint-batching",
+        "name": "Opt8: RAF 페인트 + 배칭",
+        "shortName": "opt8-raf-paint-batching"
+      }
+    ]
+  },
+  "results": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "url": "http://nextjs:3000/feedback-basic/4",
+      "shortName": "basic",
+      "results": [
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://nextjs:3000/feedback-basic/4",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:40:38.945Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1213.3000000000466,
+          "firstPaint": 218.60000000009313,
+          "firstContentfulPaint": 218.60000000009313,
+          "largestContentfulPaint": 218.60000000009313,
+          "longTasks": [
+            {
+              "startTime": 137.70000000018626,
+              "duration": 57,
+              "timestamp": 209.70000000018626
+            },
+            {
+              "startTime": 324.70000000018626,
+              "duration": 244,
+              "timestamp": 578.2000000001863
+            },
+            {
+              "startTime": 963.1000000000931,
+              "duration": 102,
+              "timestamp": 1079.7000000001863
+            }
+          ],
+          "totalBlockingTime": 246,
+          "longTaskCount": 3,
+          "navigationStart": 1761831633972,
+          "domContentLoaded": 210,
+          "loadComplete": 571.5,
+          "canvasCount": 147,
+          "measurementDuration": 3012.3000000000466,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 218.60000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 218.60000000009313,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://nextjs:3000/feedback-basic/4",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:40:46.887Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1102.3000000000466,
+          "firstPaint": 172.10000000009313,
+          "firstContentfulPaint": 172.10000000009313,
+          "largestContentfulPaint": 172.10000000009313,
+          "longTasks": [
+            {
+              "startTime": 261.30000000004657,
+              "duration": 223,
+              "timestamp": 495.30000000004657
+            },
+            {
+              "startTime": 884.8999999999069,
+              "duration": 100,
+              "timestamp": 996.8999999999069
+            }
+          ],
+          "totalBlockingTime": 223,
+          "longTaskCount": 2,
+          "navigationStart": 1761831642129,
+          "domContentLoaded": 163.39999999990687,
+          "loadComplete": 487.69999999995343,
+          "canvasCount": 147,
+          "measurementDuration": 3014.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 172.10000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 172.10000000009313,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://nextjs:3000/feedback-basic/4",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:40:54.954Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1226.1999999999534,
+          "firstPaint": 275.10000000009313,
+          "firstContentfulPaint": 275.10000000009313,
+          "largestContentfulPaint": 275.10000000009313,
+          "longTasks": [
+            {
+              "startTime": 107.9000000001397,
+              "duration": 147,
+              "timestamp": 274
+            },
+            {
+              "startTime": 368,
+              "duration": 229,
+              "timestamp": 606.9000000001397
+            },
+            {
+              "startTime": 997.1000000000931,
+              "duration": 101,
+              "timestamp": 1110.6000000000931
+            }
+          ],
+          "totalBlockingTime": 230,
+          "longTaskCount": 3,
+          "navigationStart": 1761831650091,
+          "domContentLoaded": 275.60000000009313,
+          "loadComplete": 600.5,
+          "canvasCount": 147,
+          "measurementDuration": 3009,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 275.10000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 275.10000000009313,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://nextjs:3000/feedback-basic/4",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:41:03.008Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1214,
+          "firstPaint": 140.4000000001397,
+          "firstContentfulPaint": 140.4000000001397,
+          "largestContentfulPaint": 140.4000000001397,
+          "longTasks": [
+            {
+              "startTime": 260.10000000009313,
+              "duration": 227,
+              "timestamp": 495.9000000001397
+            },
+            {
+              "startTime": 995.3000000000466,
+              "duration": 99,
+              "timestamp": 1105.6000000000931
+            }
+          ],
+          "totalBlockingTime": 226,
+          "longTaskCount": 2,
+          "navigationStart": 1761831658150,
+          "domContentLoaded": 91.39999999990687,
+          "loadComplete": 489.60000000009313,
+          "canvasCount": 147,
+          "measurementDuration": 3015.899999999907,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 140.4000000001397,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 140.4000000001397,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://nextjs:3000/feedback-basic/4",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:41:11.010Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1181.6000000000931,
+          "firstPaint": 166.30000000004657,
+          "firstContentfulPaint": 166.30000000004657,
+          "largestContentfulPaint": 166.30000000004657,
+          "longTasks": [
+            {
+              "startTime": 92.19999999995343,
+              "duration": 51,
+              "timestamp": 156.4000000001397
+            },
+            {
+              "startTime": 253.80000000004657,
+              "duration": 240,
+              "timestamp": 503.80000000004657
+            },
+            {
+              "startTime": 896.1000000000931,
+              "duration": 51,
+              "timestamp": 1059.4000000001397
+            },
+            {
+              "startTime": 954.8000000000466,
+              "duration": 104,
+              "timestamp": 1059.4000000001397
+            }
+          ],
+          "totalBlockingTime": 245,
+          "longTaskCount": 4,
+          "navigationStart": 1761831666182,
+          "domContentLoaded": 91.9000000001397,
+          "loadComplete": 497,
+          "canvasCount": 147,
+          "measurementDuration": 3015,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 166.30000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 166.30000000004657,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "url": "http://nextjs:3000/feedback/4?version=simple",
+      "shortName": "simple",
+      "results": [
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://nextjs:3000/feedback/4?version=simple",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:41:16.009Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1313.5,
+          "firstPaint": 161.19999999995343,
+          "firstContentfulPaint": 161.19999999995343,
+          "largestContentfulPaint": 161.19999999995343,
+          "longTasks": [
+            {
+              "startTime": 250,
+              "duration": 194,
+              "timestamp": 453.5999999998603
+            },
+            {
+              "startTime": 579.2999999998137,
+              "duration": 53,
+              "timestamp": 644.0999999998603
+            },
+            {
+              "startTime": 942.5999999998603,
+              "duration": 108,
+              "timestamp": 1094.5
+            },
+            {
+              "startTime": 1100.5999999998603,
+              "duration": 95,
+              "timestamp": 1202.0999999998603
+            }
+          ],
+          "totalBlockingTime": 250,
+          "longTaskCount": 4,
+          "navigationStart": 1761831671170,
+          "domContentLoaded": 97.30000000004657,
+          "loadComplete": 446.80000000004657,
+          "canvasCount": 147,
+          "measurementDuration": 3018.4000000001397,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 161.19999999995343,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 161.19999999995343,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://nextjs:3000/feedback/4?version=simple",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:41:24.146Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1436.5,
+          "firstPaint": 302.80000000004657,
+          "firstContentfulPaint": 302.80000000004657,
+          "largestContentfulPaint": 302.80000000004657,
+          "longTasks": [
+            {
+              "startTime": 210.9000000001397,
+              "duration": 61,
+              "timestamp": 292.20000000018626
+            },
+            {
+              "startTime": 440,
+              "duration": 190,
+              "timestamp": 639.7000000001863
+            },
+            {
+              "startTime": 1045,
+              "duration": 121,
+              "timestamp": 1211.6000000000931
+            },
+            {
+              "startTime": 1218,
+              "duration": 96,
+              "timestamp": 1319.6000000000931
+            }
+          ],
+          "totalBlockingTime": 257,
+          "longTaskCount": 4,
+          "navigationStart": 1761831679194,
+          "domContentLoaded": 210.30000000004657,
+          "loadComplete": 633.3000000000466,
+          "canvasCount": 147,
+          "measurementDuration": 3020,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 302.80000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 302.80000000004657,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://nextjs:3000/feedback/4?version=simple",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:41:32.268Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1432.6999999999534,
+          "firstPaint": 157.30000000004657,
+          "firstContentfulPaint": 157.30000000004657,
+          "largestContentfulPaint": 157.30000000004657,
+          "longTasks": [
+            {
+              "startTime": 250.10000000009313,
+              "duration": 191,
+              "timestamp": 450.5
+            },
+            {
+              "startTime": 858.3000000000466,
+              "duration": 168,
+              "timestamp": 1184.1999999999534
+            },
+            {
+              "startTime": 1030.5,
+              "duration": 153,
+              "timestamp": 1184.1999999999534
+            },
+            {
+              "startTime": 1212.6999999999534,
+              "duration": 94,
+              "timestamp": 1315.3000000000466
+            }
+          ],
+          "totalBlockingTime": 406,
+          "longTaskCount": 4,
+          "navigationStart": 1761831687333,
+          "domContentLoaded": 101,
+          "loadComplete": 444.0999999998603,
+          "canvasCount": 147,
+          "measurementDuration": 3014.7000000001863,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 157.30000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 157.30000000004657,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://nextjs:3000/feedback/4?version=simple",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:41:40.258Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1274.4000000001397,
+          "firstPaint": 159.9000000001397,
+          "firstContentfulPaint": 159.9000000001397,
+          "largestContentfulPaint": 159.9000000001397,
+          "longTasks": [
+            {
+              "startTime": 266.30000000004657,
+              "duration": 194,
+              "timestamp": 470.5
+            },
+            {
+              "startTime": 909.1999999999534,
+              "duration": 108,
+              "timestamp": 1060.3000000000466
+            },
+            {
+              "startTime": 1066.4000000001397,
+              "duration": 92,
+              "timestamp": 1164.1000000000931
+            }
+          ],
+          "totalBlockingTime": 244,
+          "longTaskCount": 3,
+          "navigationStart": 1761831695471,
+          "domContentLoaded": 153.69999999995343,
+          "loadComplete": 463.60000000009313,
+          "canvasCount": 147,
+          "measurementDuration": 3017.2000000001863,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 159.9000000001397,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 159.9000000001397,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://nextjs:3000/feedback/4?version=simple",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:41:48.233Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1291.1999999999534,
+          "firstPaint": 182.80000000004657,
+          "firstContentfulPaint": 182.80000000004657,
+          "largestContentfulPaint": 182.80000000004657,
+          "longTasks": [
+            {
+              "startTime": 117.19999999995343,
+              "duration": 53,
+              "timestamp": 180.10000000009313
+            },
+            {
+              "startTime": 270.9000000001397,
+              "duration": 190,
+              "timestamp": 472
+            },
+            {
+              "startTime": 916.1000000000931,
+              "duration": 110,
+              "timestamp": 1070.5
+            },
+            {
+              "startTime": 1079.6999999999534,
+              "duration": 89,
+              "timestamp": 1175.6000000000931
+            }
+          ],
+          "totalBlockingTime": 239,
+          "longTaskCount": 4,
+          "navigationStart": 1761831703437,
+          "domContentLoaded": 116.5,
+          "loadComplete": 464.30000000004657,
+          "canvasCount": 147,
+          "measurementDuration": 3014.4000000001397,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 182.80000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 182.80000000004657,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "url": "http://nextjs:3000/feedback/4?version=raf",
+      "shortName": "raf",
+      "results": [
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://nextjs:3000/feedback/4?version=raf",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:41:53.031Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1109.3000000000466,
+          "firstPaint": 178.10000000009313,
+          "firstContentfulPaint": 178.10000000009313,
+          "largestContentfulPaint": 178.10000000009313,
+          "longTasks": [
+            {
+              "startTime": 110.19999999995343,
+              "duration": 51,
+              "timestamp": 174.9000000001397
+            },
+            {
+              "startTime": 277.69999999995343,
+              "duration": 195,
+              "timestamp": 483.4000000001397
+            }
+          ],
+          "totalBlockingTime": 145,
+          "longTaskCount": 2,
+          "navigationStart": 1761831708419,
+          "domContentLoaded": 109.69999999995343,
+          "loadComplete": 476.19999999995343,
+          "canvasCount": 147,
+          "measurementDuration": 3022.6999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 178.10000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 178.10000000009313,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://nextjs:3000/feedback/4?version=raf",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:42:00.992Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1123.8000000000466,
+          "firstPaint": 145.10000000009313,
+          "firstContentfulPaint": 145.10000000009313,
+          "largestContentfulPaint": 145.10000000009313,
+          "longTasks": [
+            {
+              "startTime": 257,
+              "duration": 190,
+              "timestamp": 456.4000000001397
+            }
+          ],
+          "totalBlockingTime": 140,
+          "longTaskCount": 1,
+          "navigationStart": 1761831716340,
+          "domContentLoaded": 91.19999999995343,
+          "loadComplete": 450,
+          "canvasCount": 147,
+          "measurementDuration": 3017.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 145.10000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 145.10000000009313,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://nextjs:3000/feedback/4?version=raf",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:42:08.922Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1224.8000000000466,
+          "firstPaint": 176.60000000009313,
+          "firstContentfulPaint": 176.60000000009313,
+          "largestContentfulPaint": 176.60000000009313,
+          "longTasks": [
+            {
+              "startTime": 101,
+              "duration": 55,
+              "timestamp": 171.80000000004657
+            },
+            {
+              "startTime": 262.19999999995343,
+              "duration": 194,
+              "timestamp": 467.60000000009313
+            }
+          ],
+          "totalBlockingTime": 144,
+          "longTaskCount": 2,
+          "navigationStart": 1761831724203,
+          "domContentLoaded": 100.5999999998603,
+          "loadComplete": 459.89999999990687,
+          "canvasCount": 147,
+          "measurementDuration": 3012.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 176.60000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 176.60000000009313,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://nextjs:3000/feedback/4?version=raf",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:42:16.675Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1064.6000000000931,
+          "firstPaint": 167.9000000001397,
+          "firstContentfulPaint": 167.9000000001397,
+          "largestContentfulPaint": 167.9000000001397,
+          "longTasks": [
+            {
+              "startTime": 97.20000000018626,
+              "duration": 54,
+              "timestamp": 158
+            },
+            {
+              "startTime": 259.5,
+              "duration": 195,
+              "timestamp": 464.4000000001397
+            }
+          ],
+          "totalBlockingTime": 145,
+          "longTaskCount": 2,
+          "navigationStart": 1761831732115,
+          "domContentLoaded": 96.80000000004657,
+          "loadComplete": 457.80000000004657,
+          "canvasCount": 147,
+          "measurementDuration": 3016,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 167.9000000001397,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 167.9000000001397,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://nextjs:3000/feedback/4?version=raf",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:42:24.668Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1427.3999999999069,
+          "firstPaint": 162.0999999998603,
+          "firstContentfulPaint": 162.0999999998603,
+          "largestContentfulPaint": 162.0999999998603,
+          "longTasks": [
+            {
+              "startTime": 371.29999999981374,
+              "duration": 230,
+              "timestamp": 612.2999999998137
+            },
+            {
+              "startTime": 753.5999999998603,
+              "duration": 53,
+              "timestamp": 813.2999999998137
+            }
+          ],
+          "totalBlockingTime": 183,
+          "longTaskCount": 2,
+          "navigationStart": 1761831739849,
+          "domContentLoaded": 96,
+          "loadComplete": 605.5999999998603,
+          "canvasCount": 147,
+          "measurementDuration": 3014.1999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 162.0999999998603,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 162.0999999998603,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "raf-windowing": {
+      "name": "RAF Windowing (점진적 마운트)",
+      "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+      "shortName": "raf-windowing",
+      "results": [
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:42:29.819Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1514.0999999998603,
+          "firstPaint": 163.5,
+          "firstContentfulPaint": 163.5,
+          "largestContentfulPaint": 163.5,
+          "longTasks": [
+            {
+              "startTime": 94.5,
+              "duration": 50,
+              "timestamp": 153.89999999990687
+            },
+            {
+              "startTime": 259.79999999981374,
+              "duration": 198,
+              "timestamp": 466.69999999995343
+            }
+          ],
+          "totalBlockingTime": 148,
+          "longTaskCount": 2,
+          "navigationStart": 1761831744849,
+          "domContentLoaded": 144.70000000018626,
+          "loadComplete": 460.70000000018626,
+          "canvasCount": 147,
+          "measurementDuration": 3015.5999999998603,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 163.5,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 163.5,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:42:37.985Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1465.2000000001863,
+          "firstPaint": 155.10000000009313,
+          "firstContentfulPaint": 155.10000000009313,
+          "largestContentfulPaint": 155.10000000009313,
+          "longTasks": [
+            {
+              "startTime": 256.9000000001397,
+              "duration": 202,
+              "timestamp": 469.80000000004657
+            }
+          ],
+          "totalBlockingTime": 152,
+          "longTaskCount": 1,
+          "navigationStart": 1761831753028,
+          "domContentLoaded": 95.9000000001397,
+          "loadComplete": 462.60000000009313,
+          "canvasCount": 147,
+          "measurementDuration": 3018.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 155.10000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 155.10000000009313,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:42:46.187Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1492.1999999999534,
+          "firstPaint": 162.4000000001397,
+          "firstContentfulPaint": 162.4000000001397,
+          "largestContentfulPaint": 162.4000000001397,
+          "longTasks": [
+            {
+              "startTime": 93.60000000009313,
+              "duration": 55,
+              "timestamp": 153.60000000009313
+            },
+            {
+              "startTime": 366.10000000009313,
+              "duration": 200,
+              "timestamp": 575.3000000000466
+            }
+          ],
+          "totalBlockingTime": 150,
+          "longTaskCount": 2,
+          "navigationStart": 1761831761169,
+          "domContentLoaded": 93.19999999995343,
+          "loadComplete": 568.6999999999534,
+          "canvasCount": 147,
+          "measurementDuration": 3016.6999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 162.4000000001397,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 162.4000000001397,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:42:54.526Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1664.2999999998137,
+          "firstPaint": 167.39999999990687,
+          "firstContentfulPaint": 167.39999999990687,
+          "largestContentfulPaint": 167.39999999990687,
+          "longTasks": [
+            {
+              "startTime": 100.5,
+              "duration": 56,
+              "timestamp": 166.5
+            },
+            {
+              "startTime": 249.69999999995343,
+              "duration": 190,
+              "timestamp": 449.5
+            },
+            {
+              "startTime": 1189,
+              "duration": 101,
+              "timestamp": 1312.7999999998137
+            }
+          ],
+          "totalBlockingTime": 191,
+          "longTaskCount": 3,
+          "navigationStart": 1761831769360,
+          "domContentLoaded": 157.30000000004657,
+          "loadComplete": 442.60000000009313,
+          "canvasCount": 147,
+          "measurementDuration": 3019.7999999998137,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 167.39999999990687,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 167.39999999990687,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:43:02.818Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1605.1000000000931,
+          "firstPaint": 141.69999999995343,
+          "firstContentfulPaint": 141.69999999995343,
+          "largestContentfulPaint": 141.69999999995343,
+          "longTasks": [
+            {
+              "startTime": 255.5,
+              "duration": 194,
+              "timestamp": 460.69999999995343
+            },
+            {
+              "startTime": 1095.6999999999534,
+              "duration": 120,
+              "timestamp": 1245.8000000000466
+            }
+          ],
+          "totalBlockingTime": 214,
+          "longTaskCount": 2,
+          "navigationStart": 1761831777719,
+          "domContentLoaded": 87.70000000018626,
+          "loadComplete": 453.9000000001397,
+          "canvasCount": 147,
+          "measurementDuration": 3019.6999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 141.69999999995343,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 141.69999999995343,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "lazy": {
+      "name": "Lazy (지연된 getPage)",
+      "url": "http://nextjs:3000/feedback/4?version=lazy",
+      "shortName": "lazy",
+      "results": [
+        {
+          "version": "Lazy (지연된 getPage)",
+          "url": "http://nextjs:3000/feedback/4?version=lazy",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:43:07.653Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1109.2000000001863,
+          "firstPaint": 160.5,
+          "firstContentfulPaint": 160.5,
+          "largestContentfulPaint": 160.5,
+          "longTasks": [
+            {
+              "startTime": 249.5,
+              "duration": 194,
+              "timestamp": 453.20000000018626
+            },
+            {
+              "startTime": 589.7000000001863,
+              "duration": 52,
+              "timestamp": 643.8000000000466
+            }
+          ],
+          "totalBlockingTime": 146,
+          "longTaskCount": 2,
+          "navigationStart": 1761831782982,
+          "domContentLoaded": 149.69999999995343,
+          "loadComplete": 446.69999999995343,
+          "canvasCount": 147,
+          "measurementDuration": 3016.6999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 160.5,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 160.5,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Lazy (지연된 getPage)",
+          "url": "http://nextjs:3000/feedback/4?version=lazy",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:43:15.576Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1129.4000000001397,
+          "firstPaint": 152.80000000004657,
+          "firstContentfulPaint": 152.80000000004657,
+          "largestContentfulPaint": 152.80000000004657,
+          "longTasks": [
+            {
+              "startTime": 248.30000000004657,
+              "duration": 195,
+              "timestamp": 452.5
+            }
+          ],
+          "totalBlockingTime": 145,
+          "longTaskCount": 1,
+          "navigationStart": 1761831790944,
+          "domContentLoaded": 99.5999999998603,
+          "loadComplete": 446.19999999995343,
+          "canvasCount": 147,
+          "measurementDuration": 3020.899999999907,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 152.80000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 152.80000000004657,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Lazy (지연된 getPage)",
+          "url": "http://nextjs:3000/feedback/4?version=lazy",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:43:23.468Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1094.1000000000931,
+          "firstPaint": 152.4000000001397,
+          "firstContentfulPaint": 152.4000000001397,
+          "largestContentfulPaint": 152.4000000001397,
+          "longTasks": [
+            {
+              "startTime": 270.5,
+              "duration": 189,
+              "timestamp": 470
+            }
+          ],
+          "totalBlockingTime": 139,
+          "longTaskCount": 1,
+          "navigationStart": 1761831798879,
+          "domContentLoaded": 98.5,
+          "loadComplete": 463,
+          "canvasCount": 147,
+          "measurementDuration": 3029.6999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 152.4000000001397,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 152.4000000001397,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Lazy (지연된 getPage)",
+          "url": "http://nextjs:3000/feedback/4?version=lazy",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:43:31.480Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1322,
+          "firstPaint": 276.0999999998603,
+          "firstContentfulPaint": 276.0999999998603,
+          "largestContentfulPaint": 276.0999999998603,
+          "longTasks": [
+            {
+              "startTime": 468,
+              "duration": 204,
+              "timestamp": 682.1999999999534
+            }
+          ],
+          "totalBlockingTime": 154,
+          "longTaskCount": 1,
+          "navigationStart": 1761831806651,
+          "domContentLoaded": 272.19999999995343,
+          "loadComplete": 675.4000000001397,
+          "canvasCount": 147,
+          "measurementDuration": 3026,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 276.0999999998603,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 276.0999999998603,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Lazy (지연된 getPage)",
+          "url": "http://nextjs:3000/feedback/4?version=lazy",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:43:39.244Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1087.8999999999069,
+          "firstPaint": 174.80000000004657,
+          "firstContentfulPaint": 174.80000000004657,
+          "largestContentfulPaint": 174.80000000004657,
+          "longTasks": [
+            {
+              "startTime": 268.80000000004657,
+              "duration": 194,
+              "timestamp": 472.60000000009313
+            }
+          ],
+          "totalBlockingTime": 144,
+          "longTaskCount": 1,
+          "navigationStart": 1761831814668,
+          "domContentLoaded": 105.20000000018626,
+          "loadComplete": 466.10000000009313,
+          "canvasCount": 147,
+          "measurementDuration": 3015.100000000093,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 174.80000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 174.80000000004657,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "opt1-raf": {
+      "name": "Opt1: RAF 페인트 안정화",
+      "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+      "shortName": "opt1-raf",
+      "results": [
+        {
+          "version": "Opt1: RAF 페인트 안정화",
+          "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:43:44.365Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1427.7000000001863,
+          "firstPaint": 278,
+          "firstContentfulPaint": 278,
+          "largestContentfulPaint": 278,
+          "longTasks": [
+            {
+              "startTime": 386,
+              "duration": 195,
+              "timestamp": 590.9000000001397
+            },
+            {
+              "startTime": 1060,
+              "duration": 109,
+              "timestamp": 1212.8000000000466
+            },
+            {
+              "startTime": 1217.8000000000466,
+              "duration": 91,
+              "timestamp": 1314.1000000000931
+            }
+          ],
+          "totalBlockingTime": 245,
+          "longTaskCount": 3,
+          "navigationStart": 1761831819411,
+          "domContentLoaded": 253.5,
+          "loadComplete": 584.3000000000466,
+          "canvasCount": 147,
+          "measurementDuration": 3017.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 278,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 278,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt1: RAF 페인트 안정화",
+          "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:43:52.618Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1562.5,
+          "firstPaint": 194.80000000004657,
+          "firstContentfulPaint": 194.80000000004657,
+          "largestContentfulPaint": 194.80000000004657,
+          "longTasks": [
+            {
+              "startTime": 110.4000000001397,
+              "duration": 66,
+              "timestamp": 190.80000000004657
+            },
+            {
+              "startTime": 331.80000000004657,
+              "duration": 191,
+              "timestamp": 534.3000000000466
+            },
+            {
+              "startTime": 1070.3000000000466,
+              "duration": 111,
+              "timestamp": 1327.2000000001863
+            },
+            {
+              "startTime": 1181.8000000000466,
+              "duration": 98,
+              "timestamp": 1327.2000000001863
+            },
+            {
+              "startTime": 1334.8000000000466,
+              "duration": 100,
+              "timestamp": 1440.1000000000931
+            }
+          ],
+          "totalBlockingTime": 300,
+          "longTaskCount": 5,
+          "navigationStart": 1761831827563,
+          "domContentLoaded": 110,
+          "loadComplete": 526.6999999999534,
+          "canvasCount": 147,
+          "measurementDuration": 3013.600000000093,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 194.80000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 194.80000000004657,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt1: RAF 페인트 안정화",
+          "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:44:00.655Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1315.3000000000466,
+          "firstPaint": 154,
+          "firstContentfulPaint": 154,
+          "largestContentfulPaint": 154,
+          "longTasks": [
+            {
+              "startTime": 251.9000000001397,
+              "duration": 194,
+              "timestamp": 455.9000000001397
+            },
+            {
+              "startTime": 934.1999999999534,
+              "duration": 109,
+              "timestamp": 1093.3000000000466
+            },
+            {
+              "startTime": 1103.3000000000466,
+              "duration": 93,
+              "timestamp": 1202.1999999999534
+            }
+          ],
+          "totalBlockingTime": 246,
+          "longTaskCount": 3,
+          "navigationStart": 1761831835823,
+          "domContentLoaded": 146.89999999990687,
+          "loadComplete": 449.30000000004657,
+          "canvasCount": 147,
+          "measurementDuration": 3011.3000000000466,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 154,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 154,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt1: RAF 페인트 안정화",
+          "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:44:08.759Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1389.0999999998603,
+          "firstPaint": 248.79999999981374,
+          "firstContentfulPaint": 248.79999999981374,
+          "largestContentfulPaint": 248.79999999981374,
+          "longTasks": [
+            {
+              "startTime": 105.0999999998603,
+              "duration": 119,
+              "timestamp": 241.5
+            },
+            {
+              "startTime": 359.89999999990687,
+              "duration": 191,
+              "timestamp": 561
+            },
+            {
+              "startTime": 1032.7999999998137,
+              "duration": 107,
+              "timestamp": 1183.1999999999534
+            },
+            {
+              "startTime": 1188,
+              "duration": 93,
+              "timestamp": 1285.3999999999069
+            }
+          ],
+          "totalBlockingTime": 241,
+          "longTaskCount": 4,
+          "navigationStart": 1761831843848,
+          "domContentLoaded": 226,
+          "loadComplete": 554,
+          "canvasCount": 147,
+          "measurementDuration": 3013.9000000001397,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 248.79999999981374,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 248.79999999981374,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt1: RAF 페인트 안정화",
+          "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:44:16.691Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1221.7000000001863,
+          "firstPaint": 147.4000000001397,
+          "firstContentfulPaint": 147.4000000001397,
+          "largestContentfulPaint": 147.4000000001397,
+          "longTasks": [
+            {
+              "startTime": 247,
+              "duration": 195,
+              "timestamp": 451.30000000004657
+            },
+            {
+              "startTime": 857.5,
+              "duration": 108,
+              "timestamp": 1008.2000000001863
+            },
+            {
+              "startTime": 1015.8000000000466,
+              "duration": 89,
+              "timestamp": 1112.4000000001397
+            }
+          ],
+          "totalBlockingTime": 242,
+          "longTaskCount": 3,
+          "navigationStart": 1761831851965,
+          "domContentLoaded": 148.60000000009313,
+          "loadComplete": 444.4000000001397,
+          "canvasCount": 147,
+          "measurementDuration": 3014.6999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 147.4000000001397,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 147.4000000001397,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "opt2-callback-ref": {
+      "name": "Opt2: Callback Ref 패턴",
+      "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+      "shortName": "opt2-callback-ref",
+      "results": [
+        {
+          "version": "Opt2: Callback Ref 패턴",
+          "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:44:21.696Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1331.5999999998603,
+          "firstPaint": 153.79999999981374,
+          "firstContentfulPaint": 153.79999999981374,
+          "largestContentfulPaint": 153.79999999981374,
+          "longTasks": [
+            {
+              "startTime": 266.79999999981374,
+              "duration": 188,
+              "timestamp": 465.89999999990687
+            },
+            {
+              "startTime": 918.8999999999069,
+              "duration": 106,
+              "timestamp": 1068.1999999999534
+            },
+            {
+              "startTime": 1072.1999999999534,
+              "duration": 135,
+              "timestamp": 1213.5
+            }
+          ],
+          "totalBlockingTime": 279,
+          "longTaskCount": 3,
+          "navigationStart": 1761831856860,
+          "domContentLoaded": 93.89999999990687,
+          "loadComplete": 458.0999999998603,
+          "canvasCount": 147,
+          "measurementDuration": 3018.100000000093,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 153.79999999981374,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 153.79999999981374,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt2: Callback Ref 패턴",
+          "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:44:29.613Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1235.1999999999534,
+          "firstPaint": 171.79999999981374,
+          "firstContentfulPaint": 171.79999999981374,
+          "largestContentfulPaint": 171.79999999981374,
+          "longTasks": [
+            {
+              "startTime": 96.89999999990687,
+              "duration": 52,
+              "timestamp": 161.29999999981374
+            },
+            {
+              "startTime": 262.0999999998603,
+              "duration": 195,
+              "timestamp": 466.0999999998603
+            },
+            {
+              "startTime": 942.5,
+              "duration": 107,
+              "timestamp": 1094.1999999999534
+            }
+          ],
+          "totalBlockingTime": 202,
+          "longTaskCount": 3,
+          "navigationStart": 1761831864883,
+          "domContentLoaded": 96.10000000009313,
+          "loadComplete": 459.69999999995343,
+          "canvasCount": 147,
+          "measurementDuration": 3018.5999999998603,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 171.79999999981374,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 171.79999999981374,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt2: Callback Ref 패턴",
+          "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:44:37.633Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1337.8999999999069,
+          "firstPaint": 142.5999999998603,
+          "firstContentfulPaint": 142.5999999998603,
+          "largestContentfulPaint": 142.5999999998603,
+          "longTasks": [
+            {
+              "startTime": 243.19999999995343,
+              "duration": 197,
+              "timestamp": 450.5999999998603
+            },
+            {
+              "startTime": 1028.0999999998603,
+              "duration": 118,
+              "timestamp": 1191.3999999999069
+            }
+          ],
+          "totalBlockingTime": 215,
+          "longTaskCount": 2,
+          "navigationStart": 1761831872798,
+          "domContentLoaded": 128.4000000001397,
+          "loadComplete": 443.10000000009313,
+          "canvasCount": 147,
+          "measurementDuration": 3018.1999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 142.5999999998603,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 142.5999999998603,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt2: Callback Ref 패턴",
+          "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:44:45.608Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1160.5,
+          "firstPaint": 164.19999999995343,
+          "firstContentfulPaint": 164.19999999995343,
+          "largestContentfulPaint": 164.19999999995343,
+          "longTasks": [
+            {
+              "startTime": 264.80000000004657,
+              "duration": 194,
+              "timestamp": 468.60000000009313
+            },
+            {
+              "startTime": 877,
+              "duration": 106,
+              "timestamp": 1025.3000000000466
+            }
+          ],
+          "totalBlockingTime": 200,
+          "longTaskCount": 2,
+          "navigationStart": 1761831880924,
+          "domContentLoaded": 166,
+          "loadComplete": 461.89999999990687,
+          "canvasCount": 147,
+          "measurementDuration": 3013.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 164.19999999995343,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 164.19999999995343,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt2: Callback Ref 패턴",
+          "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:44:53.663Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1347,
+          "firstPaint": 133.79999999981374,
+          "firstContentfulPaint": 133.79999999981374,
+          "largestContentfulPaint": 133.79999999981374,
+          "longTasks": [
+            {
+              "startTime": 246.89999999990687,
+              "duration": 204,
+              "timestamp": 464.5
+            },
+            {
+              "startTime": 922.5999999998603,
+              "duration": 112,
+              "timestamp": 1080.6999999999534
+            },
+            {
+              "startTime": 1084.8999999999069,
+              "duration": 139,
+              "timestamp": 1229.8999999999069
+            }
+          ],
+          "totalBlockingTime": 305,
+          "longTaskCount": 3,
+          "navigationStart": 1761831888805,
+          "domContentLoaded": 131.5,
+          "loadComplete": 454.30000000004657,
+          "canvasCount": 147,
+          "measurementDuration": 3020,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 133.79999999981374,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 133.79999999981374,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "opt3-combined": {
+      "name": "Opt3: Combined (RAF + Callback)",
+      "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+      "shortName": "opt3-combined",
+      "results": [
+        {
+          "version": "Opt3: Combined (RAF + Callback)",
+          "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:44:58.609Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1244.3000000000466,
+          "firstPaint": 162,
+          "firstContentfulPaint": 162,
+          "largestContentfulPaint": 162,
+          "longTasks": [
+            {
+              "startTime": 96.30000000004657,
+              "duration": 57,
+              "timestamp": 162.80000000004657
+            },
+            {
+              "startTime": 258,
+              "duration": 196,
+              "timestamp": 464
+            },
+            {
+              "startTime": 958.9000000001397,
+              "duration": 105,
+              "timestamp": 1106.9000000001397
+            }
+          ],
+          "totalBlockingTime": 201,
+          "longTaskCount": 3,
+          "navigationStart": 1761831893842,
+          "domContentLoaded": 95.39999999990687,
+          "loadComplete": 456.79999999981374,
+          "canvasCount": 147,
+          "measurementDuration": 3016,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 162,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 162,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt3: Combined (RAF + Callback)",
+          "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:45:06.730Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1376.0999999998603,
+          "firstPaint": 165.19999999995343,
+          "firstContentfulPaint": 165.19999999995343,
+          "largestContentfulPaint": 165.19999999995343,
+          "longTasks": [
+            {
+              "startTime": 288.0999999998603,
+              "duration": 203,
+              "timestamp": 502.30000000004657
+            },
+            {
+              "startTime": 1037.8000000000466,
+              "duration": 149,
+              "timestamp": 1234
+            }
+          ],
+          "totalBlockingTime": 252,
+          "longTaskCount": 2,
+          "navigationStart": 1761831901791,
+          "domContentLoaded": 92,
+          "loadComplete": 495.29999999981374,
+          "canvasCount": 147,
+          "measurementDuration": 3019.4000000001397,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 165.19999999995343,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 165.19999999995343,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt3: Combined (RAF + Callback)",
+          "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:45:14.735Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1413,
+          "firstPaint": 167.60000000009313,
+          "firstContentfulPaint": 167.60000000009313,
+          "largestContentfulPaint": 167.60000000009313,
+          "longTasks": [
+            {
+              "startTime": 268.69999999995343,
+              "duration": 195,
+              "timestamp": 475.19999999995343
+            },
+            {
+              "startTime": 1013.8999999999069,
+              "duration": 106,
+              "timestamp": 1162.8999999999069
+            }
+          ],
+          "totalBlockingTime": 201,
+          "longTaskCount": 2,
+          "navigationStart": 1761831909904,
+          "domContentLoaded": 153.69999999995343,
+          "loadComplete": 468.39999999990687,
+          "canvasCount": 147,
+          "measurementDuration": 3019,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 167.60000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 167.60000000009313,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt3: Combined (RAF + Callback)",
+          "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:45:22.764Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1298.3999999999069,
+          "firstPaint": 198.19999999995343,
+          "firstContentfulPaint": 198.19999999995343,
+          "largestContentfulPaint": 198.19999999995343,
+          "longTasks": [
+            {
+              "startTime": 104.60000000009313,
+              "duration": 70,
+              "timestamp": 186.69999999995343
+            },
+            {
+              "startTime": 279.39999999990687,
+              "duration": 196,
+              "timestamp": 485.69999999995343
+            },
+            {
+              "startTime": 997.8999999999069,
+              "duration": 107,
+              "timestamp": 1147.6000000000931
+            }
+          ],
+          "totalBlockingTime": 203,
+          "longTaskCount": 3,
+          "navigationStart": 1761831917953,
+          "domContentLoaded": 186.39999999990687,
+          "loadComplete": 479,
+          "canvasCount": 147,
+          "measurementDuration": 3020.8000000000466,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 198.19999999995343,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 198.19999999995343,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt3: Combined (RAF + Callback)",
+          "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:45:30.639Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1176.6000000000931,
+          "firstPaint": 161.4000000001397,
+          "firstContentfulPaint": 161.4000000001397,
+          "largestContentfulPaint": 161.4000000001397,
+          "longTasks": [
+            {
+              "startTime": 98.5,
+              "duration": 55,
+              "timestamp": 164.60000000009313
+            },
+            {
+              "startTime": 264.4000000001397,
+              "duration": 197,
+              "timestamp": 472.30000000004657
+            },
+            {
+              "startTime": 890.5,
+              "duration": 108,
+              "timestamp": 1041
+            }
+          ],
+          "totalBlockingTime": 205,
+          "longTaskCount": 3,
+          "navigationStart": 1761831925956,
+          "domContentLoaded": 98.10000000009313,
+          "loadComplete": 464.5,
+          "canvasCount": 147,
+          "measurementDuration": 3013.1999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 161.4000000001397,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 161.4000000001397,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "opt4-scheduler": {
+      "name": "Opt4: RenderScheduler (K=4)",
+      "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+      "shortName": "opt4-scheduler",
+      "results": [
+        {
+          "version": "Opt4: RenderScheduler (K=4)",
+          "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:45:35.710Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1392.6000000000931,
+          "firstPaint": 162.20000000018626,
+          "firstContentfulPaint": 162.20000000018626,
+          "largestContentfulPaint": 162.20000000018626,
+          "longTasks": [
+            {
+              "startTime": 97.60000000009313,
+              "duration": 51,
+              "timestamp": 157.80000000004657
+            },
+            {
+              "startTime": 260,
+              "duration": 197,
+              "timestamp": 466.60000000009313
+            },
+            {
+              "startTime": 1011.4000000001397,
+              "duration": 107,
+              "timestamp": 1176.1000000000931
+            },
+            {
+              "startTime": 1122.3000000000466,
+              "duration": 53,
+              "timestamp": 1176.1000000000931
+            },
+            {
+              "startTime": 1181.5,
+              "duration": 95,
+              "timestamp": 1281.4000000001397
+            }
+          ],
+          "totalBlockingTime": 252,
+          "longTaskCount": 5,
+          "navigationStart": 1761831930805,
+          "domContentLoaded": 96.79999999981374,
+          "loadComplete": 459.5999999998603,
+          "canvasCount": 147,
+          "measurementDuration": 3017,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 162.20000000018626,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 162.20000000018626,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt4: RenderScheduler (K=4)",
+          "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:45:43.761Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1374.7000000001863,
+          "firstPaint": 283.9000000001397,
+          "firstContentfulPaint": 283.9000000001397,
+          "largestContentfulPaint": 283.9000000001397,
+          "longTasks": [
+            {
+              "startTime": 212.70000000018626,
+              "duration": 55,
+              "timestamp": 281.5
+            },
+            {
+              "startTime": 372.80000000004657,
+              "duration": 194,
+              "timestamp": 578.9000000001397
+            },
+            {
+              "startTime": 1010.7000000001863,
+              "duration": 106,
+              "timestamp": 1157.9000000001397
+            },
+            {
+              "startTime": 1164,
+              "duration": 90,
+              "timestamp": 1259.9000000001397
+            }
+          ],
+          "totalBlockingTime": 240,
+          "longTaskCount": 4,
+          "navigationStart": 1761831938889,
+          "domContentLoaded": 212.29999999981374,
+          "loadComplete": 571.2999999998137,
+          "canvasCount": 147,
+          "measurementDuration": 3013.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 283.9000000001397,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 283.9000000001397,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt4: RenderScheduler (K=4)",
+          "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:45:51.843Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1383.3000000000466,
+          "firstPaint": 154.5,
+          "firstContentfulPaint": 154.5,
+          "largestContentfulPaint": 154.5,
+          "longTasks": [
+            {
+              "startTime": 259.69999999995343,
+              "duration": 191,
+              "timestamp": 461.0999999998603
+            },
+            {
+              "startTime": 876.8999999999069,
+              "duration": 113,
+              "timestamp": 1035.1999999999534
+            },
+            {
+              "startTime": 1137.3999999999069,
+              "duration": 123,
+              "timestamp": 1267
+            }
+          ],
+          "totalBlockingTime": 277,
+          "longTaskCount": 3,
+          "navigationStart": 1761831946963,
+          "domContentLoaded": 155,
+          "loadComplete": 453.89999999990687,
+          "canvasCount": 147,
+          "measurementDuration": 3016.4000000001397,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 154.5,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 154.5,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt4: RenderScheduler (K=4)",
+          "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:45:59.857Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1331.8000000000466,
+          "firstPaint": 174.5999999998603,
+          "firstContentfulPaint": 174.5999999998603,
+          "largestContentfulPaint": 174.5999999998603,
+          "longTasks": [
+            {
+              "startTime": 109.89999999990687,
+              "duration": 51,
+              "timestamp": 171.80000000004657
+            },
+            {
+              "startTime": 274.39999999990687,
+              "duration": 195,
+              "timestamp": 478.5999999998603
+            },
+            {
+              "startTime": 966.3000000000466,
+              "duration": 105,
+              "timestamp": 1113
+            },
+            {
+              "startTime": 1119.3000000000466,
+              "duration": 90,
+              "timestamp": 1215.8000000000466
+            }
+          ],
+          "totalBlockingTime": 240,
+          "longTaskCount": 4,
+          "navigationStart": 1761831955015,
+          "domContentLoaded": 163.69999999995343,
+          "loadComplete": 472,
+          "canvasCount": 147,
+          "measurementDuration": 3017.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 174.5999999998603,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 174.5999999998603,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt4: RenderScheduler (K=4)",
+          "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:46:07.655Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1311.5,
+          "firstPaint": 148.19999999995343,
+          "firstContentfulPaint": 148.19999999995343,
+          "largestContentfulPaint": 148.19999999995343,
+          "longTasks": [
+            {
+              "startTime": 257.79999999981374,
+              "duration": 194,
+              "timestamp": 463.29999999981374
+            },
+            {
+              "startTime": 953.0999999998603,
+              "duration": 107,
+              "timestamp": 1101.2999999998137
+            },
+            {
+              "startTime": 1108.5999999998603,
+              "duration": 92,
+              "timestamp": 1208.5
+            }
+          ],
+          "totalBlockingTime": 243,
+          "longTaskCount": 3,
+          "navigationStart": 1761831963035,
+          "domContentLoaded": 137,
+          "loadComplete": 455.10000000009313,
+          "canvasCount": 147,
+          "measurementDuration": 3011.6999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 148.19999999995343,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 148.19999999995343,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "opt5-raf-batching": {
+      "name": "Opt5: RAF 배칭",
+      "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+      "shortName": "opt5-raf-batching",
+      "results": [
+        {
+          "version": "Opt5: RAF 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:46:12.776Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1434.7999999998137,
+          "firstPaint": 172.5,
+          "firstContentfulPaint": 172.5,
+          "largestContentfulPaint": 172.5,
+          "longTasks": [
+            {
+              "startTime": 102.89999999990687,
+              "duration": 53,
+              "timestamp": 170.69999999995343
+            },
+            {
+              "startTime": 263.29999999981374,
+              "duration": 196,
+              "timestamp": 470.39999999990687
+            },
+            {
+              "startTime": 1020.7999999998137,
+              "duration": 119,
+              "timestamp": 1210.1999999999534
+            },
+            {
+              "startTime": 1145.2999999998137,
+              "duration": 64,
+              "timestamp": 1210.1999999999534
+            },
+            {
+              "startTime": 1215,
+              "duration": 95,
+              "timestamp": 1314.3999999999069
+            }
+          ],
+          "totalBlockingTime": 274,
+          "longTaskCount": 5,
+          "navigationStart": 1761831967844,
+          "domContentLoaded": 102.30000000004657,
+          "loadComplete": 463.60000000009313,
+          "canvasCount": 147,
+          "measurementDuration": 3020.9000000001397,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 172.5,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 172.5,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt5: RAF 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:46:20.813Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1314.3999999999069,
+          "firstPaint": 170.19999999995343,
+          "firstContentfulPaint": 170.19999999995343,
+          "largestContentfulPaint": 170.19999999995343,
+          "longTasks": [
+            {
+              "startTime": 319.69999999995343,
+              "duration": 194,
+              "timestamp": 523.1999999999534
+            },
+            {
+              "startTime": 935.5,
+              "duration": 106,
+              "timestamp": 1087.3999999999069
+            },
+            {
+              "startTime": 1095.1999999999534,
+              "duration": 92,
+              "timestamp": 1194.6000000000931
+            }
+          ],
+          "totalBlockingTime": 242,
+          "longTaskCount": 3,
+          "navigationStart": 1761831975983,
+          "domContentLoaded": 159.5,
+          "loadComplete": 516.9000000001397,
+          "canvasCount": 147,
+          "measurementDuration": 3022.1999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 170.19999999995343,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 170.19999999995343,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt5: RAF 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:46:28.869Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1284.6000000000931,
+          "firstPaint": 166.5,
+          "firstContentfulPaint": 166.5,
+          "largestContentfulPaint": 166.5,
+          "longTasks": [
+            {
+              "startTime": 93.30000000004657,
+              "duration": 54,
+              "timestamp": 160.89999999990687
+            },
+            {
+              "startTime": 265.19999999995343,
+              "duration": 222,
+              "timestamp": 497.30000000004657
+            },
+            {
+              "startTime": 909.1000000000931,
+              "duration": 112,
+              "timestamp": 1065.1000000000931
+            },
+            {
+              "startTime": 1074.6999999999534,
+              "duration": 92,
+              "timestamp": 1172.8999999999069
+            }
+          ],
+          "totalBlockingTime": 276,
+          "longTaskCount": 4,
+          "navigationStart": 1761831984013,
+          "domContentLoaded": 92.9000000001397,
+          "loadComplete": 490.5,
+          "canvasCount": 147,
+          "measurementDuration": 3019.899999999907,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 166.5,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 166.5,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt5: RAF 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:46:37.074Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1487.5,
+          "firstPaint": 145.89999999990687,
+          "firstContentfulPaint": 145.89999999990687,
+          "largestContentfulPaint": 145.89999999990687,
+          "longTasks": [
+            {
+              "startTime": 271.80000000004657,
+              "duration": 206,
+              "timestamp": 488.30000000004657
+            },
+            {
+              "startTime": 1034.8999999999069,
+              "duration": 164,
+              "timestamp": 1251.3000000000466
+            },
+            {
+              "startTime": 1258.6000000000931,
+              "duration": 99,
+              "timestamp": 1362.8999999999069
+            }
+          ],
+          "totalBlockingTime": 319,
+          "longTaskCount": 3,
+          "navigationStart": 1761831992075,
+          "domContentLoaded": 142.30000000004657,
+          "loadComplete": 481,
+          "canvasCount": 147,
+          "measurementDuration": 3018.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 145.89999999990687,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 145.89999999990687,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt5: RAF 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:46:45.173Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1380,
+          "firstPaint": 315.60000000009313,
+          "firstContentfulPaint": 315.60000000009313,
+          "largestContentfulPaint": 315.60000000009313,
+          "longTasks": [
+            {
+              "startTime": 402.39999999990687,
+              "duration": 192,
+              "timestamp": 604.3000000000466
+            },
+            {
+              "startTime": 1025.6999999999534,
+              "duration": 107,
+              "timestamp": 1176.8999999999069
+            },
+            {
+              "startTime": 1183,
+              "duration": 91,
+              "timestamp": 1280.1000000000931
+            }
+          ],
+          "totalBlockingTime": 240,
+          "longTaskCount": 3,
+          "navigationStart": 1761832000264,
+          "domContentLoaded": 252.4000000001397,
+          "loadComplete": 597.3000000000466,
+          "canvasCount": 147,
+          "measurementDuration": 3019.5999999998603,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 315.60000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 315.60000000009313,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "opt6-priority": {
+      "name": "Opt6: 우선순위 정렬",
+      "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+      "shortName": "opt6-priority",
+      "results": [
+        {
+          "version": "Opt6: 우선순위 정렬",
+          "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:46:50.173Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1301.5,
+          "firstPaint": 170.9000000001397,
+          "firstContentfulPaint": 170.9000000001397,
+          "largestContentfulPaint": 170.9000000001397,
+          "longTasks": [
+            {
+              "startTime": 101.10000000009313,
+              "duration": 54,
+              "timestamp": 167
+            },
+            {
+              "startTime": 260.5,
+              "duration": 194,
+              "timestamp": 463.80000000004657
+            },
+            {
+              "startTime": 926.1000000000931,
+              "duration": 114,
+              "timestamp": 1085.6000000000931
+            },
+            {
+              "startTime": 1092.5,
+              "duration": 91,
+              "timestamp": 1190.2000000001863
+            }
+          ],
+          "totalBlockingTime": 249,
+          "longTaskCount": 4,
+          "navigationStart": 1761832005342,
+          "domContentLoaded": 155.19999999995343,
+          "loadComplete": 457.19999999995343,
+          "canvasCount": 147,
+          "measurementDuration": 3020.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 170.9000000001397,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 170.9000000001397,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt6: 우선순위 정렬",
+          "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:46:58.114Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1249.3000000000466,
+          "firstPaint": 161.5,
+          "firstContentfulPaint": 161.5,
+          "largestContentfulPaint": 161.5,
+          "longTasks": [
+            {
+              "startTime": 105.5999999998603,
+              "duration": 51,
+              "timestamp": 160
+            },
+            {
+              "startTime": 253.19999999995343,
+              "duration": 195,
+              "timestamp": 458.0999999998603
+            },
+            {
+              "startTime": 878.3999999999069,
+              "duration": 108,
+              "timestamp": 1030.0999999998603
+            },
+            {
+              "startTime": 1036.0999999998603,
+              "duration": 93,
+              "timestamp": 1134.5999999998603
+            }
+          ],
+          "totalBlockingTime": 246,
+          "longTaskCount": 4,
+          "navigationStart": 1761832013360,
+          "domContentLoaded": 159.89999999990687,
+          "loadComplete": 451.69999999995343,
+          "canvasCount": 147,
+          "measurementDuration": 3020.899999999907,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 161.5,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 161.5,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt6: 우선순위 정렬",
+          "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:47:06.141Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1325,
+          "firstPaint": 164,
+          "firstContentfulPaint": 164,
+          "largestContentfulPaint": 164,
+          "longTasks": [
+            {
+              "startTime": 100.19999999995343,
+              "duration": 60,
+              "timestamp": 168.5999999998603
+            },
+            {
+              "startTime": 284.30000000004657,
+              "duration": 205,
+              "timestamp": 498.89999999990687
+            },
+            {
+              "startTime": 962.6999999999534,
+              "duration": 108,
+              "timestamp": 1113.0999999998603
+            },
+            {
+              "startTime": 1119,
+              "duration": 91,
+              "timestamp": 1216.3000000000466
+            }
+          ],
+          "totalBlockingTime": 254,
+          "longTaskCount": 4,
+          "navigationStart": 1761832021302,
+          "domContentLoaded": 99.69999999995343,
+          "loadComplete": 492.19999999995343,
+          "canvasCount": 147,
+          "measurementDuration": 3016.9000000001397,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 164,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 164,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt6: 우선순위 정렬",
+          "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:47:14.262Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1417.5,
+          "firstPaint": 152.80000000004657,
+          "firstContentfulPaint": 152.80000000004657,
+          "largestContentfulPaint": 152.80000000004657,
+          "longTasks": [
+            {
+              "startTime": 253.60000000009313,
+              "duration": 194,
+              "timestamp": 457.20000000018626
+            },
+            {
+              "startTime": 892.2000000001863,
+              "duration": 119,
+              "timestamp": 1056.7000000001863
+            },
+            {
+              "startTime": 1069.2000000001863,
+              "duration": 219,
+              "timestamp": 1292.1000000000931
+            }
+          ],
+          "totalBlockingTime": 382,
+          "longTaskCount": 3,
+          "navigationStart": 1761832029342,
+          "domContentLoaded": 137.80000000004657,
+          "loadComplete": 450.80000000004657,
+          "canvasCount": 147,
+          "measurementDuration": 3018,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 152.80000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 152.80000000004657,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt6: 우선순위 정렬",
+          "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:47:22.320Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1338.8999999999069,
+          "firstPaint": 211.30000000004657,
+          "firstContentfulPaint": 211.30000000004657,
+          "largestContentfulPaint": 211.30000000004657,
+          "longTasks": [
+            {
+              "startTime": 299.5999999998603,
+              "duration": 192,
+              "timestamp": 502.30000000004657
+            },
+            {
+              "startTime": 983,
+              "duration": 104,
+              "timestamp": 1128.8999999999069
+            },
+            {
+              "startTime": 1133.6999999999534,
+              "duration": 90,
+              "timestamp": 1228.6999999999534
+            }
+          ],
+          "totalBlockingTime": 236,
+          "longTaskCount": 3,
+          "navigationStart": 1761832037453,
+          "domContentLoaded": 207.5,
+          "loadComplete": 495.0999999998603,
+          "canvasCount": 147,
+          "measurementDuration": 3018.100000000093,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 211.30000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 211.30000000004657,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "opt7-all-scheduling": {
+      "name": "Opt7: 전체 스케줄링",
+      "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+      "shortName": "opt7-all-scheduling",
+      "results": [
+        {
+          "version": "Opt7: 전체 스케줄링",
+          "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:47:27.396Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1359.3999999999069,
+          "firstPaint": 164.80000000004657,
+          "firstContentfulPaint": 164.80000000004657,
+          "largestContentfulPaint": 164.80000000004657,
+          "longTasks": [
+            {
+              "startTime": 329.5999999998603,
+              "duration": 210,
+              "timestamp": 549.3000000000466
+            },
+            {
+              "startTime": 999.5,
+              "duration": 109,
+              "timestamp": 1152.5
+            },
+            {
+              "startTime": 1157.5999999998603,
+              "duration": 93,
+              "timestamp": 1257.8000000000466
+            }
+          ],
+          "totalBlockingTime": 262,
+          "longTaskCount": 3,
+          "navigationStart": 1761832042515,
+          "domContentLoaded": 158.79999999981374,
+          "loadComplete": 542.1999999999534,
+          "canvasCount": 147,
+          "measurementDuration": 3012.4000000001397,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 164.80000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 164.80000000004657,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt7: 전체 스케줄링",
+          "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:47:35.416Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1287.6999999999534,
+          "firstPaint": 157.30000000004657,
+          "firstContentfulPaint": 157.30000000004657,
+          "largestContentfulPaint": 157.30000000004657,
+          "longTasks": [
+            {
+              "startTime": 271,
+              "duration": 196,
+              "timestamp": 477.5
+            },
+            {
+              "startTime": 919.1999999999534,
+              "duration": 115,
+              "timestamp": 1079.0999999998603
+            },
+            {
+              "startTime": 1083,
+              "duration": 92,
+              "timestamp": 1180.6999999999534
+            }
+          ],
+          "totalBlockingTime": 253,
+          "longTaskCount": 3,
+          "navigationStart": 1761832050604,
+          "domContentLoaded": 154.19999999995343,
+          "loadComplete": 470.39999999990687,
+          "canvasCount": 147,
+          "measurementDuration": 3020.6999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 157.30000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 157.30000000004657,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt7: 전체 스케줄링",
+          "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:47:43.521Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1277.1999999999534,
+          "firstPaint": 176.0999999998603,
+          "firstContentfulPaint": 176.0999999998603,
+          "largestContentfulPaint": 176.0999999998603,
+          "longTasks": [
+            {
+              "startTime": 104,
+              "duration": 54,
+              "timestamp": 166.5
+            },
+            {
+              "startTime": 259.5999999998603,
+              "duration": 189,
+              "timestamp": 460.0999999998603
+            },
+            {
+              "startTime": 911.5,
+              "duration": 110,
+              "timestamp": 1064.5999999998603
+            },
+            {
+              "startTime": 1069.3000000000466,
+              "duration": 93,
+              "timestamp": 1167.5
+            }
+          ],
+          "totalBlockingTime": 242,
+          "longTaskCount": 4,
+          "navigationStart": 1761832058715,
+          "domContentLoaded": 158.79999999981374,
+          "loadComplete": 452.5999999998603,
+          "canvasCount": 147,
+          "measurementDuration": 3015.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 176.0999999998603,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 176.0999999998603,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt7: 전체 스케줄링",
+          "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:47:51.620Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1422.5999999998603,
+          "firstPaint": 274.89999999990687,
+          "firstContentfulPaint": 274.89999999990687,
+          "largestContentfulPaint": 274.89999999990687,
+          "longTasks": [
+            {
+              "startTime": 384.5999999998603,
+              "duration": 194,
+              "timestamp": 588.5999999998603
+            },
+            {
+              "startTime": 1070.5999999998603,
+              "duration": 106,
+              "timestamp": 1218.8000000000466
+            },
+            {
+              "startTime": 1222.3999999999069,
+              "duration": 90,
+              "timestamp": 1317.0999999998603
+            }
+          ],
+          "totalBlockingTime": 240,
+          "longTaskCount": 3,
+          "navigationStart": 1761832066702,
+          "domContentLoaded": 219.5999999998603,
+          "loadComplete": 581.5999999998603,
+          "canvasCount": 147,
+          "measurementDuration": 3017.899999999907,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 274.89999999990687,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 274.89999999990687,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt7: 전체 스케줄링",
+          "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:47:59.706Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1379.8000000000466,
+          "firstPaint": 152.10000000009313,
+          "firstContentfulPaint": 152.10000000009313,
+          "largestContentfulPaint": 152.10000000009313,
+          "longTasks": [
+            {
+              "startTime": 243.19999999995343,
+              "duration": 187,
+              "timestamp": 439.69999999995343
+            },
+            {
+              "startTime": 911.5,
+              "duration": 107,
+              "timestamp": 1061.6000000000931
+            },
+            {
+              "startTime": 1065.9000000001397,
+              "duration": 203,
+              "timestamp": 1273.1000000000931
+            }
+          ],
+          "totalBlockingTime": 347,
+          "longTaskCount": 3,
+          "navigationStart": 1761832074810,
+          "domContentLoaded": 148,
+          "loadComplete": 433,
+          "canvasCount": 147,
+          "measurementDuration": 3010.8000000000466,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 152.10000000009313,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 152.10000000009313,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "opt8-raf-paint-batching": {
+      "name": "Opt8: RAF 페인트 + 배칭",
+      "url": "http://nextjs:3000/feedback/4?version=opt8-raf-paint-batching",
+      "shortName": "opt8-raf-paint-batching",
+      "results": [
+        {
+          "version": "Opt8: RAF 페인트 + 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt8-raf-paint-batching",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T13:48:04.786Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1383.6000000000931,
+          "firstPaint": 152,
+          "firstContentfulPaint": 152,
+          "largestContentfulPaint": 152,
+          "longTasks": [
+            {
+              "startTime": 244.9000000001397,
+              "duration": 195,
+              "timestamp": 450
+            },
+            {
+              "startTime": 994.1000000000931,
+              "duration": 140,
+              "timestamp": 1179.8000000000466
+            },
+            {
+              "startTime": 1184.7000000001863,
+              "duration": 92,
+              "timestamp": 1281.7000000001863
+            }
+          ],
+          "totalBlockingTime": 277,
+          "longTaskCount": 3,
+          "navigationStart": 1761832079873,
+          "domContentLoaded": 98,
+          "loadComplete": 443.69999999995343,
+          "canvasCount": 147,
+          "measurementDuration": 3017.3000000000466,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 152,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 152,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt8: RAF 페인트 + 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt8-raf-paint-batching",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T13:48:12.973Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1493.6999999999534,
+          "firstPaint": 162.80000000004657,
+          "firstContentfulPaint": 162.80000000004657,
+          "largestContentfulPaint": 162.80000000004657,
+          "longTasks": [
+            {
+              "startTime": 245.9000000001397,
+              "duration": 195,
+              "timestamp": 450.9000000001397
+            },
+            {
+              "startTime": 1112.3000000000466,
+              "duration": 114,
+              "timestamp": 1270.1999999999534
+            },
+            {
+              "startTime": 1276.6000000000931,
+              "duration": 91,
+              "timestamp": 1373.6999999999534
+            }
+          ],
+          "totalBlockingTime": 250,
+          "longTaskCount": 3,
+          "navigationStart": 1761832087980,
+          "domContentLoaded": 147.30000000004657,
+          "loadComplete": 444.60000000009313,
+          "canvasCount": 147,
+          "measurementDuration": 3014.1999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 162.80000000004657,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 162.80000000004657,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt8: RAF 페인트 + 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt8-raf-paint-batching",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T13:48:21.046Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1381.5999999998603,
+          "firstPaint": 154.79999999981374,
+          "firstContentfulPaint": 154.79999999981374,
+          "largestContentfulPaint": 154.79999999981374,
+          "longTasks": [
+            {
+              "startTime": 263.29999999981374,
+              "duration": 211,
+              "timestamp": 485.69999999995343
+            },
+            {
+              "startTime": 901.5999999998603,
+              "duration": 106,
+              "timestamp": 1158.5999999998603
+            },
+            {
+              "startTime": 1012,
+              "duration": 146,
+              "timestamp": 1158.5999999998603
+            },
+            {
+              "startTime": 1173,
+              "duration": 91,
+              "timestamp": 1269.3999999999069
+            }
+          ],
+          "totalBlockingTime": 354,
+          "longTaskCount": 4,
+          "navigationStart": 1761832096156,
+          "domContentLoaded": 149.0999999998603,
+          "loadComplete": 478.30000000004657,
+          "canvasCount": 147,
+          "measurementDuration": 3019.6999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 154.79999999981374,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 154.79999999981374,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt8: RAF 페인트 + 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt8-raf-paint-batching",
+          "runNumber": 4,
+          "timestamp": "2025-10-30T13:48:29.340Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1603.8999999999069,
+          "firstPaint": 254.29999999981374,
+          "firstContentfulPaint": 254.29999999981374,
+          "largestContentfulPaint": 254.29999999981374,
+          "longTasks": [
+            {
+              "startTime": 146.79999999981374,
+              "duration": 82,
+              "timestamp": 245.29999999981374
+            },
+            {
+              "startTime": 428.19999999995343,
+              "duration": 236,
+              "timestamp": 674.3999999999069
+            },
+            {
+              "startTime": 825.0999999998603,
+              "duration": 50,
+              "timestamp": 877.2999999998137
+            },
+            {
+              "startTime": 1206.8999999999069,
+              "duration": 113,
+              "timestamp": 1370.1999999999534
+            },
+            {
+              "startTime": 1374.7999999998137,
+              "duration": 98,
+              "timestamp": 1477.7999999998137
+            }
+          ],
+          "totalBlockingTime": 297,
+          "longTaskCount": 5,
+          "navigationStart": 1761832104236,
+          "domContentLoaded": 146.30000000004657,
+          "loadComplete": 667.3000000000466,
+          "canvasCount": 147,
+          "measurementDuration": 3019.1999999999534,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 254.29999999981374,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 254.29999999981374,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Opt8: RAF 페인트 + 배칭",
+          "url": "http://nextjs:3000/feedback/4?version=opt8-raf-paint-batching",
+          "runNumber": 5,
+          "timestamp": "2025-10-30T13:48:37.409Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1331.5,
+          "firstPaint": 162.19999999995343,
+          "firstContentfulPaint": 162.19999999995343,
+          "largestContentfulPaint": 162.19999999995343,
+          "longTasks": [
+            {
+              "startTime": 260.5999999998603,
+              "duration": 193,
+              "timestamp": 463.29999999981374
+            },
+            {
+              "startTime": 949.5,
+              "duration": 115,
+              "timestamp": 1107.2999999998137
+            },
+            {
+              "startTime": 1113.3999999999069,
+              "duration": 93,
+              "timestamp": 1212.1999999999534
+            }
+          ],
+          "totalBlockingTime": 251,
+          "longTaskCount": 3,
+          "navigationStart": 1761832112544,
+          "domContentLoaded": 103.10000000009313,
+          "loadComplete": 456.70000000018626,
+          "canvasCount": 147,
+          "measurementDuration": 3023.3000000000466,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 162.19999999995343,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 162.19999999995343,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1187.480000000028,
+        "min": 1102.3000000000466,
+        "max": 1226.1999999999534
+      },
+      "totalBlockingTime": {
+        "avg": 234,
+        "min": 223,
+        "max": 246
+      },
+      "longTaskCount": {
+        "avg": 2.8,
+        "min": 2,
+        "max": 4
+      },
+      "firstContentfulPaint": {
+        "avg": 194.50000000009314,
+        "min": 140.4000000001397,
+        "max": 275.10000000009313
+      },
+      "largestContentfulPaint": {
+        "avg": 194.50000000009314,
+        "min": 140.4000000001397,
+        "max": 275.10000000009313
+      }
+    },
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1349.6600000000094,
+        "min": 1274.4000000001397,
+        "max": 1436.5
+      },
+      "totalBlockingTime": {
+        "avg": 279.2,
+        "min": 239,
+        "max": 406
+      },
+      "longTaskCount": {
+        "avg": 3.8,
+        "min": 3,
+        "max": 4
+      },
+      "firstContentfulPaint": {
+        "avg": 192.80000000004657,
+        "min": 157.30000000004657,
+        "max": 302.80000000004657
+      },
+      "largestContentfulPaint": {
+        "avg": 192.80000000004657,
+        "min": 157.30000000004657,
+        "max": 302.80000000004657
+      }
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1189.980000000028,
+        "min": 1064.6000000000931,
+        "max": 1427.3999999999069
+      },
+      "totalBlockingTime": {
+        "avg": 151.4,
+        "min": 140,
+        "max": 183
+      },
+      "longTaskCount": {
+        "avg": 1.8,
+        "min": 1,
+        "max": 2
+      },
+      "firstContentfulPaint": {
+        "avg": 165.96000000005589,
+        "min": 145.10000000009313,
+        "max": 178.10000000009313
+      },
+      "largestContentfulPaint": {
+        "avg": 165.96000000005589,
+        "min": 145.10000000009313,
+        "max": 178.10000000009313
+      }
+    },
+    "raf-windowing": {
+      "name": "RAF Windowing (점진적 마운트)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1548.1799999999814,
+        "min": 1465.2000000001863,
+        "max": 1664.2999999998137
+      },
+      "totalBlockingTime": {
+        "avg": 171,
+        "min": 148,
+        "max": 214
+      },
+      "longTaskCount": {
+        "avg": 2,
+        "min": 1,
+        "max": 3
+      },
+      "firstContentfulPaint": {
+        "avg": 158.02000000001863,
+        "min": 141.69999999995343,
+        "max": 167.39999999990687
+      },
+      "largestContentfulPaint": {
+        "avg": 158.02000000001863,
+        "min": 141.69999999995343,
+        "max": 167.39999999990687
+      }
+    },
+    "lazy": {
+      "name": "Lazy (지연된 getPage)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1148.5200000000652,
+        "min": 1087.8999999999069,
+        "max": 1322
+      },
+      "totalBlockingTime": {
+        "avg": 145.6,
+        "min": 139,
+        "max": 154
+      },
+      "longTaskCount": {
+        "avg": 1.2,
+        "min": 1,
+        "max": 2
+      },
+      "firstContentfulPaint": {
+        "avg": 183.32000000001864,
+        "min": 152.4000000001397,
+        "max": 276.0999999998603
+      },
+      "largestContentfulPaint": {
+        "avg": 183.32000000001864,
+        "min": 152.4000000001397,
+        "max": 276.0999999998603
+      }
+    },
+    "opt1-raf": {
+      "name": "Opt1: RAF 페인트 안정화",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1383.260000000056,
+        "min": 1221.7000000001863,
+        "max": 1562.5
+      },
+      "totalBlockingTime": {
+        "avg": 254.8,
+        "min": 241,
+        "max": 300
+      },
+      "longTaskCount": {
+        "avg": 3.6,
+        "min": 3,
+        "max": 5
+      },
+      "firstContentfulPaint": {
+        "avg": 204.6,
+        "min": 147.4000000001397,
+        "max": 278
+      },
+      "largestContentfulPaint": {
+        "avg": 204.6,
+        "min": 147.4000000001397,
+        "max": 278
+      }
+    },
+    "opt2-callback-ref": {
+      "name": "Opt2: Callback Ref 패턴",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1282.4399999999441,
+        "min": 1160.5,
+        "max": 1347
+      },
+      "totalBlockingTime": {
+        "avg": 240.2,
+        "min": 200,
+        "max": 305
+      },
+      "longTaskCount": {
+        "avg": 2.6,
+        "min": 2,
+        "max": 3
+      },
+      "firstContentfulPaint": {
+        "avg": 153.239999999851,
+        "min": 133.79999999981374,
+        "max": 171.79999999981374
+      },
+      "largestContentfulPaint": {
+        "avg": 153.239999999851,
+        "min": 133.79999999981374,
+        "max": 171.79999999981374
+      }
+    },
+    "opt3-combined": {
+      "name": "Opt3: Combined (RAF + Callback)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1301.6799999999814,
+        "min": 1176.6000000000931,
+        "max": 1413
+      },
+      "totalBlockingTime": {
+        "avg": 212.4,
+        "min": 201,
+        "max": 252
+      },
+      "longTaskCount": {
+        "avg": 2.6,
+        "min": 2,
+        "max": 3
+      },
+      "firstContentfulPaint": {
+        "avg": 170.88000000002793,
+        "min": 161.4000000001397,
+        "max": 198.19999999995343
+      },
+      "largestContentfulPaint": {
+        "avg": 170.88000000002793,
+        "min": 161.4000000001397,
+        "max": 198.19999999995343
+      }
+    },
+    "opt4-scheduler": {
+      "name": "Opt4: RenderScheduler (K=4)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1358.7800000000746,
+        "min": 1311.5,
+        "max": 1392.6000000000931
+      },
+      "totalBlockingTime": {
+        "avg": 250.4,
+        "min": 240,
+        "max": 277
+      },
+      "longTaskCount": {
+        "avg": 3.8,
+        "min": 3,
+        "max": 5
+      },
+      "firstContentfulPaint": {
+        "avg": 184.68000000002795,
+        "min": 148.19999999995343,
+        "max": 283.9000000001397
+      },
+      "largestContentfulPaint": {
+        "avg": 184.68000000002795,
+        "min": 148.19999999995343,
+        "max": 283.9000000001397
+      }
+    },
+    "opt5-raf-batching": {
+      "name": "Opt5: RAF 배칭",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1380.2599999999627,
+        "min": 1284.6000000000931,
+        "max": 1487.5
+      },
+      "totalBlockingTime": {
+        "avg": 270.2,
+        "min": 240,
+        "max": 319
+      },
+      "longTaskCount": {
+        "avg": 3.6,
+        "min": 3,
+        "max": 5
+      },
+      "firstContentfulPaint": {
+        "avg": 194.1399999999907,
+        "min": 145.89999999990687,
+        "max": 315.60000000009313
+      },
+      "largestContentfulPaint": {
+        "avg": 194.1399999999907,
+        "min": 145.89999999990687,
+        "max": 315.60000000009313
+      }
+    },
+    "opt6-priority": {
+      "name": "Opt6: 우선순위 정렬",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1326.4399999999907,
+        "min": 1249.3000000000466,
+        "max": 1417.5
+      },
+      "totalBlockingTime": {
+        "avg": 273.4,
+        "min": 236,
+        "max": 382
+      },
+      "longTaskCount": {
+        "avg": 3.6,
+        "min": 3,
+        "max": 4
+      },
+      "firstContentfulPaint": {
+        "avg": 172.10000000004658,
+        "min": 152.80000000004657,
+        "max": 211.30000000004657
+      },
+      "largestContentfulPaint": {
+        "avg": 172.10000000004658,
+        "min": 152.80000000004657,
+        "max": 211.30000000004657
+      }
+    },
+    "opt7-all-scheduling": {
+      "name": "Opt7: 전체 스케줄링",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1345.3399999999442,
+        "min": 1277.1999999999534,
+        "max": 1422.5999999998603
+      },
+      "totalBlockingTime": {
+        "avg": 268.8,
+        "min": 240,
+        "max": 347
+      },
+      "longTaskCount": {
+        "avg": 3.2,
+        "min": 3,
+        "max": 4
+      },
+      "firstContentfulPaint": {
+        "avg": 185.0399999999907,
+        "min": 152.10000000009313,
+        "max": 274.89999999990687
+      },
+      "largestContentfulPaint": {
+        "avg": 185.0399999999907,
+        "min": 152.10000000009313,
+        "max": 274.89999999990687
+      }
+    },
+    "opt8-raf-paint-batching": {
+      "name": "Opt8: RAF 페인트 + 배칭",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1438.8599999999628,
+        "min": 1331.5,
+        "max": 1603.8999999999069
+      },
+      "totalBlockingTime": {
+        "avg": 285.8,
+        "min": 250,
+        "max": 354
+      },
+      "longTaskCount": {
+        "avg": 3.6,
+        "min": 3,
+        "max": 5
+      },
+      "firstContentfulPaint": {
+        "avg": 177.2199999999255,
+        "min": 152,
+        "max": 254.29999999981374
+      },
+      "largestContentfulPaint": {
+        "avg": 177.2199999999255,
+        "min": 152,
+        "max": 254.29999999981374
+      }
+    }
+  }
+}

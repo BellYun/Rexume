@@ -1,0 +1,449 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (스케줄링 없음)",
+      "shortName": "basic",
+      "tbt": {
+        "avg": 1435,
+        "min": 1168,
+        "max": 1556,
+        "median": 1478
+      },
+      "fcp": {
+        "avg": 404,
+        "min": 260,
+        "max": 704,
+        "median": 296
+      },
+      "firstCanvasTime": {
+        "avg": 2795,
+        "min": 2248,
+        "max": 3655,
+        "median": 2696
+      },
+      "longTaskCount": {
+        "avg": 6,
+        "min": 6,
+        "max": 7,
+        "median": 6
+      },
+      "longTaskMax": {
+        "avg": 854,
+        "min": 612,
+        "max": 973,
+        "median": 910
+      },
+      "longTaskAvg": {
+        "avg": 300,
+        "min": 264,
+        "max": 335,
+        "median": 304
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "runs": 5
+    },
+    {
+      "version": "IO (IntersectionObserver)",
+      "shortName": "simple-io",
+      "tbt": {
+        "avg": 1070,
+        "min": 976,
+        "max": 1172,
+        "median": 1080
+      },
+      "fcp": {
+        "avg": 646,
+        "min": 292,
+        "max": 1724,
+        "median": 364
+      },
+      "firstCanvasTime": {
+        "avg": 2839,
+        "min": 2293,
+        "max": 3832,
+        "median": 2618
+      },
+      "longTaskCount": {
+        "avg": 5,
+        "min": 5,
+        "max": 6,
+        "median": 5
+      },
+      "longTaskMax": {
+        "avg": 796,
+        "min": 717,
+        "max": 857,
+        "median": 797
+      },
+      "longTaskAvg": {
+        "avg": 274,
+        "min": 233,
+        "max": 295,
+        "median": 289
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "runs": 5
+    },
+    {
+      "version": "WorkerOnly (OffscreenCanvas)",
+      "shortName": "worker-only",
+      "tbt": {
+        "avg": 783,
+        "min": 694,
+        "max": 827,
+        "median": 800
+      },
+      "fcp": {
+        "avg": 442,
+        "min": 272,
+        "max": 908,
+        "median": 316
+      },
+      "firstCanvasTime": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "longTaskCount": {
+        "avg": 3,
+        "min": 2,
+        "max": 4,
+        "median": 4
+      },
+      "longTaskMax": {
+        "avg": 822,
+        "min": 744,
+        "max": 864,
+        "median": 835
+      },
+      "longTaskAvg": {
+        "avg": 326,
+        "min": 276,
+        "max": 446,
+        "median": 286
+      },
+      "canvasCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "runs": 5
+    },
+    {
+      "version": "IO + Worker",
+      "shortName": "io-worker",
+      "tbt": {
+        "avg": 673,
+        "min": 409,
+        "max": 811,
+        "median": 746
+      },
+      "fcp": {
+        "avg": 562,
+        "min": 272,
+        "max": 1556,
+        "median": 308
+      },
+      "firstCanvasTime": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "longTaskCount": {
+        "avg": 3,
+        "min": 3,
+        "max": 4,
+        "median": 3
+      },
+      "longTaskMax": {
+        "avg": 707,
+        "min": 448,
+        "max": 821,
+        "median": 791
+      },
+      "longTaskAvg": {
+        "avg": 279,
+        "min": 218,
+        "max": 335,
+        "median": 283
+      },
+      "canvasCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "runs": 5
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "tbt": 1556,
+        "fcp": 464,
+        "firstCanvasTime": 3655,
+        "longTaskCount": 6,
+        "longTaskMax": 973,
+        "longTaskAvg": 335,
+        "canvasCount": 147,
+        "loadComplete": 1598,
+        "version": "Basic (스케줄링 없음)",
+        "run": 1
+      },
+      {
+        "tbt": 1478,
+        "fcp": 704,
+        "firstCanvasTime": 2919,
+        "longTaskCount": 7,
+        "longTaskMax": 910,
+        "longTaskAvg": 276,
+        "canvasCount": 147,
+        "loadComplete": 1825,
+        "version": "Basic (스케줄링 없음)",
+        "run": 2
+      },
+      {
+        "tbt": 1168,
+        "fcp": 296,
+        "firstCanvasTime": 2248,
+        "longTaskCount": 6,
+        "longTaskMax": 612,
+        "longTaskAvg": 264,
+        "canvasCount": 147,
+        "loadComplete": 1082,
+        "version": "Basic (스케줄링 없음)",
+        "run": 3
+      },
+      {
+        "tbt": 1435,
+        "fcp": 296,
+        "firstCanvasTime": 2458,
+        "longTaskCount": 6,
+        "longTaskMax": 844,
+        "longTaskAvg": 304,
+        "canvasCount": 147,
+        "loadComplete": 1294,
+        "version": "Basic (스케줄링 없음)",
+        "run": 4
+      },
+      {
+        "tbt": 1536,
+        "fcp": 260,
+        "firstCanvasTime": 2696,
+        "longTaskCount": 6,
+        "longTaskMax": 930,
+        "longTaskAvg": 319,
+        "canvasCount": 147,
+        "loadComplete": 1370,
+        "version": "Basic (스케줄링 없음)",
+        "run": 5
+      }
+    ],
+    "simple-io": [
+      {
+        "tbt": 1080,
+        "fcp": 1724,
+        "firstCanvasTime": 3832,
+        "longTaskCount": 5,
+        "longTaskMax": 797,
+        "longTaskAvg": 289,
+        "canvasCount": 147,
+        "loadComplete": 2773,
+        "version": "IO (IntersectionObserver)",
+        "run": 1
+      },
+      {
+        "tbt": 992,
+        "fcp": 304,
+        "firstCanvasTime": 2395,
+        "longTaskCount": 6,
+        "longTaskMax": 717,
+        "longTaskAvg": 233,
+        "canvasCount": 147,
+        "loadComplete": 1274,
+        "version": "IO (IntersectionObserver)",
+        "run": 2
+      },
+      {
+        "tbt": 976,
+        "fcp": 292,
+        "firstCanvasTime": 2293,
+        "longTaskCount": 5,
+        "longTaskMax": 760,
+        "longTaskAvg": 266,
+        "canvasCount": 147,
+        "loadComplete": 1160,
+        "version": "IO (IntersectionObserver)",
+        "run": 3
+      },
+      {
+        "tbt": 1172,
+        "fcp": 548,
+        "firstCanvasTime": 3059,
+        "longTaskCount": 5,
+        "longTaskMax": 850,
+        "longTaskAvg": 295,
+        "canvasCount": 147,
+        "loadComplete": 1668,
+        "version": "IO (IntersectionObserver)",
+        "run": 4
+      },
+      {
+        "tbt": 1132,
+        "fcp": 364,
+        "firstCanvasTime": 2618,
+        "longTaskCount": 5,
+        "longTaskMax": 857,
+        "longTaskAvg": 289,
+        "canvasCount": 147,
+        "loadComplete": 1475,
+        "version": "IO (IntersectionObserver)",
+        "run": 5
+      }
+    ],
+    "worker-only": [
+      {
+        "tbt": 800,
+        "fcp": 908,
+        "firstCanvasTime": 0,
+        "longTaskCount": 4,
+        "longTaskMax": 835,
+        "longTaskAvg": 276,
+        "canvasCount": 0,
+        "loadComplete": 1934,
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 1
+      },
+      {
+        "tbt": 776,
+        "fcp": 316,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 809,
+        "longTaskAvg": 341,
+        "canvasCount": 0,
+        "loadComplete": 1248,
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 2
+      },
+      {
+        "tbt": 817,
+        "fcp": 304,
+        "firstCanvasTime": 0,
+        "longTaskCount": 4,
+        "longTaskMax": 864,
+        "longTaskAvg": 279,
+        "canvasCount": 0,
+        "loadComplete": 1380,
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 3
+      },
+      {
+        "tbt": 827,
+        "fcp": 412,
+        "firstCanvasTime": 0,
+        "longTaskCount": 4,
+        "longTaskMax": 858,
+        "longTaskAvg": 286,
+        "canvasCount": 0,
+        "loadComplete": 1493,
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 4
+      },
+      {
+        "tbt": 694,
+        "fcp": 272,
+        "firstCanvasTime": 0,
+        "longTaskCount": 2,
+        "longTaskMax": 744,
+        "longTaskAvg": 446,
+        "canvasCount": 0,
+        "loadComplete": 1099,
+        "version": "WorkerOnly (OffscreenCanvas)",
+        "run": 5
+      }
+    ],
+    "io-worker": [
+      {
+        "tbt": 811,
+        "fcp": 1556,
+        "firstCanvasTime": 0,
+        "longTaskCount": 4,
+        "longTaskMax": 821,
+        "longTaskAvg": 283,
+        "canvasCount": 0,
+        "loadComplete": 2929,
+        "version": "IO + Worker",
+        "run": 1
+      },
+      {
+        "tbt": 633,
+        "fcp": 300,
+        "firstCanvasTime": 0,
+        "longTaskCount": 4,
+        "longTaskMax": 671,
+        "longTaskAvg": 231,
+        "canvasCount": 0,
+        "loadComplete": 1166,
+        "version": "IO + Worker",
+        "run": 2
+      },
+      {
+        "tbt": 409,
+        "fcp": 376,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 448,
+        "longTaskAvg": 218,
+        "canvasCount": 0,
+        "loadComplete": 1167,
+        "version": "IO + Worker",
+        "run": 3
+      },
+      {
+        "tbt": 746,
+        "fcp": 308,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 791,
+        "longTaskAvg": 327,
+        "canvasCount": 0,
+        "loadComplete": 1242,
+        "version": "IO + Worker",
+        "run": 4
+      },
+      {
+        "tbt": 764,
+        "fcp": 272,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 802,
+        "longTaskAvg": 335,
+        "canvasCount": 0,
+        "loadComplete": 1195,
+        "version": "IO + Worker",
+        "run": 5
+      }
+    ]
+  },
+  "meta": {
+    "runs": 5,
+    "cpuThrottle": 4,
+    "baseUrl": "http://localhost:3000",
+    "pdfUrl": "/sample4.pdf",
+    "timestamp": "2026-03-27T04:25:14.001Z"
+  }
+}

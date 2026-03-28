@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-11-12T03:37:18.724Z",
+  "config": {
+    "cpuThrottle": 1,
+    "runsPerUrl": 3,
+    "headless": true,
+    "testUrls": [
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt8-raf-paint-batching",
+        "name": "Opt8: RAF 페인트 + 배칭",
+        "shortName": "opt8-raf-paint-batching"
+      }
+    ]
+  },
+  "results": {
+    "opt8-raf-paint-batching": {
+      "name": "Opt8: RAF 페인트 + 배칭",
+      "url": "http://localhost:3000/feedback/4?version=opt8-raf-paint-batching",
+      "shortName": "opt8-raf-paint-batching",
+      "results": []
+    }
+  },
+  "statistics": {}
+}

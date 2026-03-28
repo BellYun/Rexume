@@ -1,0 +1,1198 @@
+{
+  "timestamp": "2025-10-29T13:22:18.279Z",
+  "config": {
+    "cpuThrottle": 4,
+    "runsPerUrl": 5,
+    "headless": true,
+    "testUrls": [
+      {
+        "url": "http://localhost:3000/feedback-basic/4",
+        "name": "Basic (개선 전)",
+        "shortName": "basic"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=simple",
+        "name": "Simple (IntersectionObserver)",
+        "shortName": "simple"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=raf",
+        "name": "RAF (requestAnimationFrame)",
+        "shortName": "raf"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+        "name": "RAF Windowing (점진적 마운트)",
+        "shortName": "raf-windowing"
+      }
+    ]
+  },
+  "results": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "url": "http://localhost:3000/feedback-basic/4",
+      "shortName": "basic",
+      "results": [
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://localhost:3000/feedback-basic/4",
+          "runNumber": 1,
+          "timestamp": "2025-10-29T13:19:50.749Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1145,
+          "firstPaint": 168,
+          "firstContentfulPaint": 168,
+          "largestContentfulPaint": 676,
+          "longTasks": [
+            {
+              "startTime": 90.09999996423721,
+              "duration": 59,
+              "timestamp": 258.39999997615814
+            },
+            {
+              "startTime": 153.29999995231628,
+              "duration": 94,
+              "timestamp": 258.39999997615814
+            },
+            {
+              "startTime": 266.2999999523163,
+              "duration": 111,
+              "timestamp": 511.7999999523163
+            },
+            {
+              "startTime": 379.0999999642372,
+              "duration": 124,
+              "timestamp": 511.7999999523163
+            },
+            {
+              "startTime": 910.2999999523163,
+              "duration": 101,
+              "timestamp": 1030.0999999642372
+            }
+          ],
+          "totalBlockingTime": 230,
+          "longTaskCount": 5,
+          "navigationStart": 1761743986005,
+          "domContentLoaded": 163,
+          "loadComplete": 510.80000001192093,
+          "canvasCount": 147,
+          "measurementDuration": 3020.2000000476837,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 168,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 168,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://localhost:3000/feedback-basic/4",
+          "runNumber": 2,
+          "timestamp": "2025-10-29T13:19:58.827Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 950.3999999761581,
+          "firstPaint": 196,
+          "firstContentfulPaint": 196,
+          "largestContentfulPaint": 504,
+          "longTasks": [
+            {
+              "startTime": 40.89999997615814,
+              "duration": 103,
+              "timestamp": 155.19999998807907
+            },
+            {
+              "startTime": 155.69999998807907,
+              "duration": 83,
+              "timestamp": 373.69999998807907
+            },
+            {
+              "startTime": 239.5,
+              "duration": 126,
+              "timestamp": 373.69999998807907
+            },
+            {
+              "startTime": 719.5999999642372,
+              "duration": 107,
+              "timestamp": 844.1999999880791
+            }
+          ],
+          "totalBlockingTime": 166,
+          "longTaskCount": 4,
+          "navigationStart": 1761743994341,
+          "domContentLoaded": 42.09999996423721,
+          "loadComplete": 373,
+          "canvasCount": 147,
+          "measurementDuration": 3012.800000011921,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 196,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 196,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://localhost:3000/feedback-basic/4",
+          "runNumber": 3,
+          "timestamp": "2025-10-29T13:20:07.099Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1010,
+          "firstPaint": 204,
+          "firstContentfulPaint": 204,
+          "largestContentfulPaint": 572,
+          "longTasks": [
+            {
+              "startTime": 39.40000003576279,
+              "duration": 122,
+              "timestamp": 175.10000002384186
+            },
+            {
+              "startTime": 177.10000002384186,
+              "duration": 88,
+              "timestamp": 414.80000001192093
+            },
+            {
+              "startTime": 265.5,
+              "duration": 140,
+              "timestamp": 414.80000001192093
+            },
+            {
+              "startTime": 792.5,
+              "duration": 93,
+              "timestamp": 896.9000000357628
+            }
+          ],
+          "totalBlockingTime": 171,
+          "longTaskCount": 4,
+          "navigationStart": 1761744002463,
+          "domContentLoaded": 41.09999996423721,
+          "loadComplete": 414,
+          "canvasCount": 147,
+          "measurementDuration": 3095.900000035763,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 204,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 204,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://localhost:3000/feedback-basic/4",
+          "runNumber": 4,
+          "timestamp": "2025-10-29T13:20:15.430Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1153.300000011921,
+          "firstPaint": 228,
+          "firstContentfulPaint": 228,
+          "largestContentfulPaint": 552,
+          "longTasks": [
+            {
+              "startTime": 63.69999998807907,
+              "duration": 121,
+              "timestamp": 196.19999998807907
+            },
+            {
+              "startTime": 199.60000002384186,
+              "duration": 88,
+              "timestamp": 431.9000000357628
+            },
+            {
+              "startTime": 288.19999998807907,
+              "duration": 135,
+              "timestamp": 431.9000000357628
+            },
+            {
+              "startTime": 898.5,
+              "duration": 121,
+              "timestamp": 1046.5
+            }
+          ],
+          "totalBlockingTime": 194,
+          "longTaskCount": 4,
+          "navigationStart": 1761744010785,
+          "domContentLoaded": 188.30000001192093,
+          "loadComplete": 431.10000002384186,
+          "canvasCount": 147,
+          "measurementDuration": 3017.600000023842,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 228,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 228,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Basic (개선 전)",
+          "url": "http://localhost:3000/feedback-basic/4",
+          "runNumber": 5,
+          "timestamp": "2025-10-29T13:20:23.766Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1071.8999999761581,
+          "firstPaint": 224,
+          "firstContentfulPaint": 224,
+          "largestContentfulPaint": 568,
+          "longTasks": [
+            {
+              "startTime": 52.69999998807907,
+              "duration": 132,
+              "timestamp": 198.10000002384186
+            },
+            {
+              "startTime": 201.19999998807907,
+              "duration": 90,
+              "timestamp": 420.5
+            },
+            {
+              "startTime": 292.19999998807907,
+              "duration": 120,
+              "timestamp": 420.5
+            },
+            {
+              "startTime": 810.5,
+              "duration": 126,
+              "timestamp": 960.3999999761581
+            }
+          ],
+          "totalBlockingTime": 186,
+          "longTaskCount": 4,
+          "navigationStart": 1761744019128,
+          "domContentLoaded": 189.10000002384186,
+          "loadComplete": 419.9000000357628,
+          "canvasCount": 147,
+          "measurementDuration": 3015,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 224,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 224,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "url": "http://localhost:3000/feedback/4?version=simple",
+      "shortName": "simple",
+      "results": [
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://localhost:3000/feedback/4?version=simple",
+          "runNumber": 1,
+          "timestamp": "2025-10-29T13:20:29.361Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1570,
+          "firstPaint": 264,
+          "firstContentfulPaint": 264,
+          "largestContentfulPaint": 264,
+          "longTasks": [
+            {
+              "startTime": 64.80000001192093,
+              "duration": 148,
+              "timestamp": 222.69999998807907
+            },
+            {
+              "startTime": 228.60000002384186,
+              "duration": 108,
+              "timestamp": 347.19999998807907
+            },
+            {
+              "startTime": 521.6000000238419,
+              "duration": 74,
+              "timestamp": 596.5
+            },
+            {
+              "startTime": 972.3000000119209,
+              "duration": 232,
+              "timestamp": 1220.4000000357628
+            },
+            {
+              "startTime": 1269.4000000357628,
+              "duration": 147,
+              "timestamp": 1429.6000000238419
+            }
+          ],
+          "totalBlockingTime": 361,
+          "longTaskCount": 5,
+          "navigationStart": 1761744024480,
+          "domContentLoaded": 215.70000004768372,
+          "loadComplete": 344.80000001192093,
+          "canvasCount": 147,
+          "measurementDuration": 3020.100000023842,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 264,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 264,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://localhost:3000/feedback/4?version=simple",
+          "runNumber": 2,
+          "timestamp": "2025-10-29T13:20:37.820Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1342.7000000476837,
+          "firstPaint": 220,
+          "firstContentfulPaint": 220,
+          "largestContentfulPaint": 220,
+          "longTasks": [
+            {
+              "startTime": 44.80000001192093,
+              "duration": 133,
+              "timestamp": 190.5
+            },
+            {
+              "startTime": 197.20000004768372,
+              "duration": 102,
+              "timestamp": 311.4000000357628
+            },
+            {
+              "startTime": 464.2000000476837,
+              "duration": 143,
+              "timestamp": 612.6000000238419
+            },
+            {
+              "startTime": 856.3000000119209,
+              "duration": 185,
+              "timestamp": 1053.1000000238419
+            },
+            {
+              "startTime": 1117.300000011921,
+              "duration": 129,
+              "timestamp": 1257
+            }
+          ],
+          "totalBlockingTime": 359,
+          "longTaskCount": 5,
+          "navigationStart": 1761744033016,
+          "domContentLoaded": 181.9000000357628,
+          "loadComplete": 308.9000000357628,
+          "canvasCount": 147,
+          "measurementDuration": 3012.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 220,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 220,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://localhost:3000/feedback/4?version=simple",
+          "runNumber": 3,
+          "timestamp": "2025-10-29T13:20:46.197Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1262.5,
+          "firstPaint": 224,
+          "firstContentfulPaint": 224,
+          "largestContentfulPaint": 224,
+          "longTasks": [
+            {
+              "startTime": 47.5,
+              "duration": 131,
+              "timestamp": 189.69999998807907
+            },
+            {
+              "startTime": 193.60000002384186,
+              "duration": 103,
+              "timestamp": 307
+            },
+            {
+              "startTime": 437,
+              "duration": 132,
+              "timestamp": 588
+            },
+            {
+              "startTime": 817.9000000357628,
+              "duration": 168,
+              "timestamp": 997.1999999880791
+            },
+            {
+              "startTime": 1050.4000000357628,
+              "duration": 116,
+              "timestamp": 1175.9000000357628
+            }
+          ],
+          "totalBlockingTime": 319,
+          "longTaskCount": 5,
+          "navigationStart": 1761744041487,
+          "domContentLoaded": 182.30000001192093,
+          "loadComplete": 304.9000000357628,
+          "canvasCount": 147,
+          "measurementDuration": 3013.2000000476837,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 224,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 224,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://localhost:3000/feedback/4?version=simple",
+          "runNumber": 4,
+          "timestamp": "2025-10-29T13:20:54.439Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1184,
+          "firstPaint": 200,
+          "firstContentfulPaint": 200,
+          "largestContentfulPaint": 200,
+          "longTasks": [
+            {
+              "startTime": 38.80000001192093,
+              "duration": 112,
+              "timestamp": 162
+            },
+            {
+              "startTime": 164.10000002384186,
+              "duration": 86,
+              "timestamp": 258.60000002384186
+            },
+            {
+              "startTime": 375,
+              "duration": 131,
+              "timestamp": 511.30000001192093
+            },
+            {
+              "startTime": 739.3000000119209,
+              "duration": 160,
+              "timestamp": 910.4000000357628
+            },
+            {
+              "startTime": 966.6000000238419,
+              "duration": 109,
+              "timestamp": 1084.800000011921
+            }
+          ],
+          "totalBlockingTime": 286,
+          "longTaskCount": 5,
+          "navigationStart": 1761744049809,
+          "domContentLoaded": 40.80000001192093,
+          "loadComplete": 256.80000001192093,
+          "canvasCount": 147,
+          "measurementDuration": 3012.7999999523163,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 200,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 200,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://localhost:3000/feedback/4?version=simple",
+          "runNumber": 5,
+          "timestamp": "2025-10-29T13:21:03.143Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1425.1000000238419,
+          "firstPaint": 252,
+          "firstContentfulPaint": 252,
+          "largestContentfulPaint": 252,
+          "longTasks": [
+            {
+              "startTime": 48.80000001192093,
+              "duration": 151,
+              "timestamp": 210.19999998807907
+            },
+            {
+              "startTime": 215.5,
+              "duration": 112,
+              "timestamp": 339.30000001192093
+            },
+            {
+              "startTime": 487.39999997615814,
+              "duration": 145,
+              "timestamp": 636.8999999761581
+            },
+            {
+              "startTime": 907.3999999761581,
+              "duration": 187,
+              "timestamp": 1106
+            },
+            {
+              "startTime": 1140.800000011921,
+              "duration": 116,
+              "timestamp": 1259.699999988079
+            }
+          ],
+          "totalBlockingTime": 360,
+          "longTaskCount": 5,
+          "navigationStart": 1761744058343,
+          "domContentLoaded": 205.5999999642372,
+          "loadComplete": 336.30000001192093,
+          "canvasCount": 147,
+          "measurementDuration": 3015.600000023842,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 252,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 252,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "url": "http://localhost:3000/feedback/4?version=raf",
+      "shortName": "raf",
+      "results": [
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://localhost:3000/feedback/4?version=raf",
+          "runNumber": 1,
+          "timestamp": "2025-10-29T13:21:08.649Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1042.1000000238419,
+          "firstPaint": 244,
+          "firstContentfulPaint": 244,
+          "largestContentfulPaint": 476,
+          "longTasks": [
+            {
+              "startTime": 44.90000003576279,
+              "duration": 144,
+              "timestamp": 200.60000002384186
+            },
+            {
+              "startTime": 205,
+              "duration": 116,
+              "timestamp": 333.30000001192093
+            },
+            {
+              "startTime": 473,
+              "duration": 141,
+              "timestamp": 634.4000000357628
+            }
+          ],
+          "totalBlockingTime": 157,
+          "longTaskCount": 3,
+          "navigationStart": 1761744064135,
+          "domContentLoaded": 194.39999997615814,
+          "loadComplete": 330.5,
+          "canvasCount": 147,
+          "measurementDuration": 3011.2000000476837,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 244,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 244,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://localhost:3000/feedback/4?version=raf",
+          "runNumber": 2,
+          "timestamp": "2025-10-29T13:21:16.995Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 1143.3999999761581,
+          "firstPaint": 228,
+          "firstContentfulPaint": 228,
+          "largestContentfulPaint": 460,
+          "longTasks": [
+            {
+              "startTime": 49.39999997615814,
+              "duration": 133,
+              "timestamp": 196.39999997615814
+            },
+            {
+              "startTime": 201.79999995231628,
+              "duration": 124,
+              "timestamp": 340.2999999523163
+            },
+            {
+              "startTime": 442.89999997615814,
+              "duration": 149,
+              "timestamp": 597.2999999523163
+            }
+          ],
+          "totalBlockingTime": 173,
+          "longTaskCount": 3,
+          "navigationStart": 1761744072333,
+          "domContentLoaded": 187,
+          "loadComplete": 339,
+          "canvasCount": 147,
+          "measurementDuration": 3014.7999999523163,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 228,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 228,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://localhost:3000/feedback/4?version=raf",
+          "runNumber": 3,
+          "timestamp": "2025-10-29T13:21:24.961Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 892.1999999880791,
+          "firstPaint": 204,
+          "firstContentfulPaint": 204,
+          "largestContentfulPaint": 396,
+          "longTasks": [
+            {
+              "startTime": 40.39999997615814,
+              "duration": 114,
+              "timestamp": 169.80000001192093
+            },
+            {
+              "startTime": 171,
+              "duration": 93,
+              "timestamp": 273.30000001192093
+            },
+            {
+              "startTime": 388.30000001192093,
+              "duration": 131,
+              "timestamp": 538.6999999880791
+            }
+          ],
+          "totalBlockingTime": 124,
+          "longTaskCount": 3,
+          "navigationStart": 1761744080624,
+          "domContentLoaded": 42.30000001192093,
+          "loadComplete": 271.39999997615814,
+          "canvasCount": 147,
+          "measurementDuration": 3013.300000011921,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 204,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 204,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://localhost:3000/feedback/4?version=raf",
+          "runNumber": 4,
+          "timestamp": "2025-10-29T13:21:33.133Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 933,
+          "firstPaint": 212,
+          "firstContentfulPaint": 212,
+          "largestContentfulPaint": 420,
+          "longTasks": [
+            {
+              "startTime": 44.60000002384186,
+              "duration": 127,
+              "timestamp": 185.10000002384186
+            },
+            {
+              "startTime": 189.30000001192093,
+              "duration": 94,
+              "timestamp": 293.5
+            },
+            {
+              "startTime": 417.10000002384186,
+              "duration": 138,
+              "timestamp": 572.5
+            }
+          ],
+          "totalBlockingTime": 132,
+          "longTaskCount": 3,
+          "navigationStart": 1761744088576,
+          "domContentLoaded": 176.70000004768372,
+          "loadComplete": 291.5,
+          "canvasCount": 147,
+          "measurementDuration": 3013.400000035763,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 212,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 212,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://localhost:3000/feedback/4?version=raf",
+          "runNumber": 5,
+          "timestamp": "2025-10-29T13:21:41.117Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 885.5,
+          "firstPaint": 196,
+          "firstContentfulPaint": 196,
+          "largestContentfulPaint": 580,
+          "longTasks": [
+            {
+              "startTime": 39.80000001192093,
+              "duration": 111,
+              "timestamp": 164.19999998807907
+            },
+            {
+              "startTime": 165.69999998807907,
+              "duration": 88,
+              "timestamp": 264.30000001192093
+            },
+            {
+              "startTime": 387.5,
+              "duration": 128,
+              "timestamp": 523
+            }
+          ],
+          "totalBlockingTime": 116,
+          "longTaskCount": 3,
+          "navigationStart": 1761744096765,
+          "domContentLoaded": 40.60000002384186,
+          "loadComplete": 261.9000000357628,
+          "canvasCount": 147,
+          "measurementDuration": 3013.7999999523163,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 196,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 196,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "raf-windowing": {
+      "name": "RAF Windowing (점진적 마운트)",
+      "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+      "shortName": "raf-windowing",
+      "results": [
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+          "runNumber": 1,
+          "timestamp": "2025-10-29T13:21:46.177Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 911.8000000119209,
+          "firstPaint": 212,
+          "firstContentfulPaint": 212,
+          "largestContentfulPaint": 596,
+          "longTasks": [
+            {
+              "startTime": 41.30000001192093,
+              "duration": 118,
+              "timestamp": 172.80000001192093
+            },
+            {
+              "startTime": 174.69999998807907,
+              "duration": 91,
+              "timestamp": 275.9000000357628
+            },
+            {
+              "startTime": 401,
+              "duration": 131,
+              "timestamp": 535.9000000357628
+            }
+          ],
+          "totalBlockingTime": 122,
+          "longTaskCount": 3,
+          "navigationStart": 1761744101716,
+          "domContentLoaded": 42.5,
+          "loadComplete": 273.60000002384186,
+          "canvasCount": 147,
+          "measurementDuration": 3013.699999988079,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 212,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 212,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+          "runNumber": 2,
+          "timestamp": "2025-10-29T13:21:54.195Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 929.2999999523163,
+          "firstPaint": 200,
+          "firstContentfulPaint": 200,
+          "largestContentfulPaint": 600,
+          "longTasks": [
+            {
+              "startTime": 38.59999996423721,
+              "duration": 115,
+              "timestamp": 166.69999998807907
+            },
+            {
+              "startTime": 168.89999997615814,
+              "duration": 92,
+              "timestamp": 270.89999997615814
+            },
+            {
+              "startTime": 402.5,
+              "duration": 132,
+              "timestamp": 542.2999999523163
+            }
+          ],
+          "totalBlockingTime": 124,
+          "longTaskCount": 3,
+          "navigationStart": 1761744109788,
+          "domContentLoaded": 40.30000001192093,
+          "loadComplete": 268.5,
+          "canvasCount": 147,
+          "measurementDuration": 3012.099999964237,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 200,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 200,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+          "runNumber": 3,
+          "timestamp": "2025-10-29T13:22:02.267Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 906.3999999761581,
+          "firstPaint": 200,
+          "firstContentfulPaint": 200,
+          "largestContentfulPaint": 584,
+          "longTasks": [
+            {
+              "startTime": 40.39999997615814,
+              "duration": 116,
+              "timestamp": 169.69999998807907
+            },
+            {
+              "startTime": 171,
+              "duration": 91,
+              "timestamp": 270.80000001192093
+            },
+            {
+              "startTime": 384.69999998807907,
+              "duration": 131,
+              "timestamp": 522.8999999761581
+            }
+          ],
+          "totalBlockingTime": 122,
+          "longTaskCount": 3,
+          "navigationStart": 1761744117804,
+          "domContentLoaded": 42.09999996423721,
+          "loadComplete": 268.5,
+          "canvasCount": 147,
+          "measurementDuration": 3012.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 200,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 200,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+          "runNumber": 4,
+          "timestamp": "2025-10-29T13:22:10.259Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 913.3000000119209,
+          "firstPaint": 200,
+          "firstContentfulPaint": 200,
+          "largestContentfulPaint": 592,
+          "longTasks": [
+            {
+              "startTime": 40.39999997615814,
+              "duration": 109,
+              "timestamp": 161.89999997615814
+            },
+            {
+              "startTime": 163.89999997615814,
+              "duration": 92,
+              "timestamp": 265
+            },
+            {
+              "startTime": 390.5,
+              "duration": 129,
+              "timestamp": 526.8000000119209
+            }
+          ],
+          "totalBlockingTime": 121,
+          "longTaskCount": 3,
+          "navigationStart": 1761744125897,
+          "domContentLoaded": 42.40000003576279,
+          "loadComplete": 263,
+          "canvasCount": 147,
+          "measurementDuration": 3012.800000011921,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 200,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 200,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "RAF Windowing (점진적 마운트)",
+          "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+          "runNumber": 5,
+          "timestamp": "2025-10-29T13:22:18.278Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 935.6999999880791,
+          "firstPaint": 212,
+          "firstContentfulPaint": 212,
+          "largestContentfulPaint": 612,
+          "longTasks": [
+            {
+              "startTime": 41.39999997615814,
+              "duration": 118,
+              "timestamp": 173.19999998807907
+            },
+            {
+              "startTime": 174.5999999642372,
+              "duration": 91,
+              "timestamp": 275.69999998807907
+            },
+            {
+              "startTime": 401.0999999642372,
+              "duration": 141,
+              "timestamp": 550.0999999642372
+            }
+          ],
+          "totalBlockingTime": 132,
+          "longTaskCount": 3,
+          "navigationStart": 1761744133891,
+          "domContentLoaded": 43.30000001192093,
+          "loadComplete": 273.4000000357628,
+          "canvasCount": 147,
+          "measurementDuration": 3012.7999999523163,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 212,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 212,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1066.1199999928474,
+        "min": 950.3999999761581,
+        "max": 1153.300000011921
+      },
+      "totalBlockingTime": {
+        "avg": 189.4,
+        "min": 166,
+        "max": 230
+      },
+      "longTaskCount": {
+        "avg": 4.2,
+        "min": 4,
+        "max": 5
+      },
+      "firstContentfulPaint": {
+        "avg": 204,
+        "min": 168,
+        "max": 228
+      },
+      "largestContentfulPaint": {
+        "avg": 574.4,
+        "min": 504,
+        "max": 676
+      }
+    },
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 1356.8600000143051,
+        "min": 1184,
+        "max": 1570
+      },
+      "totalBlockingTime": {
+        "avg": 337,
+        "min": 286,
+        "max": 361
+      },
+      "longTaskCount": {
+        "avg": 5,
+        "min": 5,
+        "max": 5
+      },
+      "firstContentfulPaint": {
+        "avg": 232,
+        "min": 200,
+        "max": 264
+      },
+      "largestContentfulPaint": {
+        "avg": 232,
+        "min": 200,
+        "max": 264
+      }
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 979.2399999976158,
+        "min": 885.5,
+        "max": 1143.3999999761581
+      },
+      "totalBlockingTime": {
+        "avg": 140.4,
+        "min": 116,
+        "max": 173
+      },
+      "longTaskCount": {
+        "avg": 3,
+        "min": 3,
+        "max": 3
+      },
+      "firstContentfulPaint": {
+        "avg": 216.8,
+        "min": 196,
+        "max": 244
+      },
+      "largestContentfulPaint": {
+        "avg": 466.4,
+        "min": 396,
+        "max": 580
+      }
+    },
+    "raf-windowing": {
+      "name": "RAF Windowing (점진적 마운트)",
+      "count": 5,
+      "firstPageRenderTime": {
+        "avg": 919.2999999880791,
+        "min": 906.3999999761581,
+        "max": 935.6999999880791
+      },
+      "totalBlockingTime": {
+        "avg": 124.2,
+        "min": 121,
+        "max": 132
+      },
+      "longTaskCount": {
+        "avg": 3,
+        "min": 3,
+        "max": 3
+      },
+      "firstContentfulPaint": {
+        "avg": 204.8,
+        "min": 200,
+        "max": 212
+      },
+      "largestContentfulPaint": {
+        "avg": 596.8,
+        "min": 584,
+        "max": 612
+      }
+    }
+  }
+}

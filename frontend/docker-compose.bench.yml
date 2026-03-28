@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  benchmark:
+    build:
+      context: .
+      dockerfile: Dockerfile.bench
+    network_mode: "host"  # 호스트의 localhost:3000에 접근
+    volumes:
+      - ./bench/results:/app/bench/results  # 결과 파일을 호스트로 저장
+    environment:
+      - NODE_ENV=production
+    # Puppeteer가 샌드박스 없이 실행되도록 설정
+    cap_add:
+      - SYS_ADMIN
+    shm_size: 2gb
+

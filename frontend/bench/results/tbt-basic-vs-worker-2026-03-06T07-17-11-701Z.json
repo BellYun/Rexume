@@ -1,0 +1,231 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (pdfOld, 스케줄링 없음)",
+      "shortName": "basic",
+      "tbt": {
+        "avg": 1268,
+        "min": 1074,
+        "max": 1417,
+        "median": 1271
+      },
+      "fcp": {
+        "avg": 450,
+        "min": 300,
+        "max": 548,
+        "median": 524
+      },
+      "firstCanvasTime": {
+        "avg": 3379,
+        "min": 2352,
+        "max": 4701,
+        "median": 3354
+      },
+      "longTaskCount": {
+        "avg": 6,
+        "min": 5,
+        "max": 7,
+        "median": 6
+      },
+      "longTaskMax": {
+        "avg": 800,
+        "min": 689,
+        "max": 884,
+        "median": 831
+      },
+      "longTaskAvg": {
+        "avg": 273,
+        "min": 214,
+        "max": 320,
+        "median": 295
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "runs": 5
+    },
+    {
+      "version": "RAF+IO+OffscreenWorker (pdfOpt15)",
+      "shortName": "opt15-worker",
+      "tbt": {
+        "avg": 560,
+        "min": 394,
+        "max": 774,
+        "median": 514
+      },
+      "fcp": {
+        "avg": 323,
+        "min": 280,
+        "max": 368,
+        "median": 304
+      },
+      "firstCanvasTime": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "longTaskCount": {
+        "avg": 3,
+        "min": 2,
+        "max": 4,
+        "median": 3
+      },
+      "longTaskMax": {
+        "avg": 599,
+        "min": 444,
+        "max": 806,
+        "median": 550
+      },
+      "longTaskAvg": {
+        "avg": 270,
+        "min": 197,
+        "max": 334,
+        "median": 283
+      },
+      "canvasCount": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "runs": 5
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "tbt": 1417,
+        "fcp": 336,
+        "firstCanvasTime": 3354,
+        "longTaskCount": 6,
+        "longTaskMax": 831,
+        "longTaskAvg": 303,
+        "canvasCount": 147,
+        "loadComplete": 1357,
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 1
+      },
+      {
+        "tbt": 1186,
+        "fcp": 540,
+        "firstCanvasTime": 2530,
+        "longTaskCount": 7,
+        "longTaskMax": 689,
+        "longTaskAvg": 231,
+        "canvasCount": 147,
+        "loadComplete": 1474,
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 2
+      },
+      {
+        "tbt": 1271,
+        "fcp": 548,
+        "firstCanvasTime": 3960,
+        "longTaskCount": 5,
+        "longTaskMax": 884,
+        "longTaskAvg": 320,
+        "canvasCount": 147,
+        "loadComplete": 2372,
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 3
+      },
+      {
+        "tbt": 1074,
+        "fcp": 300,
+        "firstCanvasTime": 2352,
+        "longTaskCount": 7,
+        "longTaskMax": 725,
+        "longTaskAvg": 214,
+        "canvasCount": 147,
+        "loadComplete": 1193,
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 4
+      },
+      {
+        "tbt": 1394,
+        "fcp": 524,
+        "firstCanvasTime": 4701,
+        "longTaskCount": 6,
+        "longTaskMax": 870,
+        "longTaskAvg": 295,
+        "canvasCount": 147,
+        "loadComplete": 3328,
+        "version": "Basic (pdfOld, 스케줄링 없음)",
+        "run": 5
+      }
+    ],
+    "opt15-worker": [
+      {
+        "tbt": 514,
+        "fcp": 280,
+        "firstCanvasTime": 0,
+        "longTaskCount": 4,
+        "longTaskMax": 550,
+        "longTaskAvg": 197,
+        "canvasCount": 0,
+        "loadComplete": 1085,
+        "version": "RAF+IO+OffscreenWorker (pdfOpt15)",
+        "run": 1
+      },
+      {
+        "tbt": 614,
+        "fcp": 360,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 654,
+        "longTaskAvg": 283,
+        "canvasCount": 0,
+        "loadComplete": 1197,
+        "version": "RAF+IO+OffscreenWorker (pdfOpt15)",
+        "run": 2
+      },
+      {
+        "tbt": 774,
+        "fcp": 304,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 806,
+        "longTaskAvg": 334,
+        "canvasCount": 0,
+        "loadComplete": 1470,
+        "version": "RAF+IO+OffscreenWorker (pdfOpt15)",
+        "run": 3
+      },
+      {
+        "tbt": 394,
+        "fcp": 368,
+        "firstCanvasTime": 0,
+        "longTaskCount": 2,
+        "longTaskMax": 444,
+        "longTaskAvg": 286,
+        "canvasCount": 0,
+        "loadComplete": 1348,
+        "version": "RAF+IO+OffscreenWorker (pdfOpt15)",
+        "run": 4
+      },
+      {
+        "tbt": 506,
+        "fcp": 304,
+        "firstCanvasTime": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 543,
+        "longTaskAvg": 248,
+        "canvasCount": 0,
+        "loadComplete": 1170,
+        "version": "RAF+IO+OffscreenWorker (pdfOpt15)",
+        "run": 5
+      }
+    ]
+  },
+  "meta": {
+    "runs": 5,
+    "cpuThrottle": 4,
+    "baseUrl": "http://localhost:3000",
+    "pdfUrl": "/sample4.pdf",
+    "timestamp": "2026-03-06T07:17:11.703Z"
+  }
+}

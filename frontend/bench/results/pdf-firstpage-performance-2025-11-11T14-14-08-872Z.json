@@ -1,0 +1,112 @@
+{
+  "timestamp": "2025-11-11T14:14:08.879Z",
+  "config": {
+    "cpuThrottle": 1,
+    "runsPerUrl": 10,
+    "headless": true,
+    "testUrls": [
+      {
+        "url": "http://localhost:3000/feedback-basic/4",
+        "name": "Basic (개선 전)",
+        "shortName": "basic"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=simple",
+        "name": "Simple (IntersectionObserver)",
+        "shortName": "simple"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=raf",
+        "name": "RAF (requestAnimationFrame)",
+        "shortName": "raf"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=lazy",
+        "name": "Lazy (지연된 getPage)",
+        "shortName": "lazy"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt8-raf-paint-batching",
+        "name": "Opt8: RAF 페인트 + 배칭",
+        "shortName": "opt8-raf-paint-batching"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt9-raf-nopaint",
+        "name": "Opt9: RAF 페인트 제거",
+        "shortName": "opt9-raf-nopaint"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt9-raf-nobatch",
+        "name": "Opt9B: RAF 배칭 제거",
+        "shortName": "opt9-raf-nobatch"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt9-raf-nobatch-noscheduler",
+        "name": "Opt9C: Scheduler 제거",
+        "shortName": "opt9-raf-nobatch-noscheduler"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt10-lazy-pure-raf",
+        "name": "Opt10: Lazy + Pure RAF",
+        "shortName": "opt10-lazy-pure-raf"
+      }
+    ]
+  },
+  "results": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "url": "http://localhost:3000/feedback-basic/4",
+      "shortName": "basic",
+      "results": []
+    },
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "url": "http://localhost:3000/feedback/4?version=simple",
+      "shortName": "simple",
+      "results": []
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "url": "http://localhost:3000/feedback/4?version=raf",
+      "shortName": "raf",
+      "results": []
+    },
+    "lazy": {
+      "name": "Lazy (지연된 getPage)",
+      "url": "http://localhost:3000/feedback/4?version=lazy",
+      "shortName": "lazy",
+      "results": []
+    },
+    "opt8-raf-paint-batching": {
+      "name": "Opt8: RAF 페인트 + 배칭",
+      "url": "http://localhost:3000/feedback/4?version=opt8-raf-paint-batching",
+      "shortName": "opt8-raf-paint-batching",
+      "results": []
+    },
+    "opt9-raf-nopaint": {
+      "name": "Opt9: RAF 페인트 제거",
+      "url": "http://localhost:3000/feedback/4?version=opt9-raf-nopaint",
+      "shortName": "opt9-raf-nopaint",
+      "results": []
+    },
+    "opt9-raf-nobatch": {
+      "name": "Opt9B: RAF 배칭 제거",
+      "url": "http://localhost:3000/feedback/4?version=opt9-raf-nobatch",
+      "shortName": "opt9-raf-nobatch",
+      "results": []
+    },
+    "opt9-raf-nobatch-noscheduler": {
+      "name": "Opt9C: Scheduler 제거",
+      "url": "http://localhost:3000/feedback/4?version=opt9-raf-nobatch-noscheduler",
+      "shortName": "opt9-raf-nobatch-noscheduler",
+      "results": []
+    },
+    "opt10-lazy-pure-raf": {
+      "name": "Opt10: Lazy + Pure RAF",
+      "url": "http://localhost:3000/feedback/4?version=opt10-lazy-pure-raf",
+      "shortName": "opt10-lazy-pure-raf",
+      "results": []
+    }
+  },
+  "statistics": {}
+}

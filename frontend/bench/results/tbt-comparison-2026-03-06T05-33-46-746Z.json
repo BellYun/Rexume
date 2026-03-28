@@ -1,0 +1,267 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (개선 전)",
+      "shortName": "basic",
+      "tbt": {
+        "avg": 907,
+        "min": 261,
+        "max": 1328,
+        "median": 1131
+      },
+      "fcp": {
+        "avg": 1269,
+        "min": 288,
+        "max": 3112,
+        "median": 408
+      },
+      "firstCanvasTime": {
+        "avg": 3315,
+        "min": 2267,
+        "max": 5190,
+        "median": 2487
+      },
+      "longTaskCount": {
+        "avg": 6,
+        "min": 6,
+        "max": 7,
+        "median": 6
+      },
+      "longTaskMax": {
+        "avg": 642,
+        "min": 483,
+        "max": 780,
+        "median": 663
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "loadComplete": {
+        "avg": 1708,
+        "min": 1109,
+        "max": 2685,
+        "median": 1331
+      },
+      "runs": 3
+    },
+    {
+      "version": "Simple 75vh + rAF (기존 최고)",
+      "shortName": "simple-75vh-raf",
+      "tbt": {
+        "avg": 1052,
+        "min": 1035,
+        "max": 1064,
+        "median": 1056
+      },
+      "fcp": {
+        "avg": 260,
+        "min": 232,
+        "max": 308,
+        "median": 240
+      },
+      "firstCanvasTime": {
+        "avg": 2406,
+        "min": 2367,
+        "max": 2435,
+        "median": 2415
+      },
+      "longTaskCount": {
+        "avg": 5,
+        "min": 5,
+        "max": 6,
+        "median": 5
+      },
+      "longTaskMax": {
+        "avg": 804,
+        "min": 791,
+        "max": 816,
+        "median": 804
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "loadComplete": {
+        "avg": 1241,
+        "min": 1169,
+        "max": 1319,
+        "median": 1236
+      },
+      "runs": 3
+    },
+    {
+      "version": "PDF Optimization (번들 최적화)",
+      "shortName": "pdf-optimazation",
+      "tbt": {
+        "avg": 972,
+        "min": 907,
+        "max": 1095,
+        "median": 914
+      },
+      "fcp": {
+        "avg": 385,
+        "min": 324,
+        "max": 444,
+        "median": 388
+      },
+      "firstCanvasTime": {
+        "avg": 2817,
+        "min": 2199,
+        "max": 3727,
+        "median": 2524
+      },
+      "longTaskCount": {
+        "avg": 6,
+        "min": 5,
+        "max": 6,
+        "median": 6
+      },
+      "longTaskMax": {
+        "avg": 717,
+        "min": 618,
+        "max": 858,
+        "median": 675
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "loadComplete": {
+        "avg": 1356,
+        "min": 1111,
+        "max": 1486,
+        "median": 1471
+      },
+      "runs": 3
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "tbt": 261,
+        "fcp": 3112,
+        "firstCanvasTime": 5190,
+        "longTaskCount": 6,
+        "longTaskMax": 483,
+        "canvasCount": 147,
+        "loadComplete": 2685,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 1
+      },
+      {
+        "tbt": 1328,
+        "fcp": 408,
+        "firstCanvasTime": 2487,
+        "longTaskCount": 6,
+        "longTaskMax": 780,
+        "canvasCount": 147,
+        "loadComplete": 1331,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 2
+      },
+      {
+        "tbt": 1131,
+        "fcp": 288,
+        "firstCanvasTime": 2267,
+        "longTaskCount": 7,
+        "longTaskMax": 663,
+        "canvasCount": 147,
+        "loadComplete": 1109,
+        "version": "Basic (개선 전)",
+        "url": "http://localhost:3000/pdf-bench/basic?url=/sample4.pdf",
+        "run": 3
+      }
+    ],
+    "simple-75vh-raf": [
+      {
+        "tbt": 1064,
+        "fcp": 308,
+        "firstCanvasTime": 2367,
+        "longTaskCount": 5,
+        "longTaskMax": 816,
+        "canvasCount": 147,
+        "loadComplete": 1319,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 1
+      },
+      {
+        "tbt": 1035,
+        "fcp": 232,
+        "firstCanvasTime": 2415,
+        "longTaskCount": 5,
+        "longTaskMax": 791,
+        "canvasCount": 147,
+        "loadComplete": 1236,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 2
+      },
+      {
+        "tbt": 1056,
+        "fcp": 240,
+        "firstCanvasTime": 2435,
+        "longTaskCount": 6,
+        "longTaskMax": 804,
+        "canvasCount": 147,
+        "loadComplete": 1169,
+        "version": "Simple 75vh + rAF (기존 최고)",
+        "url": "http://localhost:3000/pdf-bench/simple?url=/sample4.pdf",
+        "run": 3
+      }
+    ],
+    "pdf-optimazation": [
+      {
+        "tbt": 914,
+        "fcp": 324,
+        "firstCanvasTime": 2199,
+        "longTaskCount": 5,
+        "longTaskMax": 675,
+        "canvasCount": 147,
+        "loadComplete": 1111,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 1
+      },
+      {
+        "tbt": 1095,
+        "fcp": 444,
+        "firstCanvasTime": 2524,
+        "longTaskCount": 6,
+        "longTaskMax": 858,
+        "canvasCount": 147,
+        "loadComplete": 1471,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 2
+      },
+      {
+        "tbt": 907,
+        "fcp": 388,
+        "firstCanvasTime": 3727,
+        "longTaskCount": 6,
+        "longTaskMax": 618,
+        "canvasCount": 147,
+        "loadComplete": 1486,
+        "version": "PDF Optimization (번들 최적화)",
+        "url": "http://localhost:3000/pdf-optimazation?url=/sample4.pdf",
+        "run": 3
+      }
+    ]
+  },
+  "meta": {
+    "runs": 3,
+    "cpuThrottle": 4,
+    "baseUrl": "http://localhost:3000",
+    "timestamp": "2026-03-06T05:33:46.747Z"
+  }
+}

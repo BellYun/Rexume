@@ -1,0 +1,231 @@
+{
+  "summaries": [
+    {
+      "version": "Baseline (pdfOptimized)",
+      "shortName": "baseline",
+      "tbt": {
+        "avg": 981,
+        "min": 818,
+        "max": 1175,
+        "median": 991
+      },
+      "fcp": {
+        "avg": 384,
+        "min": 240,
+        "max": 632,
+        "median": 248
+      },
+      "firstCanvasTime": {
+        "avg": 2469,
+        "min": 1916,
+        "max": 3260,
+        "median": 2473
+      },
+      "longTaskCount": {
+        "avg": 6,
+        "min": 5,
+        "max": 7,
+        "median": 7
+      },
+      "longTaskMax": {
+        "avg": 775,
+        "min": 603,
+        "max": 881,
+        "median": 796
+      },
+      "longTaskAvg": {
+        "avg": 227,
+        "min": 177,
+        "max": 273,
+        "median": 235
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "runs": 5
+    },
+    {
+      "version": "Opt14 (getPage 캐싱)",
+      "shortName": "opt14-pagecache",
+      "tbt": {
+        "avg": 1004,
+        "min": 918,
+        "max": 1067,
+        "median": 1010
+      },
+      "fcp": {
+        "avg": 260,
+        "min": 224,
+        "max": 312,
+        "median": 252
+      },
+      "firstCanvasTime": {
+        "avg": 2304,
+        "min": 2164,
+        "max": 2523,
+        "median": 2283
+      },
+      "longTaskCount": {
+        "avg": 6,
+        "min": 5,
+        "max": 7,
+        "median": 6
+      },
+      "longTaskMax": {
+        "avg": 772,
+        "min": 666,
+        "max": 845,
+        "median": 781
+      },
+      "longTaskAvg": {
+        "avg": 231,
+        "min": 192,
+        "max": 261,
+        "median": 237
+      },
+      "canvasCount": {
+        "avg": 147,
+        "min": 147,
+        "max": 147,
+        "median": 147
+      },
+      "runs": 5
+    }
+  ],
+  "allResults": {
+    "baseline": [
+      {
+        "tbt": 1175,
+        "fcp": 560,
+        "firstCanvasTime": 3260,
+        "longTaskCount": 7,
+        "longTaskMax": 881,
+        "longTaskAvg": 235,
+        "canvasCount": 147,
+        "loadComplete": 1949,
+        "version": "Baseline (pdfOptimized)",
+        "run": 1
+      },
+      {
+        "tbt": 1041,
+        "fcp": 632,
+        "firstCanvasTime": 2549,
+        "longTaskCount": 5,
+        "longTaskMax": 796,
+        "longTaskAvg": 273,
+        "canvasCount": 147,
+        "loadComplete": 1582,
+        "version": "Baseline (pdfOptimized)",
+        "run": 2
+      },
+      {
+        "tbt": 878,
+        "fcp": 248,
+        "firstCanvasTime": 2473,
+        "longTaskCount": 7,
+        "longTaskMax": 816,
+        "longTaskAvg": 187,
+        "canvasCount": 147,
+        "loadComplete": 1352,
+        "version": "Baseline (pdfOptimized)",
+        "run": 3
+      },
+      {
+        "tbt": 818,
+        "fcp": 240,
+        "firstCanvasTime": 1916,
+        "longTaskCount": 7,
+        "longTaskMax": 603,
+        "longTaskAvg": 177,
+        "canvasCount": 147,
+        "loadComplete": 972,
+        "version": "Baseline (pdfOptimized)",
+        "run": 4
+      },
+      {
+        "tbt": 991,
+        "fcp": 240,
+        "firstCanvasTime": 2145,
+        "longTaskCount": 5,
+        "longTaskMax": 780,
+        "longTaskAvg": 263,
+        "canvasCount": 147,
+        "loadComplete": 1143,
+        "version": "Baseline (pdfOptimized)",
+        "run": 5
+      }
+    ],
+    "opt14-pagecache": [
+      {
+        "tbt": 1010,
+        "fcp": 224,
+        "firstCanvasTime": 2283,
+        "longTaskCount": 6,
+        "longTaskMax": 781,
+        "longTaskAvg": 222,
+        "canvasCount": 147,
+        "loadComplete": 1205,
+        "version": "Opt14 (getPage 캐싱)",
+        "run": 1
+      },
+      {
+        "tbt": 986,
+        "fcp": 240,
+        "firstCanvasTime": 2220,
+        "longTaskCount": 5,
+        "longTaskMax": 779,
+        "longTaskAvg": 261,
+        "canvasCount": 147,
+        "loadComplete": 1154,
+        "version": "Opt14 (getPage 캐싱)",
+        "run": 2
+      },
+      {
+        "tbt": 1041,
+        "fcp": 312,
+        "firstCanvasTime": 2329,
+        "longTaskCount": 6,
+        "longTaskMax": 788,
+        "longTaskAvg": 237,
+        "canvasCount": 147,
+        "loadComplete": 1304,
+        "version": "Opt14 (getPage 캐싱)",
+        "run": 3
+      },
+      {
+        "tbt": 1067,
+        "fcp": 252,
+        "firstCanvasTime": 2523,
+        "longTaskCount": 6,
+        "longTaskMax": 845,
+        "longTaskAvg": 242,
+        "canvasCount": 147,
+        "loadComplete": 1387,
+        "version": "Opt14 (getPage 캐싱)",
+        "run": 4
+      },
+      {
+        "tbt": 918,
+        "fcp": 272,
+        "firstCanvasTime": 2164,
+        "longTaskCount": 7,
+        "longTaskMax": 666,
+        "longTaskAvg": 192,
+        "canvasCount": 147,
+        "loadComplete": 1098,
+        "version": "Opt14 (getPage 캐싱)",
+        "run": 5
+      }
+    ]
+  },
+  "meta": {
+    "runs": 5,
+    "cpuThrottle": 4,
+    "baseUrl": "http://localhost:3000",
+    "pdfUrl": "/sample4.pdf",
+    "timestamp": "2026-03-06T06:06:57.201Z"
+  }
+}

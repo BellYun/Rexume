@@ -1,22 +1,21 @@
-# ReXume Frontend_Optimization
+# ReXume Frontend
 
-PDF 뷰어 렌더링 성능 최적화를 위한 Next.js 프로젝트입니다.
+PDF 이력서 뷰어의 렌더링 성능을 최적화한 Next.js 프로젝트입니다.
 
 ## 프로젝트 소개
 
-이 프로젝트는 대용량 PDF 문서의 렌더링 성능을 최적화하기 위한 다양한 기법을 연구하고 비교합니다.
-IntersectionObserver와 requestAnimationFrame을 활용하여 사용자 경험을 개선한 PDF 뷰어를 제공합니다.
+이력서 PDF를 웹에서 빠르게 열람하고 피드백을 남길 수 있는 서비스입니다.
+`react-pdf` 없이 `pdfjs-dist`를 직접 사용하며, **OffscreenCanvas Worker + IntersectionObserver**로 대용량 PDF의 렌더링 성능을 개선했습니다.
 
 ## 시작하기
 
-### 개발 서버 실행
-
 ```bash
+cd frontend
 npm install
 npm run dev
 ```
 
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 열면 PDF 렌더링 버전 비교 페이지를 확인할 수 있습니다.
+[http://localhost:3000](http://localhost:3000)에서 확인할 수 있습니다.
 
 ### 빌드
 
@@ -25,110 +24,122 @@ npm run build
 npm start
 ```
 
-## PDF 뷰어 버전
+## 최적화 전략
 
-프로젝트는 세 가지 버전의 PDF 뷰어를 제공합니다:
+### 최종 버전: OffscreenCanvas Worker + IntersectionObserver
 
-### 1. 기본 버전
-- **경로**: `/feedback-basic/[id]`
-- **특징**: 성능 최적화가 적용되지 않은 기본 PDF 뷰어
-- **용도**: 성능 비교를 위한 베이스라인
+| 기법 | 설명 |
+| --- | --- |
+| **pdfjs-dist 직접 사용** | react-pdf 제거, 번들 사이즈 감소 |
+| **OffscreenCanvas Worker** | Canvas 2D 드로잉을 메인 스레드에서 완전히 제거, ImageBitmap zero-copy 전송 |
+| **IntersectionObserver (75vh)** | 뷰포트 + 75vh 프리워밍으로 렌더링 대상을 3~5개로 축소 |
+| **로컬 Worker/cMap/Font** | 네트워크 의존 제거, `/api/pdfjs/` 경로로 서빙 |
+| **bitmaprenderer** | GPU 메모리 직접 이전으로 픽셀 복사 없이 표시 |
+| **Placeholder 사전 계산** | getViewport로 정확한 크기 확보, 레이아웃 시프트 방지 |
 
-### 2. Simple 버전
-- **경로**: `/feedback/[id]?version=simple`
-- **특징**: 스케줄러 없이 단순한 IntersectionObserver만 사용
-- **장점**: 구현이 간단하며 기본적인 뷰포트 기반 렌더링 제공
+### 핵심 구조
 
-### 3. rAF 버전
-- **경로**: `/feedback/[id]?version=raf`
-- **특징**: requestAnimationFrame을 사용한 렌더링 최적화
-- **장점**: 프레임 기반 렌더링으로 부드러운 사용자 경험 제공
-
-## 성능 벤치마크
-
-프로젝트는 다양한 성능 측정 도구를 포함하고 있습니다:
-
-```bash
-# Web Vitals 측정
-npm run bench:webvitals
-
-# 첫 페이지 렌더링 성능 측정
-npm run bench:firstpage
-
-# Long Task 분석
-npm run bench:longtask
-
-# 시나리오 기반 벤치마크
-npm run bench:scenario
+```
+[기존] pdf.js Worker (파싱) → operator list → 메인 스레드에서 Canvas 2D 드로잉 ← blocking
+[개선] Render Worker에서 PDF 로드 + OffscreenCanvas 드로잉
+        → ImageBitmap (zero-copy) → bitmaprenderer로 표시 (GPU-to-GPU)
 ```
 
-벤치마크 결과는 `bench/results/` 디렉토리에 저장됩니다.
+### 실험한 접근법들
+
+15+ 버전의 최적화를 실험했으며, 주요 접근법은 다음과 같습니다:
+
+- **기본**: 최적화 없는 순차 렌더링
+- **IntersectionObserver only**: IO 기반 지연 렌더링
+- **rAF Batch**: IO + rAF 배칭 (React 18+ automatic batching과 중복되어 효과 미미)
+- **Scheduler (K=5, K=8, K=16)**: 동시 렌더링 수 제한
+- **OffscreenCanvas Worker**: Canvas 드로잉을 메인 스레드에서 제거 (핵심 개선)
+- **Worker + IO 결합**: Worker 오프로드 + 뷰포트 기반 렌더링 제한 (최종 채택)
+- **Page Cache**: 렌더링 결과 캐싱
 
 ## 성능 측정 결과
 
-이 프로젝트의 주목적은 PDF를 확인하는 것인데, 페이지에서 PDF 렌더링 시점은 Lighthouse에서 제공하지 않기 때문에 따로 측정을 시도하였습니다.
+PDF 렌더링 시점은 Lighthouse에서 측정할 수 없어 Puppeteer + web-vitals 기반으로 직접 측정했습니다. (10회 반복, CPU 4x 쓰로틀링)
 
-### PDF 첫 페이지 렌더링 시간 (ms) (쓰로틀링 4x)
+### Total Blocking Time (TBT)
 
-| 버전 | 평균 |
-| --- | --- |
-| **Basic (개선 전)** | 3593ms |
-| **Simple (IntersectionObserver)** | 3330ms |
-| **RAF (requestAnimationFrame)** | 31838ms |
+| 버전 | TBT 평균 | vs Basic | Long Task 수 |
+| --- | --- | --- | --- |
+| **Basic (개선 전)** | 1,343ms | - | 6개 |
+| **OffscreenCanvas Worker 단독** | 808ms | **↓39.8%** | 3개 |
+| **IO + Worker 결합 (최종)** | 720ms | **↓46.4%** | 3개 |
 
-전체적으로 IntersectionObserver를 적용한 버전이 기존 버전보다도 PDF 첫 페이지 렌더링 시간이 늦었습니다. IntersectionObserver를 적용했기 때문에 IntersectionObserver가 **상태 업데이트를 자주 발생**시킴이 추가적인 병목으로 발생한 것으로 판단됩니다.
+### 각 레이어의 기여
 
-### Total Blocking Time (TBT, ms) (쓰로틀링 4x)
+```
+Worker 기여:  -535ms (39.8%)  ████████████████████████████████████████
+IO 추가 기여:  -88ms ( 6.6%)  ███████
+합계:         -623ms (46.4%)
+Long Task:    6개 → 3개       ████████████████████
+```
 
-| 버전 | 평균 |
-| --- | --- |
-| **Basic (개선 전)** | 1551ms |
-| **Simple (IntersectionObserver)** | 1141ms |
-| **RAF (requestAnimationFrame)** | 1056ms |
+### 핵심 결론
 
-
-### 결론
-
-- `IntersectionObserver`만으로는 통신 폭주와 setState 병목을 해결할 수 없었습니다.
-- **rAF Batch**를 적용하면서 초기 렌더링 부하와 커밋 병목이 모두 해결되었습니다.
-- **PDF 첫 페이지 렌더링 시간 11.3% 개선, TBT 31.9% 개선**
+- **rAF Batching은 효과 없음**: React 18+의 automatic batching이 이미 동일한 역할을 수행하여, rAF의 TBT 개선은 측정 노이즈에 불과했음
+- **병목의 본질**: setState 타이밍이 아니라 **Canvas 2D 드로잉의 메인 스레드 점유** 자체가 원인
+- **OffscreenCanvas Worker**로 Canvas 드로잉을 메인 스레드에서 완전히 제거 → **TBT 39.8% 감소**
+- **IntersectionObserver**로 렌더링 대상을 147개 → 3~5개로 축소 → **TBT 추가 6.6% 감소**
+- 최종: **TBT 1,343ms → 720ms (↓46.4%), Long Task 6개 → 3개**
 
 ## 기술 스택
 
-- **Framework**: Next.js 15.5
-- **UI**: React 19, Tailwind CSS
-- **PDF 렌더링**: pdfjs-dist 3.11
-- **상태 관리**: Zustand
-- **데이터 페칭**: TanStack Query (React Query)
-- **성능 측정**: Puppeteer, Lighthouse, Web Vitals
+| 분류 | 기술 |
+| --- | --- |
+| **Framework** | Next.js 15.5, React 19 |
+| **PDF 렌더링** | pdfjs-dist 3.11 (react-pdf 미사용) |
+| **UI** | Tailwind CSS 4, Material-UI 7 |
+| **상태 관리** | Zustand 5 |
+| **데이터 페칭** | TanStack Query 5, Axios |
+| **성능 측정** | Puppeteer, Playwright, Lighthouse |
+| **차트** | Recharts |
 
 ## 프로젝트 구조
 
 ```
 frontend/
 ├── src/
-│   ├── app/                    # Next.js App Router 페이지
-│   │   ├── feedback/          # Simple & rAF 버전
-│   │   ├── feedback-basic/    # 기본 버전
-│   │   └── api/               # API 라우트
-│   ├── components/            # React 컴포넌트
-│   ├── libs/                  # 렌더링 스케줄러
-│   ├── store/                 # Zustand 스토어
-│   └── api/                   # API 클라이언트
-├── bench/                     # 성능 벤치마크 스크립트
-└── public/                    # 정적 파일
+│   ├── app/
+│   │   ├── page.tsx                # 메인 (버전 비교 허브)
+│   │   ├── feedback/[id]/          # 이력서 피드백 페이지
+│   │   ├── feedback-basic/[id]/    # 기본 버전
+│   │   ├── pdf-bench/              # 벤치마크용 페이지 (9개 버전)
+│   │   ├── performance-chart/      # 성능 차트 대시보드
+│   │   └── api/pdfjs/              # PDF.js 리소스 (cMap, fonts)
+│   ├── components/
+│   │   ├── pdfOptimized-RAFBatch/  # 최종 버전 (RAF 배칭)
+│   │   ├── pdfOptimized/           # RAF + IO 버전
+│   │   ├── pdfOptimized-NoLimit/   # 동시성 제한 없는 버전
+│   │   ├── feedback/               # 피드백 UI (댓글, 포인트)
+│   │   ├── layout/                 # 레이아웃 (Navbar, ResumeLayout)
+│   │   └── common/                 # 공통 (PerformanceMonitor 등)
+│   ├── libs/                       # 렌더링 스케줄러 (고정/적응형)
+│   ├── store/                      # Zustand 스토어
+│   ├── api/                        # API 클라이언트
+│   └── types/                      # TypeScript 타입 정의
+├── bench/                          # 벤치마크 스크립트 & 결과
+└── public/                         # 정적 파일 (PDF Worker 등)
 ```
 
 ## 주요 기능
 
-- 대용량 PDF 문서의 효율적인 렌더링
-- 뷰포트 기반 지연 렌더링
-- 다양한 렌더링 전략 비교
-- 실시간 성능 메트릭 측정
-- 사용자 피드백 시스템
+- PDF 이력서 열람 및 피드백 시스템
+- 뷰포트 기반 지연 렌더링 (IntersectionObserver + 75vh 프리워밍)
+- OffscreenCanvas Worker로 메인 스레드 블로킹 제거
+- 실시간 성능 모니터 (FPS, 메모리, CPU, Long Task)
+- Puppeteer/Playwright 기반 자동화 벤치마크
 
-## 개발 참고사항
+## 성능 벤치마크 실행
 
-- PDF Worker는 빌드 후 자동으로 public 디렉토리에 복사됩니다 (`postbuild` 스크립트)
-- 성능 테스트는 headless Chrome을 사용하여 자동화되어 있습니다
-- 각 버전의 성능 차이를 확인하려면 메인 페이지에서 버전별로 테스트해보세요
+```bash
+npm run bench:firstpage    # PDF 첫 페이지 렌더링 시간
+npm run bench:webvitals    # Web Vitals (LCP, FID, CLS 등)
+npm run bench:longtask     # Long Task 분석
+npm run bench:scenario     # 시나리오 기반 벤치마크
+```
+
+결과는 `bench/results/`에 JSON으로 저장됩니다.

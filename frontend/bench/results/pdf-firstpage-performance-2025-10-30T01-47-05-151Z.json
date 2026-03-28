@@ -1,0 +1,1329 @@
+{
+  "timestamp": "2025-10-30T01:47:05.363Z",
+  "config": {
+    "cpuThrottle": 4,
+    "runsPerUrl": 3,
+    "headless": true,
+    "testUrls": [
+      {
+        "url": "http://nextjs:3000/feedback-basic/4",
+        "name": "Basic (개선 전)",
+        "shortName": "basic"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=simple",
+        "name": "Simple (IntersectionObserver)",
+        "shortName": "simple"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=raf",
+        "name": "RAF (requestAnimationFrame)",
+        "shortName": "raf"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+        "name": "RAF Windowing (점진적 마운트)",
+        "shortName": "raf-windowing"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=lazy",
+        "name": "Lazy (지연된 getPage)",
+        "shortName": "lazy"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+        "name": "Opt1: RAF 페인트 안정화",
+        "shortName": "opt1-raf"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+        "name": "Opt2: Callback Ref 패턴",
+        "shortName": "opt2-callback-ref"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+        "name": "Opt3: Combined (RAF + Callback)",
+        "shortName": "opt3-combined"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+        "name": "Opt4: RenderScheduler (K=4)",
+        "shortName": "opt4-scheduler"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+        "name": "Opt5: RAF 배칭",
+        "shortName": "opt5-raf-batching"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+        "name": "Opt6: 우선순위 정렬",
+        "shortName": "opt6-priority"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+        "name": "Opt7: 전체 스케줄링",
+        "shortName": "opt7-all-scheduling"
+      }
+    ]
+  },
+  "results": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "url": "http://nextjs:3000/feedback-basic/4",
+      "shortName": "basic",
+      "results": []
+    },
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "url": "http://nextjs:3000/feedback/4?version=simple",
+      "shortName": "simple",
+      "results": [
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://nextjs:3000/feedback/4?version=simple",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T00:57:19.030Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 8515.400000000373,
+          "firstPaint": 973.1000000005588,
+          "firstContentfulPaint": 973.1000000005588,
+          "largestContentfulPaint": 1401.1000000005588,
+          "longTasks": [
+            {
+              "startTime": 542.5,
+              "duration": 84,
+              "timestamp": 660.3000000007451
+            },
+            {
+              "startTime": 699.7000000001863,
+              "duration": 273,
+              "timestamp": 1038.300000000745
+            },
+            {
+              "startTime": 1038.5,
+              "duration": 300,
+              "timestamp": 1431.300000000745
+            },
+            {
+              "startTime": 1348.800000000745,
+              "duration": 50,
+              "timestamp": 1431.300000000745
+            },
+            {
+              "startTime": 1630.9000000003725,
+              "duration": 1326,
+              "timestamp": 3014.9000000003725
+            },
+            {
+              "startTime": 3046.7000000001863,
+              "duration": 105,
+              "timestamp": 3182.7000000001863
+            },
+            {
+              "startTime": 3413.5,
+              "duration": 195,
+              "timestamp": 3620.600000000559
+            },
+            {
+              "startTime": 3642.4000000003725,
+              "duration": 202,
+              "timestamp": 4023.100000000559
+            },
+            {
+              "startTime": 3918.300000000745,
+              "duration": 103,
+              "timestamp": 4023.100000000559
+            },
+            {
+              "startTime": 4065.600000000559,
+              "duration": 76,
+              "timestamp": 4169.5
+            },
+            {
+              "startTime": 4231.5,
+              "duration": 104,
+              "timestamp": 4639.5
+            },
+            {
+              "startTime": 4341.100000000559,
+              "duration": 195,
+              "timestamp": 4639.5
+            },
+            {
+              "startTime": 4536.600000000559,
+              "duration": 93,
+              "timestamp": 4639.5
+            },
+            {
+              "startTime": 4723.300000000745,
+              "duration": 57,
+              "timestamp": 4851
+            },
+            {
+              "startTime": 6012.5,
+              "duration": 151,
+              "timestamp": 6482
+            },
+            {
+              "startTime": 6163.800000000745,
+              "duration": 246,
+              "timestamp": 6482
+            },
+            {
+              "startTime": 6431.700000000186,
+              "duration": 50,
+              "timestamp": 6522.5
+            },
+            {
+              "startTime": 6540.200000000186,
+              "duration": 65,
+              "timestamp": 7147.600000000559
+            },
+            {
+              "startTime": 6607,
+              "duration": 509,
+              "timestamp": 7147.600000000559
+            },
+            {
+              "startTime": 7147.700000000186,
+              "duration": 332,
+              "timestamp": 7890.4000000003725
+            },
+            {
+              "startTime": 7623.800000000745,
+              "duration": 250,
+              "timestamp": 7890.4000000003725
+            },
+            {
+              "startTime": 7966.700000000186,
+              "duration": 69,
+              "timestamp": 8135.4000000003725
+            },
+            {
+              "startTime": 8059.5,
+              "duration": 75,
+              "timestamp": 8135.4000000003725
+            },
+            {
+              "startTime": 8348.300000000745,
+              "duration": 105,
+              "timestamp": 8508.800000000745
+            },
+            {
+              "startTime": 9024.700000000186,
+              "duration": 50,
+              "timestamp": 9076.100000000559
+            },
+            {
+              "startTime": 12021,
+              "duration": 115,
+              "timestamp": 12250
+            },
+            {
+              "startTime": 12136.800000000745,
+              "duration": 98,
+              "timestamp": 12250
+            },
+            {
+              "startTime": 12250.200000000186,
+              "duration": 157,
+              "timestamp": 12744
+            },
+            {
+              "startTime": 12425.800000000745,
+              "duration": 93,
+              "timestamp": 12744
+            },
+            {
+              "startTime": 12519.5,
+              "duration": 210,
+              "timestamp": 12744
+            }
+          ],
+          "totalBlockingTime": 3981,
+          "longTaskCount": 30,
+          "navigationStart": 1761785823521,
+          "domContentLoaded": 1082.2999999998137,
+          "loadComplete": 2991.100000000559,
+          "canvasCount": 147,
+          "measurementDuration": 3458.5,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 973.1000000005588,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 973.1000000005588,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://nextjs:3000/feedback/4?version=simple",
+          "runNumber": 2,
+          "timestamp": "2025-10-30T00:57:38.193Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 9611.199999999255,
+          "firstPaint": 1096.2999999998137,
+          "firstContentfulPaint": 1096.2999999998137,
+          "largestContentfulPaint": 1096.2999999998137,
+          "longTasks": [
+            {
+              "startTime": 351.69999999925494,
+              "duration": 169,
+              "timestamp": 534.3999999994412
+            },
+            {
+              "startTime": 547.1999999992549,
+              "duration": 464,
+              "timestamp": 1126.8999999994412
+            },
+            {
+              "startTime": 1216,
+              "duration": 70,
+              "timestamp": 1319
+            },
+            {
+              "startTime": 1349.5999999996275,
+              "duration": 1559,
+              "timestamp": 3013.0999999996275
+            },
+            {
+              "startTime": 3127.0999999996275,
+              "duration": 109,
+              "timestamp": 3270.5
+            },
+            {
+              "startTime": 3364.899999999441,
+              "duration": 227,
+              "timestamp": 3670.399999999441
+            },
+            {
+              "startTime": 3592,
+              "duration": 78,
+              "timestamp": 3670.399999999441
+            },
+            {
+              "startTime": 3677.399999999441,
+              "duration": 148,
+              "timestamp": 4025.199999999255
+            },
+            {
+              "startTime": 3837.7999999998137,
+              "duration": 170,
+              "timestamp": 4025.199999999255
+            },
+            {
+              "startTime": 4114.5,
+              "duration": 211,
+              "timestamp": 4361.199999999255
+            },
+            {
+              "startTime": 4391.299999999814,
+              "duration": 206,
+              "timestamp": 4819.199999999255
+            },
+            {
+              "startTime": 4598.199999999255,
+              "duration": 168,
+              "timestamp": 4819.199999999255
+            },
+            {
+              "startTime": 4821,
+              "duration": 146,
+              "timestamp": 5012.5
+            },
+            {
+              "startTime": 5197.199999999255,
+              "duration": 52,
+              "timestamp": 5299.5
+            },
+            {
+              "startTime": 6272.5,
+              "duration": 198,
+              "timestamp": 7926.299999999814
+            },
+            {
+              "startTime": 6476.0999999996275,
+              "duration": 1113,
+              "timestamp": 7926.299999999814
+            },
+            {
+              "startTime": 7589.5999999996275,
+              "duration": 318,
+              "timestamp": 7926.299999999814
+            },
+            {
+              "startTime": 7977.299999999814,
+              "duration": 147,
+              "timestamp": 8740.799999999814
+            },
+            {
+              "startTime": 8126,
+              "duration": 53,
+              "timestamp": 8740.799999999814
+            },
+            {
+              "startTime": 8239.099999999627,
+              "duration": 429,
+              "timestamp": 8740.799999999814
+            },
+            {
+              "startTime": 8668.299999999814,
+              "duration": 72,
+              "timestamp": 8740.799999999814
+            },
+            {
+              "startTime": 8744,
+              "duration": 62,
+              "timestamp": 9172.5
+            },
+            {
+              "startTime": 8808.799999999814,
+              "duration": 342,
+              "timestamp": 9172.5
+            },
+            {
+              "startTime": 9173.399999999441,
+              "duration": 88,
+              "timestamp": 9299.199999999255
+            },
+            {
+              "startTime": 9515.299999999814,
+              "duration": 54,
+              "timestamp": 9598.5
+            },
+            {
+              "startTime": 9745,
+              "duration": 167,
+              "timestamp": 9964.399999999441
+            }
+          ],
+          "totalBlockingTime": 4987,
+          "longTaskCount": 26,
+          "navigationStart": 1761785843536,
+          "domContentLoaded": 556.5,
+          "loadComplete": 2956,
+          "canvasCount": 147,
+          "measurementDuration": 3299.2999999998137,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 1096.2999999998137,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 1096.2999999998137,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://nextjs:3000/feedback/4?version=simple",
+          "runNumber": 3,
+          "timestamp": "2025-10-30T00:58:00.426Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 9812.299999999814,
+          "firstPaint": 991.5,
+          "firstContentfulPaint": 991.5,
+          "largestContentfulPaint": 1377.7000000001863,
+          "longTasks": [
+            {
+              "startTime": 302.90000000037253,
+              "duration": 177,
+              "timestamp": 522.7999999998137
+            },
+            {
+              "startTime": 585.1000000005588,
+              "duration": 71,
+              "timestamp": 720.9000000003725
+            },
+            {
+              "startTime": 757.7999999998137,
+              "duration": 222,
+              "timestamp": 1021.4000000003725
+            },
+            {
+              "startTime": 1021.5,
+              "duration": 353,
+              "timestamp": 3086.100000000559
+            },
+            {
+              "startTime": 1379.4000000003725,
+              "duration": 75,
+              "timestamp": 3086.100000000559
+            },
+            {
+              "startTime": 1517,
+              "duration": 1400,
+              "timestamp": 3086.100000000559
+            },
+            {
+              "startTime": 2917.4000000003725,
+              "duration": 75,
+              "timestamp": 3086.100000000559
+            },
+            {
+              "startTime": 2993,
+              "duration": 93,
+              "timestamp": 3086.100000000559
+            },
+            {
+              "startTime": 3224.2000000001863,
+              "duration": 81,
+              "timestamp": 3342.2000000001863
+            },
+            {
+              "startTime": 3730.4000000003725,
+              "duration": 251,
+              "timestamp": 4030.600000000559
+            },
+            {
+              "startTime": 4030.600000000559,
+              "duration": 91,
+              "timestamp": 4474.5
+            },
+            {
+              "startTime": 4122.299999999814,
+              "duration": 115,
+              "timestamp": 4474.5
+            },
+            {
+              "startTime": 4304.299999999814,
+              "duration": 166,
+              "timestamp": 4474.5
+            },
+            {
+              "startTime": 4512,
+              "duration": 217,
+              "timestamp": 4754
+            },
+            {
+              "startTime": 4799,
+              "duration": 154,
+              "timestamp": 4991.5
+            },
+            {
+              "startTime": 5038.799999999814,
+              "duration": 124,
+              "timestamp": 5416.4000000003725
+            },
+            {
+              "startTime": 5163.299999999814,
+              "duration": 241,
+              "timestamp": 5416.4000000003725
+            },
+            {
+              "startTime": 6409.799999999814,
+              "duration": 73,
+              "timestamp": 6565.100000000559
+            },
+            {
+              "startTime": 6515.600000000559,
+              "duration": 50,
+              "timestamp": 6623.100000000559
+            },
+            {
+              "startTime": 6946.100000000559,
+              "duration": 986,
+              "timestamp": 8268.200000000186
+            },
+            {
+              "startTime": 7934.100000000559,
+              "duration": 130,
+              "timestamp": 8268.200000000186
+            },
+            {
+              "startTime": 8068.700000000186,
+              "duration": 199,
+              "timestamp": 8268.200000000186
+            },
+            {
+              "startTime": 8323,
+              "duration": 539,
+              "timestamp": 9047.200000000186
+            },
+            {
+              "startTime": 8872,
+              "duration": 103,
+              "timestamp": 9047.200000000186
+            },
+            {
+              "startTime": 8975,
+              "duration": 61,
+              "timestamp": 9047.200000000186
+            },
+            {
+              "startTime": 9055.600000000559,
+              "duration": 228,
+              "timestamp": 9304.700000000186
+            },
+            {
+              "startTime": 10302.600000000559,
+              "duration": 72,
+              "timestamp": 10399.299999999814
+            },
+            {
+              "startTime": 11225.200000000186,
+              "duration": 50,
+              "timestamp": 12091.700000000186
+            },
+            {
+              "startTime": 11275.700000000186,
+              "duration": 169,
+              "timestamp": 12091.700000000186
+            },
+            {
+              "startTime": 11444.700000000186,
+              "duration": 104,
+              "timestamp": 12091.700000000186
+            },
+            {
+              "startTime": 11554.600000000559,
+              "duration": 260,
+              "timestamp": 12091.700000000186
+            },
+            {
+              "startTime": 11814.900000000373,
+              "duration": 262,
+              "timestamp": 12091.700000000186
+            },
+            {
+              "startTime": 12107.5,
+              "duration": 159,
+              "timestamp": 12416.5
+            },
+            {
+              "startTime": 12322.299999999814,
+              "duration": 55,
+              "timestamp": 12416.5
+            },
+            {
+              "startTime": 12742.799999999814,
+              "duration": 68,
+              "timestamp": 12882.100000000559
+            },
+            {
+              "startTime": 12903.700000000186,
+              "duration": 54,
+              "timestamp": 13001.200000000186
+            },
+            {
+              "startTime": 13296.100000000559,
+              "duration": 90,
+              "timestamp": 13394.5
+            },
+            {
+              "startTime": 14306.200000000186,
+              "duration": 52,
+              "timestamp": 14468.600000000559
+            },
+            {
+              "startTime": 14358.600000000559,
+              "duration": 107,
+              "timestamp": 14468.600000000559
+            },
+            {
+              "startTime": 14472.100000000559,
+              "duration": 72,
+              "timestamp": 14584.400000000373
+            },
+            {
+              "startTime": 14793,
+              "duration": 52,
+              "timestamp": 14846.700000000186
+            },
+            {
+              "startTime": 14904.700000000186,
+              "duration": 71,
+              "timestamp": 14980.600000000559
+            },
+            {
+              "startTime": 15326.600000000559,
+              "duration": 98,
+              "timestamp": 15424.900000000373
+            }
+          ],
+          "totalBlockingTime": 5600,
+          "longTaskCount": 43,
+          "navigationStart": 1761785862763,
+          "domContentLoaded": 1402.3999999994412,
+          "loadComplete": 3112.5999999996275,
+          "canvasCount": 147,
+          "measurementDuration": 5044.100000000559,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 991.5,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 991.5,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "url": "http://nextjs:3000/feedback/4?version=raf",
+      "shortName": "raf",
+      "results": [
+        {
+          "version": "RAF (requestAnimationFrame)",
+          "url": "http://nextjs:3000/feedback/4?version=raf",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T00:58:51.101Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 8397.700000000186,
+          "firstPaint": 648.8000000007451,
+          "firstContentfulPaint": 648.8000000007451,
+          "largestContentfulPaint": 1077.9000000003725,
+          "longTasks": [
+            {
+              "startTime": 366.5,
+              "duration": 120,
+              "timestamp": 521.7000000001863
+            },
+            {
+              "startTime": 540.2000000001863,
+              "duration": 107,
+              "timestamp": 689.8000000007451
+            },
+            {
+              "startTime": 784.4000000003725,
+              "duration": 295,
+              "timestamp": 1242.300000000745
+            },
+            {
+              "startTime": 1270.6000000005588,
+              "duration": 1608,
+              "timestamp": 3026.9000000003725
+            },
+            {
+              "startTime": 2910.7000000001863,
+              "duration": 86,
+              "timestamp": 3026.9000000003725
+            },
+            {
+              "startTime": 3310.9000000003725,
+              "duration": 190,
+              "timestamp": 3524.7000000001863
+            },
+            {
+              "startTime": 3524.800000000745,
+              "duration": 146,
+              "timestamp": 3877.100000000559
+            },
+            {
+              "startTime": 3729.9000000003725,
+              "duration": 135,
+              "timestamp": 3877.100000000559
+            },
+            {
+              "startTime": 3953,
+              "duration": 203,
+              "timestamp": 4187.100000000559
+            },
+            {
+              "startTime": 4191.5,
+              "duration": 101,
+              "timestamp": 4589.700000000186
+            },
+            {
+              "startTime": 4293,
+              "duration": 283,
+              "timestamp": 4589.700000000186
+            },
+            {
+              "startTime": 4649.300000000745,
+              "duration": 211,
+              "timestamp": 5310.700000000186
+            },
+            {
+              "startTime": 4860.800000000745,
+              "duration": 271,
+              "timestamp": 5310.700000000186
+            },
+            {
+              "startTime": 5935.200000000186,
+              "duration": 90,
+              "timestamp": 6033.600000000559
+            },
+            {
+              "startTime": 6371.200000000186,
+              "duration": 78,
+              "timestamp": 6528.800000000745
+            },
+            {
+              "startTime": 6814.9000000003725,
+              "duration": 393,
+              "timestamp": 7457.5
+            },
+            {
+              "startTime": 7208.600000000559,
+              "duration": 204,
+              "timestamp": 7457.5
+            },
+            {
+              "startTime": 7521.700000000186,
+              "duration": 78,
+              "timestamp": 7683.600000000559
+            },
+            {
+              "startTime": 7707.300000000745,
+              "duration": 129,
+              "timestamp": 7918
+            },
+            {
+              "startTime": 8382.600000000559,
+              "duration": 77,
+              "timestamp": 8657.200000000186
+            },
+            {
+              "startTime": 8706.300000000745,
+              "duration": 260,
+              "timestamp": 10734.700000000186
+            },
+            {
+              "startTime": 8966.300000000745,
+              "duration": 971,
+              "timestamp": 10734.700000000186
+            },
+            {
+              "startTime": 9938.200000000186,
+              "duration": 322,
+              "timestamp": 10734.700000000186
+            },
+            {
+              "startTime": 10288.300000000745,
+              "duration": 421,
+              "timestamp": 10734.700000000186
+            },
+            {
+              "startTime": 10785.800000000745,
+              "duration": 321,
+              "timestamp": 14103.300000000745
+            },
+            {
+              "startTime": 11107,
+              "duration": 1380,
+              "timestamp": 14103.300000000745
+            },
+            {
+              "startTime": 12527.100000000559,
+              "duration": 369,
+              "timestamp": 14103.300000000745
+            },
+            {
+              "startTime": 12896.800000000745,
+              "duration": 588,
+              "timestamp": 14103.300000000745
+            },
+            {
+              "startTime": 13485,
+              "duration": 270,
+              "timestamp": 14103.300000000745
+            },
+            {
+              "startTime": 13800.700000000186,
+              "duration": 207,
+              "timestamp": 14103.300000000745
+            },
+            {
+              "startTime": 14007.900000000373,
+              "duration": 89,
+              "timestamp": 14103.300000000745
+            },
+            {
+              "startTime": 14104.100000000559,
+              "duration": 98,
+              "timestamp": 16417.200000000186
+            },
+            {
+              "startTime": 14225.200000000186,
+              "duration": 81,
+              "timestamp": 16417.200000000186
+            },
+            {
+              "startTime": 14306.700000000186,
+              "duration": 281,
+              "timestamp": 16417.200000000186
+            },
+            {
+              "startTime": 14588.100000000559,
+              "duration": 63,
+              "timestamp": 16417.200000000186
+            },
+            {
+              "startTime": 14673.100000000559,
+              "duration": 278,
+              "timestamp": 16417.200000000186
+            },
+            {
+              "startTime": 14951.100000000559,
+              "duration": 1294,
+              "timestamp": 16417.200000000186
+            },
+            {
+              "startTime": 16266.200000000186,
+              "duration": 227,
+              "timestamp": 17036.900000000373
+            },
+            {
+              "startTime": 16493.5,
+              "duration": 301,
+              "timestamp": 17036.900000000373
+            },
+            {
+              "startTime": 16894,
+              "duration": 114,
+              "timestamp": 17036.900000000373
+            },
+            {
+              "startTime": 17052.10000000056,
+              "duration": 241,
+              "timestamp": 18965.300000000745
+            },
+            {
+              "startTime": 17293.300000000745,
+              "duration": 917,
+              "timestamp": 18965.300000000745
+            },
+            {
+              "startTime": 18237.300000000745,
+              "duration": 101,
+              "timestamp": 18965.300000000745
+            },
+            {
+              "startTime": 18339.10000000056,
+              "duration": 315,
+              "timestamp": 18965.300000000745
+            },
+            {
+              "startTime": 18654.200000000186,
+              "duration": 96,
+              "timestamp": 18969.200000000186
+            },
+            {
+              "startTime": 18825.300000000745,
+              "duration": 62,
+              "timestamp": 18969.200000000186
+            },
+            {
+              "startTime": 18887.700000000186,
+              "duration": 81,
+              "timestamp": 23280.700000000186
+            },
+            {
+              "startTime": 19001.300000000745,
+              "duration": 67,
+              "timestamp": 23280.700000000186
+            },
+            {
+              "startTime": 19072.700000000186,
+              "duration": 195,
+              "timestamp": 23280.700000000186
+            },
+            {
+              "startTime": 19298.800000000745,
+              "duration": 294,
+              "timestamp": 23280.700000000186
+            },
+            {
+              "startTime": 19698.400000000373,
+              "duration": 2059,
+              "timestamp": 23280.700000000186
+            },
+            {
+              "startTime": 21758.200000000186,
+              "duration": 310,
+              "timestamp": 23280.700000000186
+            },
+            {
+              "startTime": 22069.10000000056,
+              "duration": 959,
+              "timestamp": 23280.700000000186
+            },
+            {
+              "startTime": 23029,
+              "duration": 322,
+              "timestamp": 25289
+            },
+            {
+              "startTime": 23365.5,
+              "duration": 120,
+              "timestamp": 25289
+            },
+            {
+              "startTime": 23485.60000000056,
+              "duration": 535,
+              "timestamp": 25289
+            },
+            {
+              "startTime": 24039.800000000745,
+              "duration": 424,
+              "timestamp": 25289
+            },
+            {
+              "startTime": 24487.800000000745,
+              "duration": 295,
+              "timestamp": 25289
+            },
+            {
+              "startTime": 24783.700000000186,
+              "duration": 455,
+              "timestamp": 25289
+            },
+            {
+              "startTime": 25328.700000000186,
+              "duration": 159,
+              "timestamp": 26811.900000000373
+            },
+            {
+              "startTime": 25500.900000000373,
+              "duration": 198,
+              "timestamp": 26811.900000000373
+            },
+            {
+              "startTime": 25699.5,
+              "duration": 116,
+              "timestamp": 26811.900000000373
+            },
+            {
+              "startTime": 25816,
+              "duration": 157,
+              "timestamp": 26811.900000000373
+            },
+            {
+              "startTime": 26048.300000000745,
+              "duration": 230,
+              "timestamp": 26811.900000000373
+            },
+            {
+              "startTime": 26278.5,
+              "duration": 440,
+              "timestamp": 26811.900000000373
+            },
+            {
+              "startTime": 26723.10000000056,
+              "duration": 93,
+              "timestamp": 28106.900000000373
+            },
+            {
+              "startTime": 26839.60000000056,
+              "duration": 190,
+              "timestamp": 28106.900000000373
+            },
+            {
+              "startTime": 27029.800000000745,
+              "duration": 267,
+              "timestamp": 28106.900000000373
+            },
+            {
+              "startTime": 27305.200000000186,
+              "duration": 211,
+              "timestamp": 28106.900000000373
+            },
+            {
+              "startTime": 27516.60000000056,
+              "duration": 150,
+              "timestamp": 28106.900000000373
+            },
+            {
+              "startTime": 27667.300000000745,
+              "duration": 113,
+              "timestamp": 28106.900000000373
+            },
+            {
+              "startTime": 27780.60000000056,
+              "duration": 166,
+              "timestamp": 28106.900000000373
+            },
+            {
+              "startTime": 27999.5,
+              "duration": 167,
+              "timestamp": 30264.60000000056
+            },
+            {
+              "startTime": 28173.200000000186,
+              "duration": 87,
+              "timestamp": 30264.60000000056
+            },
+            {
+              "startTime": 28260.60000000056,
+              "duration": 1237,
+              "timestamp": 30264.60000000056
+            },
+            {
+              "startTime": 29497.700000000186,
+              "duration": 590,
+              "timestamp": 30264.60000000056
+            },
+            {
+              "startTime": 30123.900000000373,
+              "duration": 258,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 30382.700000000186,
+              "duration": 518,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 30901.300000000745,
+              "duration": 682,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 31640.60000000056,
+              "duration": 687,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 32328,
+              "duration": 835,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 33163.800000000745,
+              "duration": 899,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 34381.200000000186,
+              "duration": 662,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 35043.90000000037,
+              "duration": 585,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 35629.10000000056,
+              "duration": 176,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 35805.60000000056,
+              "duration": 329,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 36135.300000000745,
+              "duration": 614,
+              "timestamp": 36762.200000000186
+            },
+            {
+              "startTime": 36897.5,
+              "duration": 62,
+              "timestamp": 43832.700000000186
+            },
+            {
+              "startTime": 36960.40000000037,
+              "duration": 344,
+              "timestamp": 43856.10000000056
+            },
+            {
+              "startTime": 37304.60000000056,
+              "duration": 196,
+              "timestamp": 43856.10000000056
+            },
+            {
+              "startTime": 37500.90000000037,
+              "duration": 235,
+              "timestamp": 43856.10000000056
+            },
+            {
+              "startTime": 37818.700000000186,
+              "duration": 4282,
+              "timestamp": 43856.10000000056
+            },
+            {
+              "startTime": 42137.60000000056,
+              "duration": 642,
+              "timestamp": 43856.10000000056
+            },
+            {
+              "startTime": 42779.90000000037,
+              "duration": 642,
+              "timestamp": 43856.10000000056
+            },
+            {
+              "startTime": 43575.90000000037,
+              "duration": 74,
+              "timestamp": 43856.10000000056
+            },
+            {
+              "startTime": 43685,
+              "duration": 62,
+              "timestamp": 43856.10000000056
+            },
+            {
+              "startTime": 43993.60000000056,
+              "duration": 195,
+              "timestamp": 44219.10000000056
+            },
+            {
+              "startTime": 45870.90000000037,
+              "duration": 270,
+              "timestamp": 46375.300000000745
+            },
+            {
+              "startTime": 46146.60000000056,
+              "duration": 186,
+              "timestamp": 46381.40000000037
+            },
+            {
+              "startTime": 46468.40000000037,
+              "duration": 54,
+              "timestamp": 46537
+            }
+          ],
+          "totalBlockingTime": 33521,
+          "longTaskCount": 100,
+          "navigationStart": 1761785882063,
+          "domContentLoaded": 1128.0999999996275,
+          "loadComplete": 2909.5,
+          "canvasCount": 147,
+          "measurementDuration": 4094.300000000745,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 648.8000000007451,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 648.8000000007451,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "raf-windowing": {
+      "name": "RAF Windowing (점진적 마운트)",
+      "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+      "shortName": "raf-windowing",
+      "results": []
+    },
+    "lazy": {
+      "name": "Lazy (지연된 getPage)",
+      "url": "http://nextjs:3000/feedback/4?version=lazy",
+      "shortName": "lazy",
+      "results": []
+    },
+    "opt1-raf": {
+      "name": "Opt1: RAF 페인트 안정화",
+      "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+      "shortName": "opt1-raf",
+      "results": []
+    },
+    "opt2-callback-ref": {
+      "name": "Opt2: Callback Ref 패턴",
+      "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+      "shortName": "opt2-callback-ref",
+      "results": []
+    },
+    "opt3-combined": {
+      "name": "Opt3: Combined (RAF + Callback)",
+      "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+      "shortName": "opt3-combined",
+      "results": []
+    },
+    "opt4-scheduler": {
+      "name": "Opt4: RenderScheduler (K=4)",
+      "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+      "shortName": "opt4-scheduler",
+      "results": []
+    },
+    "opt5-raf-batching": {
+      "name": "Opt5: RAF 배칭",
+      "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+      "shortName": "opt5-raf-batching",
+      "results": []
+    },
+    "opt6-priority": {
+      "name": "Opt6: 우선순위 정렬",
+      "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+      "shortName": "opt6-priority",
+      "results": []
+    },
+    "opt7-all-scheduling": {
+      "name": "Opt7: 전체 스케줄링",
+      "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+      "shortName": "opt7-all-scheduling",
+      "results": []
+    }
+  },
+  "statistics": {
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "count": 3,
+      "firstPageRenderTime": {
+        "avg": 9312.96666666648,
+        "min": 8515.400000000373,
+        "max": 9812.299999999814
+      },
+      "totalBlockingTime": {
+        "avg": 4856,
+        "min": 3981,
+        "max": 5600
+      },
+      "longTaskCount": {
+        "avg": 33,
+        "min": 26,
+        "max": 43
+      },
+      "firstContentfulPaint": {
+        "avg": 1020.3000000001242,
+        "min": 973.1000000005588,
+        "max": 1096.2999999998137
+      },
+      "largestContentfulPaint": {
+        "avg": 1291.7000000001863,
+        "min": 1096.2999999998137,
+        "max": 1401.1000000005588
+      }
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "count": 1,
+      "firstPageRenderTime": {
+        "avg": 8397.700000000186,
+        "min": 8397.700000000186,
+        "max": 8397.700000000186
+      },
+      "totalBlockingTime": {
+        "avg": 33521,
+        "min": 33521,
+        "max": 33521
+      },
+      "longTaskCount": {
+        "avg": 100,
+        "min": 100,
+        "max": 100
+      },
+      "firstContentfulPaint": {
+        "avg": 648.8000000007451,
+        "min": 648.8000000007451,
+        "max": 648.8000000007451
+      },
+      "largestContentfulPaint": {
+        "avg": 1077.9000000003725,
+        "min": 1077.9000000003725,
+        "max": 1077.9000000003725
+      }
+    }
+  }
+}

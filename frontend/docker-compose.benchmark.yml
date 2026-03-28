@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  # Next.js 개발 서버
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+    networks:
+      - benchmark-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # Puppeteer 벤치마크
+  benchmark:
+    build:
+      context: .
+      dockerfile: Dockerfile.bench
+    depends_on:
+      nextjs:
+        condition: service_healthy
+    volumes:
+      - ./bench:/app/bench
+    environment:
+      - NODE_ENV=production
+      - TEST_URL=http://nextjs:3000
+    networks:
+      - benchmark-network
+    cap_add:
+      - SYS_ADMIN
+    shm_size: 2gb
+    command: node bench/pdf-firstpage-group1.js
+
+networks:
+  benchmark-network:
+    driver: bridge
+

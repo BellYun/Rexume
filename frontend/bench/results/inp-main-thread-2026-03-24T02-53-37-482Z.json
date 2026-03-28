@@ -1,0 +1,2193 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (스케줄링 없음)",
+      "shortName": "basic",
+      "probeMed": {
+        "avg": 14.6,
+        "min": 7.9,
+        "max": 30.2,
+        "median": 12
+      },
+      "probeP75": {
+        "avg": 77.8,
+        "min": 25.5,
+        "max": 191,
+        "median": 50.7
+      },
+      "probeP95": {
+        "avg": 807.5,
+        "min": 147.2,
+        "max": 1775.9,
+        "median": 486.2
+      },
+      "probeP99": {
+        "avg": 1275.2,
+        "min": 750.9,
+        "max": 1775.9,
+        "median": 1391.4
+      },
+      "probeMax": {
+        "avg": 1275.2,
+        "min": 750.9,
+        "max": 1775.9,
+        "median": 1391.4
+      },
+      "probeCount": {
+        "avg": 35,
+        "min": 16,
+        "max": 68,
+        "median": 23
+      },
+      "ltProbeMed": {
+        "avg": 139.9,
+        "min": 0,
+        "max": 399.9,
+        "median": 0
+      },
+      "ltProbeP75": {
+        "avg": 139.9,
+        "min": 0,
+        "max": 399.9,
+        "median": 0
+      },
+      "ltProbeMax": {
+        "avg": 139.9,
+        "min": 0,
+        "max": 399.9,
+        "median": 0
+      },
+      "ltProbeCount": {
+        "avg": 0.4,
+        "min": 0,
+        "max": 1,
+        "median": 0
+      },
+      "idleProbeMed": {
+        "avg": 14.3,
+        "min": 7.8,
+        "max": 30.2,
+        "median": 10.5
+      },
+      "idleProbeP75": {
+        "avg": 68.9,
+        "min": 25.5,
+        "max": 191,
+        "median": 50.2
+      },
+      "ltRatio": {
+        "avg": 1.9,
+        "min": 0,
+        "max": 5.3,
+        "median": 0
+      },
+      "tbt": {
+        "avg": 1166,
+        "min": 912,
+        "max": 1533,
+        "median": 1039
+      },
+      "ltCount": {
+        "avg": 13,
+        "min": 5,
+        "max": 36,
+        "median": 8
+      },
+      "ltAvg": {
+        "avg": 199.6,
+        "min": 81.1,
+        "max": 251.8,
+        "median": 215.8
+      },
+      "ltMax": {
+        "avg": 773.6,
+        "min": 758,
+        "max": 801,
+        "median": 766
+      },
+      "avgFPS": {
+        "avg": 72.3,
+        "min": 52.7,
+        "max": 97.1,
+        "median": 68.3
+      },
+      "jankRate": {
+        "avg": 2.1,
+        "min": 0.5,
+        "max": 6.4,
+        "median": 0.7
+      },
+      "severeJank": {
+        "avg": 0.3,
+        "min": 0.2,
+        "max": 0.4,
+        "median": 0.3
+      },
+      "frameDeltaP95": {
+        "avg": 31.9,
+        "min": 9.3,
+        "max": 57.6,
+        "median": 33.3
+      },
+      "runs": 5
+    },
+    {
+      "version": "Simple (IO)",
+      "shortName": "simple",
+      "probeMed": {
+        "avg": 9,
+        "min": 8.3,
+        "max": 10,
+        "median": 8.6
+      },
+      "probeP75": {
+        "avg": 46.3,
+        "min": 12.8,
+        "max": 84.6,
+        "median": 50.4
+      },
+      "probeP95": {
+        "avg": 348.4,
+        "min": 193.7,
+        "max": 483.2,
+        "median": 387.1
+      },
+      "probeP99": {
+        "avg": 896.5,
+        "min": 193.7,
+        "max": 1884.8,
+        "median": 387.1
+      },
+      "probeMax": {
+        "avg": 896.5,
+        "min": 193.7,
+        "max": 1884.8,
+        "median": 387.1
+      },
+      "probeCount": {
+        "avg": 21.6,
+        "min": 18,
+        "max": 30,
+        "median": 20
+      },
+      "ltProbeMed": {
+        "avg": 18.3,
+        "min": 0,
+        "max": 91.7,
+        "median": 0
+      },
+      "ltProbeP75": {
+        "avg": 18.3,
+        "min": 0,
+        "max": 91.7,
+        "median": 0
+      },
+      "ltProbeMax": {
+        "avg": 18.3,
+        "min": 0,
+        "max": 91.7,
+        "median": 0
+      },
+      "ltProbeCount": {
+        "avg": 0.2,
+        "min": 0,
+        "max": 1,
+        "median": 0
+      },
+      "idleProbeMed": {
+        "avg": 9,
+        "min": 8.3,
+        "max": 10,
+        "median": 8.6
+      },
+      "idleProbeP75": {
+        "avg": 45.8,
+        "min": 10,
+        "max": 84.6,
+        "median": 50.4
+      },
+      "ltRatio": {
+        "avg": 1,
+        "min": 0,
+        "max": 5,
+        "median": 0
+      },
+      "tbt": {
+        "avg": 918.2,
+        "min": 813,
+        "max": 1047,
+        "median": 897
+      },
+      "ltCount": {
+        "avg": 6.2,
+        "min": 5,
+        "max": 9,
+        "median": 5
+      },
+      "ltAvg": {
+        "avg": 217.8,
+        "min": 175.4,
+        "max": 244.8,
+        "median": 229.6
+      },
+      "ltMax": {
+        "avg": 748,
+        "min": 670,
+        "max": 772,
+        "median": 765
+      },
+      "avgFPS": {
+        "avg": 61.3,
+        "min": 51.9,
+        "max": 75.4,
+        "median": 60
+      },
+      "jankRate": {
+        "avg": 3.3,
+        "min": 0.8,
+        "max": 7,
+        "median": 1.3
+      },
+      "severeJank": {
+        "avg": 0.4,
+        "min": 0.3,
+        "max": 0.6,
+        "median": 0.3
+      },
+      "frameDeltaP95": {
+        "avg": 44.8,
+        "min": 33.3,
+        "max": 58.3,
+        "median": 41.5
+      },
+      "runs": 5
+    },
+    {
+      "version": "Optimized (IO+RAF+Limit)",
+      "shortName": "optimized",
+      "probeMed": {
+        "avg": 11.4,
+        "min": 7.6,
+        "max": 19.7,
+        "median": 10.3
+      },
+      "probeP75": {
+        "avg": 111,
+        "min": 16.6,
+        "max": 175.4,
+        "median": 116.2
+      },
+      "probeP95": {
+        "avg": 1914.5,
+        "min": 225.2,
+        "max": 3969.1,
+        "median": 1375.5
+      },
+      "probeP99": {
+        "avg": 2094.6,
+        "min": 599.4,
+        "max": 3969.1,
+        "median": 1375.5
+      },
+      "probeMax": {
+        "avg": 2094.6,
+        "min": 599.4,
+        "max": 3969.1,
+        "median": 1375.5
+      },
+      "probeCount": {
+        "avg": 23.4,
+        "min": 16,
+        "max": 44,
+        "median": 18
+      },
+      "ltProbeMed": {
+        "avg": 146.2,
+        "min": 0,
+        "max": 407.6,
+        "median": 0
+      },
+      "ltProbeP75": {
+        "avg": 146.2,
+        "min": 0,
+        "max": 407.6,
+        "median": 0
+      },
+      "ltProbeMax": {
+        "avg": 146.2,
+        "min": 0,
+        "max": 407.6,
+        "median": 0
+      },
+      "ltProbeCount": {
+        "avg": 0.4,
+        "min": 0,
+        "max": 1,
+        "median": 0
+      },
+      "idleProbeMed": {
+        "avg": 11,
+        "min": 6.7,
+        "max": 19.7,
+        "median": 9.3
+      },
+      "idleProbeP75": {
+        "avg": 78.9,
+        "min": 16.6,
+        "max": 175.4,
+        "median": 51.8
+      },
+      "ltRatio": {
+        "avg": 2.5,
+        "min": 0,
+        "max": 6.3,
+        "median": 0
+      },
+      "tbt": {
+        "avg": 899,
+        "min": 825,
+        "max": 969,
+        "median": 887
+      },
+      "ltCount": {
+        "avg": 11,
+        "min": 5,
+        "max": 23,
+        "median": 6
+      },
+      "ltAvg": {
+        "avg": 180.8,
+        "min": 92,
+        "max": 239.2,
+        "median": 225.7
+      },
+      "ltMax": {
+        "avg": 729,
+        "min": 685,
+        "max": 766,
+        "median": 723
+      },
+      "avgFPS": {
+        "avg": 66.2,
+        "min": 53.4,
+        "max": 81.8,
+        "median": 65
+      },
+      "jankRate": {
+        "avg": 2.3,
+        "min": 0.3,
+        "max": 5.7,
+        "median": 0.8
+      },
+      "severeJank": {
+        "avg": 0.3,
+        "min": 0.2,
+        "max": 0.3,
+        "median": 0.3
+      },
+      "frameDeltaP95": {
+        "avg": 39.9,
+        "min": 25.3,
+        "max": 50.3,
+        "median": 40.9
+      },
+      "runs": 5
+    },
+    {
+      "version": "Opt14 (IO+RAF+Cache)",
+      "shortName": "opt14",
+      "probeMed": {
+        "avg": 19.2,
+        "min": 9.3,
+        "max": 49.6,
+        "median": 10.6
+      },
+      "probeP75": {
+        "avg": 89.8,
+        "min": 42.2,
+        "max": 165.9,
+        "median": 63.9
+      },
+      "probeP95": {
+        "avg": 2377.5,
+        "min": 602.8,
+        "max": 4833.2,
+        "median": 1877.7
+      },
+      "probeP99": {
+        "avg": 3107.3,
+        "min": 602.8,
+        "max": 4833.2,
+        "median": 3872.5
+      },
+      "probeMax": {
+        "avg": 3107.3,
+        "min": 602.8,
+        "max": 4833.2,
+        "median": 3872.5
+      },
+      "probeCount": {
+        "avg": 19.2,
+        "min": 14,
+        "max": 29,
+        "median": 18
+      },
+      "ltProbeMed": {
+        "avg": 53.5,
+        "min": 0,
+        "max": 267.7,
+        "median": 0
+      },
+      "ltProbeP75": {
+        "avg": 53.5,
+        "min": 0,
+        "max": 267.7,
+        "median": 0
+      },
+      "ltProbeMax": {
+        "avg": 53.5,
+        "min": 0,
+        "max": 267.7,
+        "median": 0
+      },
+      "ltProbeCount": {
+        "avg": 0.2,
+        "min": 0,
+        "max": 1,
+        "median": 0
+      },
+      "idleProbeMed": {
+        "avg": 19.2,
+        "min": 9.2,
+        "max": 49.6,
+        "median": 10.6
+      },
+      "idleProbeP75": {
+        "avg": 89.8,
+        "min": 42.2,
+        "max": 165.9,
+        "median": 63.9
+      },
+      "ltRatio": {
+        "avg": 0.7,
+        "min": 0,
+        "max": 3.4,
+        "median": 0
+      },
+      "tbt": {
+        "avg": 845.8,
+        "min": 653,
+        "max": 939,
+        "median": 881
+      },
+      "ltCount": {
+        "avg": 5.6,
+        "min": 5,
+        "max": 6,
+        "median": 6
+      },
+      "ltAvg": {
+        "avg": 216,
+        "min": 195.8,
+        "max": 241.4,
+        "median": 211.5
+      },
+      "ltMax": {
+        "avg": 716.6,
+        "min": 625,
+        "max": 748,
+        "median": 743
+      },
+      "avgFPS": {
+        "avg": 67.9,
+        "min": 59.2,
+        "max": 79.7,
+        "median": 66.7
+      },
+      "jankRate": {
+        "avg": 1.7,
+        "min": 0.7,
+        "max": 2.4,
+        "median": 1.6
+      },
+      "severeJank": {
+        "avg": 0.3,
+        "min": 0.1,
+        "max": 0.5,
+        "median": 0.3
+      },
+      "frameDeltaP95": {
+        "avg": 38,
+        "min": 32.6,
+        "max": 42.1,
+        "median": 40.3
+      },
+      "runs": 5
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "probe": {
+          "count": 68,
+          "avg": 61.4,
+          "min": 0.5,
+          "max": 1578.1,
+          "med": 14.3,
+          "p75": 50.7,
+          "p95": 147.2,
+          "p99": 1578.1
+        },
+        "probeTimeout": {
+          "count": 68,
+          "avg": 51,
+          "min": 0,
+          "max": 1573.9,
+          "med": 4,
+          "p75": 36.1,
+          "p95": 123,
+          "p99": 1573.9
+        },
+        "probeRaf": {
+          "count": 68,
+          "avg": 10.4,
+          "min": 0,
+          "max": 117.9,
+          "med": 7.9,
+          "p75": 9.9,
+          "p95": 22.9,
+          "p99": 117.9
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 68,
+          "avg": 61.4,
+          "min": 0.5,
+          "max": 1578.1,
+          "med": 14.3,
+          "p75": 50.7,
+          "p95": 147.2,
+          "p99": 1578.1
+        },
+        "idleProbeCount": 68,
+        "ltRatio": 0,
+        "tbt": 1423,
+        "longTaskCount": 10,
+        "ltDur": {
+          "count": 10,
+          "avg": 202,
+          "min": 52,
+          "max": 801,
+          "med": 107.5,
+          "p75": 215,
+          "p95": 801,
+          "p99": 801
+        },
+        "totalFrames": 1164,
+        "avgFPS": 97.1,
+        "frameDelta": {
+          "count": 1164,
+          "avg": 10.3,
+          "min": 5.2,
+          "max": 875,
+          "med": 8.3,
+          "p75": 8.7,
+          "p95": 9.3,
+          "p99": 33.1
+        },
+        "jankRate": 0.6,
+        "severeJankRate": 0.4,
+        "version": "Basic (스케줄링 없음)",
+        "run": 1
+      },
+      {
+        "probe": {
+          "count": 16,
+          "avg": 184.1,
+          "min": 1,
+          "max": 1775.9,
+          "med": 30.2,
+          "p75": 191,
+          "p95": 1775.9,
+          "p99": 1775.9
+        },
+        "probeTimeout": {
+          "count": 16,
+          "avg": 177.1,
+          "min": 0,
+          "max": 1769.1,
+          "med": 22.5,
+          "p75": 182.9,
+          "p95": 1769.1,
+          "p99": 1769.1
+        },
+        "probeRaf": {
+          "count": 16,
+          "avg": 7.1,
+          "min": 0,
+          "max": 24.1,
+          "med": 7.7,
+          "p75": 8.8,
+          "p95": 24.1,
+          "p99": 24.1
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 16,
+          "avg": 184.1,
+          "min": 1,
+          "max": 1775.9,
+          "med": 30.2,
+          "p75": 191,
+          "p95": 1775.9,
+          "p99": 1775.9
+        },
+        "idleProbeCount": 16,
+        "ltRatio": 0,
+        "tbt": 923,
+        "longTaskCount": 6,
+        "ltDur": {
+          "count": 6,
+          "avg": 215.8,
+          "min": 50,
+          "max": 777,
+          "med": 101.5,
+          "p75": 209,
+          "p95": 777,
+          "p99": 777
+        },
+        "totalFrames": 819,
+        "avgFPS": 68.3,
+        "frameDelta": {
+          "count": 819,
+          "avg": 14.6,
+          "min": 5.3,
+          "max": 825.1,
+          "med": 8.6,
+          "p75": 16.7,
+          "p95": 33.3,
+          "p99": 42.4
+        },
+        "jankRate": 0.5,
+        "severeJankRate": 0.2,
+        "version": "Basic (스케줄링 없음)",
+        "run": 2
+      },
+      {
+        "probe": {
+          "count": 19,
+          "avg": 120,
+          "min": 1.2,
+          "max": 1391.4,
+          "med": 12,
+          "p75": 84.4,
+          "p95": 1391.4,
+          "p99": 1391.4
+        },
+        "probeTimeout": {
+          "count": 19,
+          "avg": 112.1,
+          "min": 0,
+          "max": 1389.4,
+          "med": 5.8,
+          "p75": 78.1,
+          "p95": 1389.4,
+          "p99": 1389.4
+        },
+        "probeRaf": {
+          "count": 19,
+          "avg": 7.9,
+          "min": 0,
+          "max": 26.6,
+          "med": 6.3,
+          "p75": 8.9,
+          "p95": 26.6,
+          "p99": 26.6
+        },
+        "ltProbe": {
+          "count": 1,
+          "avg": 399.9,
+          "min": 399.9,
+          "max": 399.9,
+          "med": 399.9,
+          "p75": 399.9,
+          "p95": 399.9,
+          "p99": 399.9
+        },
+        "ltProbeCount": 1,
+        "idleProbe": {
+          "count": 18,
+          "avg": 104.4,
+          "min": 1.2,
+          "max": 1391.4,
+          "med": 10.5,
+          "p75": 50.2,
+          "p95": 1391.4,
+          "p99": 1391.4
+        },
+        "idleProbeCount": 18,
+        "ltRatio": 5.3,
+        "tbt": 912,
+        "longTaskCount": 5,
+        "ltDur": {
+          "count": 5,
+          "avg": 247.4,
+          "min": 59,
+          "max": 766,
+          "med": 125,
+          "p75": 201,
+          "p95": 766,
+          "p99": 766
+        },
+        "totalFrames": 747,
+        "avgFPS": 62.4,
+        "frameDelta": {
+          "count": 747,
+          "avg": 16,
+          "min": 7.3,
+          "max": 824.5,
+          "med": 8.7,
+          "p75": 17.1,
+          "p95": 34.1,
+          "p99": 59
+        },
+        "jankRate": 2.1,
+        "severeJankRate": 0.3,
+        "version": "Basic (스케줄링 없음)",
+        "run": 3
+      },
+      {
+        "probe": {
+          "count": 49,
+          "avg": 48.6,
+          "min": 1.5,
+          "max": 750.9,
+          "med": 8.6,
+          "p75": 25.5,
+          "p95": 236.7,
+          "p99": 750.9
+        },
+        "probeTimeout": {
+          "count": 49,
+          "avg": 41.7,
+          "min": 0,
+          "max": 735.5,
+          "med": 2.2,
+          "p75": 17.3,
+          "p95": 229.7,
+          "p99": 735.5
+        },
+        "probeRaf": {
+          "count": 49,
+          "avg": 6.9,
+          "min": 0,
+          "max": 23.3,
+          "med": 7.6,
+          "p75": 8.3,
+          "p95": 13.7,
+          "p99": 23.3
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 49,
+          "avg": 48.6,
+          "min": 1.5,
+          "max": 750.9,
+          "med": 8.6,
+          "p75": 25.5,
+          "p95": 236.7,
+          "p99": 750.9
+        },
+        "idleProbeCount": 49,
+        "ltRatio": 0,
+        "tbt": 1533,
+        "longTaskCount": 8,
+        "ltDur": {
+          "count": 8,
+          "avg": 251.8,
+          "min": 61,
+          "max": 766,
+          "med": 167.5,
+          "p75": 392,
+          "p95": 766,
+          "p99": 766
+        },
+        "totalFrames": 974,
+        "avgFPS": 81.2,
+        "frameDelta": {
+          "count": 974,
+          "avg": 12.3,
+          "min": 5.6,
+          "max": 825.5,
+          "med": 8.4,
+          "p75": 9.1,
+          "p95": 25.1,
+          "p99": 42.1
+        },
+        "jankRate": 0.7,
+        "severeJankRate": 0.4,
+        "version": "Basic (스케줄링 없음)",
+        "run": 4
+      },
+      {
+        "probe": {
+          "count": 23,
+          "avg": 88.4,
+          "min": 1.4,
+          "max": 879.5,
+          "med": 7.9,
+          "p75": 37.2,
+          "p95": 486.2,
+          "p99": 879.5
+        },
+        "probeTimeout": {
+          "count": 23,
+          "avg": 80.9,
+          "min": 0,
+          "max": 876.8,
+          "med": 5.3,
+          "p75": 15.4,
+          "p95": 468.1,
+          "p99": 876.8
+        },
+        "probeRaf": {
+          "count": 23,
+          "avg": 7.4,
+          "min": 0.4,
+          "max": 24,
+          "med": 5.8,
+          "p75": 8.2,
+          "p95": 23,
+          "p99": 24
+        },
+        "ltProbe": {
+          "count": 1,
+          "avg": 299.7,
+          "min": 299.7,
+          "max": 299.7,
+          "med": 299.7,
+          "p75": 299.7,
+          "p95": 299.7,
+          "p99": 299.7
+        },
+        "ltProbeCount": 1,
+        "idleProbe": {
+          "count": 22,
+          "avg": 78.8,
+          "min": 1.4,
+          "max": 879.5,
+          "med": 7.8,
+          "p75": 27.2,
+          "p95": 486.2,
+          "p99": 879.5
+        },
+        "idleProbeCount": 22,
+        "ltRatio": 4.3,
+        "tbt": 1039,
+        "longTaskCount": 36,
+        "ltDur": {
+          "count": 36,
+          "avg": 81.1,
+          "min": 50,
+          "max": 758,
+          "med": 54,
+          "p75": 59,
+          "p95": 197,
+          "p99": 758
+        },
+        "totalFrames": 629,
+        "avgFPS": 52.7,
+        "frameDelta": {
+          "count": 629,
+          "avg": 19,
+          "min": 6.5,
+          "max": 816.3,
+          "med": 8.7,
+          "p75": 17.3,
+          "p95": 57.6,
+          "p99": 75.7
+        },
+        "jankRate": 6.4,
+        "severeJankRate": 0.3,
+        "version": "Basic (스케줄링 없음)",
+        "run": 5
+      }
+    ],
+    "simple": [
+      {
+        "probe": {
+          "count": 21,
+          "avg": 134.1,
+          "min": 0.2,
+          "max": 1884.8,
+          "med": 9.5,
+          "p75": 50.4,
+          "p95": 483.2,
+          "p99": 1884.8
+        },
+        "probeTimeout": {
+          "count": 21,
+          "avg": 124.9,
+          "min": 0,
+          "max": 1873.2,
+          "med": 6.6,
+          "p75": 17.2,
+          "p95": 475.3,
+          "p99": 1873.2
+        },
+        "probeRaf": {
+          "count": 21,
+          "avg": 9.2,
+          "min": 0.1,
+          "max": 47.5,
+          "med": 7,
+          "p75": 8.9,
+          "p95": 27.6,
+          "p99": 47.5
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 21,
+          "avg": 134.1,
+          "min": 0.2,
+          "max": 1884.8,
+          "med": 9.5,
+          "p75": 50.4,
+          "p95": 483.2,
+          "p99": 1884.8
+        },
+        "idleProbeCount": 21,
+        "ltRatio": 0,
+        "tbt": 1047,
+        "longTaskCount": 9,
+        "ltDur": {
+          "count": 9,
+          "avg": 175.4,
+          "min": 50,
+          "max": 772,
+          "med": 84,
+          "p75": 150,
+          "p95": 772,
+          "p99": 772
+        },
+        "totalFrames": 620,
+        "avgFPS": 51.9,
+        "frameDelta": {
+          "count": 620,
+          "avg": 19.3,
+          "min": 4.8,
+          "max": 825.7,
+          "med": 8.8,
+          "p75": 17.5,
+          "p95": 58.3,
+          "p99": 75.4
+        },
+        "jankRate": 6.5,
+        "severeJankRate": 0.6,
+        "version": "Simple (IO)",
+        "run": 1
+      },
+      {
+        "probe": {
+          "count": 19,
+          "avg": 62.1,
+          "min": 2.1,
+          "max": 387.1,
+          "med": 8.6,
+          "p75": 60.3,
+          "p95": 387.1,
+          "p99": 387.1
+        },
+        "probeTimeout": {
+          "count": 19,
+          "avg": 53.3,
+          "min": 0,
+          "max": 376.8,
+          "med": 2.2,
+          "p75": 34.5,
+          "p95": 376.8,
+          "p99": 376.8
+        },
+        "probeRaf": {
+          "count": 19,
+          "avg": 8.8,
+          "min": 0,
+          "max": 43.4,
+          "med": 6.7,
+          "p75": 10.3,
+          "p95": 43.4,
+          "p99": 43.4
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 19,
+          "avg": 62.1,
+          "min": 2.1,
+          "max": 387.1,
+          "med": 8.6,
+          "p75": 60.3,
+          "p95": 387.1,
+          "p99": 387.1
+        },
+        "idleProbeCount": 19,
+        "ltRatio": 0,
+        "tbt": 813,
+        "longTaskCount": 5,
+        "ltDur": {
+          "count": 5,
+          "avg": 229.6,
+          "min": 61,
+          "max": 670,
+          "med": 135,
+          "p75": 200,
+          "p95": 670,
+          "p99": 670
+        },
+        "totalFrames": 796,
+        "avgFPS": 66.3,
+        "frameDelta": {
+          "count": 796,
+          "avg": 15.1,
+          "min": 7.3,
+          "max": 725.8,
+          "med": 8.7,
+          "p75": 16.8,
+          "p95": 33.6,
+          "p99": 42.6
+        },
+        "jankRate": 0.9,
+        "severeJankRate": 0.3,
+        "version": "Simple (IO)",
+        "run": 2
+      },
+      {
+        "probe": {
+          "count": 30,
+          "avg": 116.8,
+          "min": 0,
+          "max": 1764,
+          "med": 10,
+          "p75": 84.6,
+          "p95": 425,
+          "p99": 1764
+        },
+        "probeTimeout": {
+          "count": 30,
+          "avg": 110.2,
+          "min": 0,
+          "max": 1759.9,
+          "med": 7.4,
+          "p75": 81,
+          "p95": 416.6,
+          "p99": 1759.9
+        },
+        "probeRaf": {
+          "count": 30,
+          "avg": 6.5,
+          "min": 0,
+          "max": 28,
+          "med": 4,
+          "p75": 9.1,
+          "p95": 24.6,
+          "p99": 28
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 30,
+          "avg": 116.8,
+          "min": 0,
+          "max": 1764,
+          "med": 10,
+          "p75": 84.6,
+          "p95": 425,
+          "p99": 1764
+        },
+        "idleProbeCount": 30,
+        "ltRatio": 0,
+        "tbt": 1000,
+        "longTaskCount": 7,
+        "ltDur": {
+          "count": 7,
+          "avg": 205,
+          "min": 55,
+          "max": 765,
+          "med": 135,
+          "p75": 200,
+          "p95": 765,
+          "p99": 765
+        },
+        "totalFrames": 904,
+        "avgFPS": 75.4,
+        "frameDelta": {
+          "count": 904,
+          "avg": 13.3,
+          "min": 7.3,
+          "max": 816.9,
+          "med": 8.5,
+          "p75": 9.2,
+          "p95": 33.3,
+          "p99": 42.6
+        },
+        "jankRate": 0.8,
+        "severeJankRate": 0.3,
+        "version": "Simple (IO)",
+        "run": 3
+      },
+      {
+        "probe": {
+          "count": 20,
+          "avg": 28.7,
+          "min": 2.6,
+          "max": 253,
+          "med": 8.6,
+          "p75": 12.8,
+          "p95": 253,
+          "p99": 253
+        },
+        "probeTimeout": {
+          "count": 20,
+          "avg": 22.2,
+          "min": 0,
+          "max": 247.9,
+          "med": 1.8,
+          "p75": 7.6,
+          "p95": 247.9,
+          "p99": 247.9
+        },
+        "probeRaf": {
+          "count": 20,
+          "avg": 6.5,
+          "min": 0.5,
+          "max": 19.7,
+          "med": 5.4,
+          "p75": 8.9,
+          "p95": 19.7,
+          "p99": 19.7
+        },
+        "ltProbe": {
+          "count": 1,
+          "avg": 91.7,
+          "min": 91.7,
+          "max": 91.7,
+          "med": 91.7,
+          "p75": 91.7,
+          "p95": 91.7,
+          "p99": 91.7
+        },
+        "ltProbeCount": 1,
+        "idleProbe": {
+          "count": 19,
+          "avg": 25.4,
+          "min": 2.6,
+          "max": 253,
+          "med": 8.5,
+          "p75": 10,
+          "p95": 253,
+          "p99": 253
+        },
+        "idleProbeCount": 19,
+        "ltRatio": 5,
+        "tbt": 897,
+        "longTaskCount": 5,
+        "ltDur": {
+          "count": 5,
+          "avg": 244.8,
+          "min": 63,
+          "max": 765,
+          "med": 127,
+          "p75": 200,
+          "p95": 765,
+          "p99": 765
+        },
+        "totalFrames": 719,
+        "avgFPS": 60,
+        "frameDelta": {
+          "count": 719,
+          "avg": 16.7,
+          "min": 0,
+          "max": 824.3,
+          "med": 8.9,
+          "p75": 17.4,
+          "p95": 41.5,
+          "p99": 50.1
+        },
+        "jankRate": 1.3,
+        "severeJankRate": 0.3,
+        "version": "Simple (IO)",
+        "run": 4
+      },
+      {
+        "probe": {
+          "count": 18,
+          "avg": 29.5,
+          "min": 1.4,
+          "max": 193.7,
+          "med": 8.3,
+          "p75": 23.6,
+          "p95": 193.7,
+          "p99": 193.7
+        },
+        "probeTimeout": {
+          "count": 18,
+          "avg": 16.2,
+          "min": 0,
+          "max": 161,
+          "med": 1.2,
+          "p75": 7.5,
+          "p95": 161,
+          "p99": 161
+        },
+        "probeRaf": {
+          "count": 18,
+          "avg": 13.3,
+          "min": 0.4,
+          "max": 136.9,
+          "med": 3.2,
+          "p75": 9.7,
+          "p95": 136.9,
+          "p99": 136.9
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 18,
+          "avg": 29.5,
+          "min": 1.4,
+          "max": 193.7,
+          "med": 8.3,
+          "p75": 23.6,
+          "p95": 193.7,
+          "p99": 193.7
+        },
+        "idleProbeCount": 18,
+        "ltRatio": 0,
+        "tbt": 834,
+        "longTaskCount": 5,
+        "ltDur": {
+          "count": 5,
+          "avg": 234.4,
+          "min": 61,
+          "max": 768,
+          "med": 134,
+          "p75": 138,
+          "p95": 768,
+          "p99": 768
+        },
+        "totalFrames": 629,
+        "avgFPS": 52.7,
+        "frameDelta": {
+          "count": 629,
+          "avg": 19,
+          "min": 6.8,
+          "max": 825.6,
+          "med": 8.8,
+          "p75": 24.1,
+          "p95": 57.4,
+          "p99": 83
+        },
+        "jankRate": 7,
+        "severeJankRate": 0.3,
+        "version": "Simple (IO)",
+        "run": 5
+      }
+    ],
+    "optimized": [
+      {
+        "probe": {
+          "count": 16,
+          "avg": 471.7,
+          "min": 1,
+          "max": 3667.3,
+          "med": 7.6,
+          "p75": 116.2,
+          "p95": 3667.3,
+          "p99": 3667.3
+        },
+        "probeTimeout": {
+          "count": 16,
+          "avg": 465.7,
+          "min": 0,
+          "max": 3662,
+          "med": 0.1,
+          "p75": 91.6,
+          "p95": 3662,
+          "p99": 3662
+        },
+        "probeRaf": {
+          "count": 16,
+          "avg": 6,
+          "min": 0,
+          "max": 24.6,
+          "med": 4.6,
+          "p75": 8.5,
+          "p95": 24.6,
+          "p99": 24.6
+        },
+        "ltProbe": {
+          "count": 1,
+          "avg": 323.4,
+          "min": 323.4,
+          "max": 323.4,
+          "med": 323.4,
+          "p75": 323.4,
+          "p95": 323.4,
+          "p99": 323.4
+        },
+        "ltProbeCount": 1,
+        "idleProbe": {
+          "count": 15,
+          "avg": 481.6,
+          "min": 1,
+          "max": 3667.3,
+          "med": 6.7,
+          "p75": 42.8,
+          "p95": 3667.3,
+          "p99": 3667.3
+        },
+        "idleProbeCount": 15,
+        "ltRatio": 6.3,
+        "tbt": 887,
+        "longTaskCount": 23,
+        "ltDur": {
+          "count": 23,
+          "avg": 92,
+          "min": 50,
+          "max": 710,
+          "med": 52,
+          "p75": 57,
+          "p95": 199,
+          "p99": 710
+        },
+        "totalFrames": 637,
+        "avgFPS": 53.4,
+        "frameDelta": {
+          "count": 637,
+          "avg": 18.7,
+          "min": 0,
+          "max": 757.5,
+          "med": 8.8,
+          "p75": 24.2,
+          "p95": 50.3,
+          "p99": 82.6
+        },
+        "jankRate": 5.7,
+        "severeJankRate": 0.3,
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 1
+      },
+      {
+        "probe": {
+          "count": 44,
+          "avg": 38.3,
+          "min": 0.2,
+          "max": 599.4,
+          "med": 8.7,
+          "p75": 16.6,
+          "p95": 225.2,
+          "p99": 599.4
+        },
+        "probeTimeout": {
+          "count": 44,
+          "avg": 30.4,
+          "min": 0,
+          "max": 579.6,
+          "med": 0.1,
+          "p75": 7.6,
+          "p95": 216.8,
+          "p99": 579.6
+        },
+        "probeRaf": {
+          "count": 44,
+          "avg": 7.8,
+          "min": 0,
+          "max": 29.3,
+          "med": 7.9,
+          "p75": 8.8,
+          "p95": 19.8,
+          "p99": 29.3
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 44,
+          "avg": 38.3,
+          "min": 0.2,
+          "max": 599.4,
+          "med": 8.7,
+          "p75": 16.6,
+          "p95": 225.2,
+          "p99": 599.4
+        },
+        "idleProbeCount": 44,
+        "ltRatio": 0,
+        "tbt": 862,
+        "longTaskCount": 5,
+        "ltDur": {
+          "count": 5,
+          "avg": 239.2,
+          "min": 62,
+          "max": 723,
+          "med": 134,
+          "p75": 200,
+          "p95": 723,
+          "p99": 723
+        },
+        "totalFrames": 980,
+        "avgFPS": 81.8,
+        "frameDelta": {
+          "count": 980,
+          "avg": 12.2,
+          "min": 5.4,
+          "max": 783.9,
+          "med": 8.5,
+          "p75": 9.2,
+          "p95": 25.3,
+          "p99": 41.7
+        },
+        "jankRate": 0.3,
+        "severeJankRate": 0.2,
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 2
+      },
+      {
+        "probe": {
+          "count": 16,
+          "avg": 148.3,
+          "min": 2.4,
+          "max": 1375.5,
+          "med": 10.3,
+          "p75": 138.8,
+          "p95": 1375.5,
+          "p99": 1375.5
+        },
+        "probeTimeout": {
+          "count": 16,
+          "avg": 140.9,
+          "min": 0,
+          "max": 1370.4,
+          "med": 6.7,
+          "p75": 116.1,
+          "p95": 1370.4,
+          "p99": 1370.4
+        },
+        "probeRaf": {
+          "count": 16,
+          "avg": 7.4,
+          "min": 0.1,
+          "max": 22.7,
+          "med": 7.8,
+          "p75": 8.9,
+          "p95": 22.7,
+          "p99": 22.7
+        },
+        "ltProbe": {
+          "count": 1,
+          "avg": 407.6,
+          "min": 407.6,
+          "max": 407.6,
+          "med": 407.6,
+          "p75": 407.6,
+          "p95": 407.6,
+          "p99": 407.6
+        },
+        "ltProbeCount": 1,
+        "idleProbe": {
+          "count": 15,
+          "avg": 131,
+          "min": 2.4,
+          "max": 1375.5,
+          "med": 9.3,
+          "p75": 51.8,
+          "p95": 1375.5,
+          "p99": 1375.5
+        },
+        "idleProbeCount": 15,
+        "ltRatio": 6.3,
+        "tbt": 825,
+        "longTaskCount": 5,
+        "ltDur": {
+          "count": 5,
+          "avg": 232.4,
+          "min": 64,
+          "max": 685,
+          "med": 137,
+          "p75": 204,
+          "p95": 685,
+          "p99": 685
+        },
+        "totalFrames": 759,
+        "avgFPS": 63.3,
+        "frameDelta": {
+          "count": 759,
+          "avg": 15.8,
+          "min": 7.3,
+          "max": 741.2,
+          "med": 8.7,
+          "p75": 17.1,
+          "p95": 40.9,
+          "p99": 50
+        },
+        "jankRate": 0.8,
+        "severeJankRate": 0.3,
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 3
+      },
+      {
+        "probe": {
+          "count": 18,
+          "avg": 425.3,
+          "min": 2.3,
+          "max": 3969.1,
+          "med": 19.7,
+          "p75": 175.4,
+          "p95": 3969.1,
+          "p99": 3969.1
+        },
+        "probeTimeout": {
+          "count": 18,
+          "avg": 416.4,
+          "min": 0,
+          "max": 3966.6,
+          "med": 8.1,
+          "p75": 165.8,
+          "p95": 3966.6,
+          "p99": 3966.6
+        },
+        "probeRaf": {
+          "count": 18,
+          "avg": 8.9,
+          "min": 0.1,
+          "max": 26.6,
+          "med": 7.8,
+          "p75": 11.4,
+          "p95": 26.6,
+          "p99": 26.6
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 18,
+          "avg": 425.3,
+          "min": 2.3,
+          "max": 3969.1,
+          "med": 19.7,
+          "p75": 175.4,
+          "p95": 3969.1,
+          "p99": 3969.1
+        },
+        "idleProbeCount": 18,
+        "ltRatio": 0,
+        "tbt": 969,
+        "longTaskCount": 6,
+        "ltDur": {
+          "count": 6,
+          "avg": 225.7,
+          "min": 59,
+          "max": 761,
+          "med": 121,
+          "p75": 207,
+          "p95": 761,
+          "p99": 761
+        },
+        "totalFrames": 807,
+        "avgFPS": 67.3,
+        "frameDelta": {
+          "count": 807,
+          "avg": 14.8,
+          "min": 5.8,
+          "max": 817.5,
+          "med": 8.7,
+          "p75": 16.7,
+          "p95": 33.5,
+          "p99": 49.7
+        },
+        "jankRate": 0.7,
+        "severeJankRate": 0.2,
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 4
+      },
+      {
+        "probe": {
+          "count": 23,
+          "avg": 83.4,
+          "min": 2.6,
+          "max": 861.8,
+          "med": 10.5,
+          "p75": 107.9,
+          "p95": 335.6,
+          "p99": 861.8
+        },
+        "probeTimeout": {
+          "count": 23,
+          "avg": 72.5,
+          "min": 0,
+          "max": 803.9,
+          "med": 5.2,
+          "p75": 93.7,
+          "p95": 325.9,
+          "p99": 803.9
+        },
+        "probeRaf": {
+          "count": 23,
+          "avg": 10.9,
+          "min": 0,
+          "max": 57.9,
+          "med": 8.2,
+          "p75": 10.3,
+          "p95": 24.6,
+          "p99": 57.9
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 23,
+          "avg": 83.4,
+          "min": 2.6,
+          "max": 861.8,
+          "med": 10.5,
+          "p75": 107.9,
+          "p95": 335.6,
+          "p99": 861.8
+        },
+        "idleProbeCount": 23,
+        "ltRatio": 0,
+        "tbt": 952,
+        "longTaskCount": 16,
+        "ltDur": {
+          "count": 16,
+          "avg": 114.9,
+          "min": 50,
+          "max": 766,
+          "med": 55,
+          "p75": 84,
+          "p95": 766,
+          "p99": 766
+        },
+        "totalFrames": 776,
+        "avgFPS": 65,
+        "frameDelta": {
+          "count": 776,
+          "avg": 15.4,
+          "min": 7.3,
+          "max": 816.8,
+          "med": 8.5,
+          "p75": 15.9,
+          "p95": 49.5,
+          "p99": 59.1
+        },
+        "jankRate": 4.1,
+        "severeJankRate": 0.3,
+        "version": "Optimized (IO+RAF+Limit)",
+        "run": 5
+      }
+    ],
+    "opt14": [
+      {
+        "probe": {
+          "count": 18,
+          "avg": 310.5,
+          "min": 0.8,
+          "max": 4833.2,
+          "med": 9.6,
+          "p75": 63.9,
+          "p95": 4833.2,
+          "p99": 4833.2
+        },
+        "probeTimeout": {
+          "count": 18,
+          "avg": 301.8,
+          "min": 0,
+          "max": 4830.8,
+          "med": 5.7,
+          "p75": 49.8,
+          "p95": 4830.8,
+          "p99": 4830.8
+        },
+        "probeRaf": {
+          "count": 18,
+          "avg": 8.6,
+          "min": 0.5,
+          "max": 33.7,
+          "med": 7.2,
+          "p75": 9.2,
+          "p95": 33.7,
+          "p99": 33.7
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 18,
+          "avg": 310.5,
+          "min": 0.8,
+          "max": 4833.2,
+          "med": 9.6,
+          "p75": 63.9,
+          "p95": 4833.2,
+          "p99": 4833.2
+        },
+        "idleProbeCount": 18,
+        "ltRatio": 0,
+        "tbt": 653,
+        "longTaskCount": 5,
+        "ltDur": {
+          "count": 5,
+          "avg": 195.8,
+          "min": 51,
+          "max": 625,
+          "med": 91,
+          "p75": 126,
+          "p95": 625,
+          "p99": 625
+        },
+        "totalFrames": 800,
+        "avgFPS": 66.7,
+        "frameDelta": {
+          "count": 800,
+          "avg": 15,
+          "min": 0.6,
+          "max": 668.2,
+          "med": 9,
+          "p75": 16.7,
+          "p95": 40.3,
+          "p99": 58.9
+        },
+        "jankRate": 2.4,
+        "severeJankRate": 0.1,
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 1
+      },
+      {
+        "probe": {
+          "count": 18,
+          "avg": 197.9,
+          "min": 0.6,
+          "max": 1877.7,
+          "med": 49.6,
+          "p75": 165.9,
+          "p95": 1877.7,
+          "p99": 1877.7
+        },
+        "probeTimeout": {
+          "count": 18,
+          "avg": 187.6,
+          "min": 0,
+          "max": 1870.3,
+          "med": 24.3,
+          "p75": 159.5,
+          "p95": 1870.3,
+          "p99": 1870.3
+        },
+        "probeRaf": {
+          "count": 18,
+          "avg": 10.3,
+          "min": 0,
+          "max": 41.1,
+          "med": 7.2,
+          "p75": 13.3,
+          "p95": 41.1,
+          "p99": 41.1
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 18,
+          "avg": 197.9,
+          "min": 0.6,
+          "max": 1877.7,
+          "med": 49.6,
+          "p75": 165.9,
+          "p95": 1877.7,
+          "p99": 1877.7
+        },
+        "idleProbeCount": 18,
+        "ltRatio": 0,
+        "tbt": 939,
+        "longTaskCount": 6,
+        "ltDur": {
+          "count": 6,
+          "avg": 219.8,
+          "min": 64,
+          "max": 747,
+          "med": 116,
+          "p75": 200,
+          "p95": 747,
+          "p99": 747
+        },
+        "totalFrames": 853,
+        "avgFPS": 71.1,
+        "frameDelta": {
+          "count": 853,
+          "avg": 14.1,
+          "min": 3.6,
+          "max": 809.8,
+          "med": 8.7,
+          "p75": 15.1,
+          "p95": 33.3,
+          "p99": 42.4
+        },
+        "jankRate": 0.7,
+        "severeJankRate": 0.5,
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 2
+      },
+      {
+        "probe": {
+          "count": 14,
+          "avg": 378.6,
+          "min": 1.6,
+          "max": 3872.5,
+          "med": 17.1,
+          "p75": 117.7,
+          "p95": 3872.5,
+          "p99": 3872.5
+        },
+        "probeTimeout": {
+          "count": 14,
+          "avg": 365.6,
+          "min": 0,
+          "max": 3870.7,
+          "med": 10.9,
+          "p75": 93.2,
+          "p95": 3870.7,
+          "p99": 3870.7
+        },
+        "probeRaf": {
+          "count": 14,
+          "avg": 13,
+          "min": 1.6,
+          "max": 88,
+          "med": 8.3,
+          "p75": 9.1,
+          "p95": 88,
+          "p99": 88
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 14,
+          "avg": 378.6,
+          "min": 1.6,
+          "max": 3872.5,
+          "med": 17.1,
+          "p75": 117.7,
+          "p95": 3872.5,
+          "p99": 3872.5
+        },
+        "idleProbeCount": 14,
+        "ltRatio": 0,
+        "tbt": 887,
+        "longTaskCount": 6,
+        "ltDur": {
+          "count": 6,
+          "avg": 211.3,
+          "min": 50,
+          "max": 748,
+          "med": 105.5,
+          "p75": 204,
+          "p95": 748,
+          "p99": 748
+        },
+        "totalFrames": 709,
+        "avgFPS": 59.2,
+        "frameDelta": {
+          "count": 709,
+          "avg": 16.9,
+          "min": 6.4,
+          "max": 801.3,
+          "med": 9.1,
+          "p75": 18.2,
+          "p95": 42.1,
+          "p99": 51.5
+        },
+        "jankRate": 2.1,
+        "severeJankRate": 0.3,
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 3
+      },
+      {
+        "probe": {
+          "count": 29,
+          "avg": 222.7,
+          "min": 0.7,
+          "max": 4350.3,
+          "med": 9.3,
+          "p75": 42.2,
+          "p95": 701.4,
+          "p99": 4350.3
+        },
+        "probeTimeout": {
+          "count": 29,
+          "avg": 215.2,
+          "min": 0,
+          "max": 4346.9,
+          "med": 0.2,
+          "p75": 31.8,
+          "p95": 689.4,
+          "p99": 4346.9
+        },
+        "probeRaf": {
+          "count": 29,
+          "avg": 7.5,
+          "min": 0.7,
+          "max": 23.7,
+          "med": 8,
+          "p75": 9.2,
+          "p95": 12,
+          "p99": 23.7
+        },
+        "ltProbe": {
+          "count": 1,
+          "avg": 267.7,
+          "min": 267.7,
+          "max": 267.7,
+          "med": 267.7,
+          "p75": 267.7,
+          "p95": 267.7,
+          "p99": 267.7
+        },
+        "ltProbeCount": 1,
+        "idleProbe": {
+          "count": 28,
+          "avg": 221.1,
+          "min": 0.7,
+          "max": 4350.3,
+          "med": 9.2,
+          "p75": 42.2,
+          "p95": 701.4,
+          "p99": 4350.3
+        },
+        "idleProbeCount": 28,
+        "ltRatio": 3.4,
+        "tbt": 881,
+        "longTaskCount": 6,
+        "ltDur": {
+          "count": 6,
+          "avg": 211.5,
+          "min": 57,
+          "max": 720,
+          "med": 110,
+          "p75": 207,
+          "p95": 720,
+          "p99": 720
+        },
+        "totalFrames": 956,
+        "avgFPS": 79.7,
+        "frameDelta": {
+          "count": 956,
+          "avg": 12.5,
+          "min": 6.3,
+          "max": 776.5,
+          "med": 8.5,
+          "p75": 9.9,
+          "p95": 32.6,
+          "p99": 51
+        },
+        "jankRate": 1.5,
+        "severeJankRate": 0.2,
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 4
+      },
+      {
+        "probe": {
+          "count": 17,
+          "avg": 70.6,
+          "min": 1.8,
+          "max": 602.8,
+          "med": 10.6,
+          "p75": 59.3,
+          "p95": 602.8,
+          "p99": 602.8
+        },
+        "probeTimeout": {
+          "count": 17,
+          "avg": 63.2,
+          "min": 0,
+          "max": 597.8,
+          "med": 6.6,
+          "p75": 50.5,
+          "p95": 597.8,
+          "p99": 597.8
+        },
+        "probeRaf": {
+          "count": 17,
+          "avg": 7.3,
+          "min": 0.5,
+          "max": 23.5,
+          "med": 6.6,
+          "p75": 9.6,
+          "p95": 23.5,
+          "p99": 23.5
+        },
+        "ltProbe": {
+          "avg": 0,
+          "min": 0,
+          "max": 0,
+          "med": 0,
+          "p75": 0,
+          "p95": 0,
+          "p99": 0
+        },
+        "ltProbeCount": 0,
+        "idleProbe": {
+          "count": 17,
+          "avg": 70.6,
+          "min": 1.8,
+          "max": 602.8,
+          "med": 10.6,
+          "p75": 59.3,
+          "p95": 602.8,
+          "p99": 602.8
+        },
+        "idleProbeCount": 17,
+        "ltRatio": 0,
+        "tbt": 869,
+        "longTaskCount": 5,
+        "ltDur": {
+          "count": 5,
+          "avg": 241.4,
+          "min": 59,
+          "max": 743,
+          "med": 138,
+          "p75": 195,
+          "p95": 743,
+          "p99": 743
+        },
+        "totalFrames": 753,
+        "avgFPS": 62.8,
+        "frameDelta": {
+          "count": 753,
+          "avg": 15.9,
+          "min": 6.4,
+          "max": 799,
+          "med": 8.8,
+          "p75": 16.9,
+          "p95": 41.6,
+          "p99": 50.7
+        },
+        "jankRate": 1.6,
+        "severeJankRate": 0.3,
+        "version": "Opt14 (IO+RAF+Cache)",
+        "run": 5
+      }
+    ]
+  },
+  "meta": {
+    "runs": 5,
+    "cpuThrottle": 4,
+    "baseUrl": "http://localhost:3000",
+    "pdfUrl": "/sample4.pdf",
+    "timestamp": "2026-03-24T02:53:37.484Z",
+    "versions": "Basic, Simple(IO), Optimized(IO+RAF+Limit), Opt14(IO+RAF+Cache)",
+    "method": "setTimeout(0)→RAF probe every 30ms for 12s + keyboard/click interactions"
+  }
+}

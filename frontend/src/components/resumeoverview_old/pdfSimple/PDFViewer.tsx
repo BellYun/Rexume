@@ -160,6 +160,11 @@ const PDFViewer = ({
   useEffect(() => {
     if (!pdf || numPages === 0) return;
 
+    const margin =
+      typeof window !== 'undefined'
+        ? Math.round(window.innerHeight * 0.75) // 75vh 프리워밍
+        : 1200;
+
     // observer 생성
     observerRef.current = new IntersectionObserver(
       (entries) => {
@@ -198,7 +203,7 @@ const PDFViewer = ({
       {
         root: null,
         threshold: 0,
-        rootMargin: `${typeof window !== 'undefined' ? window.innerHeight * 0.25 : 2000}px 0px`,
+        rootMargin: `${margin}px 0px`,
       }
     );
 

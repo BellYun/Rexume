@@ -1,0 +1,1023 @@
+{
+  "timestamp": "2025-10-30T01:45:53.008Z",
+  "config": {
+    "cpuThrottle": 4,
+    "runsPerUrl": 3,
+    "headless": true,
+    "testUrls": [
+      {
+        "url": "http://nextjs:3000/feedback-basic/4",
+        "name": "Basic (개선 전)",
+        "shortName": "basic"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=simple",
+        "name": "Simple (IntersectionObserver)",
+        "shortName": "simple"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=raf",
+        "name": "RAF (requestAnimationFrame)",
+        "shortName": "raf"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+        "name": "RAF Windowing (점진적 마운트)",
+        "shortName": "raf-windowing"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=lazy",
+        "name": "Lazy (지연된 getPage)",
+        "shortName": "lazy"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+        "name": "Opt1: RAF 페인트 안정화",
+        "shortName": "opt1-raf"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+        "name": "Opt2: Callback Ref 패턴",
+        "shortName": "opt2-callback-ref"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+        "name": "Opt3: Combined (RAF + Callback)",
+        "shortName": "opt3-combined"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+        "name": "Opt4: RenderScheduler (K=4)",
+        "shortName": "opt4-scheduler"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+        "name": "Opt5: RAF 배칭",
+        "shortName": "opt5-raf-batching"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+        "name": "Opt6: 우선순위 정렬",
+        "shortName": "opt6-priority"
+      },
+      {
+        "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+        "name": "Opt7: 전체 스케줄링",
+        "shortName": "opt7-all-scheduling"
+      }
+    ]
+  },
+  "results": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "url": "http://nextjs:3000/feedback-basic/4",
+      "shortName": "basic",
+      "results": []
+    },
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "url": "http://nextjs:3000/feedback/4?version=simple",
+      "shortName": "simple",
+      "results": [
+        {
+          "version": "Simple (IntersectionObserver)",
+          "url": "http://nextjs:3000/feedback/4?version=simple",
+          "runNumber": 1,
+          "timestamp": "2025-10-30T01:00:47.987Z",
+          "firstPageRenderTime": null,
+          "firstPageCanvasTime": 65199.299999999814,
+          "firstPaint": 12843.199999999255,
+          "firstContentfulPaint": 12843.199999999255,
+          "largestContentfulPaint": 14065.899999999441,
+          "longTasks": [
+            {
+              "startTime": 2396.5999999996275,
+              "duration": 8237,
+              "timestamp": 11658.599999999627
+            },
+            {
+              "startTime": 11575.599999999627,
+              "duration": 83,
+              "timestamp": 12557.5
+            },
+            {
+              "startTime": 12079.5,
+              "duration": 444,
+              "timestamp": 12557.5
+            },
+            {
+              "startTime": 12719.399999999441,
+              "duration": 100,
+              "timestamp": 12889.799999999814
+            },
+            {
+              "startTime": 12998.299999999814,
+              "duration": 978,
+              "timestamp": 14582.299999999814
+            },
+            {
+              "startTime": 14499.799999999814,
+              "duration": 82,
+              "timestamp": 14975
+            },
+            {
+              "startTime": 14717.799999999814,
+              "duration": 257,
+              "timestamp": 14975
+            },
+            {
+              "startTime": 14992.799999999814,
+              "duration": 2005,
+              "timestamp": 17254.699999999255
+            },
+            {
+              "startTime": 17089,
+              "duration": 63,
+              "timestamp": 17254.699999999255
+            },
+            {
+              "startTime": 17316.5,
+              "duration": 113,
+              "timestamp": 17524.299999999814
+            },
+            {
+              "startTime": 17435,
+              "duration": 64,
+              "timestamp": 17524.299999999814
+            },
+            {
+              "startTime": 17524.39999999944,
+              "duration": 107,
+              "timestamp": 17718.89999999944
+            },
+            {
+              "startTime": 17640,
+              "duration": 78,
+              "timestamp": 17718.89999999944
+            },
+            {
+              "startTime": 17718.89999999944,
+              "duration": 50,
+              "timestamp": 17839.699999999255
+            },
+            {
+              "startTime": 18068.39999999944,
+              "duration": 355,
+              "timestamp": 18474.699999999255
+            },
+            {
+              "startTime": 18423.89999999944,
+              "duration": 50,
+              "timestamp": 18474.699999999255
+            },
+            {
+              "startTime": 18478.299999999814,
+              "duration": 178,
+              "timestamp": 19034.89999999944
+            },
+            {
+              "startTime": 18657,
+              "duration": 132,
+              "timestamp": 19034.89999999944
+            },
+            {
+              "startTime": 18851.89999999944,
+              "duration": 173,
+              "timestamp": 19034.89999999944
+            },
+            {
+              "startTime": 19098.599999999627,
+              "duration": 237,
+              "timestamp": 19420.39999999944
+            },
+            {
+              "startTime": 19428.299999999814,
+              "duration": 58,
+              "timestamp": 19883.599999999627
+            },
+            {
+              "startTime": 19492.89999999944,
+              "duration": 369,
+              "timestamp": 19883.599999999627
+            },
+            {
+              "startTime": 19893,
+              "duration": 105,
+              "timestamp": 20409.099999999627
+            },
+            {
+              "startTime": 19998.5,
+              "duration": 341,
+              "timestamp": 20409.099999999627
+            },
+            {
+              "startTime": 21280.89999999944,
+              "duration": 172,
+              "timestamp": 21487.89999999944
+            },
+            {
+              "startTime": 21533.599999999627,
+              "duration": 97,
+              "timestamp": 21801.89999999944
+            },
+            {
+              "startTime": 21631.699999999255,
+              "duration": 81,
+              "timestamp": 21801.89999999944
+            },
+            {
+              "startTime": 21980,
+              "duration": 126,
+              "timestamp": 22256.599999999627
+            },
+            {
+              "startTime": 22384.5,
+              "duration": 77,
+              "timestamp": 22491.5
+            },
+            {
+              "startTime": 22880.199999999255,
+              "duration": 213,
+              "timestamp": 23436.799999999814
+            },
+            {
+              "startTime": 23280.39999999944,
+              "duration": 120,
+              "timestamp": 23436.799999999814
+            },
+            {
+              "startTime": 23458.199999999255,
+              "duration": 74,
+              "timestamp": 26864.799999999814
+            },
+            {
+              "startTime": 23875.299999999814,
+              "duration": 447,
+              "timestamp": 26864.799999999814
+            },
+            {
+              "startTime": 24323,
+              "duration": 1722,
+              "timestamp": 26864.799999999814
+            },
+            {
+              "startTime": 26430.799999999814,
+              "duration": 380,
+              "timestamp": 26864.799999999814
+            },
+            {
+              "startTime": 27890,
+              "duration": 465,
+              "timestamp": 32367.699999999255
+            },
+            {
+              "startTime": 28417.39999999944,
+              "duration": 152,
+              "timestamp": 32367.699999999255
+            },
+            {
+              "startTime": 28570.299999999814,
+              "duration": 510,
+              "timestamp": 32367.699999999255
+            },
+            {
+              "startTime": 29081,
+              "duration": 216,
+              "timestamp": 32367.699999999255
+            },
+            {
+              "startTime": 29298.099999999627,
+              "duration": 63,
+              "timestamp": 32367.699999999255
+            },
+            {
+              "startTime": 29373.39999999944,
+              "duration": 404,
+              "timestamp": 32367.699999999255
+            },
+            {
+              "startTime": 29778.299999999814,
+              "duration": 377,
+              "timestamp": 32367.699999999255
+            },
+            {
+              "startTime": 30155.599999999627,
+              "duration": 1783,
+              "timestamp": 32367.699999999255
+            },
+            {
+              "startTime": 31939.5,
+              "duration": 293,
+              "timestamp": 32367.699999999255
+            },
+            {
+              "startTime": 32379,
+              "duration": 416,
+              "timestamp": 38285.89999999944
+            },
+            {
+              "startTime": 32824.199999999255,
+              "duration": 81,
+              "timestamp": 38285.89999999944
+            },
+            {
+              "startTime": 32939.89999999944,
+              "duration": 106,
+              "timestamp": 38285.89999999944
+            },
+            {
+              "startTime": 33053.199999999255,
+              "duration": 91,
+              "timestamp": 38285.89999999944
+            },
+            {
+              "startTime": 33403.799999999814,
+              "duration": 3150,
+              "timestamp": 38285.89999999944
+            },
+            {
+              "startTime": 36554.39999999944,
+              "duration": 1396,
+              "timestamp": 38285.89999999944
+            },
+            {
+              "startTime": 37950.59999999963,
+              "duration": 399,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 38349.89999999944,
+              "duration": 178,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 38563.199999999255,
+              "duration": 2759,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 41423.39999999944,
+              "duration": 447,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 41870.699999999255,
+              "duration": 387,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 42258.09999999963,
+              "duration": 834,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 43131.09999999963,
+              "duration": 97,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 43228.299999999814,
+              "duration": 51,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 43279.799999999814,
+              "duration": 77,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 43356.799999999814,
+              "duration": 99,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 43494.5,
+              "duration": 127,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 43621.59999999963,
+              "duration": 489,
+              "timestamp": 44199.89999999944
+            },
+            {
+              "startTime": 44164.299999999814,
+              "duration": 56,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 44260,
+              "duration": 138,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 44400.799999999814,
+              "duration": 157,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 44569.09999999963,
+              "duration": 969,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 45709,
+              "duration": 231,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 46025.39999999944,
+              "duration": 239,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 46265.199999999255,
+              "duration": 768,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 47033.199999999255,
+              "duration": 232,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 47265.299999999814,
+              "duration": 2568,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 49849.89999999944,
+              "duration": 1911,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 51761.799999999814,
+              "duration": 1517,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 53279.299999999814,
+              "duration": 321,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 53600.799999999814,
+              "duration": 223,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 53824,
+              "duration": 282,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 54106,
+              "duration": 408,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 54514.39999999944,
+              "duration": 105,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 54619.5,
+              "duration": 196,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 54820.09999999963,
+              "duration": 660,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 55480.39999999944,
+              "duration": 705,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 56185.59999999963,
+              "duration": 419,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 56605.299999999814,
+              "duration": 91,
+              "timestamp": 56738.59999999963
+            },
+            {
+              "startTime": 56860.699999999255,
+              "duration": 780,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 57807.39999999944,
+              "duration": 592,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 58479.199999999255,
+              "duration": 229,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 58717.699999999255,
+              "duration": 719,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 59437.199999999255,
+              "duration": 1200,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 60637.799999999814,
+              "duration": 1561,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 62198.89999999944,
+              "duration": 1097,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 63338,
+              "duration": 3561,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 66899.5,
+              "duration": 752,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 67652.09999999963,
+              "duration": 4863,
+              "timestamp": 78436.29999999981
+            },
+            {
+              "startTime": 72636.39999999944,
+              "duration": 963,
+              "timestamp": 78436.39999999944
+            },
+            {
+              "startTime": 73599.69999999925,
+              "duration": 490,
+              "timestamp": 78436.39999999944
+            },
+            {
+              "startTime": 74090.29999999981,
+              "duration": 1238,
+              "timestamp": 78436.39999999944
+            },
+            {
+              "startTime": 75329.09999999963,
+              "duration": 301,
+              "timestamp": 78436.39999999944
+            },
+            {
+              "startTime": 75644.69999999925,
+              "duration": 201,
+              "timestamp": 78436.39999999944
+            },
+            {
+              "startTime": 75846.59999999963,
+              "duration": 151,
+              "timestamp": 78436.39999999944
+            },
+            {
+              "startTime": 75997.59999999963,
+              "duration": 148,
+              "timestamp": 78436.39999999944
+            },
+            {
+              "startTime": 76167.89999999944,
+              "duration": 858,
+              "timestamp": 78436.39999999944
+            },
+            {
+              "startTime": 77026,
+              "duration": 1259,
+              "timestamp": 78436.39999999944
+            },
+            {
+              "startTime": 78339.19999999925,
+              "duration": 180,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 78519.69999999925,
+              "duration": 168,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 79016.79999999981,
+              "duration": 1177,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 80194.09999999963,
+              "duration": 224,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 80419,
+              "duration": 249,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 80668.89999999944,
+              "duration": 223,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 80971.79999999981,
+              "duration": 953,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 81925.39999999944,
+              "duration": 454,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 82380.09999999963,
+              "duration": 875,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 83255.39999999944,
+              "duration": 213,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 83503.39999999944,
+              "duration": 1365,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 84869.29999999981,
+              "duration": 440,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 85309.29999999981,
+              "duration": 1149,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 86459.09999999963,
+              "duration": 758,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 87474.5,
+              "duration": 939,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 88414.19999999925,
+              "duration": 210,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 88624.69999999925,
+              "duration": 1346,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 89970.79999999981,
+              "duration": 597,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 90615.59999999963,
+              "duration": 1381,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 92176,
+              "duration": 744,
+              "timestamp": 92965.69999999925
+            },
+            {
+              "startTime": 92920.79999999981,
+              "duration": 226,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 93175.69999999925,
+              "duration": 888,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 94166.79999999981,
+              "duration": 201,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 94394.09999999963,
+              "duration": 82,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 94477,
+              "duration": 457,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 95111.09999999963,
+              "duration": 870,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 96236.59999999963,
+              "duration": 1278,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 97629.19999999925,
+              "duration": 726,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 98355.89999999944,
+              "duration": 1007,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 99363.5,
+              "duration": 388,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 99752.19999999925,
+              "duration": 856,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 100633.39999999944,
+              "duration": 626,
+              "timestamp": 122851.89999999944
+            },
+            {
+              "startTime": 101260.29999999981,
+              "duration": 2380,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 103759.29999999981,
+              "duration": 1423,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 105805.5,
+              "duration": 2049,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 108485.69999999925,
+              "duration": 1304,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 109842.39999999944,
+              "duration": 468,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 110310.59999999963,
+              "duration": 2131,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 112441.69999999925,
+              "duration": 973,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 113415.39999999944,
+              "duration": 948,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 114378.29999999981,
+              "duration": 3245,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 117623.5,
+              "duration": 5137,
+              "timestamp": 122853.59999999963
+            },
+            {
+              "startTime": 122761.29999999981,
+              "duration": 200,
+              "timestamp": 124756.69999999925
+            },
+            {
+              "startTime": 122961.79999999981,
+              "duration": 90,
+              "timestamp": 124769.29999999981
+            },
+            {
+              "startTime": 123096.89999999944,
+              "duration": 92,
+              "timestamp": 124769.29999999981
+            },
+            {
+              "startTime": 123278,
+              "duration": 78,
+              "timestamp": 124769.29999999981
+            },
+            {
+              "startTime": 123421.69999999925,
+              "duration": 243,
+              "timestamp": 124769.29999999981
+            },
+            {
+              "startTime": 123665.5,
+              "duration": 778,
+              "timestamp": 124769.29999999981
+            },
+            {
+              "startTime": 124445.09999999963,
+              "duration": 269,
+              "timestamp": 124769.29999999981
+            },
+            {
+              "startTime": 124915.19999999925,
+              "duration": 432,
+              "timestamp": 125873.79999999981
+            },
+            {
+              "startTime": 125347.39999999944,
+              "duration": 447,
+              "timestamp": 125873.79999999981
+            },
+            {
+              "startTime": 126118.79999999981,
+              "duration": 63,
+              "timestamp": 126292
+            },
+            {
+              "startTime": 126891.29999999981,
+              "duration": 69,
+              "timestamp": 126964.59999999963
+            },
+            {
+              "startTime": 127807.59999999963,
+              "duration": 114,
+              "timestamp": 128038.5
+            },
+            {
+              "startTime": 127922,
+              "duration": 93,
+              "timestamp": 128038.5
+            },
+            {
+              "startTime": 128039.19999999925,
+              "duration": 617,
+              "timestamp": 131058
+            },
+            {
+              "startTime": 128656.79999999981,
+              "duration": 1038,
+              "timestamp": 131058
+            },
+            {
+              "startTime": 129758.79999999981,
+              "duration": 66,
+              "timestamp": 131058
+            },
+            {
+              "startTime": 129825.19999999925,
+              "duration": 62,
+              "timestamp": 131058
+            },
+            {
+              "startTime": 129887.69999999925,
+              "duration": 729,
+              "timestamp": 131058
+            },
+            {
+              "startTime": 130629,
+              "duration": 363,
+              "timestamp": 131058
+            }
+          ],
+          "totalBlockingTime": 97111,
+          "longTaskCount": 163,
+          "navigationStart": 1761785914248,
+          "domContentLoaded": 17530.700000000186,
+          "loadComplete": 17578.5,
+          "canvasCount": 147,
+          "measurementDuration": 26139,
+          "paintEvents": [
+            {
+              "name": "first-paint",
+              "startTime": 12843.199999999255,
+              "duration": 0
+            },
+            {
+              "name": "first-contentful-paint",
+              "startTime": 12843.199999999255,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "url": "http://nextjs:3000/feedback/4?version=raf",
+      "shortName": "raf",
+      "results": []
+    },
+    "raf-windowing": {
+      "name": "RAF Windowing (점진적 마운트)",
+      "url": "http://nextjs:3000/feedback/4?version=raf-windowing",
+      "shortName": "raf-windowing",
+      "results": []
+    },
+    "lazy": {
+      "name": "Lazy (지연된 getPage)",
+      "url": "http://nextjs:3000/feedback/4?version=lazy",
+      "shortName": "lazy",
+      "results": []
+    },
+    "opt1-raf": {
+      "name": "Opt1: RAF 페인트 안정화",
+      "url": "http://nextjs:3000/feedback/4?version=opt1-raf",
+      "shortName": "opt1-raf",
+      "results": []
+    },
+    "opt2-callback-ref": {
+      "name": "Opt2: Callback Ref 패턴",
+      "url": "http://nextjs:3000/feedback/4?version=opt2-callback-ref",
+      "shortName": "opt2-callback-ref",
+      "results": []
+    },
+    "opt3-combined": {
+      "name": "Opt3: Combined (RAF + Callback)",
+      "url": "http://nextjs:3000/feedback/4?version=opt3-combined",
+      "shortName": "opt3-combined",
+      "results": []
+    },
+    "opt4-scheduler": {
+      "name": "Opt4: RenderScheduler (K=4)",
+      "url": "http://nextjs:3000/feedback/4?version=opt4-scheduler",
+      "shortName": "opt4-scheduler",
+      "results": []
+    },
+    "opt5-raf-batching": {
+      "name": "Opt5: RAF 배칭",
+      "url": "http://nextjs:3000/feedback/4?version=opt5-raf-batching",
+      "shortName": "opt5-raf-batching",
+      "results": []
+    },
+    "opt6-priority": {
+      "name": "Opt6: 우선순위 정렬",
+      "url": "http://nextjs:3000/feedback/4?version=opt6-priority",
+      "shortName": "opt6-priority",
+      "results": []
+    },
+    "opt7-all-scheduling": {
+      "name": "Opt7: 전체 스케줄링",
+      "url": "http://nextjs:3000/feedback/4?version=opt7-all-scheduling",
+      "shortName": "opt7-all-scheduling",
+      "results": []
+    }
+  },
+  "statistics": {
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "count": 1,
+      "firstPageRenderTime": {
+        "avg": 65199.299999999814,
+        "min": 65199.299999999814,
+        "max": 65199.299999999814
+      },
+      "totalBlockingTime": {
+        "avg": 97111,
+        "min": 97111,
+        "max": 97111
+      },
+      "longTaskCount": {
+        "avg": 163,
+        "min": 163,
+        "max": 163
+      },
+      "firstContentfulPaint": {
+        "avg": 12843.199999999255,
+        "min": 12843.199999999255,
+        "max": 12843.199999999255
+      },
+      "largestContentfulPaint": {
+        "avg": 14065.899999999441,
+        "min": 14065.899999999441,
+        "max": 14065.899999999441
+      }
+    }
+  }
+}

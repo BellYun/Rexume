@@ -1,0 +1,145 @@
+{
+  "timestamp": "2025-10-29T16:03:04.830Z",
+  "config": {
+    "cpuThrottle": 4,
+    "runsPerUrl": 5,
+    "headless": true,
+    "testUrls": [
+      {
+        "url": "http://localhost:3000/feedback-basic/4",
+        "name": "Basic (개선 전)",
+        "shortName": "basic"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=simple",
+        "name": "Simple (IntersectionObserver)",
+        "shortName": "simple"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=raf",
+        "name": "RAF (requestAnimationFrame)",
+        "shortName": "raf"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+        "name": "RAF Windowing (점진적 마운트)",
+        "shortName": "raf-windowing"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=lazy",
+        "name": "Lazy (지연된 getPage)",
+        "shortName": "lazy"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt1-raf",
+        "name": "Opt1: RAF 페인트 안정화",
+        "shortName": "opt1-raf"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt2-callback-ref",
+        "name": "Opt2: Callback Ref 패턴",
+        "shortName": "opt2-callback-ref"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt3-combined",
+        "name": "Opt3: Combined (RAF + Callback)",
+        "shortName": "opt3-combined"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt4-scheduler",
+        "name": "Opt4: RenderScheduler (K=4)",
+        "shortName": "opt4-scheduler"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt5-raf-batching",
+        "name": "Opt5: RAF 배칭",
+        "shortName": "opt5-raf-batching"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt6-priority",
+        "name": "Opt6: 우선순위 정렬",
+        "shortName": "opt6-priority"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=opt7-all-scheduling",
+        "name": "Opt7: 전체 스케줄링",
+        "shortName": "opt7-all-scheduling"
+      }
+    ]
+  },
+  "results": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "url": "http://localhost:3000/feedback-basic/4",
+      "shortName": "basic",
+      "results": []
+    },
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "url": "http://localhost:3000/feedback/4?version=simple",
+      "shortName": "simple",
+      "results": []
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "url": "http://localhost:3000/feedback/4?version=raf",
+      "shortName": "raf",
+      "results": []
+    },
+    "raf-windowing": {
+      "name": "RAF Windowing (점진적 마운트)",
+      "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+      "shortName": "raf-windowing",
+      "results": []
+    },
+    "lazy": {
+      "name": "Lazy (지연된 getPage)",
+      "url": "http://localhost:3000/feedback/4?version=lazy",
+      "shortName": "lazy",
+      "results": []
+    },
+    "opt1-raf": {
+      "name": "Opt1: RAF 페인트 안정화",
+      "url": "http://localhost:3000/feedback/4?version=opt1-raf",
+      "shortName": "opt1-raf",
+      "results": []
+    },
+    "opt2-callback-ref": {
+      "name": "Opt2: Callback Ref 패턴",
+      "url": "http://localhost:3000/feedback/4?version=opt2-callback-ref",
+      "shortName": "opt2-callback-ref",
+      "results": []
+    },
+    "opt3-combined": {
+      "name": "Opt3: Combined (RAF + Callback)",
+      "url": "http://localhost:3000/feedback/4?version=opt3-combined",
+      "shortName": "opt3-combined",
+      "results": []
+    },
+    "opt4-scheduler": {
+      "name": "Opt4: RenderScheduler (K=4)",
+      "url": "http://localhost:3000/feedback/4?version=opt4-scheduler",
+      "shortName": "opt4-scheduler",
+      "results": []
+    },
+    "opt5-raf-batching": {
+      "name": "Opt5: RAF 배칭",
+      "url": "http://localhost:3000/feedback/4?version=opt5-raf-batching",
+      "shortName": "opt5-raf-batching",
+      "results": []
+    },
+    "opt6-priority": {
+      "name": "Opt6: 우선순위 정렬",
+      "url": "http://localhost:3000/feedback/4?version=opt6-priority",
+      "shortName": "opt6-priority",
+      "results": []
+    },
+    "opt7-all-scheduling": {
+      "name": "Opt7: 전체 스케줄링",
+      "url": "http://localhost:3000/feedback/4?version=opt7-all-scheduling",
+      "shortName": "opt7-all-scheduling",
+      "results": []
+    }
+  },
+  "statistics": {}
+}

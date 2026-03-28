@@ -1,0 +1,57 @@
+{
+  "timestamp": "2025-10-29T15:06:38.024Z",
+  "config": {
+    "cpuThrottle": 4,
+    "runsPerUrl": 5,
+    "headless": true,
+    "testUrls": [
+      {
+        "url": "http://localhost:3000/feedback-basic/4",
+        "name": "Basic (개선 전)",
+        "shortName": "basic"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=simple",
+        "name": "Simple (IntersectionObserver)",
+        "shortName": "simple"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=raf",
+        "name": "RAF (requestAnimationFrame)",
+        "shortName": "raf"
+      },
+      {
+        "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+        "name": "RAF Windowing (점진적 마운트)",
+        "shortName": "raf-windowing"
+      }
+    ]
+  },
+  "results": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "url": "http://localhost:3000/feedback-basic/4",
+      "shortName": "basic",
+      "results": []
+    },
+    "simple": {
+      "name": "Simple (IntersectionObserver)",
+      "url": "http://localhost:3000/feedback/4?version=simple",
+      "shortName": "simple",
+      "results": []
+    },
+    "raf": {
+      "name": "RAF (requestAnimationFrame)",
+      "url": "http://localhost:3000/feedback/4?version=raf",
+      "shortName": "raf",
+      "results": []
+    },
+    "raf-windowing": {
+      "name": "RAF Windowing (점진적 마운트)",
+      "url": "http://localhost:3000/feedback/4?version=raf-windowing",
+      "shortName": "raf-windowing",
+      "results": []
+    }
+  },
+  "statistics": {}
+}
