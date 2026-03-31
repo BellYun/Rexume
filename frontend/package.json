@@ -24,7 +24,7 @@
     "date-fns": "^4.1.0",
     "decamelize-keys": "^2.0.1",
     "lucide-react": "^0.487.0",
-    "next": "^15.5.2",
+    "next": "^15.5.14",
     "pdfjs-dist": "3.11.174",
     "playwright": "^1.56.1",
     "puppeteer": "^24.24.1",

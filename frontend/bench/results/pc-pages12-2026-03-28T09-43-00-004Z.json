@@ -1,0 +1,231 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (메인스레드)",
+      "shortName": "basic",
+      "page1Render": {
+        "avg": 5162,
+        "min": 2542,
+        "max": 9733,
+        "median": 4626
+      },
+      "page2Render": {
+        "avg": 5162,
+        "min": 2542,
+        "max": 9733,
+        "median": 4626
+      },
+      "tbt": {
+        "avg": 1186,
+        "min": 966,
+        "max": 1346,
+        "median": 1210
+      },
+      "fcp": {
+        "avg": 2086,
+        "min": 288,
+        "max": 6736,
+        "median": 480
+      },
+      "longTaskCount": {
+        "avg": 6,
+        "min": 6,
+        "max": 7,
+        "median": 6
+      },
+      "longTaskMax": {
+        "avg": 717,
+        "min": 648,
+        "max": 808,
+        "median": 672
+      },
+      "loadComplete": {
+        "avg": 3408,
+        "min": 1295,
+        "max": 7545,
+        "median": 2400
+      },
+      "runs": 5
+    },
+    {
+      "version": "OffscreenCanvas Worker",
+      "shortName": "offscreen-worker",
+      "page1Render": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "page2Render": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "tbt": {
+        "avg": 665,
+        "min": 564,
+        "max": 742,
+        "median": 676
+      },
+      "fcp": {
+        "avg": 703,
+        "min": 244,
+        "max": 2428,
+        "median": 256
+      },
+      "longTaskCount": {
+        "avg": 3,
+        "min": 2,
+        "max": 4,
+        "median": 3
+      },
+      "longTaskMax": {
+        "avg": 714,
+        "min": 614,
+        "max": 788,
+        "median": 726
+      },
+      "loadComplete": {
+        "avg": 1601,
+        "min": 983,
+        "max": 3419,
+        "median": 1232
+      },
+      "runs": 5
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "tbt": 966,
+        "fcp": 6736,
+        "longTaskCount": 6,
+        "longTaskMax": 663,
+        "longTaskAvg": 228,
+        "loadComplete": 7545,
+        "page1Render": 9733,
+        "page2Render": 9733,
+        "version": "Basic (메인스레드)",
+        "run": 1
+      },
+      {
+        "tbt": 1261,
+        "fcp": 2628,
+        "longTaskCount": 7,
+        "longTaskMax": 792,
+        "longTaskAvg": 246,
+        "loadComplete": 4340,
+        "page1Render": 5943,
+        "page2Render": 5943,
+        "version": "Basic (메인스레드)",
+        "run": 2
+      },
+      {
+        "tbt": 1346,
+        "fcp": 480,
+        "longTaskCount": 7,
+        "longTaskMax": 808,
+        "longTaskAvg": 249,
+        "loadComplete": 2400,
+        "page1Render": 4626,
+        "page2Render": 4626,
+        "version": "Basic (메인스레드)",
+        "run": 3
+      },
+      {
+        "tbt": 1146,
+        "fcp": 288,
+        "longTaskCount": 6,
+        "longTaskMax": 648,
+        "longTaskAvg": 256,
+        "loadComplete": 1295,
+        "page1Render": 2542,
+        "page2Render": 2542,
+        "version": "Basic (메인스레드)",
+        "run": 4
+      },
+      {
+        "tbt": 1210,
+        "fcp": 300,
+        "longTaskCount": 6,
+        "longTaskMax": 672,
+        "longTaskAvg": 267,
+        "loadComplete": 1462,
+        "page1Render": 2965,
+        "page2Render": 2965,
+        "version": "Basic (메인스레드)",
+        "run": 5
+      }
+    ],
+    "offscreen-worker": [
+      {
+        "tbt": 742,
+        "fcp": 2428,
+        "longTaskCount": 4,
+        "longTaskMax": 788,
+        "longTaskAvg": 258,
+        "loadComplete": 3419,
+        "page1Render": null,
+        "page2Render": null,
+        "version": "OffscreenCanvas Worker",
+        "run": 1
+      },
+      {
+        "tbt": 710,
+        "fcp": 344,
+        "longTaskCount": 3,
+        "longTaskMax": 759,
+        "longTaskAvg": 309,
+        "loadComplete": 1276,
+        "page1Render": null,
+        "page2Render": null,
+        "version": "OffscreenCanvas Worker",
+        "run": 2
+      },
+      {
+        "tbt": 564,
+        "fcp": 244,
+        "longTaskCount": 2,
+        "longTaskMax": 614,
+        "longTaskAvg": 368,
+        "loadComplete": 983,
+        "page1Render": null,
+        "page2Render": null,
+        "version": "OffscreenCanvas Worker",
+        "run": 3
+      },
+      {
+        "tbt": 634,
+        "fcp": 244,
+        "longTaskCount": 3,
+        "longTaskMax": 682,
+        "longTaskAvg": 284,
+        "loadComplete": 1095,
+        "page1Render": null,
+        "page2Render": null,
+        "version": "OffscreenCanvas Worker",
+        "run": 4
+      },
+      {
+        "tbt": 676,
+        "fcp": 256,
+        "longTaskCount": 2,
+        "longTaskMax": 726,
+        "longTaskAvg": 428,
+        "loadComplete": 1232,
+        "page1Render": null,
+        "page2Render": null,
+        "version": "OffscreenCanvas Worker",
+        "run": 5
+      }
+    ]
+  },
+  "meta": {
+    "runs": 5,
+    "cpuThrottle": 4,
+    "viewport": "1920x1080",
+    "pdfUrl": "/sample4.pdf",
+    "timestamp": "2026-03-28T09:43:00.005Z"
+  }
+}

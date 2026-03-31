@@ -11,6 +11,25 @@
  * ImageBitmap은 transferable로 전송 → 복사 없이 GPU 메모리 직접 이동
  */
 
+// pdfjs-dist가 window.location, document.createElement 등을 참조하므로
+// import 전에 폴리필 필요
+const _self = self as unknown as Record<string, unknown>;
+_self.window = self;
+const noop = () => {};
+const fakeEl = () => ({
+  getContext: () => null, appendChild: noop, removeChild: noop,
+  setAttribute: noop, getAttribute: () => null, style: {},
+  classList: { add: noop, remove: noop, contains: () => false },
+  children: [], childNodes: [], querySelectorAll: () => [], querySelector: () => null,
+});
+_self.document = {
+  createElement: fakeEl, createElementNS: fakeEl,
+  currentScript: { src: '' }, head: fakeEl(), body: fakeEl(),
+  documentElement: fakeEl(), querySelectorAll: () => [],
+  querySelector: () => null, getElementById: () => null,
+  addEventListener: noop, removeEventListener: noop,
+};
+
 import { GlobalWorkerOptions, getDocument } from 'pdfjs-dist/build/pdf';
 import type { PDFDocumentProxy, PDFPageProxy } from 'pdfjs-dist';
 
@@ -33,11 +52,13 @@ self.addEventListener('message', async (e: MessageEvent) => {
   if (type === 'load') {
     if (!url) return;
     try {
+      const origin = self.location.origin;
       pdfDoc = await getDocument({
         url,
-        cMapUrl: '/api/pdfjs/cmaps/',
+        cMapUrl: `${origin}/api/pdfjs/cmaps/`,
         cMapPacked: true,
-        standardFontDataUrl: '/api/pdfjs/fonts/',
+        standardFontDataUrl: `${origin}/api/pdfjs/fonts/`,
+        disableFontFace: true,
       }).promise;
       pageCache.clear();
       self.postMessage({ type: 'loaded', numPages: pdfDoc.numPages });

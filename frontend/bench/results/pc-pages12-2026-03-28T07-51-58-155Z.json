@@ -1,0 +1,215 @@
+{
+  "summaries": [
+    {
+      "version": "Basic (메인스레드)",
+      "shortName": "basic",
+      "page1Render": {
+        "avg": 3575,
+        "min": 2533,
+        "max": 5991,
+        "median": 2909
+      },
+      "page2Render": {
+        "avg": 9773,
+        "min": 8150,
+        "max": 14701,
+        "median": 8438
+      },
+      "tbt": {
+        "avg": 1339,
+        "min": 679,
+        "max": 1577,
+        "median": 1454
+      },
+      "fcp": {
+        "avg": 935,
+        "min": 232,
+        "max": 2776,
+        "median": 268
+      },
+      "longTaskCount": {
+        "avg": 8,
+        "min": 7,
+        "max": 9,
+        "median": 8
+      },
+      "longTaskMax": {
+        "avg": 769,
+        "min": 722,
+        "max": 819,
+        "median": 767
+      },
+      "loadComplete": {
+        "avg": 1707,
+        "min": 1012,
+        "max": 2750,
+        "median": 1400
+      },
+      "runs": 5
+    },
+    {
+      "version": "OffscreenCanvas Worker",
+      "shortName": "offscreen-worker",
+      "page1Render": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "page2Render": {
+        "avg": 0,
+        "min": 0,
+        "max": 0,
+        "median": 0
+      },
+      "tbt": {
+        "avg": 681,
+        "min": 634,
+        "max": 707,
+        "median": 702
+      },
+      "fcp": {
+        "avg": 588,
+        "min": 220,
+        "max": 1236,
+        "median": 308
+      },
+      "longTaskCount": {
+        "avg": 2,
+        "min": 2,
+        "max": 3,
+        "median": 2
+      },
+      "longTaskMax": {
+        "avg": 730,
+        "min": 684,
+        "max": 755,
+        "median": 752
+      },
+      "loadComplete": {
+        "avg": 1410,
+        "min": 1041,
+        "max": 2127,
+        "median": 1061
+      },
+      "runs": 3
+    }
+  ],
+  "allResults": {
+    "basic": [
+      {
+        "tbt": 679,
+        "fcp": 2776,
+        "page1Render": 5991,
+        "page2Render": 14701,
+        "pagesRendered": 317,
+        "longTaskCount": 7,
+        "longTaskMax": 767,
+        "longTaskAvg": 263,
+        "loadComplete": 2750,
+        "version": "Basic (메인스레드)",
+        "run": 1
+      },
+      {
+        "tbt": 1413,
+        "fcp": 1168,
+        "page1Render": 3788,
+        "page2Render": 9283,
+        "pagesRendered": 317,
+        "longTaskCount": 8,
+        "longTaskMax": 819,
+        "longTaskAvg": 238,
+        "loadComplete": 2128,
+        "version": "Basic (메인스레드)",
+        "run": 2
+      },
+      {
+        "tbt": 1454,
+        "fcp": 232,
+        "page1Render": 2533,
+        "page2Render": 8438,
+        "pagesRendered": 317,
+        "longTaskCount": 9,
+        "longTaskMax": 722,
+        "longTaskAvg": 220,
+        "loadComplete": 1012,
+        "version": "Basic (메인스레드)",
+        "run": 3
+      },
+      {
+        "tbt": 1577,
+        "fcp": 268,
+        "page1Render": 2653,
+        "page2Render": 8150,
+        "pagesRendered": 317,
+        "longTaskCount": 8,
+        "longTaskMax": 770,
+        "longTaskAvg": 257,
+        "loadComplete": 1246,
+        "version": "Basic (메인스레드)",
+        "run": 4
+      },
+      {
+        "tbt": 1570,
+        "fcp": 232,
+        "page1Render": 2909,
+        "page2Render": 8291,
+        "pagesRendered": 317,
+        "longTaskCount": 9,
+        "longTaskMax": 765,
+        "longTaskAvg": 228,
+        "loadComplete": 1400,
+        "version": "Basic (메인스레드)",
+        "run": 5
+      }
+    ],
+    "offscreen-worker": [
+      {
+        "tbt": 707,
+        "fcp": 1236,
+        "page1Render": null,
+        "page2Render": null,
+        "pagesRendered": 0,
+        "longTaskCount": 3,
+        "longTaskMax": 755,
+        "longTaskAvg": 311,
+        "loadComplete": 2127,
+        "version": "OffscreenCanvas Worker",
+        "run": 1
+      },
+      {
+        "tbt": 702,
+        "fcp": 220,
+        "page1Render": null,
+        "page2Render": null,
+        "pagesRendered": 0,
+        "longTaskCount": 2,
+        "longTaskMax": 752,
+        "longTaskAvg": 436,
+        "loadComplete": 1041,
+        "version": "OffscreenCanvas Worker",
+        "run": 2
+      },
+      {
+        "tbt": 634,
+        "fcp": 308,
+        "page1Render": null,
+        "page2Render": null,
+        "pagesRendered": 0,
+        "longTaskCount": 2,
+        "longTaskMax": 684,
+        "longTaskAvg": 406,
+        "loadComplete": 1061,
+        "version": "OffscreenCanvas Worker",
+        "run": 3
+      }
+    ]
+  },
+  "meta": {
+    "runs": 5,
+    "cpuThrottle": 4,
+    "viewport": "1920x1080",
+    "pdfUrl": "/sample4.pdf",
+    "timestamp": "2026-03-28T07:51:58.157Z"
+  }
+}

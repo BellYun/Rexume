@@ -96,7 +96,9 @@ export default function PDFViewer({ url }: PDFViewerProps) {
       rafIdRef.current = null;
     }
 
-    workerRef.current.postMessage({ type: "load", url });
+    // Worker 내부에서 상대경로 해석 불가 → 절대 URL 변환
+    const absUrl = url.startsWith("http") ? url : `${window.location.origin}${url}`;
+    workerRef.current.postMessage({ type: "load", url: absUrl });
   }, [url]);
 
   // ── RAF 배칭 flush ────────────────────────────────────────────────────
