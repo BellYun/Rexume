@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-03-03T12:54:55.625Z",
+  "settings": {
+    "CPU_THROTTLE": 4,
+    "RUNS": 3,
+    "SCROLL_STEPS": 15
+  },
+  "allResults": {
+    "basic": {
+      "name": "Basic (개선 전)",
+      "runs": []
+    },
+    "raf": {
+      "name": "RAF + Scheduler",
+      "runs": []
+    },
+    "optimized": {
+      "name": "True Windowing (최적화)",
+      "runs": []
+    }
+  }
+}
