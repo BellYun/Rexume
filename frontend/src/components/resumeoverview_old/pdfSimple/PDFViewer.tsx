@@ -245,8 +245,9 @@ const PDFViewer = ({
   return (
     <div
       style={{
-        width: 1200,
-        margin: "auto",
+        maxWidth: 1200,
+        width: "100%",
+        margin: "0 auto",
         overflowY: "auto",
         maxHeight: "90vh",
       }}
