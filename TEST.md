@@ -1,6 +1,6 @@
 # PDF Canvas Memory Optimization
 
-Next.js 기반 이력서 피드백 서비스에서 대용량 PDF 결과 화면의 브라우저 메모리 압박을 줄이는 방향으로 정리했다. 핵심은 PDF.js 자체를 빠르게 만드는 것이 아니라, **보이지 않는 페이지의 canvas 픽셀 버퍼를 유지하지 않도록 하는 것**이다.
+Next.js 기반 이력서 피드백 서비스에서 대용량 PDF 결과 화면의 브라우저 메모리 압박을 줄이는 방향으로 정리했다. 핵심은 PDF.js 자체를 빠르게 만드는 것이 아니라, **보이지 않는 페이지의 canvas 픽셀 버퍼를 계속 유지하지 않도록 하는 것**이다.
 
 ## 문제
 
@@ -12,9 +12,11 @@ Next.js 기반 이력서 피드백 서비스에서 대용량 PDF 결과 화면�
 ))}
 ```
 
-각 페이지는 mount 직후 `pdf.getPage()`와 `page.render()`를 실행하고, scale 1 canvas를 만든다. 화면에는 1-2페이지만 보여도 나머지 페이지의 canvas 픽셀 버퍼가 함께 유지되는 구조다.
+각 페이지는 mount 직후 `pdf.getPage()`와 `page.render()`를 실행하고, render scale 2 기준 canvas를 만든다. 화면에는 1-2페이지만 보여도 나머지 페이지의 canvas 픽셀 버퍼가 함께 유지되는 구조다.
 
-이 문서에서 사용하는 canvas memory는 Chrome 프로세스 전체 메모리가 아니다. canvas 픽셀 버퍼의 상대적인 변화를 비교하기 위해 `canvas.width * canvas.height * 4`로 계산한 추정 지표다. 실제 브라우저 메모리는 GPU 텍스처, 임시 버퍼, 메모리 풀링 등에 따라 달라질 수 있다.
+배포 환경에서 50페이지 포트폴리오 PDF를 확인했을 때, 최적화 전 결과 화면은 Chrome 메모리 사용량이 약 2.7GB까지 증가했다. viewport windowing과 최근 5페이지 LRU 캐시, canvas size reset을 적용한 뒤에는 동일 시나리오에서 약 298MB 수준으로 내려갔다. 대표 관측값 기준으로 약 89.0% 감소다.
+
+이 문서에서 사용하는 canvas memory는 Chrome 프로세스 전체 메모리가 아니다. canvas 픽셀 버퍼의 상대적인 변화를 비교하기 위해 `canvas.width * canvas.height * 4`로 계산한 추정 지표다. 실제 브라우저 메모리는 GPU 텍스처, 임시 버퍼, 메모리 풀링 등에 따라 달라질 수 있다. 따라서 `2.7GB -> 298MB`는 실제 Chrome 메모리 관측값, `1287.5MB -> 51.5MB`는 원인을 설명하기 위한 canvas 픽셀 버퍼 추정값으로 분리해서 본다.
 
 ## 개선
 
@@ -72,6 +74,13 @@ const releaseCanvas = useCallback((resetState = true) => {
 
 - 결과 파일: `frontend/bench/results/pdfjs-render-task-deep-dive-2026-07-13T01-47-52-791Z.json`
 
+배포 환경 수동 관측:
+
+| 버전 | Chrome 메모리 관측값 | 변화 |
+| ---- | -------------------: | ---: |
+| Basic eager PDF.js | 약 2.7GB | 기준 |
+| Viewport Memory + LRU PDF.js | 약 298MB | 약 89.0% 감소 |
+
 | 버전 | 초기 canvas | 초기 offscreen canvas | 초기 canvas 추정값 | offscreen canvas 추정값 | peak canvas 추정값 | 대표 canvas |
 | ---- | ----------: | --------------------: | ------------------: | ----------------------: | -----------------: | ----------: |
 | Basic eager PDF.js | 50 | 49 | 1287.5MB | 1261.7MB | 1287.5MB | 2250x3000 |
@@ -80,6 +89,7 @@ const releaseCanvas = useCallback((resetState = true) => {
 
 개선폭:
 
+- 배포 환경 Chrome 메모리 관측값: 약 2.7GB -> 298MB, 약 89.0% 감소
 - Basic eager와 Cleanup Only는 초기 canvas 픽셀 버퍼 추정값이 동일했다: 1287.5MB
 - Cleanup Only 대비 Viewport Memory 초기 canvas 픽셀 버퍼 추정값: 1287.5MB -> 51.5MB, 약 96.0% 감소
 - Cleanup Only 대비 offscreen canvas 픽셀 버퍼 추정값: 1261.7MB -> 25.7MB, 약 98.0% 감소
@@ -105,8 +115,8 @@ Chrome RSS는 정확한 탭 단위 메모리는 아니며, 테스트마다 새�
 
 이 작업은 "PDF.js 자체를 빠르게 만들었다"가 아니다. 더 정확한 설명은 다음과 같다.
 
-> 대용량 PDF 결과 화면에서 보이지 않는 페이지까지 canvas 픽셀 버퍼를 유지하던 구조를 개선했습니다. 기본 cleanup만 적용한 비교군에서는 초기 canvas 픽셀 버퍼가 1287.5MB로 유지되는 것을 확인했고, `IntersectionObserver`로 viewport 주변 페이지만 렌더링한 뒤 최근 5페이지 LRU에서 밀린 페이지는 `RenderTask.cancel()`과 canvas size reset으로 픽셀 버퍼를 회수했습니다. 50페이지 PDF 기준 초기 canvas 픽셀 버퍼 추정값을 1287.5MB에서 51.5MB로 96.0% 줄였고, Chrome 프로세스 RSS 증가량도 1516.2MB에서 244.0MB로 감소했습니다.
+> 대용량 PDF 결과 화면에서 보이지 않는 페이지까지 canvas 픽셀 버퍼를 유지하던 구조를 개선했습니다. 기본 cleanup만 적용한 비교군에서는 초기 canvas 픽셀 버퍼가 1287.5MB로 유지되는 것을 확인했고, `IntersectionObserver`로 viewport 주변 페이지만 렌더링한 뒤 최근 5페이지 LRU에서 밀린 페이지는 `RenderTask.cancel()`과 canvas size reset으로 픽셀 버퍼를 회수했습니다. 50페이지 PDF 기준 배포 환경 Chrome 메모리 관측값은 약 2.7GB에서 298MB로 줄었고, 내부 원인 지표인 초기 canvas 픽셀 버퍼 추정값은 1287.5MB에서 51.5MB로 감소했습니다.
 
 이력서 문장:
 
-> PDF.js 기반 이력서/포트폴리오 결과 화면에서 전체 페이지 canvas가 한 번에 유지되어 메모리 압박이 커지는 문제를 확인했습니다. `RenderTask.cancel()`과 `page.cleanup()`만 적용한 비교군으로 기본 cleanup의 한계를 확인한 뒤, `IntersectionObserver` 기반 viewport render, 최근 5페이지 LRU 캐시, canvas size reset을 적용해 화면 밖 canvas 픽셀 버퍼를 회수했습니다. Puppeteer 벤치마크에서 50페이지 PDF 기준 초기 canvas 픽셀 버퍼 추정값을 1287.5MB에서 51.5MB로 줄이고, Chrome 프로세스 RSS 증가량을 1516.2MB에서 244.0MB로 줄였습니다.
+> PDF.js 기반 이력서/포트폴리오 결과 화면에서 전체 50페이지 canvas를 eager하게 유지해 Chrome 메모리 사용량이 약 2.7GB까지 증가하는 문제를 확인했습니다. `RenderTask.cancel()`과 `page.cleanup()`만 적용한 비교군으로 기본 cleanup의 한계를 확인한 뒤, `IntersectionObserver` 기반 viewport render, 최근 5페이지 LRU 캐시, canvas size reset을 적용해 동일 시나리오의 Chrome 메모리 사용량을 약 298MB 수준으로 낮췄습니다.

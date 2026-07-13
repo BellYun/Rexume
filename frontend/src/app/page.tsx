@@ -21,6 +21,7 @@ const routes = [
     label: "baseline",
     summary: "전체 50페이지를 진입 시점에 canvas로 유지",
     metrics: {
+      memory: "2.7GB",
       canvas: "1287.5MB",
       offscreen: "1261.7MB",
       count: "50",
@@ -35,6 +36,7 @@ const routes = [
     label: "control",
     summary: "RenderTask.cancel + page.cleanup만 적용",
     metrics: {
+      memory: "eager 유지",
       canvas: "1287.5MB",
       offscreen: "1261.7MB",
       count: "50",
@@ -49,6 +51,7 @@ const routes = [
     label: "optimized",
     summary: "viewport render + 최근 5페이지 canvas cache",
     metrics: {
+      memory: "298MB",
       canvas: "51.5MB",
       offscreen: "25.7MB",
       count: "2 / peak 5",
@@ -58,6 +61,13 @@ const routes = [
 ];
 
 const metricRows = [
+  {
+    metric: "Chrome 메모리 관측값",
+    basic: "약 2.7GB",
+    cleanup: "동일 eager 구조",
+    optimized: "약 298MB",
+    result: "89.0% 감소",
+  },
   {
     metric: "초기 canvas 추정값",
     basic: "1287.5MB",
@@ -138,9 +148,9 @@ export default function Page() {
                 ReXume PDF Viewer
               </h1>
               <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-                전체 PDF 페이지를 eager하게 canvas로 유지하던 구조를
-                viewport 기반 렌더링, canvas backing store 해제, 최근 페이지
-                LRU 캐시로 비교합니다.
+                전체 PDF 페이지를 eager하게 canvas로 유지해 Chrome 메모리가
+                약 2.7GB까지 증가하던 구조를 viewport 기반 렌더링, canvas
+                backing store 해제, 최근 페이지 LRU 캐시로 비교합니다.
               </p>
             </div>
             <div className="rounded border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700">
@@ -156,7 +166,7 @@ export default function Page() {
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 화면에는 1-2페이지만 보이지만 50페이지 canvas backing store가
-                모두 유지되어 초기 진입과 프레임 안정성이 나빠졌습니다.
+                모두 유지되어 Chrome 메모리가 약 2.7GB까지 증가했습니다.
               </p>
             </div>
             <div className="rounded border border-slate-200 bg-slate-50 p-4">
@@ -176,7 +186,8 @@ export default function Page() {
               </div>
               <p className="mt-2 text-sm leading-6 text-cyan-950/80">
                 viewport 주변 페이지만 렌더링하고, 화면 밖 canvas는 최근
-                5페이지 LRU에서 밀릴 때 `width/height`를 0으로 reset했습니다.
+                5페이지 LRU에서 밀릴 때 `width/height`를 0으로 reset해 약
+                298MB 수준으로 낮췄습니다.
               </p>
             </div>
           </div>
@@ -214,15 +225,15 @@ export default function Page() {
                 </p>
                 <dl className="mt-4 grid grid-cols-2 gap-2 text-sm">
                   <div className="rounded border border-slate-100 bg-slate-50 p-2">
-                    <dt className="text-xs text-slate-500">초기 canvas</dt>
+                    <dt className="text-xs text-slate-500">Chrome 메모리</dt>
                     <dd className="mt-1 font-semibold text-slate-950">
-                      {route.metrics.canvas}
+                      {route.metrics.memory}
                     </dd>
                   </div>
                   <div className="rounded border border-slate-100 bg-slate-50 p-2">
-                    <dt className="text-xs text-slate-500">offscreen</dt>
+                    <dt className="text-xs text-slate-500">초기 canvas</dt>
                     <dd className="mt-1 font-semibold text-slate-950">
-                      {route.metrics.offscreen}
+                      {route.metrics.canvas}
                     </dd>
                   </div>
                   <div className="rounded border border-slate-100 bg-slate-50 p-2">
@@ -253,7 +264,8 @@ export default function Page() {
                   비교 결과
                 </h2>
                 <p className="mt-1 text-xs text-slate-500">
-                  canvas memory는 `width * height * 4` 기준 추정값입니다.
+                  Chrome 메모리는 배포 환경 관측값, canvas memory는 `width *
+                  height * 4` 기준 추정값입니다.
                 </p>
               </div>
               <Gauge className="h-5 w-5 text-slate-400" />
@@ -315,7 +327,7 @@ export default function Page() {
                 발생했습니다.
               </p>
               <p className="rounded border border-cyan-200 bg-cyan-50 p-3 font-semibold text-cyan-950">
-                대표 성과: 초기 canvas 1287.5MB → 51.5MB, Chrome RSS 증가량 +1516.2MB → +244.0MB
+                대표 성과: Chrome 메모리 2.7GB → 298MB, 초기 canvas 추정값 1287.5MB → 51.5MB
               </p>
             </div>
           </div>
