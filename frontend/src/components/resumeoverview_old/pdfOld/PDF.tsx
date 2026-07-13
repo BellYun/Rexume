@@ -7,6 +7,8 @@ import { FeedbackPoint } from "@/types/FeedbackPointType";
 import { GlobalWorkerOptions, getDocument, type PDFPageProxy, type PDFDocumentProxy, RenderTask } from "pdfjs-dist";
 
 
+const PAGE_RATIO = 1.414;
+const RENDER_SCALE = 2;
 
 interface PDFProps {
   pdf: PDFDocumentProxy;
@@ -70,7 +72,7 @@ const PDF: React.FC<PDFProps> = ({
       const page = await pdf.getPage(pageNumber);
       const t1 = performance.now();
       
-      const viewport = page.getViewport({ scale: 2, rotation: 0 });
+      const viewport = page.getViewport({ scale: RENDER_SCALE, rotation: 0 });
       const canvas = canvasRef.current!;
       const context = canvas.getContext("2d")!;
 
@@ -185,13 +187,22 @@ const PDF: React.FC<PDFProps> = ({
 
   return (
     <div
-      style={{ position: "relative", marginBottom: 20 }}
+      style={{
+        position: "relative",
+        margin: "0 auto 16px",
+        maxWidth: 900,
+        aspectRatio: `1 / ${PAGE_RATIO}`,
+        background: "#f3f4f6",
+      }}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
       {/* 캔버스 표시 */}
-      <canvas ref={canvasRef} style={{ display: "block" }} />
+      <canvas
+        ref={canvasRef}
+        style={{ display: "block", width: "100%", height: "100%" }}
+      />
       {/* 캔버스 표시 */}
 
 
