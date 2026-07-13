@@ -9,6 +9,9 @@ interface PDFPageProps {
   retainKey: string;
   isRetained: boolean;
   onPageActive: (pageNumber: number) => void;
+  onRenderStart: () => void;
+  onRenderSettled: () => void;
+  onCanvasReleased: () => void;
 }
 
 const PAGE_RATIO = 1.414;
@@ -28,6 +31,11 @@ declare global {
       releaseAborted: number;
       canvasReleased: number;
       cleanupCalls: number;
+      documentCleanupScheduled: number;
+      documentCleanupStarted: number;
+      documentCleanupCompleted: number;
+      documentCleanupSkipped: number;
+      documentCleanupFailed: number;
     };
   }
 }
@@ -46,6 +54,11 @@ function recordMetric(field: keyof NonNullable<Window["__pdfViewportMemoryMetric
     releaseAborted: 0,
     canvasReleased: 0,
     cleanupCalls: 0,
+    documentCleanupScheduled: 0,
+    documentCleanupStarted: 0,
+    documentCleanupCompleted: 0,
+    documentCleanupSkipped: 0,
+    documentCleanupFailed: 0,
   });
   metrics[field] += 1;
 }
@@ -56,6 +69,9 @@ export default function PDFPage({
   retainKey,
   isRetained,
   onPageActive,
+  onRenderStart,
+  onRenderSettled,
+  onCanvasReleased,
 }: PDFPageProps) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -93,13 +109,14 @@ export default function PDFPage({
       canvas.width = 0;
       canvas.height = 0;
       recordMetric("canvasReleased");
+      onCanvasReleased();
     }
 
     if (resetState) {
       renderedRef.current = false;
       setShouldRender(false);
     }
-  }, []);
+  }, [onCanvasReleased]);
 
   const hasCanvasResource = useCallback(() => {
     const canvas = canvasRef.current;
@@ -187,11 +204,15 @@ export default function PDFPage({
     if (!shouldRender || renderedRef.current || !canvasRef.current) return;
 
     let cancelled = false;
+    let pageWorkStarted = false;
     let page: PDFPageProxy | null = null;
     let task: RenderTask | null = null;
 
     (async () => {
       try {
+        onRenderStart();
+        pageWorkStarted = true;
+
         page = await pdf.getPage(pageNumber);
         if (cancelled || !canvasRef.current) return;
 
@@ -234,6 +255,10 @@ export default function PDFPage({
             // ignore cleanup error
           }
         }
+
+        if (pageWorkStarted) {
+          onRenderSettled();
+        }
       }
     })();
 
@@ -241,7 +266,15 @@ export default function PDFPage({
       cancelled = true;
       releaseCanvas(false);
     };
-  }, [onPageActive, pageNumber, pdf, releaseCanvas, shouldRender]);
+  }, [
+    onPageActive,
+    onRenderSettled,
+    onRenderStart,
+    pageNumber,
+    pdf,
+    releaseCanvas,
+    shouldRender,
+  ]);
 
   return (
     <div
