@@ -68,28 +68,35 @@ const PDF: React.FC<PDFProps> = ({
     const loadPage = async () => {
       const t0 = performance.now();
       console.log(`PDF 렌더링 시작 (페이지 ${pageNumber}): 0.00초`);
-      
-      const page = await pdf.getPage(pageNumber);
-      const t1 = performance.now();
-      
-      const viewport = page.getViewport({ scale: RENDER_SCALE, rotation: 0 });
-      const canvas = canvasRef.current!;
-      const context = canvas.getContext("2d")!;
 
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-
-      if (renderTaskRef.current) {
-        renderTaskRef.current.cancel();
-      }
-
-      renderTaskRef.current = page.render({
-        canvasContext: context,
-        viewport,
-      });
+      let page: PDFPageProxy | null = null;
+      let task: RenderTask | null = null;
 
       try {
-        await renderTaskRef.current.promise;
+        page = await pdf.getPage(pageNumber);
+        const t1 = performance.now();
+
+        if (cancelled || !canvasRef.current) return;
+
+        const viewport = page.getViewport({ scale: RENDER_SCALE, rotation: 0 });
+        const canvas = canvasRef.current;
+        const context = canvas.getContext("2d");
+        if (!context) return;
+
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        if (renderTaskRef.current) {
+          renderTaskRef.current.cancel();
+        }
+
+        task = page.render({
+          canvasContext: context,
+          viewport,
+        });
+        renderTaskRef.current = task;
+
+        await task.promise;
         const t2 = performance.now();
         
         if (cancelled) return;
@@ -108,8 +115,20 @@ const PDF: React.FC<PDFProps> = ({
           (window as any).pdfRenderMetricsCollector.add(metrics);
         }
       } catch (err: unknown) {
-        if (err instanceof Error && err.name !== "RenderingCancelledException") {
+        if (!cancelled && err instanceof Error && err.name !== "RenderingCancelledException") {
           console.error("PDF 렌더링 에러:", err);
+        }
+      } finally {
+        if (renderTaskRef.current === task) {
+          renderTaskRef.current = null;
+        }
+
+        if (page) {
+          try {
+            page.cleanup();
+          } catch {
+            // ignore cleanup error
+          }
         }
       }
     };

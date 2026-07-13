@@ -47,30 +47,46 @@ const PDFViewer = ({
 
   useEffect(() => {
     let cancelled = false;
+    let task: ReturnType<typeof getDocument> | null = null;
+    let loadedDoc: PDFDocumentProxy | null = null;
+
     setLoading(true);
 
     (async () => {
       if (!pdfSrc || typeof pdfSrc !== "string" || !pdfSrc.trim()) {
         setErr("PDF URL이 비어있습니다.");
+        setLoading(false);
         return;
       }
       try {
-        const task = getDocument({ url: pdfSrc });
+        task = getDocument({ url: pdfSrc });
         const loaded = await task.promise;
-        if (cancelled) return;
+        loadedDoc = loaded;
+
+        if (cancelled) {
+          await loaded.destroy();
+          return;
+        }
+
         setPdf(loaded);
         setNumPages(loaded.numPages);
       } catch (e: any) {
         if (cancelled) return;
         console.error("Failed to load PDF:", e);
         setErr("PDF 로딩에 실패했습니다.");
+      } finally {
+        if (!cancelled) setLoading(false);
       }
     })();
 
     return () => {
       cancelled = true;
-      setLoading(false);
+      if (loadedDoc) {
+        void loadedDoc.destroy().catch(() => {});
+        return;
+      }
 
+      void task?.destroy().catch(() => {});
     };
   }, [pdfSrc]);
 

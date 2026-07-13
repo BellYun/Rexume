@@ -29,6 +29,9 @@ export default function PDFViewer({ url }: PDFViewerProps) {
     if (!url?.trim()) return;
 
     let cancelled = false;
+    let task: ReturnType<typeof getDocument> | null = null;
+    let loadedDoc: PDFDocumentProxy | null = null;
+
     setLoading(true);
     setError(null);
     setPdf(null);
@@ -37,14 +40,19 @@ export default function PDFViewer({ url }: PDFViewerProps) {
     (async () => {
       try {
         ensureWorker();
-        const task = getDocument({
+        task = getDocument({
           url,
           cMapUrl: "/api/pdfjs/cmaps/",
           cMapPacked: true,
           standardFontDataUrl: "/api/pdfjs/fonts/",
         });
         const doc = await task.promise;
-        if (cancelled) return;
+        loadedDoc = doc;
+
+        if (cancelled) {
+          await doc.destroy();
+          return;
+        }
 
         setPdf(doc);
         setNumPages(doc.numPages);
@@ -59,6 +67,12 @@ export default function PDFViewer({ url }: PDFViewerProps) {
 
     return () => {
       cancelled = true;
+      if (loadedDoc) {
+        void loadedDoc.destroy().catch(() => {});
+        return;
+      }
+
+      void task?.destroy().catch(() => {});
     };
   }, [url]);
 
