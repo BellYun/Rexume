@@ -16,6 +16,14 @@
 약 9.1배 적은 메모리 사용
 ```
 
+Chrome Task Manager에서 단일 worker/process 기준으로도 메모리 차이를 확인했습니다.
+
+```text
+1,488,704K -> 295,700K
+약 80.1% 감소
+약 5.0배 적은 메모리 사용
+```
+
 기존 eager 렌더링 구조는 PDF 로드 직후 모든 페이지 컴포넌트를 생성하고, 각 페이지에서 `pdf.getPage()`와 `page.render()`를 실행합니다.
 
 ```tsx
@@ -57,9 +65,13 @@
 - 최근 본 페이지 최대 5개는 canvas backing store를 유지
 - LRU 캐시에서 밀린 화면 밖 페이지의 진행 중인 `RenderTask` 취소
 - LRU 캐시에서 밀린 canvas의 `width` / `height`를 `0`으로 reset
+- 순간 이동 시 현재 viewport 안의 페이지는 release하지 않도록 보호
+- LRU에서 밀린 페이지는 300ms grace period 후 reset해 짧은 되돌아가기 UX와 메모리 회수 균형 조정
 - `aspect-ratio` placeholder로 스크롤 높이와 layout shift 안정화
 
 핵심은 `page.cleanup()` 자체가 아니라, **전체 50페이지 canvas를 eager하게 유지하던 구조를 viewport 기반 windowing과 최근 5페이지 LRU 캐시 구조로 바꾼 것**입니다. 초기 진입에서는 viewport 주변 1~2페이지만 렌더링하고, 스크롤 중에는 최근 본 페이지를 최대 5개까지 유지한 뒤 캐시에서 밀린 canvas의 backing store를 비웠습니다.
+
+`canvas.width = 0`, `canvas.height = 0`은 메모리 회수에는 효과적이지만, 너무 공격적으로 실행하면 페이지 순간 이동이나 짧은 되돌아가기에서 재렌더링 지연이 생길 수 있습니다. 이를 막기 위해 현재 viewport/rootMargin 안에 있는 페이지는 release 대상에서 제외하고, LRU에서 밀린 페이지도 300ms 후에만 backing store를 비우도록 조정했습니다.
 
 ## 구현 위치
 
@@ -90,11 +102,12 @@ frontend/bench/
 | 지표 | Basic eager PDF.js | Viewport Memory + LRU PDF.js | 변화 |
 | --- | ---: | ---: | ---: |
 | 배포 환경 Chrome 메모리 관측값 | 약 2.7GB | 약 298MB | 약 89.0% 감소 |
+| Chrome Task Manager 단일 worker/process | 1,488,704K | 295,700K | 약 80.1% 감소 |
 | 초기 canvas 픽셀 버퍼 추정값 | 1287.5MB | 51.5MB | 96.0% 감소 |
 | scroll 중 peak canvas 추정값 | 1287.5MB | 128.7MB | 90.0% 감소 |
 | Puppeteer Chrome RSS 초기 증가량 | +1516.2MB | +244.0MB | 83.9% 감소 |
 
-대표 성과는 TBT가 아니라 **PDF 결과 화면 하나가 수 GB 단위의 브라우저 메모리를 점유하던 문제를 완화한 것**입니다. TBT와 frame gap은 함께 개선된 보조 지표로 해석했습니다.
+대표 성과는 TBT가 아니라 **PDF 결과 화면 하나가 수 GB 단위의 브라우저 메모리를 점유하던 문제를 완화한 것**입니다. `2.7GB -> 298MB`는 배포 환경에서 본 전체 Chrome 메모리 관측값이고, `1,488,704K -> 295,700K`는 Chrome Task Manager에서 확인한 단일 worker/process 기준 관측값입니다. TBT와 frame gap은 함께 개선된 보조 지표로 해석했습니다.
 
 측정 조건:
 
@@ -209,4 +222,4 @@ RUNS=3 CPU_THROTTLE=4 BASE_URL=http://127.0.0.1:3124 PDF_URL=/heavy-designer-por
 
 ## 이력서용 요약
 
-> PDF.js 기반 이력서/포트폴리오 결과 화면에서 전체 50페이지 canvas를 eager하게 유지해 Chrome 메모리 사용량이 약 2.7GB까지 증가하는 문제를 확인했습니다. `RenderTask.cancel()`과 `page.cleanup()`만 적용한 비교군으로 기본 cleanup의 한계를 확인한 뒤, `IntersectionObserver` 기반 viewport windowing, 최근 5페이지 LRU 캐시, canvas size reset을 적용해 동일 시나리오의 Chrome 메모리 사용량을 약 298MB 수준으로 낮췄습니다. 내부 원인 검증을 위해 canvas 픽셀 버퍼 추정값과 Puppeteer 기반 Chrome RSS도 함께 측정했습니다.
+> PDF.js 기반 이력서/포트폴리오 결과 화면에서 전체 50페이지 canvas를 eager하게 유지해 Chrome 메모리 사용량이 약 2.7GB까지 증가하는 문제를 확인했습니다. `RenderTask.cancel()`과 `page.cleanup()`만 적용한 비교군으로 기본 cleanup의 한계를 확인한 뒤, `IntersectionObserver` 기반 viewport windowing, 최근 5페이지 LRU 캐시, canvas size reset을 적용해 동일 시나리오의 Chrome 메모리 사용량을 약 298MB 수준으로 낮췄습니다. 단일 worker/process 기준으로도 1,488,704K에서 295,700K로 감소한 것을 확인했고, 현재 viewport 페이지 release 방지와 300ms grace period로 순간 이동/되돌아가기 UX 저하를 완화했습니다.

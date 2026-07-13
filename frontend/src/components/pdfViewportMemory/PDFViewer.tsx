@@ -31,6 +31,8 @@ function resetMetrics() {
     renderStarted: 0,
     renderCompleted: 0,
     renderCancelled: 0,
+    releaseScheduled: 0,
+    releaseAborted: 0,
     canvasReleased: 0,
     cleanupCalls: 0,
   };

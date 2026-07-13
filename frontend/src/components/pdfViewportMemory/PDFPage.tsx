@@ -13,6 +13,7 @@ interface PDFPageProps {
 
 const PAGE_RATIO = 1.414;
 const RENDER_SCALE = 2;
+const RELEASE_DELAY_MS = 300;
 
 declare global {
   interface Window {
@@ -23,6 +24,8 @@ declare global {
       renderStarted: number;
       renderCompleted: number;
       renderCancelled: number;
+      releaseScheduled: number;
+      releaseAborted: number;
       canvasReleased: number;
       cleanupCalls: number;
     };
@@ -39,6 +42,8 @@ function recordMetric(field: keyof NonNullable<Window["__pdfViewportMemoryMetric
     renderStarted: 0,
     renderCompleted: 0,
     renderCancelled: 0,
+    releaseScheduled: 0,
+    releaseAborted: 0,
     canvasReleased: 0,
     cleanupCalls: 0,
   });
@@ -55,10 +60,25 @@ export default function PDFPage({
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const renderTaskRef = useRef<RenderTask | null>(null);
+  const releaseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const visibleRef = useRef(false);
   const renderedRef = useRef(false);
   const [shouldRender, setShouldRender] = useState(false);
 
+  const clearScheduledRelease = useCallback(() => {
+    if (!releaseTimerRef.current) return;
+
+    clearTimeout(releaseTimerRef.current);
+    releaseTimerRef.current = null;
+    recordMetric("releaseAborted");
+  }, []);
+
   const releaseCanvas = useCallback((resetState = true) => {
+    if (releaseTimerRef.current) {
+      clearTimeout(releaseTimerRef.current);
+      releaseTimerRef.current = null;
+    }
+
     if (renderTaskRef.current) {
       try {
         renderTaskRef.current.cancel();
@@ -81,6 +101,43 @@ export default function PDFPage({
     }
   }, []);
 
+  const hasCanvasResource = useCallback(() => {
+    const canvas = canvasRef.current;
+    return Boolean(
+      shouldRender ||
+        renderedRef.current ||
+        renderTaskRef.current ||
+        (canvas && (canvas.width > 0 || canvas.height > 0))
+    );
+  }, [shouldRender]);
+
+  const scheduleCanvasRelease = useCallback(() => {
+    if (visibleRef.current || !hasCanvasResource()) return;
+    if (releaseTimerRef.current) return;
+
+    recordMetric("releaseScheduled");
+    releaseTimerRef.current = setTimeout(() => {
+      releaseTimerRef.current = null;
+      if (visibleRef.current) {
+        recordMetric("releaseAborted");
+        onPageActive(pageNumber);
+        setShouldRender(true);
+        return;
+      }
+
+      releaseCanvas();
+    }, RELEASE_DELAY_MS);
+  }, [hasCanvasResource, onPageActive, pageNumber, releaseCanvas]);
+
+  useEffect(() => {
+    return () => {
+      if (releaseTimerRef.current) {
+        clearTimeout(releaseTimerRef.current);
+        releaseTimerRef.current = null;
+      }
+    };
+  }, []);
+
   useEffect(() => {
     const target = wrapperRef.current;
     if (!target || typeof IntersectionObserver === "undefined") {
@@ -95,11 +152,14 @@ export default function PDFPage({
 
         if (entry.isIntersecting) {
           recordMetric("entered");
+          visibleRef.current = true;
+          clearScheduledRelease();
           onPageActive(pageNumber);
           setShouldRender(true);
           return;
         }
 
+        visibleRef.current = false;
         recordMetric("exited");
       },
       { rootMargin: "900px 0px", threshold: 0.01 }
@@ -107,13 +167,21 @@ export default function PDFPage({
 
     observer.observe(target);
     return () => observer.disconnect();
-  }, [onPageActive, pageNumber]);
+  }, [clearScheduledRelease, onPageActive, pageNumber]);
 
   useEffect(() => {
-    if (!isRetained) {
-      releaseCanvas();
+    if (isRetained) {
+      clearScheduledRelease();
+      return;
     }
-  }, [isRetained, releaseCanvas, retainKey]);
+
+    if (visibleRef.current) {
+      clearScheduledRelease();
+      return;
+    }
+
+    scheduleCanvasRelease();
+  }, [clearScheduledRelease, isRetained, retainKey, scheduleCanvasRelease]);
 
   useEffect(() => {
     if (!shouldRender || renderedRef.current || !canvasRef.current) return;
